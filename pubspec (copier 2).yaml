@@ -1,0 +1,53 @@
+name: tarot_app
+description: "Projet Tarot Gothique - Table Triangle Carré Pentagone"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.9
+  provider: ^6.1.5+1
+  animations: ^3.0.0
+
+  # --- CONFIGURATION SUPABASE V2 VALIDÉE ---
+  supabase_flutter: ^2.15.4
+  crypto: ^3.0.7
+  # -----------------------------------------
+
+  # --- AJOUT DES DÉPENDANCES PDF & PRINTING POUR LE RAPPORT DES SCORES ---
+  pdf: ^3.10.7
+  printing: ^5.11.1
+  # ---------------------------------------------------------------------
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/table_tapis.png
+    - assets/images/menu_bg.png
+    - assets/images/card_back_dark.png
+    - assets/images/cards/
+
+  fonts:
+    - family: Almendra
+      fonts:
+        - asset: assets/fonts/Almendra-Regular.ttf
+        - asset: assets/fonts/Almendra-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Almendra-Italic.ttf
+          style: italic
+
+# --- FORÇAGE DES MISES À JOUR TRANSITIVES ---
+dependency_overrides:
+  archive: ^4.2.0
+  material_color_utilities: ^0.13.1
+  qr: ^4.0.0

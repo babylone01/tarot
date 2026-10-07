@@ -1,0 +1,22 @@
+
+BEGIN
+    -- Aligne les colonnes de versioning pour éviter tout désaccord avec Dart
+    IF NEW.version IS DISTINCT FROM OLD.version THEN
+        NEW.game_version := NEW.version::INT;
+    ELSIF NEW.game_version IS DISTINCT FROM OLD.game_version THEN
+        NEW.version := NEW.game_version::BIGINT;
+    END IF;
+
+    -- FIX CHRONO : On ne change le timer QUE si le joueur actif change OU si le statut du jeu bascule.
+    -- La simple connexion d'un joueur (changement de playerX_uid ou de version brute) NE DOIT PAS toucher au chrono !
+    IF (NEW.current_player_index IS DISTINCT FROM OLD.current_player_index) 
+       OR (NEW.game_status IS DISTINCT FROM OLD.game_status) THEN
+        NEW.turn_ends_at := NOW() AT TIME ZONE 'UTC' + INTERVAL '30 seconds';
+    ELSE
+        -- On conserve STRICTEMENT le chronomètre déjà établi pour éviter le reset à l'arrivée du joueur 2
+        NEW.turn_ends_at := OLD.turn_ends_at;
+    END IF;
+
+    NEW.updated_at := NOW() AT TIME ZONE 'UTC';
+    RETURN NEW;
+END;

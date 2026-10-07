@@ -1,0 +1,1 @@
+// Fichier global.dart nettoyé
