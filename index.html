@@ -57,7 +57,7 @@
         }
         header {
             background-color: #12121a;
-            padding: 1rem 1.5rem;
+            padding: 0.8rem 1.5rem;
             text-align: center;
             border-bottom: 2px solid #d4af37;
             flex-shrink: 0;
@@ -65,69 +65,69 @@
         h1 {
             color: #d4af37;
             margin: 0;
-            font-size: 2.2rem;
+            font-size: 2rem;
             letter-spacing: 2px;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
         main {
             flex: 1;
-            max-width: 1400px;
+            max-width: 1300px;
             width: 100%;
             margin: 0 auto;
-            padding: 1.2rem 1.5rem 0.5rem 1.5rem;
+            padding: 1rem 1.5rem;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 1rem;
         }
-        .main-layout {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-        .left-column {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            text-align: left;
-        }
-        .right-content-area {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.2rem;
-        }
-        .banner-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .hero-banner {
-            width: 100%;
-            max-width: 733px;
-            height: auto;
-            border-radius: 10px;
-            border: 2px solid #d4af37;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-        }
-        .banner-title {
-            color: #f8fafc;
-            font-size: 1.6rem;
-            font-weight: bold;
-            margin: 0 0 0.8rem 0;
+        /* Top full-width description area */
+        .top-description {
             text-align: center;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+            background-color: #12121a;
+            border: 1px solid #27273a;
+            border-radius: 8px;
+            padding: 0.8rem 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        .video-container {
+        .top-description h2 {
+            color: #f8fafc;
+            font-size: 1.3rem;
+            margin: 0 0 0.3rem 0;
+        }
+        .top-description .sub-info {
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            margin: 0 0 0.4rem 0;
+            font-style: italic;
+        }
+        .top-description .intro-text {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+        /* Media row: Banner and Video side by side */
+        .media-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .media-item {
             width: 100%;
-            max-width: 733px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-banner, .video-container {
+            width: 100%;
+            max-width: 580px;
             aspect-ratio: 16 / 9;
-            border-radius: 10px;
+            border-radius: 8px;
             border: 2px solid #d4af37;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            object-fit: cover;
             background-color: #000;
         }
         .video-container iframe {
@@ -135,6 +135,7 @@
             height: 100%;
             border: none;
         }
+        /* Features grid: 3 equidistant columns */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -148,46 +149,25 @@
             padding: 0.8rem 1rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
         .feature-card h3 {
             color: #d4af37;
             margin-top: 0;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.3rem;
             font-size: 0.95rem;
         }
         .feature-card p {
             color: #94a3b8;
             font-size: 0.78rem;
             margin: 0;
-            line-height: 1.3;
-        }
-        h4 {
-            color: #cbd5e1;
-            font-size: 0.85rem;
-            margin: 0 0 0.2rem 0;
-            font-style: italic;
-        }
-        h5 {
-            color: #94a3b8;
-            font-size: 0.75rem;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        h6 {
-            color: #64748b;
-            font-size: 0.7rem;
-            margin: 0;
-        }
-        .intro-text {
             line-height: 1.35;
-            font-size: 0.82rem;
-            color: #cbd5e1;
-            margin: 0.3rem 0 0 0;
         }
         .cta-container {
             text-align: center;
-            margin: 0.8rem 0;
+            margin: 0.2rem 0;
         }
         .cta-button {
             display: inline-block;
@@ -197,9 +177,9 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: background-color 0.2s, transform 0.2s;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
         }
         .cta-button:hover {
             background-color: #e6c547;
@@ -208,8 +188,8 @@
         footer {
             background-color: #12121a;
             text-align: center;
-            padding: 0.5rem;
-            font-size: 0.8rem;
+            padding: 0.4rem;
+            font-size: 0.75rem;
             color: #64748b;
             border-top: 1px solid #1e1e2d;
             flex-shrink: 0;
@@ -221,12 +201,15 @@
         footer a:hover {
             text-decoration: underline;
         }
-        @media (max-width: 1024px) {
-            .main-layout {
+        @media (max-width: 950px) {
+            .media-row {
                 grid-template-columns: 1fr;
             }
             .features-grid {
                 grid-template-columns: 1fr;
+            }
+            body {
+                overflow-y: auto;
             }
         }
     </style>
@@ -235,52 +218,51 @@
     <header>
         <h1>Tarot Gothique 2026</h1>
     </header>
+
     <main>
-        <div class="main-layout">
-            <!-- Colonne de gauche : Script / Présentation -->
-            <div class="left-column">
-                <h4>L'expérience ultime du tarot en France et à travers les pays du monde</h4>
-                <h5>Application mobile Android & Solo / Multijoueur</h5>
-                <h6>Version officielle 2026 - Google Play Store</h6>
-                <p class="intro-text">
-                    Affrontez des passionnés de <strong>jeux de cartes</strong> en <strong>France</strong> ou partout dans les <em>pays du monde</em>. Maîtrisez le <strong>Tarot 2026</strong> en ligne ou perfectionnez vos tactiques contre une intelligence artificielle redoutable.
-                </p>
+        <!-- Bloc supérieur sur toute la largeur -->
+        <div class="top-description">
+            <h2>Plongez dans l'arène ténébreuse</h2>
+            <div class="sub-info">L'expérience ultime du tarot en France et à travers les pays du monde — Application mobile Android & Solo / Multijoueur</div>
+            <p class="intro-text">
+                Affrontez des passionnés de <strong>jeux de cartes</strong> en <strong>France</strong> ou partout dans les <em>pays du monde</em>. Maîtrisez le <strong>Tarot 2026</strong> en ligne ou perfectionnez vos tactiques contre une intelligence artificielle redoutable.
+            </p>
+        </div>
+
+        <!-- Ligne centrale : Bannière et Vidéo alignées -->
+        <div class="media-row">
+            <div class="media-item">
+                <img src="banner.jpg" alt="Tarot Gothique 2026 - Bannière officielle" class="hero-banner">
             </div>
-
-            <!-- Colonne de droite : Bannière, Vidéo YouTube et 3 cartes -->
-            <div class="right-content-area">
-                <div class="banner-container">
-                    <h2 class="banner-title">Plongez dans l'arène ténébreuse</h2>
-                    <img src="banner.jpg" alt="Tarot Gothique 2026 - Bannière officielle du jeu de tarot" class="hero-banner">
-                </div>
-
-                <!-- Intégration de la vidéo YouTube -->
+            <div class="media-item">
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/Hp_oTuAgBX8" title="Tarot Gothique 2026 - Teaser Officiel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-
-                <!-- Les 3 cartes disposées en dessous -->
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>Compétition, Multijoueur et Solo</h3>
-                        <p>Jouez en ligne aux <strong>jeux de cartes</strong> avec d'autres passionnés ou profitez de parties de <em>tarot</em> fluides hors-ligne face à des bots dotés d'une IA poussée.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Ambiance Gothique</h3>
-                        <p>Un design visuel soigné aux teintes sombres, contrastes élevés, crânes stylisés et <strong>finitions dorées</strong>.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Règles (5 Joueurs)</h3>
-                        <p>Retrouvez toutes les subtilités du <strong>tarot traditionnel</strong> à 5 joueurs avec gestion des contrats et des scores.</p>
-                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Les 3 colonnes équidistantes -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Compétition, Multijoueur et Solo</h3>
+                <p>Jouez en ligne aux <strong>jeux de cartes</strong> avec d'autres passionnés ou profitez de parties de <em>tarot</em> fluides hors-ligne face à des bots dotés d'une IA poussée.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Ambiance Gothique</h3>
+                <p>Un design visuel soigné aux teintes sombres, contrastes élevés, crânes stylisés et <strong>finitions dorées</strong>.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Règles (5 Joueurs)</h3>
+                <p>Retrouvez toutes les subtilités du <strong>tarot traditionnel</strong> à 5 joueurs avec gestion des contrats et des scores.</p>
+            </div>
+        </div>
+
+        <!-- Bouton CTA final -->
         <div class="cta-container">
             <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Télécharger sur Google Play</a>
         </div>
     </main>
+
     <footer>
         <p>&copy; 2026 Tarot Gothique. Tous droits réservés. | <a href="#">Politique de confidentialité</a></p>
     </footer>
