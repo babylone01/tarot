@@ -17,11 +17,11 @@
 
     <!-- Twitter Card SEO -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tarot Gothique 2026 - Jeu de Tarot Multijoueur">
+    <meta name="twitter:title" content="Tarot Gothique 2026 - Tournoi et Compétition de Tarot Multijoueur">
     <meta name="twitter:description" content="Plongez dans l'arène ténébreuse avec Tarot Gothique 2026 sur Android.">
     <meta name="twitter:image" content="https://babylone01.github.io/tarot/banner.jpg">
 
-    <!-- Schema.org Structured Data (JSON-LD) for SoftwareApplication / VideoGame -->
+    <!-- Schema.org Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -55,108 +55,108 @@
         }
         header {
             background-color: #12121a;
-            padding: 2.5rem 2rem 1.5rem 2rem;
+            padding: 2.5rem 2rem;
             text-align: center;
             border-bottom: 2px solid #d4af37;
         }
         h1 {
             color: #d4af37;
-            margin: 0 0 0.5rem 0;
-            font-size: 2.8rem;
+            margin: 0;
+            font-size: 3rem;
             letter-spacing: 2px;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
-        header p {
-            color: #94a3b8;
-            font-size: 1.15rem;
-            margin: 0;
-        }
         main {
             flex: 1;
-            max-width: 1200px;
+            max-width: 1400px;
             width: 100%;
             margin: 2rem auto;
             padding: 0 1.5rem;
             box-sizing: border-box;
-            text-align: center;
+        }
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            text-align: left;
+        }
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .center-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         h2 {
             color: #f8fafc;
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            margin: 0 0 0.5rem 0;
             font-weight: bold;
-        }
-        h3 {
-            color: #d4af37;
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
         }
         h4 {
             color: #cbd5e1;
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin: 0 0 0.5rem 0;
             font-style: italic;
         }
         h5 {
             color: #94a3b8;
-            font-size: 1rem;
-            margin: 0.5rem 0 0.2rem 0;
+            font-size: 0.9rem;
+            margin: 0;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         h6 {
             color: #64748b;
-            font-size: 0.9rem;
-            margin: 0 0 1.5rem 0;
+            font-size: 0.85rem;
+            margin: 0;
         }
         .intro-text {
-            max-width: 800px;
-            margin: 0 auto 2.5rem auto;
-            line-height: 1.7;
-            font-size: 1.05rem;
+            line-height: 1.6;
+            font-size: 1rem;
             color: #cbd5e1;
-        }
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            gap: 2rem;
-            align-items: center;
-            margin-bottom: 3rem;
-        }
-        .side-column {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            margin: 0;
         }
         .feature-card {
             background-color: #161622;
             border: 1px solid #27273a;
             border-radius: 10px;
-            padding: 1.25rem;
+            padding: 1.2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             text-align: left;
         }
+        .feature-card h3 {
+            color: #d4af37;
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+            font-size: 1.15rem;
+        }
         .feature-card p {
             color: #94a3b8;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             margin: 0;
-            line-height: 1.5;
-        }
-        .center-image-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            line-height: 1.4;
         }
         .hero-banner {
             width: 100%;
-            max-width: 550px;
+            max-width: 650px;
             border-radius: 12px;
             border: 2px solid #d4af37;
             box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
         }
         .cta-container {
-            margin: 2.5rem 0;
+            text-align: center;
+            margin: 2rem 0;
         }
         .cta-button {
             display: inline-block;
@@ -189,8 +189,8 @@
         footer a:hover {
             text-decoration: underline;
         }
-        @media (max-width: 900px) {
-            .content-grid {
+        @media (max-width: 1100px) {
+            .main-layout {
                 grid-template-columns: 1fr;
             }
         }
@@ -199,31 +199,31 @@
 <body>
     <header>
         <h1>Tarot Gothique 2026</h1>
-        <p>Le meilleur <strong>jeu de cartes</strong> et <em>tarot multijoueur</em> sur Android</p>
     </header>
     <main>
-        <h2>Plongez dans l'arène ténébreuse</h2>
-        <h4>L'expérience ultime du tarot en France et à travers les pays du monde</h4>
-        <h5>Application mobile Android & Solo / Multijoueur</h5>
-        <h6>Version officielle 2026 - Disponible sur le Google Play Store</h6>
+        <div class="main-layout">
+            <!-- Colonne de gauche : Script / Présentation -->
+            <div class="left-column">
+                <h2>Plongez dans l'arène ténébreuse</h2>
+                <h4>L'expérience ultime du tarot en France et à travers les pays du monde</h4>
+                <h5>Application mobile Android & Solo / Multijoueur</h5>
+                <h6>Version officielle 2026 - Disponible sur le Google Play Store</h6>
+                <p class="intro-text">
+                    Affrontez des passionnés de <strong>jeux de cartes</strong> en <strong>France</strong> ou partout dans les <em>pays du monde</em>. Maîtrisez le <strong>Tarot 2026</strong> en ligne ou perfectionnez vos tactiques contre une intelligence artificielle redoutable.
+                </p>
+            </div>
 
-        <p class="intro-text">
-            Affrontez des passionnés de <strong>jeux de cartes</strong> en <strong>France</strong> ou partout dans les <em>pays du monde</em>. Maîtrisez le <strong>Tarot 2026</strong> en ligne ou perfectionnez vos tactiques contre une intelligence artificielle redoutable.
-        </p>
-        
-        <div class="content-grid">
-            <div class="side-column">
+            <!-- Colonne centrale : Bannière un peu plus large -->
+            <div class="center-column">
+                <img src="banner.jpg" alt="Tarot Gothique 2026 - Bannière officielle du jeu de tarot" class="hero-banner">
+            </div>
+
+            <!-- Colonne de droite : Les 3 colonnes/cartes -->
+            <div class="right-column">
                 <div class="feature-card">
                     <h3>Multijoueur & Solo</h3>
                     <p>Jouez en ligne aux <strong>jeux de cartes</strong> avec d'autres passionnés ou profitez de parties de <em>tarot</em> fluides hors-ligne face à des bots dotés d'une IA poussée.</p>
                 </div>
-            </div>
-            
-            <div class="center-image-container">
-                <img src="banner.jpg" alt="Tarot Gothique 2026 - Bannière officielle du jeu de tarot" class="hero-banner">
-            </div>
-            
-            <div class="side-column">
                 <div class="feature-card">
                     <h3>Ambiance Gothique</h3>
                     <p>Un design visuel soigné aux teintes sombres, contrastes élevés, crânes stylisés et <strong>finitions dorées</strong>.</p>
