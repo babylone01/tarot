@@ -17,10 +17,18 @@
             min-height: 100vh;
         }
         header {
-            background-color: #12121a;
-            padding: 3rem 2rem;
+            background: linear-gradient(rgba(18, 18, 26, 0.9), rgba(11, 11, 15, 0.95)), url('banner.jpg') center/cover no-repeat;
+            padding: 4rem 2rem;
             text-align: center;
             border-bottom: 2px solid #d4af37;
+        }
+        .hero-banner {
+            max-width: 800px;
+            width: 100%;
+            border-radius: 12px;
+            border: 2px solid #d4af37;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+            margin-bottom: 2rem;
         }
         h1 {
             color: #d4af37;
@@ -36,7 +44,7 @@
         }
         main {
             flex: 1;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 3rem auto;
             padding: 0 1.5rem;
             text-align: center;
@@ -53,7 +61,7 @@
         }
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin: 3rem 0;
             text-align: left;
@@ -113,6 +121,7 @@
 </head>
 <body>
     <header>
+        <img src="banner.jpg" alt="Tarot Gothique 2026 - Bannière" class="hero-banner">
         <h1>Tarot Gothique</h1>
         <p>L'expérience ultime du jeu de Tarot multijoueur sur Android</p>
     </header>
@@ -131,7 +140,7 @@
             </div>
             <div class="feature-card">
                 <h3>Règles Officielles (5 Joueurs)</h3>
-                <p>Retrouvez toutes les subtilités du tarot traditionnel à 5 joueurs avec gestion des contrats, de la poignée et des scores automatisés.</p>
+                <p>Retrouvez toutes les subtilitates du tarot traditionnel à 5 joueurs avec gestion des contrats, de la poignée et des scores automatisés.</p>
             </div>
         </div>
 
