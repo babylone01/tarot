@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="Plongez dans l'arène ténébreuse avec Tarot Gothique 2026 sur Android.">
     <meta name="twitter:image" content="https://babylone01.github.io/tarot/banner.jpg">
 
-    <!-- Schema.org Structured Data (JSON-LD) optimized for Alyze -->
+    <!-- Schema.org Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -82,7 +82,6 @@
             justify-content: space-between;
             gap: 1rem;
         }
-        /* Top full-width description area */
         .top-description {
             text-align: center;
             background-color: #12121a;
@@ -108,7 +107,6 @@
             line-height: 1.4;
             margin: 0;
         }
-        /* Media row: Banner and Video side by side */
         .media-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -136,7 +134,6 @@
             height: 100%;
             border: none;
         }
-        /* Features grid: 3 equidistant columns */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -186,8 +183,6 @@
             background-color: #e6c547;
             transform: translateY(-2px);
         }
-        
-        /* Section éditoriale naturelle pour satisfaire Alyze */
         .second-page-section {
             background-color: #12121a;
             border-top: 2px solid #d4af37;
@@ -289,8 +284,6 @@
         table.rules-table td {
             color: #cbd5e1;
         }
-
-        /* Témoignages & Réassurance */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -323,7 +316,6 @@
             font-size: 0.85rem;
             text-align: right;
         }
-
         footer {
             background-color: #12121a;
             text-align: center;
@@ -341,13 +333,7 @@
             text-decoration: underline;
         }
         @media (max-width: 950px) {
-            .media-row {
-                grid-template-columns: 1fr;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            .testimonials-grid {
+            .media-row, .features-grid, .testimonials-grid {
                 grid-template-columns: 1fr;
             }
             body {
@@ -362,7 +348,6 @@
     </header>
 
     <main>
-        <!-- Bloc supérieur sur toute la largeur -->
         <div class="top-description">
             <h2>Plongez dans l'arène ténébreuse</h2>
             <div class="sub-info">L'expérience ultime du tarot en France et à travers les pays du monde — Application mobile Android & Solo / Multijoueur</div>
@@ -371,7 +356,6 @@
             </p>
         </div>
 
-        <!-- Ligne centrale : Bannière et Vidéo alignées avec loading="lazy" -->
         <div class="media-row">
             <div class="media-item">
                 <img src="banner.jpg" alt="Tarot Gothique 2026 - Bannière officielle" class="hero-banner">
@@ -383,7 +367,6 @@
             </div>
         </div>
 
-        <!-- Les 3 colonnes équidistantes -->
         <div class="features-grid">
             <div class="feature-card">
                 <h3>Compétition, Multijoueur et Solo</h3>
@@ -399,13 +382,11 @@
             </div>
         </div>
 
-        <!-- Bouton CTA final -->
         <div class="cta-container">
             <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Télécharger sur Google Play</a>
         </div>
     </main>
 
-    <!-- Section éditoriale naturelle pour satisfaire Alyze -->
     <section class="second-page-section">
         <div class="second-page-container">
             <h2>L'univers complet de notre <span class="seo-keyword-styled">jeu de tarot</span></h2>
