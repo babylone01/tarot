@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarot Gothique 2026</title>
+    <title>Tarot Gothique - Jeu de Tarot Multijoueur en Ligne</title>
+    <meta name="description" content="Découvrez Tarot Gothique, le jeu de tarot multijoueur (5 joueurs) au design ténébreux et doré. Jouez en ligne ou contre l'IA sur Android. Téléchargez l'application gratuitement.">
     <style>
         body {
-            background-color: #0f0f13;
+            background-color: #0b0b0f;
             color: #e2e8f0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
@@ -16,64 +17,130 @@
             min-height: 100vh;
         }
         header {
-            background-color: #1a1a24;
-            padding: 2rem;
+            background-color: #12121a;
+            padding: 3rem 2rem;
             text-align: center;
-            border-bottom: 2px solid #3b82f6;
+            border-bottom: 2px solid #d4af37;
         }
         h1 {
-            color: #60a5fa;
+            color: #d4af37;
+            margin: 0 0 0.5rem 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+        header p {
+            color: #94a3b8;
+            font-size: 1.25rem;
             margin: 0;
-            font-size: 2.5rem;
         }
         main {
             flex: 1;
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
             text-align: center;
         }
+        h2 {
+            color: #f8fafc;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
         p {
-            line-height: 1.6;
+            line-height: 1.8;
             font-size: 1.1rem;
+            color: #cbd5e1;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+            text-align: left;
+        }
+        .feature-card {
+            background-color: #161622;
+            border: 1px solid #27273a;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .feature-card h3 {
+            color: #d4af37;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .feature-card p {
             color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        .cta-container {
+            margin: 3rem 0;
         }
         .cta-button {
             display: inline-block;
-            background-color: #3b82f6;
-            color: white;
-            padding: 0.8rem 2rem;
+            background-color: #d4af37;
+            color: #0b0b0f;
+            padding: 1rem 2.5rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 1.5rem;
-            transition: background-color 0.2s;
+            font-size: 1.1rem;
+            transition: background-color 0.2s, transform 0.2s;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
         }
         .cta-button:hover {
-            background-color: #2563eb;
+            background-color: #e6c547;
+            transform: translateY(-2px);
         }
         footer {
-            background-color: #1a1a24;
+            background-color: #12121a;
             text-align: center;
             padding: 1.5rem;
             font-size: 0.9rem;
             color: #64748b;
-            border-top: 1px solid #27272a;
+            border-top: 1px solid #1e1e2d;
+        }
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Tarot Gothique 2026</h1>
-        <p>Le jeu de Tarot multijoueur sur Android</p>
+        <h1>Tarot Gothique</h1>
+        <p>L'expérience ultime du jeu de Tarot multijoueur sur Android</p>
     </header>
     <main>
-        <h2>Découvrez le Tarot Gothique</h2>
-        <p>Plongez dans une ambiance ténébreuse et affrontez d'autres joueurs en ligne ou contre l'intelligence artificielle. Application 100% gratuite disponible sur le Google Play Store.</p>
-        <a href="#" class="cta-button">Télécharger sur Google Play</a>
+        <h2>Plongez dans l'arène ténébreuse</h2>
+        <p>Affrontez des joueurs du monde entier ou perfectionnez vos tactiques contre une intelligence artificielle redoutable. Conçu spécialement pour les amateurs de jeux de cartes classiques et d'atmosphères mystiques aux accents dorés.</p>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>Multijoueur & Solo</h3>
+                <p>Jouez en ligne avec d'autres passionnés ou profitez de parties fluides hors-ligne face à des bots dotés d'une IA poussée.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Ambiance Gothique</h3>
+                <p>Un design visuel soigné aux teintes sombres, contrastes élevés, crânes stylisés et finitions dorées pour une immersion totale.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Règles Officielles (5 Joueurs)</h3>
+                <p>Retrouvez toutes les subtilités du tarot traditionnel à 5 joueurs avec gestion des contrats, de la poignée et des scores automatisés.</p>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="#" class="cta-button">Télécharger sur Google Play</a>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2026 Tarot Gothique. Tous droits réservés. | <a href="#" style="color: #60a5fa; text-decoration: none;">Politique de confidentialité</a></p>
+        <p>&copy; 2026 Tarot Gothique. Tous droits réservés. | <a href="#">Politique de confidentialité</a></p>
     </footer>
 </body>
 </html>
