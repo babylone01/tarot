@@ -104,6 +104,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
+            align-items: start;
         }
         .gallery-item {
             background-color: var(--card-bg);
@@ -116,8 +117,9 @@
         }
         .gallery-img {
             width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
+            height: auto;
+            display: block;
+            object-fit: contain;
             background-color: #000;
             border-bottom: 1px solid var(--border-color);
         }
@@ -165,7 +167,7 @@
 
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="jeu-de-tarot.jpg" alt="jeu de tarot - Tarot Gothique 2026" class="gallery-img" width="1024" height="618" loading="lazy">
+                <img src="jeu-de-tarot.jpg" alt="jeu de tarot - Tarot Gothique 2026" class="gallery-img" loading="lazy">
                 <div class="gallery-caption">Ambiance visuelle de notre <mark>jeu de tarot</mark></div>
             </div>
             <div class="gallery-item">
