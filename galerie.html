@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie Photo - Tarot Gothique 2026</title>
-    <meta name="description" content="Découvrez en images l'univers graphique et ténèbreux du jeu de Tarot Gothique 2026. Captures d'écran du jeu, plateaux et design des cartes.">
-    <meta name="keywords" content="galerie tarot, images tarot gothique, visuels jeu de cartes, jeu de tarot">
+    <title>Galerie Photo - Jeu de Tarot Gothique 2026</title>
+    <meta name="description" content="Découvrez en images l'univers graphique de notre jeu de tarot. Captures d'écran, design gothique et illustrations de notre jeu gratuit.">
+    <meta name="keywords" content="galerie photo, jeu de tarot, tarot gothique, jeu gratuit, règles">
     <link rel="canonical" href="https://babylone01.github.io/tarot/galerie.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
 
-    <!-- Données structurées Schema.org pour l'indexation de l'image sur Google Images -->
+    <!-- Données structurées Schema.org pour l'indexation sur Google Images -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -80,40 +80,32 @@
         }
         main {
             flex: 1;
-            max-width: 1200px;
+            max-width: 1100px;
             width: 100%;
             margin: 0 auto;
             padding: 2rem 1.5rem;
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
         }
-        .gallery-intro {
+        h2 {
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             text-align: center;
-            background-color: var(--header-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        .gallery-intro h2 {
-            color: #f8fafc;
-            font-size: 1.4rem;
-            margin: 0 0 0.5rem 0;
-        }
-        .gallery-intro p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin: 0;
+        mark {
+            background-color: rgba(212, 175, 55, 0.25);
+            color: #facc15;
+            padding: 0.1rem 0.3rem;
+            border-radius: 4px;
         }
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
         }
-        .gallery-card {
+        .gallery-item {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -122,26 +114,18 @@
             display: flex;
             flex-direction: column;
         }
-        .gallery-card img {
+        .gallery-img {
             width: 100%;
-            height: auto;
             aspect-ratio: 16 / 9;
             object-fit: cover;
+            background-color: #000;
             border-bottom: 1px solid var(--border-color);
         }
-        .gallery-card-content {
+        .gallery-caption {
             padding: 1rem;
-        }
-        .gallery-card-content h3 {
-            color: var(--primary-gold);
-            margin: 0 0 0.5rem 0;
-            font-size: 1.1rem;
-        }
-        .gallery-card-content p {
             color: var(--text-muted);
-            font-size: 0.85rem;
-            margin: 0;
-            line-height: 1.4;
+            font-size: 0.9rem;
+            text-align: center;
         }
         footer {
             background-color: var(--header-bg);
@@ -155,11 +139,16 @@
             color: var(--primary-gold);
             text-decoration: none;
         }
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Jeu de Tarot - Galerie Photo</h1>
+        <h1>Galerie Photo - Captures Visuelles du Jeu de Tarot et de ses Règles</h1>
         <nav class="main-nav">
             <a href="index.html">Accueil / Jeu</a>
             <a href="règles.html">Règles du Tarot</a>
@@ -169,24 +158,33 @@
     </header>
 
     <main>
-        <div class="gallery-intro">
-            <h2>Galerie d'images du Jeu de Tarot Gothique</h2>
-            <p>Aperçu visuel des illustrations, cartes et univers sombres de notre jeu de tarot en ligne.</p>
-        </div>
+        <h2>Immersion visuelle dans notre <mark>jeu de tarot</mark></h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Explorez les visuels de ce <strong>jeu gratuit</strong> de <em>tarot gothique</em> avant de consulter nos <strong>règles</strong> de jeu.
+        </p>
 
         <div class="gallery-grid">
-            <div class="gallery-card">
-                <img src="jeu-de-tarot.jpg" alt="jeu de tarot - Tarot Gothique 2026" width="1024" height="618" loading="lazy">
-                <div class="gallery-card-content">
-                    <h3>Jeu de Tarot Gothique</h3>
-                    <p>Visuel principal du jeu de tarot avec la Faucheuse et les atouts traditionnels.</p>
-                </div>
+            <div class="gallery-item">
+                <img src="jeu-de-tarot.jpg" alt="jeu de tarot - Tarot Gothique 2026" class="gallery-img" width="1024" height="618" loading="lazy">
+                <div class="gallery-caption">Ambiance visuelle de notre <mark>jeu de tarot</mark></div>
+            </div>
+            <div class="gallery-item">
+                <img src="banner.jpg" alt="jeu de tarot - Plateau du jeu de cartes" class="gallery-img" loading="lazy">
+                <div class="gallery-caption">Plateau de ce <strong>jeu gratuit</strong> de <em>tarot</em></div>
+            </div>
+            <div class="gallery-item">
+                <img src="banner.jpg" alt="jeu de tarot - Menu principal du jeu" class="gallery-img" loading="lazy">
+                <div class="gallery-caption">Menu principal et application du <em>tarot gothique</em></div>
+            </div>
+            <div class="gallery-item">
+                <img src="banner.jpg" alt="jeu de tarot - Application des règles du jeu" class="gallery-img" loading="lazy">
+                <div class="gallery-caption">Respect des <strong>règles</strong> et des plis</div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 <strong>Tarot Gothique</strong> - <em>Jeu de tarot</em> et <strong>règles</strong> | <a href="à propos.html">Mentions Légales</a></p>
+        <p>&copy; 2026 <strong>Tarot Gothique</strong> - Galerie du <mark>jeu de tarot</mark> | <a href="index.html">Accueil du Jeu</a></p>
     </footer>
 </body>
 </html>
