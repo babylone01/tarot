@@ -5,106 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarot Gothique 2026 - Jeu de Tarot Multijoueur</title>
     <meta name="description" content="Découvrez Tarot Gothique 2026, le meilleur jeu de tarot multijoueur et solo en France. Affrontez des joueurs et profitez d'une ambiance ténébreuse.">
-    <meta name="keywords" content="tarot gothique, jeu de tarot, tarot multijoueur, jeux de cartes, tarot 2026, tarot android, france, application tarot, tarot en ligne, tarot solo, intelligence artificielle, google play, cartes de tarot, tarot traditionnel, tarot 5 joueurs, cyril darbost">
+    <meta name="keywords" content="tarot gothique, jeu de tarot, tarot multijoueur, jeux de cartes, tarot 2026, france, application tarot, tarot en ligne, cyril darbost">
     <link rel="canonical" href="https://babylone01.github.io/tarot/">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
-
-    <!-- Open Graph / Facebook SEO -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://babylone01.github.io/tarot/">
-    <meta property="og:title" content="Tarot Gothique 2026 - Jeu de Tarot Multijoueur">
-    <meta property="og:description" content="Découvrez Tarot Gothique 2026, le meilleur jeu de tarot multijoueur et solo en France. Affrontez des joueurs dans une ambiance ténébreuse.">
-    <meta property="og:image" content="https://babylone01.github.io/tarot/banner.jpg">
-
-    <!-- Twitter Card SEO -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tarot Gothique 2026 - Jeu de Tarot Multijoueur">
-    <meta name="twitter:description" content="Plongez dans l'arène ténébreuse avec Tarot Gothique 2026 sur Android.">
-    <meta name="twitter:image" content="https://babylone01.github.io/tarot/banner.jpg">
-
-    <!-- Schema.org Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Tarot Gothique 2026",
-      "operatingSystem": "Android",
-      "applicationCategory": "GameApplication",
-      "description": "Jeu de tarot multijoueur et solo au design ténébreux et doré, jouable en France et dans le monde entier.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0.00",
-        "priceCurrency": "EUR"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Cyril Darbost"
-      }
-    }
-    </script>
-
     <style>
+        :root {
+            --primary-gold: #d4af37;
+            --bg-black: #0b0b0f;
+            --card-bg: #161622;
+            --header-bg: #12121a;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #27273a;
+        }
         body {
-            background-color: #0b0b0f;
-            color: #e2e8f0;
+            background-color: var(--bg-black);
+            color: var(--text-main);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            overflow-x: hidden;
             box-sizing: border-box;
         }
         header {
-            background-color: #12121a;
-            padding: 0.8rem 1.5rem;
+            background-color: var(--header-bg);
+            padding: 1rem 1.5rem;
             text-align: center;
-            border-bottom: 2px solid #d4af37;
-            flex-shrink: 0;
+            border-bottom: 2px solid var(--primary-gold);
         }
         h1 {
-            color: #d4af37;
-            margin: 0;
-            font-size: 2rem;
+            color: var(--primary-gold);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.8rem;
             letter-spacing: 2px;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
         main {
             flex: 1;
-            max-width: 1300px;
+            max-width: 1200px;
             width: 100%;
             margin: 0 auto;
-            padding: 1rem 1.5rem;
+            padding: 2rem 1.5rem;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            gap: 1rem;
+            gap: 2rem;
         }
         .top-description {
             text-align: center;
-            background-color: #12121a;
-            border: 1px solid #27273a;
+            background-color: var(--header-bg);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 0.8rem 1.5rem;
+            padding: 1.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
         .top-description h2 {
             color: #f8fafc;
-            font-size: 1.3rem;
-            margin: 0 0 0.3rem 0;
+            font-size: 1.4rem;
+            margin: 0 0 0.5rem 0;
         }
-        .top-description .sub-info {
-            color: #cbd5e1;
-            font-size: 0.85rem;
-            margin: 0 0 0.4rem 0;
-            font-style: italic;
-        }
-        .top-description .intro-text {
-            color: #94a3b8;
-            font-size: 0.85rem;
-            line-height: 1.4;
+        .top-description p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
             margin: 0;
         }
         .media-row {
@@ -113,18 +96,11 @@
             gap: 1.5rem;
             align-items: center;
         }
-        .media-item {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
         .hero-banner, .video-container {
             width: 100%;
-            max-width: 580px;
             aspect-ratio: 16 / 9;
             border-radius: 8px;
-            border: 2px solid #d4af37;
+            border: 2px solid var(--primary-gold);
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
             object-fit: cover;
             background-color: #000;
@@ -138,44 +114,39 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
-            width: 100%;
         }
         .feature-card {
-            background-color: #161622;
-            border: 1px solid #27273a;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 0.8rem 1rem;
+            padding: 1.2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
         }
         .feature-card h3 {
-            color: #d4af37;
+            color: var(--primary-gold);
             margin-top: 0;
-            margin-bottom: 0.3rem;
-            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
         }
         .feature-card p {
-            color: #94a3b8;
-            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
             margin: 0;
-            line-height: 1.35;
+            line-height: 1.4;
         }
         .cta-container {
             text-align: center;
-            margin: 0.2rem 0;
+            margin: 1rem 0;
         }
         .cta-button {
             display: inline-block;
-            background-color: #d4af37;
+            background-color: var(--primary-gold);
             color: #0b0b0f;
-            padding: 0.6rem 2rem;
+            padding: 0.8rem 2.5rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1rem;
             transition: background-color 0.2s, transform 0.2s;
             box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
         }
@@ -183,177 +154,40 @@
             background-color: #e6c547;
             transform: translateY(-2px);
         }
-        .second-page-section {
-            background-color: #12121a;
-            border-top: 2px solid #d4af37;
-            margin-top: 3rem;
-            padding: 3rem 1.5rem;
-            box-sizing: border-box;
-            width: 100%;
-        }
-        .second-page-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .second-page-section h2 {
-            color: #d4af37;
-            font-size: 1.8rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .second-page-section p {
-            color: #cbd5e1;
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 1.2rem;
-            text-align: justify;
-        }
-        .seo-keyword-styled {
-            color: #facc15;
-            font-weight: bold;
-            font-style: italic;
-            text-decoration: underline;
-        }
-
-        /* 3ème PAGE : RÈGLES, POINTS ET FAQ RÉASSURANCE */
-        .rules-page-section {
-            background-color: #0d0d12;
-            border-top: 2px solid #27273a;
-            margin-top: 2rem;
-            padding: 3rem 1.5rem;
-            box-sizing: border-box;
-            width: 100%;
-        }
-        .rules-page-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .rules-page-section h2 {
-            color: #d4af37;
-            font-size: 1.8rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .rules-page-section h3 {
-            color: #f8fafc;
-            font-size: 1.2rem;
-            margin-top: 1.5rem;
-            border-left: 3px solid #d4af37;
-            padding-left: 0.8rem;
-        }
-        .rules-card {
-            background-color: #161622;
-            border: 1px solid #27273a;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-        .rules-card ul {
-            color: #94a3b8;
-            padding-left: 1.2rem;
-            line-height: 1.6;
-        }
-        .rules-card li {
-            margin-bottom: 0.5rem;
-        }
-        .rules-card p {
-            color: #94a3b8;
-            line-height: 1.6;
-        }
-        table.rules-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-            background-color: #12121a;
-        }
-        table.rules-table th, table.rules-table td {
-            border: 1px solid #27273a;
-            padding: 0.7rem;
-            text-align: left;
-            font-size: 0.9rem;
-        }
-        table.rules-table th {
-            color: #d4af37;
-            background-color: #1a1a26;
-        }
-        table.rules-table td {
-            color: #cbd5e1;
-        }
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        .testimonial-card {
-            background-color: #161622;
-            border: 1px solid #27273a;
-            border-radius: 8px;
-            padding: 1.2rem;
-            font-style: italic;
-            color: #cbd5e1;
-            position: relative;
-        }
-        .testimonial-card::before {
-            content: "“";
-            font-size: 3rem;
-            color: #d4af37;
-            position: absolute;
-            top: -5px;
-            left: 10px;
-            opacity: 0.3;
-        }
-        .testimonial-author {
-            margin-top: 0.8rem;
-            font-style: normal;
-            font-weight: bold;
-            color: #d4af37;
-            font-size: 0.85rem;
-            text-align: right;
-        }
         footer {
-            background-color: #12121a;
+            background-color: var(--header-bg);
             text-align: center;
-            padding: 0.4rem;
-            font-size: 0.75rem;
-            color: #64748b;
-            border-top: 1px solid #1e1e2d;
-            flex-shrink: 0;
+            padding: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
         }
         footer a {
-            color: #d4af37;
+            color: var(--primary-gold);
             text-decoration: none;
         }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 950px) {
-            .media-row, .features-grid, .testimonials-grid {
+        @media (max-width: 900px) {
+            .media-row, .features-grid {
                 grid-template-columns: 1fr;
-            }
-            body {
-                overflow-y: auto;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Tarot Gothique 2026 - Jeu de Tarot Multijoueur</h1>
+        <h1>Tarot Gothique 2026</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="active">Accueil / Jeu</a>
+            <a href="regles.html">Règles du Tarot</a>
+            <a href="galerie.html">Galerie Photo</a>
+            <a href="apropos.html">À propos & FAQ</a>
+        </nav>
     </header>
 
     <main>
         <div class="top-description">
-            <h2>Plongez dans l'arène ténébreuse</h2>
-            <div class="sub-info">L'expérience ultime du tarot en France et à travers les pays du monde — Application mobile Android & Solo / Multijoueur</div>
-            <p class="intro-text">
-                Affrontez des passionnés de <strong>jeux de cartes</strong> en <strong>France</strong> ou partout dans les <em>pays du monde</em>. Maîtrisez le <strong>Tarot 2026</strong> en ligne ou perfectionnez vos tactiques contre une intelligence artificielle redoutable.
-            </p>
+            <h2>L'expérience ultime du tarot en ligne et hors-ligne</h2>
+            <p>Affrontez des passionnés de jeux de cartes en France et à travers le monde. Maîtrisez le Tarot 2026 avec une ambiance ténébreuse unique, des finitions dorées et des modes solo ou multijoueur sur-mesure.</p>
         </div>
 
         <div class="media-row">
@@ -369,16 +203,16 @@
 
         <div class="features-grid">
             <div class="feature-card">
-                <h3>Compétition, Multijoueur et Solo</h3>
-                <p>Jouez en ligne aux <strong>jeux de cartes</strong> avec d'autres passionnés ou profitez de parties de <em>tarot</em> fluides hors-ligne face à des bots dotés d'une IA poussée.</p>
+                <h3>Multijoueur & Solo</h3>
+                <p>Jouez en ligne avec d'autres joueurs ou profitez de parties fluides hors-ligne face à une intelligence artificielle stratégique.</p>
             </div>
             <div class="feature-card">
                 <h3>Ambiance Gothique</h3>
-                <p>Un design visuel soigné aux teintes sombres, contrastes élevés, crânes stylisés et <strong>finitions dorées</strong>.</p>
+                <p>Un design visuel soigné aux teintes sombres, contrastes élevés, crânes stylisés et superbes finitions dorées.</p>
             </div>
             <div class="feature-card">
-                <h3>Règles (5 Joueurs)</h3>
-                <p>Retrouvez toutes les subtilités du <strong>tarot traditionnel</strong> à 5 joueurs avec gestion des contrats et des scores.</p>
+                <h3>Règles Officielles</h3>
+                <p>Retrouvez toutes les subtilités du tarot traditionnel (3, 4 et 5 joueurs) avec gestion rigoureuse des contrats et des scores.</p>
             </div>
         </div>
 
@@ -387,88 +221,8 @@
         </div>
     </main>
 
-    <section class="second-page-section">
-        <div class="second-page-container">
-            <h2>L'univers complet de notre <span class="seo-keyword-styled">jeu de tarot</span></h2>
-            <p>Bienvenue dans la présentation approfondie de notre application. Si vous cherchez un divertissement captivant en France, notre <span class="seo-keyword-styled">jeu de tarot</span> en ligne et hors-ligne est conçu pour offrir une expérience immersive. Chaque partie disputée respecte les traditions tout en intégrant des graphismes modernes et ténébreux.</p>
-            <p>Cette plateforme se distingue par sa jouabilité fluide et ses modes compétitifs. Vous découvrirez des fonctionnalités uniques adaptées aux tournois multijoueurs. Que vous soyez débutant ou joueur stratégique, l'application répond à toutes vos attentes tactiques sur smartphone Android.</p>
-            <p>Téléchargez dès aujourd'hui l'application pour perfectionner vos contrats, affronter des adversaires redoutables et vivre toute la passion d'un authentique jeu de cartes.</p>
-        </div>
-    </section>
-
-    <!-- 3ème PAGE : RÈGLES, VALEUR DES CARTES, CALCUL DES POINTS & FAQ / TÉMOIGNAGES -->
-    <section class="rules-page-section">
-        <div class="rules-page-container">
-            <h2>Règles du Jeu & Guide du Tarot Gothique</h2>
-
-            <div class="rules-card">
-                <h3>1. Variations selon le nombre de joueurs (3, 4, 5 joueurs)</h3>
-                <ul>
-                    <li><strong>À 3 joueurs :</strong> 24 tarots distribués, 6 au chien. Chaque joueur joue pour soi contre les deux autres.</li>
-                    <li><strong>À 4 joueurs :</strong> 24 tarots distribués, 6 au chien (18 cartes par joueur). Jeu classique en solo contre la défense.</li>
-                    <li><strong>À 5 joueurs (Spécificité Gothique) :</strong> Le preneur appelle un roi d'une couleur précise. Le joueur qui possède ce roi devient son partenaire secret pour la manche.</li>
-                </ul>
-            </div>
-
-            <div class="rules-card">
-                <h3>2. Règles Spécifiques de la Variante Gothique</h3>
-                <ul>
-                    <li><strong>Règle de la couleur appelée :</strong> La couleur du roi appelé ne peut pas être jouée à la première levée (premier pli), <em>sauf si le joueur qui entame possède et joue directement ce roi</em>.</li>
-                    <li><strong>Règle de l'Excuse au dernier pli :</strong> Si l'Excuse (le Fou) est jouée lors du dernier pli, elle est considérée comme perdue. Si le dernier pli est remporté par le preneur (l'attaque), les points de l'Excuse vont aux défenseurs. À l'inverse, si le dernier pli est remporté par la défense, les points vont au preneur.</li>
-                </ul>
-            </div>
-
-            <div class="rules-card">
-                <h3>3. Valeur des Cartes (Comptage des Plis)</h3>
-                <p>À la fin de la manche, les cartes s'associent par paires (une carte forte + une petite carte) pour le décompte :</p>
-                <table class="rules-table">
-                    <tr><th>Type de carte</th><th>Valeur en points</th></tr>
-                    <tr><td>Le Petit (1 d'atout), le 21 d'atout et l'Excuse (Les 3 Bouts)</td><td><strong>4,5 points</strong> chacun</td></tr>
-                    <tr><td>Un Roi</td><td><strong>4,5 points</strong></td></tr>
-                    <tr><td>Une Dame</td><td><strong>3,5 points</strong></td></tr>
-                    <tr><td>Un Cavalier</td><td><strong>2,5 points</strong></td></tr>
-                    <tr><td>Un Valet</td><td><strong>1,5 point</strong></td></tr>
-                    <tr><td>Cartes basses / ordinaires</td><td><strong>0,5 point</strong></td></tr>
-                </table>
-            </div>
-
-            <div class="rules-card">
-                <h3>4. Contrats et Bouts Nécessaires</h3>
-                <p>Le preneur doit atteindre un seuil de points précis selon le nombre de Bouts (1, 21, Excuse) qu'il a capturés dans ses plis :</p>
-                <ul>
-                    <li><strong>Avec 3 Bouts :</strong> 36 points minimum requis.</li>
-                    <li><strong>Avec 2 Bouts :</strong> 41 points minimum requis.</li>
-                    <li><strong>Avec 1 Bout :</strong> 51 points minimum requis.</li>
-                    <li><strong>Avec 0 Bout :</strong> 56 points minimum requis.</li>
-                </ul>
-            </div>
-
-            <h2>Avis des Testeurs & Foire Aux Questions (FAQ)</h2>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    « Enfin un jeu de tarot sur mobile qui respecte les vraies règles de nos soirées entre amis ! L'ambiance visuelle gothique est sublime et le jeu est totalement gratuit sans forcer l'achat. »
-                    <div class="testimonial-author">— Thomas M. (Testeur Bêta)</div>
-                </div>
-                <div class="testimonial-card">
-                    « Le mode 5 joueurs avec l'appel du roi fonctionne à la perfection. Les pubs sont extrêmement discrètes et ne coupent jamais en plein milieu d'une partie tendue. Bravo au développeur ! »
-                    <div class="testimonial-author">— Sarah L. (Passionnée de Tarot)</div>
-                </div>
-            </div>
-
-            <div class="rules-card" style="margin-top: 1.5rem;">
-                <h3>Questions Fréquentes</h3>
-                <p><strong>L'application est-elle vraiment gratuite ?</strong><br>
-                Oui ! Tarot Gothique est 100 % gratuit d'accès. Vous profitez de toutes les tables et des modes solo/multijoueur sans aucune barrière payante. Les pubs affichées sont légères et financent l'hébergement sécurisé des serveurs.</p>
-                
-                <p style="margin-top: 1rem;"><strong>Peut-on jouer sans connexion internet ?</strong><br>
-                Absolument. Le mode solo contre l'intelligence artificielle fonctionne entièrement en local sur votre appareil Android.</p>
-            </div>
-        </div>
-    </section>
-
     <footer>
-        <p>&copy; 2026 Tarot Gothique. Tous droits réservés. | <a href="#">Politique de confidentialité</a></p>
+        <p>&copy; 2026 Tarot Gothique (Cyril Darbost). Tous droits réservés. | <a href="apropos.html">Mentions Légales</a></p>
     </footer>
 </body>
 </html>
