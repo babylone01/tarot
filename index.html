@@ -50,25 +50,34 @@
             --border-color: #27273a;
         }
 
-        /* Masquer la bannière supérieure de Google Translate */
+        /* NE PAS MASQUER iframe.skiptranslate car c'est le menu déroulant ! */
         .goog-te-banner-frame,
         .goog-te-banner-frame.skiptranslate,
         #goog-gt-tt,
         .goog-te-balloon-frame,
-        .goog-te-spinner-pos,
-        iframe.skiptranslate {
+        .goog-te-spinner-pos {
             display: none !important;
             visibility: hidden !important;
             opacity: 0 !important;
             height: 0 !important;
             width: 0 !important;
         }
+        
+        /* Réautoriser l'affichage de la fenêtre IFrame du menu de choix des langues */
+        body > iframe.skiptranslate {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            position: absolute !important;
+            z-index: 9999999 !important;
+        }
+
         body {
             top: 0px !important;
             position: static !important;
         }
 
-        /* Configuration plein écran (F11) */
+        /* Configuration plein écran (F11) sans bloquer les popups */
         html, body {
             height: 100vh;
             max-height: 100vh;
@@ -89,6 +98,8 @@
             text-align: center;
             border-bottom: 2px solid var(--primary-gold);
             flex-shrink: 0;
+            position: relative;
+            z-index: 100;
         }
         h1 {
             color: var(--primary-gold);
