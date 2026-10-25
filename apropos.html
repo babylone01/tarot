@@ -4,21 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos & FAQ - Tarot Gothique 2026</title>
-    <meta name="description" content="Tout savoir sur Tarot Gothique 2026, l'application développée par Cyril Darbost. Foire aux questions, avis et mentions légales.">
+    <meta name="description" content="Projet Tarot Gothique 2026 créé par Cyril Darbost. FAQ, avis et présentation.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/apropos.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
-    
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'fr',
-          includedLanguages: 'en,de,es,ru,it,pt,ja',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: true
-        }, 'google_translate_element');
-      }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <style>
         :root {
@@ -30,51 +18,59 @@
             --text-muted: #94a3b8;
             --border-color: #27273a;
         }
-        body {
+
+        .goog-te-banner-frame,
+        .goog-te-banner-frame.skiptranslate,
+        #goog-gt-tt,
+        .goog-te-balloon-frame,
+        .goog-te-spinner-pos,
+        .VIpgJd-yD32fd-Aca33b,
+        iframe.skiptranslate,
+        iframe[id*=":1.container"],
+        iframe[id*=":2.container"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            height: 0 !important;
+            width: 0 !important;
+            pointer-events: none !important;
+        }
+
+        body { top: 0px !important; position: static !important; }
+
+        html, body {
+            height: 100vh;
+            max-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
             background-color: var(--bg-black);
             color: var(--text-main);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
             box-sizing: border-box;
         }
-        .lang-bar {
-            background-color: #0b0b0f;
-            text-align: right;
-            padding: 0.4rem 1rem;
-            border-bottom: 1px solid #27273a;
-            font-size: 0.8rem;
-        }
-        .goog-te-gadget-simple {
-            background-color: #161622 !important;
-            border: 1px solid #d4af37 !important;
-            padding: 3px 8px !important;
-            border-radius: 4px !important;
-            color: #e2e8f0 !important;
-        }
-        .goog-te-gadget-simple span {
-            color: #e2e8f0 !important;
-        }
+
         header {
             background-color: var(--header-bg);
-            padding: 1rem 1.5rem;
+            padding: 0.5rem 1rem;
             text-align: center;
             border-bottom: 2px solid var(--primary-gold);
+            flex-shrink: 0;
         }
         h1 {
             color: var(--primary-gold);
-            margin: 0 0 0.5rem 0;
-            font-size: 1.8rem;
-            letter-spacing: 2px;
+            margin: 0 0 0.2rem 0;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
         .main-nav {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 0.5rem;
+            align-items: center;
+            gap: 1.2rem;
             flex-wrap: wrap;
         }
         .main-nav a {
@@ -88,136 +84,232 @@
             color: var(--primary-gold);
             text-decoration: underline;
         }
+
+        .custom-lang-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 6px;
+            padding: 2px 8px;
+            margin-left: 0.5rem;
+        }
+        .lang-earth-icon {
+            width: 18px;
+            height: 18px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            flex-shrink: 0;
+        }
+        .custom-lang-select {
+            background: transparent;
+            color: var(--text-main);
+            border: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            font-family: inherit;
+        }
+        .custom-lang-select option {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+        }
+
+        #google_translate_element {
+            display: none !important;
+        }
+
         main {
             flex: 1;
-            max-width: 1000px;
+            max-width: 1200px;
             width: 100%;
             margin: 0 auto;
-            padding: 2rem 1.5rem;
+            padding: 0.6rem 1rem;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            justify-content: space-between;
+            gap: 0.6rem;
+            overflow: hidden;
         }
-        h2 {
-            color: var(--primary-gold);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
-        }
+
         .info-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 1.5rem;
+            padding: 0.8rem 1rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
         }
         .info-card h3 {
-            color: #f8fafc;
-            font-size: 1.15rem;
-            margin-top: 0;
+            color: var(--primary-gold);
+            font-size: 1rem;
+            margin: 0 0 0.3rem 0;
             border-left: 3px solid var(--primary-gold);
-            padding-left: 0.8rem;
+            padding-left: 0.5rem;
         }
         .info-card p {
             color: var(--text-muted);
-            line-height: 1.6;
-            margin: 0 0 1rem 0;
+            line-height: 1.35;
+            margin: 0;
+            font-size: 0.8rem;
         }
+
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 0.5rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            flex-shrink: 0;
         }
         .testimonial-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 1.2rem;
+            padding: 0.6rem 0.8rem;
             font-style: italic;
             color: var(--text-main);
-            position: relative;
+            font-size: 0.8rem;
+            line-height: 1.3;
         }
         .testimonial-author {
-            margin-top: 0.8rem;
+            margin-top: 0.3rem;
             font-style: normal;
             font-weight: bold;
             color: var(--primary-gold);
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             text-align: right;
         }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            flex: 1;
+            min-height: 0;
+        }
+        .faq-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.6rem 0.8rem;
+            overflow: hidden;
+        }
+        .faq-card h4 {
+            color: var(--primary-gold);
+            margin: 0 0 0.2rem 0;
+            font-size: 0.85rem;
+        }
+        .faq-card p {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            line-height: 1.3;
+            margin: 0;
+        }
+
         footer {
             background-color: var(--header-bg);
             text-align: center;
-            padding: 1rem;
-            font-size: 0.8rem;
+            padding: 0.4rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
             border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
         }
-        footer a {
-            color: var(--primary-gold);
-            text-decoration: none;
-        }
-        @media (max-width: 768px) {
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
+        footer a { color: var(--primary-gold); text-decoration: none; }
+
+        @media (max-width: 900px) {
+            html, body { overflow: auto; height: auto; }
+            .testimonials-grid, .faq-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <div class="lang-bar">
-        <span style="color: #94a3b8; margin-right: 8px;">🌐 Langue / Language:</span>
-        <span id="google_translate_element"></span>
-    </div>
 
     <header>
-        <h1>À propos & FAQ</h1>
+        <h1>À propos du Projet Tarot Gothique</h1>
         <nav class="main-nav">
             <a href="index.html">Accueil / Jeu</a>
             <a href="regles.html">Règles du Tarot</a>
             <a href="galerie.html">Galerie Photo</a>
             <a href="apropos.html" class="active">À propos & FAQ</a>
+            
+            <div class="custom-lang-container">
+                <img src="terre.jpeg" alt="Langue" class="lang-earth-icon">
+                <select id="languageSelect" class="custom-lang-select" onchange="changeLanguage(this.value)">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="pt">Português</option>
+                    <option value="ru">Русский</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <h2>Informations sur le projet et foire aux questions</h2>
+    <div id="google_translate_element"></div>
 
+    <main>
         <div class="info-card">
-            <h3>Le Projet Tarot Gothique</h3>
-            <p>Conçu et développé par <strong>Cyril Darbost</strong>, Tarot Gothique 2026 est né de la volonté de proposer un jeu de cartes traditionnel doté d'une identité visuelle forte, sombre et soignée, tout en garantissant des performances techniques irréprochables sur mobile et sur le web.</p>
+            <h3>Origine du Projet</h3>
+            <p>Conçu et développé par <strong>Cyril Darbost</strong>, Tarot Gothique 2026 propose un jeu de tarot traditionnel avec une identité gothique affirmée, fluide et optimisé pour le web et mobile.</p>
         </div>
 
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                « Enfin un jeu de tarot sur mobile qui respecte les vraies règles de nos soirées entre amis ! L'ambiance visuelle gothique est sublime et le jeu est totalement gratuit. »
-                <div class="testimonial-author">— Thomas M. (Testeur Bêta)</div>
+                « Un jeu de tarot très fidèle aux règles officielles avec un design sombre magnifique. »
+                <div class="testimonial-author">— Thomas M.</div>
             </div>
             <div class="testimonial-card">
-                « Le mode 5 joueurs avec l'appel du roi fonctionne à la perfection. Les pubs sont extrêmement discrètes et ne coupent jamais en plein milieu d'une partie. »
-                <div class="testimonial-author">— Sarah L. (Passionnée de Tarot)</div>
+                « L'appel du roi à 5 joueurs est parfaitement géré. Excellent travail. »
+                <div class="testimonial-author">— Sarah L.</div>
             </div>
         </div>
 
-        <div class="info-card" style="margin-top: 1rem;">
-            <h3>Foire Aux Questions (FAQ)</h3>
-            <p><strong>L'application est-elle gratuite ?</strong><br>
-            Oui, Tarot Gothique est 100 % gratuit d'accès pour toutes les tables et modes de jeu.</p>
-            
-            <p><strong>L'application est-elle compatible mobile ?</strong><br>
-            Absolument, le mode solo contre l'intelligence artificielle et l'application Android fonctionnent de pair avec le site web.</p>
-
-            <p><strong>Où contacter le développeur ?</strong><br>
-            Pour toute suggestion ou remontée de bug, vous pouvez passer par le dépôt GitHub officiel du projet.</p>
+        <div class="faq-grid">
+            <div class="faq-card">
+                <h4>Est-ce gratuit ?</h4>
+                <p>Oui, l'accès à l'application et au site est 100% gratuit.</p>
+            </div>
+            <div class="faq-card">
+                <h4>Mode Solo & Multijoueur ?</h4>
+                <p>Vous pouvez jouer contre des bots IA hors-ligne ou rejoindre des joueurs en ligne.</p>
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Tarot Gothique (Cyril Darbost). Tous droits réservés. | <a href="index.html">Accueil du Jeu</a></p>
+        <p>&copy; 2026 <strong>Cyril Darbost</strong> - Tarot Gothique | <a href="index.html">Retour à l'accueil</a></p>
     </footer>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'fr',
+          includedLanguages: 'fr,en,de,es,it,pt,ru,ja',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        }, 'google_translate_element');
+      }
+
+      function changeLanguage(langCode) {
+        var selectObj = document.querySelector('.goog-te-combo');
+        if (selectObj) {
+            selectObj.value = langCode;
+            selectObj.dispatchEvent(new Event('change'));
+        } else {
+            document.cookie = "googtrans=/fr/" + langCode + "; path=/;";
+            document.cookie = "googtrans=/fr/" + langCode + "; domain=" + window.location.hostname + "; path=/;";
+            location.reload();
+        }
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>

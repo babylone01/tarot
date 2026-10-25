@@ -2,50 +2,192 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Suppression de compte - Tarot Gothique</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppression de Compte - Tarot Gothique</title>
+
+    <style>
+        :root {
+            --primary-gold: #d4af37;
+            --bg-black: #0b0b0f;
+            --card-bg: #161622;
+            --header-bg: #12121a;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #27273a;
+        }
+
+        .goog-te-banner-frame,
+        .goog-te-banner-frame.skiptranslate,
+        #goog-gt-tt,
+        .goog-te-balloon-frame,
+        .goog-te-spinner-pos,
+        .VIpgJd-yD32fd-Aca33b,
+        iframe.skiptranslate,
+        iframe[id*=":1.container"],
+        iframe[id*=":2.container"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            height: 0 !important;
+            width: 0 !important;
+            pointer-events: none !important;
+        }
+
+        body { top: 0px !important; position: static !important; }
+
+        html, body {
+            height: 100vh;
+            max-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: var(--bg-black);
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            padding: 0.5rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-gold);
+            flex-shrink: 0;
+        }
+        h1 {
+            color: #ff5252;
+            margin: 0 0 0.2rem 0;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+
+        .custom-lang-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 6px;
+            padding: 2px 8px;
+            margin-left: 0.5rem;
+        }
+        .lang-earth-icon { width: 18px; height: 18px; object-fit: cover; border-radius: 50%; display: block; flex-shrink: 0; }
+        .custom-lang-select { background: transparent; color: var(--text-main); border: none; font-size: 0.85rem; font-weight: bold; cursor: pointer; outline: none; font-family: inherit; }
+        .custom-lang-select option { background-color: var(--card-bg); color: var(--text-main); }
+
+        #google_translate_element { display: none !important; }
+
+        main {
+            flex: 1;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.8rem 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.8rem;
+            overflow: hidden;
+        }
+
+        .box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        h2 { color: var(--primary-gold); font-size: 1rem; margin: 0 0 0.5rem 0; }
+        p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.4; margin: 0 0 0.8rem 0; }
+        .contact-box {
+            background: #1a1a26;
+            border: 1px solid var(--border-color);
+            padding: 0.8rem;
+            border-radius: 6px;
+            color: var(--text-main);
+            font-size: 0.85rem;
+        }
+        a { color: var(--primary-gold); }
+
+        footer {
+            background-color: var(--header-bg);
+            text-align: center;
+            padding: 0.4rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Suppression de compte & données</h1>
+        <div style="margin-top:0.3rem;">
+            <a href="index.html" style="color:var(--text-main); font-weight:bold; text-decoration:none; font-size:0.85rem; margin-right:1rem;">Retour à l'accueil</a>
+            <div class="custom-lang-container">
+                <img src="terre.jpeg" alt="Langue" class="lang-earth-icon">
+                <select id="languageSelect" class="custom-lang-select" onchange="changeLanguage(this.value)">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="pt">Português</option>
+                    <option value="ru">Русский</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div id="google_translate_element"></div>
+
+    <main>
+        <div class="box">
+            <h2>Demande de suppression définitive</h2>
+            <p>Conformément aux directives Google Play et au RGPD, vous pouvez demander l'effacement complet de votre compte et de vos scores Supabase.</p>
+            
+            <div class="contact-box">
+                <p style="margin:0 0 0.3rem 0;"><strong>E-mail :</strong> <a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a></p>
+                <p style="margin:0;"><strong>Objet :</strong> Suppression de compte - Tarot</p>
+            </div>
+            
+            <p style="margin-top:0.8rem; margin-bottom:0; font-size:0.75rem; color:#888;">Traitement sous 48 à 72 heures.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 <strong>Tarot Gothique</strong> | <a href="index.html">Accueil</a></p>
+    </footer>
+
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
           pageLanguage: 'fr',
-          includedLanguages: 'en,de,es,ru,it,pt,ja',
+          includedLanguages: 'fr,en,de,es,it,pt,ru,ja',
           layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: true
+          autoDisplay: false
         }, 'google_translate_element');
+      }
+
+      function changeLanguage(langCode) {
+        var selectObj = document.querySelector('.goog-te-combo');
+        if (selectObj) {
+            selectObj.value = langCode;
+            selectObj.dispatchEvent(new Event('change'));
+        } else {
+            document.cookie = "googtrans=/fr/" + langCode + "; path=/;";
+            document.cookie = "googtrans=/fr/" + langCode + "; domain=" + window.location.hostname + "; path=/;";
+            location.reload();
+        }
       }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #0b0b0f; color: #e0e0e0; margin: 0; padding: 40px; }
-        .container { max-width: 600px; margin: 0 auto; background: #161622; padding: 30px; border-radius: 8px; border: 1px solid #27273a; }
-        h1 { color: #ff5252; }
-        p, li { line-height: 1.6; }
-        .contact { background: #1a1a26; padding: 15px; border-radius: 5px; margin-top: 20px; border: 1px solid #27273a; }
-        a { color: #d4af37; }
-        .lang-bar { text-align: right; margin-bottom: 10px; }
-    </style>
-</head>
-<body>
-    <div class="lang-bar">
-        <span id="google_translate_element"></span>
-    </div>
-
-    <div class="container">
-        <h1>Suppression de compte et des données</h1>
-        <p>Conformément aux règles de Google Play, vous avez le droit de demander la suppression complète de votre compte et des données associées à notre jeu de Tarot.</p>
-        
-        <h2>Comment demander la suppression :</h2>
-        <p>Pour supprimer votre compte, vos statistiques et vos données enregistrées sur nos serveurs (Supabase), veuillez nous envoyer un e-mail à l'adresse ci-dessous :</p>
-
-        <div class="contact">
-            <p><strong>E-mail de contact :</strong> <a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a></p>
-            <p><strong>Objet de l'e-mail :</strong> Suppression de compte - Tarot</p>
-        </div>
-
-        <p style="margin-top: 30px; font-size: 0.9em; color: #aaa;">Vos données (pseudo, e-mail et données de jeu) seront supprimées définitivement dans un délai de 48 à 72 heures après réception de votre demande.</p>
-        
-        <p style="margin-top: 20px;"><a href="index.html">Retour à l'accueil</a></p>
-    </div>
 </body>
 </html>
