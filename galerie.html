@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie Photo - Jeu de Tarot Gothique 2026</title>
-    <meta name="description" content="Découvrez en images l'univers graphique de notre jeu de tarot. Captures d'écran, design gothique et illustrations.">
+    <meta name="description" content="Découvrez en images l'univers graphique de notre jeu de tarot. Captures d'écran, design gothique et illustrations de notre jeu gratuit.">
+    <meta name="keywords" content="galerie photo, jeu de tarot, tarot gothique, jeu gratuit, règles">
     <link rel="canonical" href="https://babylone01.github.io/tarot/galerie.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'fr',
+          includedLanguages: 'en,de,es,ru,it,pt,ja',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: true
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "https://babylone01.github.io/tarot/jeu-de-tarot.jpg",
+      "license": "https://babylone01.github.io/tarot/",
+      "acquireLicensePage": "https://babylone01.github.io/tarot/galerie.html",
+      "creditText": "Tarot Gothique",
+      "creator": {
+        "@type": "Person",
+        "name": "Cyril Darbost"
+      },
+      "copyrightNotice": "Tarot Gothique"
+    }
+    </script>
 
     <style>
         :root {
@@ -18,59 +47,52 @@
             --text-muted: #94a3b8;
             --border-color: #27273a;
         }
-
-        .goog-te-banner-frame,
-        .goog-te-banner-frame.skiptranslate,
-        #goog-gt-tt,
-        .goog-te-balloon-frame,
-        .goog-te-spinner-pos,
-        .VIpgJd-yD32fd-Aca33b,
-        iframe.skiptranslate,
-        iframe[id*=":1.container"],
-        iframe[id*=":2.container"] {
-            display: none !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            height: 0 !important;
-            width: 0 !important;
-            pointer-events: none !important;
-        }
-
-        body { top: 0px !important; position: static !important; }
-
-        html, body {
-            height: 100vh;
-            max-height: 100vh;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: var(--bg-black);
+        body {
+            background: linear-gradient(rgba(11, 11, 15, 0.85), rgba(11, 11, 15, 0.92)), url('background.jpg'); background-size: cover; background-position: center; background-attachment: fixed;
             color: var(--text-main);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
+            min-height: 100vh;
             box-sizing: border-box;
         }
-
+        .lang-bar {
+            background: linear-gradient(rgba(11, 11, 15, 0.85), rgba(11, 11, 15, 0.92)), url('background.jpg'); background-size: cover; background-position: center; background-attachment: fixed;
+            text-align: right;
+            padding: 0.4rem 1rem;
+            border-bottom: 1px solid #27273a;
+            font-size: 0.8rem;
+        }
+        .goog-te-gadget-simple {
+            background-color: #161622 !important;
+            border: 1px solid #d4af37 !important;
+            padding: 3px 8px !important;
+            border-radius: 4px !important;
+            color: #e2e8f0 !important;
+        }
+        .goog-te-gadget-simple span {
+            color: #e2e8f0 !important;
+        }
         header {
-            background-color: var(--header-bg);
-            padding: 0.5rem 1rem;
+            background-color: rgba(18, 18, 26, 0.92); backdrop-filter: blur(8px);
+            padding: 1rem 1.5rem;
             text-align: center;
             border-bottom: 2px solid var(--primary-gold);
-            flex-shrink: 0;
         }
         h1 {
             color: var(--primary-gold);
-            margin: 0 0 0.2rem 0;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
         .main-nav {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 1.2rem;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
             flex-wrap: wrap;
         }
         .main-nav a {
@@ -84,189 +106,114 @@
             color: var(--primary-gold);
             text-decoration: underline;
         }
-
-        .custom-lang-container {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: var(--card-bg);
-            border: 1px solid var(--primary-gold);
-            border-radius: 6px;
-            padding: 2px 8px;
-            margin-left: 0.5rem;
-        }
-        .lang-earth-icon {
-            width: 18px;
-            height: 18px;
-            object-fit: cover;
-            border-radius: 50%;
-            display: block;
-            flex-shrink: 0;
-        }
-        .custom-lang-select {
-            background: transparent;
-            color: var(--text-main);
-            border: none;
-            font-size: 0.85rem;
-            font-weight: bold;
-            cursor: pointer;
-            outline: none;
-            font-family: inherit;
-        }
-        .custom-lang-select option {
-            background-color: var(--card-bg);
-            color: var(--text-main);
-        }
-
-        #google_translate_element {
-            display: none !important;
-        }
-
         main {
             flex: 1;
-            max-width: 1200px;
+            max-width: 1100px;
             width: 100%;
             margin: 0 auto;
-            padding: 0.6rem 1rem;
+            padding: 2rem 1.5rem;
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            overflow: hidden;
         }
-
+        h2 {
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 0.8rem;
-            flex: 1;
-            min-height: 0;
+            gap: 1.5rem;
+            align-items: start;
         }
         .gallery-item {
-            background-color: var(--card-bg);
+            background-color: rgba(22, 22, 34, 0.88); backdrop-filter: blur(8px);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
-            height: 100%;
         }
         .gallery-img {
             width: 100%;
-            height: calc(100% - 24px);
-            object-fit: cover;
-            background-color: #000;
+            height: auto;
             display: block;
+            object-fit: contain;
+            background-color: #000;
+            border-bottom: 1px solid var(--border-color);
         }
         .gallery-caption {
-            padding: 0.2rem 0.5rem;
+            padding: 1rem;
             color: var(--text-muted);
-            font-size: 0.75rem;
+            font-size: 0.9rem;
             text-align: center;
-            background-color: var(--card-bg);
-            height: 24px;
-            line-height: 20px;
-            box-sizing: border-box;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
-
         footer {
-            background-color: var(--header-bg);
+            background-color: rgba(18, 18, 26, 0.92); backdrop-filter: blur(8px);
             text-align: center;
-            padding: 0.4rem;
-            font-size: 0.75rem;
+            padding: 1rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             border-top: 1px solid var(--border-color);
-            flex-shrink: 0;
         }
-        footer a { color: var(--primary-gold); text-decoration: none; }
-
-        @media (max-width: 900px) {
-            html, body { overflow: auto; height: auto; }
-            .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+        footer a {
+            color: var(--primary-gold);
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="lang-bar">
+        <span style="color: #94a3b8; margin-right: 8px;">🌐 Langue / Language:</span>
+        <span id="google_translate_element"></span>
+    </div>
 
     <header>
-        <h1>Galerie Visuelle du Jeu de Tarot Gothique</h1>
+        <h1>Galerie Photo - Captures Visuelles du Jeu de Tarot et de ses Règles</h1>
         <nav class="main-nav">
             <a href="index.html">Accueil / Jeu</a>
             <a href="regles.html">Règles du Tarot</a>
             <a href="galerie.html" class="active">Galerie Photo</a>
             <a href="apropos.html">À propos & FAQ</a>
-            
-            <div class="custom-lang-container">
-                <img src="terre.jpeg" alt="Langue" class="lang-earth-icon">
-                <select id="languageSelect" class="custom-lang-select" onchange="changeLanguage(this.value)">
-                    <option value="fr">Français</option>
-                    <option value="en">English</option>
-                    <option value="de">Deutsch</option>
-                    <option value="es">Español</option>
-                    <option value="it">Italiano</option>
-                    <option value="pt">Português</option>
-                    <option value="ru">Русский</option>
-                    <option value="ja">日本語</option>
-                </select>
-            </div>
         </nav>
     </header>
 
-    <div id="google_translate_element"></div>
-
     <main>
+        <h2>Immersion visuelle dans notre jeu de tarot</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Explorez les visuels de ce <strong>jeu gratuit</strong> de <em>tarot gothique</em> avant de consulter nos <strong>règles</strong> de jeu.
+        </p>
+
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="jeu-de-tarot.jpg" alt="Ambiance Jeu de Tarot" class="gallery-img">
-                <div class="gallery-caption">Ambiance visuelle et plateau de jeu</div>
+                <img src="jeu-de-tarot.jpg" alt="jeu de tarot - Tarot Gothique 2026" class="gallery-img" loading="lazy">
+                <div class="gallery-caption">Ambiance visuelle de notre jeu de tarot</div>
             </div>
             <div class="gallery-item">
-                <img src="banner.jpg" alt="Plateau de jeu gothique" class="gallery-img">
-                <div class="gallery-caption">Design des cartes gothiques uniques</div>
+                <img src="banner.jpg" alt="jeu de tarot - Plateau du jeu de cartes" class="gallery-img" loading="lazy">
+                <div class="gallery-caption">Plateau de ce <strong>jeu gratuit</strong> de <em>tarot</em></div>
             </div>
             <div class="gallery-item">
-                <img src="banner.jpg" alt="Menu du jeu de tarot" class="gallery-img">
-                <div class="gallery-caption">Interface multijoueur & solo</div>
+                <img src="banner.jpg" alt="jeu de tarot - Menu principal du jeu" class="gallery-img" loading="lazy">
+                <div class="gallery-caption">Menu principal et application du <em>tarot gothique</em></div>
             </div>
             <div class="gallery-item">
-                <img src="jeu-de-tarot.jpg" alt="Règles et plis du jeu" class="gallery-img">
-                <div class="gallery-caption">Calcul automatique des plis & score</div>
+                <img src="banner.jpg" alt="jeu de tarot - Application des règles du jeu" class="gallery-img" loading="lazy">
+                <div class="gallery-caption">Respect des <strong>règles</strong> et des plis</div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 <strong>Tarot Gothique</strong> - Galerie photo | <a href="index.html">Retour à l'accueil</a></p>
+        <p>&copy; 2026 <strong>Tarot Gothique</strong> - Galerie du jeu de tarot | <a href="index.html">Accueil du Jeu</a></p>
     </footer>
-
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'fr',
-          includedLanguages: 'fr,en,de,es,it,pt,ru,ja',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-        }, 'google_translate_element');
-      }
-
-      function changeLanguage(langCode) {
-        var selectObj = document.querySelector('.goog-te-combo');
-        if (selectObj) {
-            selectObj.value = langCode;
-            selectObj.dispatchEvent(new Event('change'));
-        } else {
-            document.cookie = "googtrans=/fr/" + langCode + "; path=/;";
-            document.cookie = "googtrans=/fr/" + langCode + "; domain=" + window.location.hostname + "; path=/;";
-            location.reload();
-        }
-      }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </body>
 </html>
