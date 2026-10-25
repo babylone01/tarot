@@ -9,7 +9,18 @@
     <link rel="canonical" href="https://babylone01.github.io/tarot/galerie.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
 
-    <!-- Données structurées Schema.org pour l'indexation sur Google Images -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'fr',
+          includedLanguages: 'en,de,es,ru,it,pt,ja',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: true
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,6 +57,23 @@
             flex-direction: column;
             min-height: 100vh;
             box-sizing: border-box;
+        }
+        .lang-bar {
+            background-color: #0b0b0f;
+            text-align: right;
+            padding: 0.4rem 1rem;
+            border-bottom: 1px solid #27273a;
+            font-size: 0.8rem;
+        }
+        .goog-te-gadget-simple {
+            background-color: #161622 !important;
+            border: 1px solid #d4af37 !important;
+            padding: 3px 8px !important;
+            border-radius: 4px !important;
+            color: #e2e8f0 !important;
+        }
+        .goog-te-gadget-simple span {
+            color: #e2e8f0 !important;
         }
         header {
             background-color: var(--header-bg);
@@ -93,12 +121,6 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             text-align: center;
-        }
-        mark {
-            background-color: rgba(212, 175, 55, 0.25);
-            color: #facc15;
-            padding: 0.1rem 0.3rem;
-            border-radius: 4px;
         }
         .gallery-grid {
             display: grid;
@@ -149,18 +171,23 @@
     </style>
 </head>
 <body>
+    <div class="lang-bar">
+        <span style="color: #94a3b8; margin-right: 8px;">🌐 Langue / Language:</span>
+        <span id="google_translate_element"></span>
+    </div>
+
     <header>
         <h1>Galerie Photo - Captures Visuelles du Jeu de Tarot et de ses Règles</h1>
         <nav class="main-nav">
             <a href="index.html">Accueil / Jeu</a>
-            <a href="règles.html">Règles du Tarot</a>
+            <a href="regles.html">Règles du Tarot</a>
             <a href="galerie.html" class="active">Galerie Photo</a>
-            <a href="à propos.html">À propos & FAQ</a>
+            <a href="apropos.html">À propos & FAQ</a>
         </nav>
     </header>
 
     <main>
-        <h2>Immersion visuelle dans notre <mark>jeu de tarot</mark></h2>
+        <h2>Immersion visuelle dans notre jeu de tarot</h2>
         <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">
             Explorez les visuels de ce <strong>jeu gratuit</strong> de <em>tarot gothique</em> avant de consulter nos <strong>règles</strong> de jeu.
         </p>
@@ -168,7 +195,7 @@
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="jeu-de-tarot.jpg" alt="jeu de tarot - Tarot Gothique 2026" class="gallery-img" loading="lazy">
-                <div class="gallery-caption">Ambiance visuelle de notre <mark>jeu de tarot</mark></div>
+                <div class="gallery-caption">Ambiance visuelle de notre jeu de tarot</div>
             </div>
             <div class="gallery-item">
                 <img src="banner.jpg" alt="jeu de tarot - Plateau du jeu de cartes" class="gallery-img" loading="lazy">
@@ -186,7 +213,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 <strong>Tarot Gothique</strong> - Galerie du <mark>jeu de tarot</mark> | <a href="index.html">Accueil du Jeu</a></p>
+        <p>&copy; 2026 <strong>Tarot Gothique</strong> - Galerie du jeu de tarot | <a href="index.html">Accueil du Jeu</a></p>
     </footer>
 </body>
 </html>
