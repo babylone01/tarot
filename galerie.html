@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie Photo - Jeu de Tarot Gothique 2026</title>
+    <title>Galerie Photo - Tarot Gothique 2026</title>
     <meta name="description" content="Découvrez en images l'univers graphique de notre jeu de tarot. Captures d'écran, design gothique et illustrations de notre jeu gratuit.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/galerie.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
 
     <script type="text/javascript">
+      (function() {
+          var userLang = navigator.language || navigator.userLanguage || 'fr';
+          var langCode = userLang.substring(0, 2);
+          var supportedLangs = ['fr', 'en', 'de', 'es', 'it', 'pt', 'ru', 'ja'];
+          if (!document.cookie.includes('googtrans=') && supportedLangs.includes(langCode) && langCode !== 'fr') {
+              document.cookie = "googtrans=/fr/" + langCode + "; path=/;";
+              document.cookie = "googtrans=/fr/" + langCode + "; domain=" + window.location.hostname + "; path=/;";
+          }
+      })();
+
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
           pageLanguage: 'fr',
@@ -23,8 +33,8 @@
     <style>
         :root {
             --primary-gold: #f3d060;
-            --card-bg: rgba(22, 22, 34, 0.82);
-            --header-bg: rgba(18, 18, 26, 0.88);
+            --card-bg: rgba(22, 22, 34, 0.85);
+            --header-bg: rgba(18, 18, 26, 0.90);
             --text-main: #f8fafc;
             --text-muted: #e2e8f0;
             --border-color: #d4af37;
@@ -273,28 +283,29 @@
     </footer>
 
     <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'fr',
-          includedLanguages: 'fr,en,de,es,it,pt,ru,ja',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-        }, 'google_translate_element');
-      }
-
       function changeLanguage(langCode) {
+        document.cookie = "googtrans=/fr/" + langCode + "; path=/;";
+        document.cookie = "googtrans=/fr/" + langCode + "; domain=" + window.location.hostname + "; path=/;";
         var selectObj = document.querySelector('.goog-te-combo');
         if (selectObj) {
             selectObj.value = langCode;
             selectObj.dispatchEvent(new Event('change'));
-        } else {
-            document.cookie = "googtrans=/fr/" + langCode + "; path=/;";
-            document.cookie = "googtrans=/fr/" + langCode + "; domain=" + window.location.hostname + "; path=/;";
-            location.reload();
         }
+        location.reload();
       }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+      // Synchroniser la valeur du select avec le cookie actif au chargement
+      window.addEventListener('DOMContentLoaded', function() {
+          var match = document.cookie.match(new RegExp('(^| )googtrans=([^;]+)'));
+          if (match) {
+              var parts = match[2].split('/');
+              if (parts.length >= 3 && parts[2]) {
+                  var lang = parts[2];
+                  var sel = document.getElementById('languageSelect');
+                  if (sel) { sel.value = lang; }
+              }
+          }
+      });
+    </script>
 </body>
 </html>
