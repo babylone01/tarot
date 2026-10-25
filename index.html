@@ -50,7 +50,7 @@
             --border-color: #27273a;
         }
 
-        /* Bloquer et masquer totalement tous les éléments de bannière de Google Translate */
+        /* Masquer la bannière supérieure de Google Translate */
         .goog-te-banner-frame,
         .goog-te-banner-frame.skiptranslate,
         #goog-gt-tt,
@@ -68,7 +68,7 @@
             position: static !important;
         }
 
-        /* Bloquer le scroll global pour le mode plein écran (F11) */
+        /* Configuration plein écran (F11) */
         html, body {
             height: 100vh;
             max-height: 100vh;
@@ -116,7 +116,7 @@
             text-decoration: underline;
         }
 
-        /* Sélecteur de langue avec l'image Terre.jpeg intégrée */
+        /* Sélecteur de langue avec terre.jpeg */
         .lang-inline-container {
             display: inline-flex;
             align-items: center;
@@ -126,6 +126,8 @@
             border-radius: 6px;
             padding: 2px 8px;
             margin-left: 0.5rem;
+            position: relative;
+            z-index: 9999;
         }
         .lang-earth-icon {
             width: 18px;
@@ -133,12 +135,14 @@
             object-fit: cover;
             border-radius: 50%;
             display: block;
+            flex-shrink: 0;
         }
         .goog-te-gadget-simple {
             background-color: transparent !important;
             border: none !important;
             padding: 0 !important;
             font-size: 0.8rem !important;
+            cursor: pointer !important;
         }
         .goog-te-gadget-simple span {
             color: var(--text-main) !important;
@@ -289,9 +293,8 @@
             <a href="galerie.html">Galerie Photo</a>
             <a href="apropos.html">À propos & FAQ</a>
             
-            <!-- Widget de langue avec l'image Terre.jpeg -->
             <div class="lang-inline-container">
-                <img src="Terre.jpeg" alt="Langue" class="lang-earth-icon">
+                <img src="terre.jpeg" alt="Langue" class="lang-earth-icon">
                 <span id="google_translate_element"></span>
             </div>
         </nav>
