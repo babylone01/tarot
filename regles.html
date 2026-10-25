@@ -15,11 +15,10 @@
             --card-bg: #161622;
             --header-bg: #12121a;
             --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
+            --text-muted: #cbd5e1;
             --border-color: #27273a;
         }
 
-        /* Masquer toutes les bannières et popups parasites Google Translate */
         .goog-te-banner-frame,
         .goog-te-banner-frame.skiptranslate,
         #goog-gt-tt,
@@ -37,18 +36,12 @@
             pointer-events: none !important;
         }
 
-        body {
-            top: 0px !important;
-            position: static !important;
-        }
+        body { top: 0px !important; position: static !important; }
 
-        /* Plein écran strict 16/9 sans défilement (100vh) */
         html, body {
-            height: 100vh;
-            max-height: 100vh;
+            min-height: 100vh;
             margin: 0;
             padding: 0;
-            overflow: hidden;
             background-color: var(--bg-black);
             color: var(--text-main);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -59,15 +52,15 @@
 
         header {
             background-color: var(--header-bg);
-            padding: 0.5rem 1rem;
+            padding: 0.8rem 1rem;
             text-align: center;
             border-bottom: 2px solid var(--primary-gold);
             flex-shrink: 0;
         }
         h1 {
             color: var(--primary-gold);
-            margin: 0 0 0.2rem 0;
-            font-size: 1.3rem;
+            margin: 0 0 0.3rem 0;
+            font-size: 1.5rem;
             letter-spacing: 1px;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
@@ -81,7 +74,7 @@
         .main-nav a {
             color: var(--text-main);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             font-weight: bold;
             transition: color 0.2s;
         }
@@ -90,7 +83,6 @@
             text-decoration: underline;
         }
 
-        /* Sélecteur personnalisé propre avec Terre.jpeg */
         .custom-lang-container {
             display: inline-flex;
             align-items: center;
@@ -98,7 +90,7 @@
             background: var(--card-bg);
             border: 1px solid var(--primary-gold);
             border-radius: 6px;
-            padding: 2px 8px;
+            padding: 3px 8px;
             margin-left: 0.5rem;
         }
         .lang-earth-icon {
@@ -130,64 +122,60 @@
 
         main {
             flex: 1;
-            max-width: 1200px;
+            max-width: 1100px;
             width: 100%;
             margin: 0 auto;
-            padding: 0.6rem 1rem;
+            padding: 1.2rem;
             box-sizing: border-box;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 0.8rem;
-            overflow: hidden;
+            gap: 1.2rem;
         }
 
         .rules-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 0.6rem 0.9rem;
+            padding: 1.2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            overflow: hidden;
         }
         .rules-card h3 {
             color: var(--primary-gold);
-            font-size: 0.95rem;
-            margin: 0 0 0.3rem 0;
-            border-left: 3px solid var(--primary-gold);
-            padding-left: 0.5rem;
+            font-size: 1.15rem;
+            margin: 0 0 0.6rem 0;
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 0.6rem;
         }
         .rules-card ul {
             color: var(--text-muted);
-            padding-left: 1rem;
-            line-height: 1.35;
+            padding-left: 1.2rem;
+            line-height: 1.5;
             margin: 0;
-            font-size: 0.78rem;
+            font-size: 0.95rem;
         }
         .rules-card li {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.5rem;
         }
         .rules-card p {
             color: var(--text-muted);
-            line-height: 1.3;
-            margin: 0 0 0.3rem 0;
-            font-size: 0.78rem;
+            line-height: 1.5;
+            margin: 0 0 0.6rem 0;
+            font-size: 0.95rem;
         }
 
         table.rules-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 0.2rem 0 0 0;
+            margin: 0.5rem 0;
             background-color: var(--header-bg);
         }
         table.rules-table th, table.rules-table td {
             border: 1px solid var(--border-color);
-            padding: 0.3rem 0.5rem;
+            padding: 0.6rem 0.8rem;
             text-align: left;
-            font-size: 0.75rem;
+            font-size: 0.9rem;
         }
         table.rules-table th {
             color: var(--primary-gold);
@@ -197,8 +185,8 @@
         footer {
             background-color: var(--header-bg);
             text-align: center;
-            padding: 0.4rem;
-            font-size: 0.75rem;
+            padding: 0.8rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             border-top: 1px solid var(--border-color);
             flex-shrink: 0;
@@ -209,15 +197,14 @@
         }
 
         @media (max-width: 900px) {
-            html, body { overflow: auto; height: auto; }
-            main { grid-template-columns: 1fr; grid-template-rows: auto; }
+            main { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Règles Officielles du Jeu de Tarot</h1>
+        <h1>Règles Officieuses & Guide du Tarot Gothique</h1>
         <nav class="main-nav">
             <a href="index.html">Accueil / Jeu</a>
             <a href="regles.html" class="active">Règles du Tarot</a>
@@ -244,47 +231,50 @@
 
     <main>
         <div class="rules-card">
-            <h3>1. Nombre de joueurs (3, 4 et 5)</h3>
+            <h3>1. Variations selon le nombre de joueurs (3, 4, 5 joueurs)</h3>
             <ul>
-                <li><strong>À 3 joueurs :</strong> 24 tarots distribués, 6 au chien. Chacun joue pour soi.</li>
-                <li><strong>À 4 joueurs :</strong> 18 cartes distribuées, 6 au chien. Jeu classique en solo contre la défense.</li>
-                <li><strong>À 5 joueurs (Gothique) :</strong> Appel du Roi. Le possesseur du roi devient l'allié secret du preneur.</li>
+                <li><strong>À 3 joueurs :</strong> 24 tarots distribués, 6 au chien. Chaque joueur joue pour soi contre les deux autres.</li>
+                <li><strong>À 4 joueurs :</strong> 18 cartes distribuées par joueur, 6 au chien. Jeu classique en solo contre la défense.</li>
+                <li><strong>À 5 joueurs (Spécificité Gothique) :</strong> Le preneur appelle un roi d'une couleur précise. Le joueur qui possède ce roi devient son partenaire secret pour la manche.</li>
             </ul>
         </div>
 
         <div class="rules-card">
-            <h3>2. Variantes Spécifiques Gothique</h3>
+            <h3>2. Règles Spécifiques de la Variante Gothique</h3>
             <ul>
-                <li><strong>Couleur appelée :</strong> Interdiction de jouer la couleur du roi appelé au 1er pli (sauf si entamé par le roi).</li>
-                <li><strong>Excuse au dernier pli :</strong> Si jouée au dernier pli, l'Excuse est perdue et ses points vont à l'adversaire.</li>
+                <li><strong>Règle de la couleur appelée :</strong> La couleur du roi appelé ne peut pas être jouée à la première levée (premier pli), <em>sauf si le joueur qui entame possède et joue directement ce roi</em>.</li>
+                <li><strong>Règle de l'Excuse au dernier pli :</strong> Si l'Excuse (le Fou) est jouée lors du dernier pli, elle est considérée comme perdue. Ses points et la carte vont au camp adverse.</li>
             </ul>
         </div>
 
         <div class="rules-card">
-            <h3>3. Valeur des Cartes (Plis)</h3>
+            <h3>3. Valeur des Cartes (Comptage des Plis)</h3>
+            <p>À la fin de la manche, les cartes s'associent par paires (une carte forte + une petite carte) pour le décompte :</p>
             <table class="rules-table">
-                <tr><th>Type de carte</th><th>Valeur</th></tr>
-                <tr><td>Les Bouts (1 d'atout, 21 d'atout, Excuse)</td><td><strong>4,5 pts</strong></td></tr>
-                <tr><td>Rois</td><td><strong>4,5 pts</strong></td></tr>
-                <tr><td>Dames / Cavaliers / Valets</td><td><strong>3,5 / 2,5 / 1,5 pts</strong></td></tr>
-                <tr><td>Cartes basses (basses)</td><td><strong>0,5 pt</strong></td></tr>
+                <tr><th>Type de carte</th><th>Valeur en points</th></tr>
+                <tr><td>Le Petit (1 d'atout), le 21 d'atout et l'Excuse (Les 3 Bouts)</td><td><strong>4,5 points</strong> chacun</td></tr>
+                <tr><td>Un Roi</td><td><strong>4,5 points</strong></td></tr>
+                <tr><td>Une Dame</td><td><strong>3,5 points</strong></td></tr>
+                <tr><td>Un Cavalier</td><td><strong>2,5 points</strong></td></tr>
+                <tr><td>Un Valet</td><td><strong>1,5 point</strong></td></tr>
+                <tr><td>Cartes basses / ordinaires</td><td><strong>0,5 point</strong></td></tr>
             </table>
         </div>
 
         <div class="rules-card">
-            <h3>4. Contrats & Bouts requis</h3>
-            <p style="margin-bottom:0.2rem;">Le preneur doit réaliser un score minimum selon ses Bouts :</p>
+            <h3>4. Contrats et Bouts Nécessaires</h3>
+            <p>Le preneur doit atteindre un seuil de points précis selon le nombre de Bouts (1, 21, Excuse) capturés :</p>
             <ul>
-                <li><strong>3 Bouts :</strong> 36 points minimum.</li>
-                <li><strong>2 Bouts :</strong> 41 points minimum.</li>
-                <li><strong>1 Bout :</strong> 51 points minimum.</li>
-                <li><strong>0 Bout :</strong> 56 points minimum.</li>
+                <li><strong>Avec 3 Bouts :</strong> 36 points minimum requis.</li>
+                <li><strong>Avec 2 Bouts :</strong> 41 points minimum requis.</li>
+                <li><strong>Avec 1 Bout :</strong> 51 points minimum requis.</li>
+                <li><strong>Avec 0 Bout :</strong> 56 points minimum requis.</li>
             </ul>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 <strong>Tarot Gothique</strong> - Règles du jeu | <a href="index.html">Retour à l'accueil</a></p>
+        <p>&copy; 2026 <strong>Tarot Gothique</strong> - Tous droits réservés | <a href="index.html">Accueil du Jeu</a></p>
     </footer>
 
     <script type="text/javascript">

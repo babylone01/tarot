@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos & FAQ - Tarot Gothique 2026</title>
-    <meta name="description" content="Projet Tarot Gothique 2026 créé par Cyril Darbost. FAQ, avis et présentation.">
+    <meta name="description" content="Tout savoir sur Tarot Gothique 2026, l'application développée par Cyril Darbost. Foire aux questions, avis et mentions légales.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/apropos.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
 
@@ -15,7 +15,7 @@
             --card-bg: #161622;
             --header-bg: #12121a;
             --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
+            --text-muted: #cbd5e1;
             --border-color: #27273a;
         }
 
@@ -39,11 +39,9 @@
         body { top: 0px !important; position: static !important; }
 
         html, body {
-            height: 100vh;
-            max-height: 100vh;
+            min-height: 100vh;
             margin: 0;
             padding: 0;
-            overflow: hidden;
             background-color: var(--bg-black);
             color: var(--text-main);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -54,15 +52,15 @@
 
         header {
             background-color: var(--header-bg);
-            padding: 0.5rem 1rem;
+            padding: 0.8rem 1rem;
             text-align: center;
             border-bottom: 2px solid var(--primary-gold);
             flex-shrink: 0;
         }
         h1 {
             color: var(--primary-gold);
-            margin: 0 0 0.2rem 0;
-            font-size: 1.3rem;
+            margin: 0 0 0.3rem 0;
+            font-size: 1.5rem;
             letter-spacing: 1px;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
@@ -76,7 +74,7 @@
         .main-nav a {
             color: var(--text-main);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             font-weight: bold;
             transition: color 0.2s;
         }
@@ -92,7 +90,7 @@
             background: var(--card-bg);
             border: 1px solid var(--primary-gold);
             border-radius: 6px;
-            padding: 2px 8px;
+            padding: 3px 8px;
             margin-left: 0.5rem;
         }
         .lang-earth-icon {
@@ -124,96 +122,66 @@
 
         main {
             flex: 1;
-            max-width: 1200px;
+            max-width: 1100px;
             width: 100%;
             margin: 0 auto;
-            padding: 0.6rem 1rem;
+            padding: 1.2rem;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            gap: 0.6rem;
-            overflow: hidden;
+            gap: 1.2rem;
         }
 
         .info-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 0.8rem 1rem;
+            padding: 1.2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            flex-shrink: 0;
         }
         .info-card h3 {
             color: var(--primary-gold);
-            font-size: 1rem;
-            margin: 0 0 0.3rem 0;
-            border-left: 3px solid var(--primary-gold);
-            padding-left: 0.5rem;
+            font-size: 1.15rem;
+            margin: 0 0 0.5rem 0;
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 0.6rem;
         }
         .info-card p {
             color: var(--text-muted);
-            line-height: 1.35;
-            margin: 0;
-            font-size: 0.8rem;
+            line-height: 1.6;
+            margin: 0 0 0.8rem 0;
+            font-size: 0.95rem;
         }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 0.8rem;
-            flex-shrink: 0;
+            gap: 1.2rem;
         }
         .testimonial-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 0.6rem 0.8rem;
+            padding: 1rem;
             font-style: italic;
             color: var(--text-main);
-            font-size: 0.8rem;
-            line-height: 1.3;
+            font-size: 0.92rem;
+            line-height: 1.4;
         }
         .testimonial-author {
-            margin-top: 0.3rem;
+            margin-top: 0.5rem;
             font-style: normal;
             font-weight: bold;
             color: var(--primary-gold);
-            font-size: 0.75rem;
-            text-align: right;
-        }
-
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.8rem;
-            flex: 1;
-            min-height: 0;
-        }
-        .faq-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 0.6rem 0.8rem;
-            overflow: hidden;
-        }
-        .faq-card h4 {
-            color: var(--primary-gold);
-            margin: 0 0 0.2rem 0;
             font-size: 0.85rem;
-        }
-        .faq-card p {
-            color: var(--text-muted);
-            font-size: 0.78rem;
-            line-height: 1.3;
-            margin: 0;
+            text-align: right;
         }
 
         footer {
             background-color: var(--header-bg);
             text-align: center;
-            padding: 0.4rem;
-            font-size: 0.75rem;
+            padding: 0.8rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             border-top: 1px solid var(--border-color);
             flex-shrink: 0;
@@ -221,8 +189,7 @@
         footer a { color: var(--primary-gold); text-decoration: none; }
 
         @media (max-width: 900px) {
-            html, body { overflow: auto; height: auto; }
-            .testimonials-grid, .faq-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -256,35 +223,37 @@
 
     <main>
         <div class="info-card">
-            <h3>Origine du Projet</h3>
-            <p>Conçu et développé par <strong>Cyril Darbost</strong>, Tarot Gothique 2026 propose un jeu de tarot traditionnel avec une identité gothique affirmée, fluide et optimisé pour le web et mobile.</p>
+            <h3>Le Projet Tarot Gothique 2026</h3>
+            <p>Conçu et développé par <strong>Cyril Darbost</strong>, <strong>Tarot Gothique 2026</strong> est né de la volonté de proposer un jeu de cartes traditionnel doté d'une identité visuelle forte, sombre et soignée, tout en garantissant des performances techniques irréprochables sur mobile et sur le web.</p>
+            <p>Le projet réunit à la fois un moteur de jeu fluide en solo contre l'intelligence artificielle, un système multijoueur temps réel et une expérience utilisateur immersive pensée pour les passionnés de tarot.</p>
         </div>
 
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                « Un jeu de tarot très fidèle aux règles officielles avec un design sombre magnifique. »
-                <div class="testimonial-author">— Thomas M.</div>
+                « Enfin un jeu de tarot sur mobile qui respecte les vraies règles de nos soirées entre amis ! L'ambiance visuelle gothique est sublime et le jeu est totalement gratuit. »
+                <div class="testimonial-author">— Thomas M. (Testeur Bêta)</div>
             </div>
             <div class="testimonial-card">
-                « L'appel du roi à 5 joueurs est parfaitement géré. Excellent travail. »
-                <div class="testimonial-author">— Sarah L.</div>
+                « Le mode 5 joueurs avec l'appel du roi fonctionne à la perfection. Les pubs sont extrêmement discrètes et ne coupent jamais en plein milieu d'une partie. »
+                <div class="testimonial-author">— Sarah L. (Passionnée de Tarot)</div>
             </div>
         </div>
 
-        <div class="faq-grid">
-            <div class="faq-card">
-                <h4>Est-ce gratuit ?</h4>
-                <p>Oui, l'accès à l'application et au site est 100% gratuit.</p>
-            </div>
-            <div class="faq-card">
-                <h4>Mode Solo & Multijoueur ?</h4>
-                <p>Vous pouvez jouer contre des bots IA hors-ligne ou rejoindre des joueurs en ligne.</p>
-            </div>
+        <div class="info-card">
+            <h3>Foire Aux Questions (FAQ)</h3>
+            <p><strong>L'application est-elle gratuite ?</strong><br>
+            Oui, Tarot Gothique est 100 % gratuit d'accès pour toutes les tables et modes de jeu.</p>
+            
+            <p><strong>L'application est-elle compatible mobile & PC ?</strong><br>
+            Absolument, le mode solo contre l'intelligence artificielle et l'application Android fonctionnent de pair avec le site web.</p>
+
+            <p style="margin-bottom: 0;"><strong>Où contacter le développeur ?</strong><br>
+            Pour toute suggestion ou remontée de bug, vous pouvez passer par le dépôt GitHub officiel du projet ou le serveur Discord de la communauté.</p>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 <strong>Cyril Darbost</strong> - Tarot Gothique | <a href="index.html">Retour à l'accueil</a></p>
+        <p>&copy; 2026 <strong>Tarot Gothique</strong> (Cyril Darbost). Tous droits réservés. | <a href="index.html">Accueil du Jeu</a></p>
     </footer>
 
     <script type="text/javascript">
