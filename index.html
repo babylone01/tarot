@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://babylone01.github.io/tarot/">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
     
-    <!-- Traduction automatique Google masquée & personnalisée -->
+    <!-- Traduction automatique Google masquée -->
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
@@ -50,12 +50,18 @@
             --border-color: #27273a;
         }
 
-        /* Masquer la bannière supérieure parasite de Google Translate */
-        .goog-te-banner-frame.skiptranslate, 
-        .goog-te-banner-frame, 
-        #goog-gt-tt, 
-        .goog-te-balloon-frame {
+        /* Bloquer et masquer totalement tous les éléments de bannière de Google Translate */
+        .goog-te-banner-frame,
+        .goog-te-banner-frame.skiptranslate,
+        #goog-gt-tt,
+        .goog-te-balloon-frame,
+        .goog-te-spinner-pos,
+        iframe.skiptranslate {
             display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            height: 0 !important;
+            width: 0 !important;
         }
         body {
             top: 0px !important;
@@ -110,20 +116,23 @@
             text-decoration: underline;
         }
 
-        /* Sélecteur de langue intégré à la barre de navigation avec icône globe */
+        /* Sélecteur de langue avec l'image Terre.jpeg intégrée */
         .lang-inline-container {
             display: inline-flex;
             align-items: center;
-            gap: 0.3rem;
+            gap: 0.4rem;
             background: var(--card-bg);
             border: 1px solid var(--primary-gold);
             border-radius: 6px;
-            padding: 2px 6px;
+            padding: 2px 8px;
             margin-left: 0.5rem;
         }
-        .globe-icon {
-            font-size: 0.9rem;
-            line-height: 1;
+        .lang-earth-icon {
+            width: 18px;
+            height: 18px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
         }
         .goog-te-gadget-simple {
             background-color: transparent !important;
@@ -280,9 +289,9 @@
             <a href="galerie.html">Galerie Photo</a>
             <a href="apropos.html">À propos & FAQ</a>
             
-            <!-- Widget de langue avec globe intégré -->
+            <!-- Widget de langue avec l'image Terre.jpeg -->
             <div class="lang-inline-container">
-                <span class="globe-icon">🌐</span>
+                <img src="Terre.jpeg" alt="Langue" class="lang-earth-icon">
                 <span id="google_translate_element"></span>
             </div>
         </nav>
