@@ -6,56 +6,16 @@
     <title>ゴシック・タロット 2026 - 無料のフランス式タロットゲーム</title>
     <meta name="description" content="ゴシックタロット2026。ダークな雰囲気のフランス式タロットカードゲーム。AIとのソロプレイやオンライン対戦が無料。">
     <link rel="canonical" href="https://babylone01.github.io/tarot/index_ja.html">
-    <link rel="alternate" hreflang="fr" href="https://babylone01.github.io/tarot/">
-    <link rel="alternate" hreflang="en" href="https://babylone01.github.io/tarot/index_en.html">
-    <link rel="alternate" hreflang="es" href="https://babylone01.github.io/tarot/index_es.html">
-    <link rel="alternate" hreflang="de" href="https://babylone01.github.io/tarot/index_de.html">
-    <link rel="alternate" hreflang="pt" href="https://babylone01.github.io/tarot/index_pt.html">
-    <link rel="alternate" hreflang="ru" href="https://babylone01.github.io/tarot/index_ru.html">
-    <link rel="alternate" hreflang="ja" href="https://babylone01.github.io/tarot/index_ja.html">
-    <link rel="alternate" hreflang="zh" href="https://babylone01.github.io/tarot/index_zh.html">
-    <link rel="alternate" hreflang="x-default" href="https://babylone01.github.io/tarot/">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
-    
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'ja',
-          includedLanguages: 'fr,en,es,de,pt,ru,ja,zh',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-        }, 'google_translate_element');
-      }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
     <style>
         :root {
             --primary-gold: #f3d060;
-            --card-bg: rgba(22, 22, 34, 0.78);
-            --header-bg: rgba(18, 18, 26, 0.85);
+            --card-bg: rgba(22, 22, 34, 0.82);
+            --header-bg: rgba(18, 18, 26, 0.88);
             --text-main: #f8fafc;
             --text-muted: #e2e8f0;
             --border-color: #d4af37;
         }
-
-        .goog-te-banner-frame,
-        .goog-te-banner-frame.skiptranslate,
-        #goog-gt-tt,
-        .goog-te-balloon-frame,
-        .goog-te-spinner-pos,
-        .VIpgJd-yD32fd-Aca33b,
-        iframe.skiptranslate {
-            display: none !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            height: 0 !important;
-            width: 0 !important;
-            pointer-events: none !important;
-        }
-
-        body { top: 0px !important; position: static !important; }
-
         html, body {
             height: 100vh;
             max-height: 100vh;
@@ -71,11 +31,10 @@
             flex-direction: column;
             box-sizing: border-box;
         }
-
         header {
             background-color: var(--header-bg);
             backdrop-filter: blur(10px);
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1rem;
             text-align: center;
             border-bottom: 2px solid var(--primary-gold);
             flex-shrink: 0;
@@ -84,8 +43,8 @@
         }
         h1 {
             color: var(--primary-gold);
-            margin: 0 0 0.2rem 0;
-            font-size: 1.3rem;
+            margin: 0 0 0.3rem 0;
+            font-size: 1.4rem;
             letter-spacing: 1px;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
         }
@@ -93,13 +52,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1.2rem;
             flex-wrap: wrap;
         }
         .main-nav a {
             color: var(--text-main);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             font-weight: bold;
             transition: color 0.2s;
         }
@@ -107,7 +66,6 @@
             color: var(--primary-gold);
             text-decoration: underline;
         }
-
         .lang-switch {
             background: var(--card-bg);
             border: 1px solid var(--primary-gold);
@@ -119,9 +77,6 @@
             font-weight: bold;
         }
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
-
-        #google_translate_element { display: none !important; }
-
         main {
             flex: 1;
             max-width: 1200px;
@@ -129,36 +84,17 @@
             margin: 0 auto;
             padding: 0.8rem 1rem;
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 0.6rem;
+            display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem;
             overflow: hidden;
         }
-
-        .top-description {
-            text-align: center;
+        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card {
             background-color: var(--card-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 0.8rem 1rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            flex-shrink: 0;
         }
-        .top-description h2 {
-            color: #ffffff;
-            font-size: 1.25rem;
-            margin: 0 0 0.3rem 0;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-        }
-        .top-description p {
-            color: var(--text-muted);
-            font-size: 0.92rem;
-            line-height: 1.35;
-            margin: 0;
-        }
-
         .media-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -178,43 +114,16 @@
             background-color: #000;
             box-sizing: border-box;
         }
-        .video-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
+        .video-container iframe { width: 100%; height: 100%; border: none; }
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 0.8rem;
             flex-shrink: 0;
         }
-        .feature-card {
-            background-color: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 0.7rem 0.9rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-        }
-        .feature-card h3 {
-            color: var(--primary-gold);
-            margin: 0 0 0.3rem 0;
-            font-size: 1.02rem;
-        }
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin: 0;
-            line-height: 1.3;
-        }
-
-        .cta-container {
-            text-align: center;
-            margin: 0.2rem 0;
-            flex-shrink: 0;
-        }
+        .feature-card h3 { color: var(--primary-gold); margin: 0 0 0.3rem 0; font-size: 1.02rem; }
+        .feature-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; line-height: 1.3; }
+        .cta-container { text-align: center; margin: 0.2rem 0; flex-shrink: 0; }
         .cta-button {
             display: inline-block;
             background-color: var(--primary-gold);
@@ -224,14 +133,16 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1.02rem;
-            transition: background-color 0.2s, transform 0.2s;
             box-shadow: 0 0 14px rgba(212, 175, 55, 0.6);
         }
-        .cta-button:hover {
-            background-color: #ffe082;
-            transform: translateY(-2px);
-        }
-
+        table.rules-table { width: 100%; border-collapse: collapse; margin: 0.3rem 0; background-color: rgba(18, 18, 26, 0.88); }
+        table.rules-table th, table.rules-table td { border: 1px solid var(--border-color); padding: 0.4rem 0.7rem; font-size: 0.88rem; }
+        table.rules-table th { color: var(--primary-gold); background-color: rgba(26, 26, 38, 0.95); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .gallery-img { width: 100%; max-height: 140px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
+        .gallery-caption { padding: 0.5rem; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
+        .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+        .testimonial-author { margin-top: 0.4rem; font-weight: bold; color: var(--primary-gold); text-align: right; font-size: 0.9rem; }
         footer {
             background-color: var(--header-bg);
             backdrop-filter: blur(10px);
@@ -243,41 +154,40 @@
             flex-shrink: 0;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
-
-        @media (max-width: 900px) {
-            html, body { overflow: auto; height: auto; }
-            .media-row, .features-grid { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-
     <header>
         <h1>ゴシック・タロット — 公式ハブ</h1>
+        
         <nav class="main-nav">
             <a href="index_ja.html" class="active">ホーム</a>
-            <a href="index.html" class="lang-switch">🇫🇷 FR</a>
-            <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
-            <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
-            <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
-            <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
-            <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
-            <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
-            <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+            <a href="regles_ja.html" class="">ルール</a>
+            <a href="galerie_ja.html" class="">ギャラリー</a>
+            <a href="apropos_ja.html" class="">概要</a>
+            <div style="display:inline-flex; gap:3px; margin-left:10px;">
+                <a href="index.html" class="lang-switch">🇫🇷 FR</a>
+                <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
+                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
+                <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
+                <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
+                <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
+                <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
+                <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+            </div>
         </nav>
+    
     </header>
-
-    <div id="google_translate_element"></div>
-
     <main>
+        
         <div class="top-description">
             <h2>究極の無料フランス式タロットオンライン体験</h2>
             <p>ゴシック・タロットへようこそ。ダークなテーマを持つ伝統的なフランス式タロットカードゲームをお楽しみください。賢いAIとのソロプレイや、白熱のマルチプレイ対戦が完全無料です。</p>
         </div>
-
         <div class="media-row">
             <div class="media-item" style="height: 100%;">
-                <img src="banner.jpg" alt="Gothic Tarot Banner" class="hero-banner">
+                <img src="banner.jpg" alt="Banner" class="hero-banner">
             </div>
             <div class="media-item" style="height: 100%;">
                 <div class="video-container">
@@ -285,7 +195,6 @@
                 </div>
             </div>
         </div>
-
         <div class="features-grid">
             <div class="feature-card">
                 <h3>マルチプレイ & ソロ</h3>
@@ -300,15 +209,13 @@
                 <p>3人、4人、5人プレイ向けのフランス式タロットの公式ルール、コントラクト、スコア計算をマスターしよう。</p>
             </div>
         </div>
-
         <div class="cta-container">
             <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Google Playでダウンロード</a>
         </div>
+        
     </main>
-
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="privacy.html">プライバシーポリシー</a></p>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ja.html">ホーム</a> | <a href="apropos_ja.html">法的事項</a> | <a href="privacy_ja.html">プライバシー</a> | <a href="delete_ja.html">アカウント削除</a></p>
     </footer>
-
 </body>
 </html>

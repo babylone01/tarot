@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правила Таро и Подсчет Очков - Готический Таро 2026</title>
+    <meta name="description" content="Официальные правила французского таро для 3, 4 и 5 игроков. Узнайте как считать очки и контракты.">
+    <link rel="canonical" href="https://babylone01.github.io/tarot/regles_ru.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
+    <style>
+        :root {
+            --primary-gold: #f3d060;
+            --card-bg: rgba(22, 22, 34, 0.82);
+            --header-bg: rgba(18, 18, 26, 0.88);
+            --text-main: #f8fafc;
+            --text-muted: #e2e8f0;
+            --border-color: #d4af37;
+        }
+        html, body {
+            height: 100vh;
+            max-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            padding: 0.6rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-gold);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 100;
+        }
+        h1 {
+            color: var(--primary-gold);
+            margin: 0 0 0.3rem 0;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        main {
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.8rem 1rem;
+            box-sizing: border-box;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; align-content: stretch;
+            overflow: hidden;
+        }
+        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .media-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            align-items: center;
+            flex: 1;
+            min-height: 0;
+        }
+        .hero-banner, .video-container {
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+            border: 2px solid var(--primary-gold);
+            box-shadow: 0 0 16px rgba(212, 175, 55, 0.5);
+            object-fit: cover;
+            background-color: #000;
+            box-sizing: border-box;
+        }
+        .video-container iframe { width: 100%; height: 100%; border: none; }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            flex-shrink: 0;
+        }
+        .feature-card h3 { color: var(--primary-gold); margin: 0 0 0.3rem 0; font-size: 1.02rem; }
+        .feature-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; line-height: 1.3; }
+        .cta-container { text-align: center; margin: 0.2rem 0; flex-shrink: 0; }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-gold);
+            color: #0b0b0f;
+            padding: 0.6rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.02rem;
+            box-shadow: 0 0 14px rgba(212, 175, 55, 0.6);
+        }
+        table.rules-table { width: 100%; border-collapse: collapse; margin: 0.3rem 0; background-color: rgba(18, 18, 26, 0.88); }
+        table.rules-table th, table.rules-table td { border: 1px solid var(--border-color); padding: 0.4rem 0.7rem; font-size: 0.88rem; }
+        table.rules-table th { color: var(--primary-gold); background-color: rgba(26, 26, 38, 0.95); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .gallery-img { width: 100%; max-height: 140px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
+        .gallery-caption { padding: 0.5rem; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
+        .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+        .testimonial-author { margin-top: 0.4rem; font-weight: bold; color: var(--primary-gold); text-align: right; font-size: 0.9rem; }
+        footer {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        footer a { color: var(--primary-gold); text-decoration: none; }
+        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Официальные Правила и Руководство по Готическому Таро</h1>
+        
+        <nav class="main-nav">
+            <a href="index_ru.html" class="">Главная</a>
+            <a href="regles_ru.html" class="active">Правила</a>
+            <a href="galerie_ru.html" class="">Галерея</a>
+            <a href="apropos_ru.html" class="">О проекте</a>
+            <div style="display:inline-flex; gap:3px; margin-left:10px;">
+                <a href="index.html" class="lang-switch">🇫🇷 FR</a>
+                <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
+                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
+                <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
+                <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
+                <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
+                <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
+                <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+            </div>
+        </nav>
+    
+    </header>
+    <main>
+        
+        <div class="rules-card">
+            <h3>1. Варианты по количеству игроков (3, 4, 5 игроков)</h3>
+            <ul>
+                <li><strong>На 3 игрока:</strong> раздается 24 карты таро, 6 в прикуп. Каждый играет сам за себя против двоих других.</li>
+                <li><strong>На 4 игрока:</strong> 18 карт игроку, 6 в прикуп. Классическая игра соло против защиты.</li>
+                <li><strong>На 5 игроков:</strong> Берущий вызывает короля нужной масти. Игрок с этим королем становится его тайным партнером.</li>
+            </ul>
+        </div>
+        <div class="rules-card">
+            <h3>2. Особые правила готического варианта</h3>
+            <ul>
+                <li><strong>Правило вызванной масти:</strong> Масть вызванного короля не может быть сыграна в первой взятке, <em>если только ходящий сам не играет этим королем</em>.</li>
+                <li><strong>Правило Апологии (Excuse) на последней взятке:</strong> Если Excuse разыграна на последней взятке, она считается проигранной.</li>
+            </ul>
+        </div>
+        <div class="rules-card">
+            <h3>3. Стоимость карт (Подсчет взяток)</h3>
+            <p>В конце раунда карты объединяются в пары (старшая + младшая) для подсчета:</p>
+            <table class="rules-table">
+                <tr><th>Тип карты</th><th>Стоимость в очках</th></tr>
+                <tr><td>Пети (1 козырь), 21 козырь и Excuse (3 Упаковки / Bouts)</td><td><strong>4.5 очка</strong> каждая</td></tr>
+                <tr><td>Король</td><td><strong>4.5 очка</strong></td></tr>
+                <tr><td>Дама</td><td><strong>3.5 очка</strong></td></tr>
+                <tr><td>Кавалер</td><td><strong>2.5 очка</strong></td></tr>
+                <tr><td>Валет</td><td><strong>1.5 очка</strong></td></tr>
+                <tr><td>Младшие / обычные карты</td><td><strong>0.5 очка</strong></td></tr>
+            </table>
+        </div>
+        <div class="rules-card">
+            <h3>4. Контракты и необходимые Bouts</h3>
+            <p>Берущий должен набрать точный порог очков в зависимости от захваченных Bouts (1, 21, Excuse):</p>
+            <ul>
+                <li><strong>С 3 Bouts:</strong> требуется минимум 36 очков.</li>
+                <li><strong>С 2 Bouts:</strong> требуется минимум 41 очко.</li>
+                <li><strong>С 1 Bout:</strong> требуется минимум 51 очко.</li>
+                <li><strong>Без Bouts:</strong> требуется минимум 56 очков.</li>
+            </ul>
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ru.html">Главная</a> | <a href="apropos_ru.html">Правовая информация</a> | <a href="privacy_ru.html">Конфиденциальность</a> | <a href="delete_ru.html">Удалить аккаунт</a></p>
+    </footer>
+</body>
+</html>
