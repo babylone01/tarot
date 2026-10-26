@@ -22,19 +22,19 @@
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(rgba(11, 12, 16, 0.7), rgba(11, 12, 16, 0.9)), url('terre.jpeg') no-repeat center center/cover;
+            background: linear-gradient(rgba(11, 12, 16, 0.75), rgba(11, 12, 16, 0.9)), url('background.jpg') no-repeat center center/cover;
             text-align: center;
-            padding: 90px 20px;
+            padding: 100px 20px;
             border-bottom: 2px solid var(--accent);
         }
         header h1 {
             color: var(--text-heading);
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+            text-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
         }
         header p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--text-main);
             max-width: 700px;
             margin: 0 auto;
@@ -69,7 +69,7 @@
             color: var(--gold);
             margin-top: 0;
         }
-        ul {
+        ul, ol {
             padding-left: 20px;
         }
         li {
@@ -112,15 +112,17 @@
         }
         .gallery-item img {
             width: 100%;
-            height: auto;
+            height: 180px;
+            object-fit: cover;
             display: block;
+            background-color: #000;
         }
         .gallery-item p {
-            padding: 10px;
+            padding: 12px;
             margin: 0;
             font-size: 0.95rem;
             color: var(--text-heading);
-            background: rgba(31, 40, 51, 0.8);
+            background: rgba(31, 40, 51, 0.9);
         }
         footer {
             text-align: center;
