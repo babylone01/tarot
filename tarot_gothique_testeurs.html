@@ -22,22 +22,25 @@
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(rgba(11, 12, 16, 0.75), rgba(11, 12, 16, 0.9)), url('jeu-tarot-gothique-ambiance-principale.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(11, 12, 16, 0.4), rgba(11, 12, 16, 0.8)), url('hero-tarot-gothique.jpg') no-repeat center center;
+            background-size: cover;
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px;
             border-bottom: 2px solid var(--accent);
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
         }
         header h1 {
             color: var(--text-heading);
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(102, 252, 241, 0.6);
         }
         header p {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             color: var(--text-main);
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
         .container {
             max-width: 950px;
@@ -124,6 +127,14 @@
             color: var(--text-heading);
             background: rgba(31, 40, 51, 0.9);
         }
+        .featured-image {
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid var(--accent);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            margin-top: 15px;
+            display: block;
+        }
         footer {
             text-align: center;
             padding: 30px;
@@ -184,8 +195,11 @@
         </div>
 
         <div class="card">
-            <h2>Galerie & Captures du jeu</h2>
-            <p>Découvrez l'interface immersive, les tournois et les tables multijoueurs :</p>
+            <h2>Galerie & Visuels du jeu</h2>
+            <p>L'ambiance graphique de la Faucheuse et de ses cartes mystiques :</p>
+            <img src="faucheuse-tarot-gothique.jpg" alt="Faucheuse et cartes du Tarot Gothique" class="featured-image">
+            <p style="text-align: center; font-style: italic; color: var(--accent); margin-top: 10px; margin-bottom: 25px;">L'emblématique Faucheuse veillant sur les arcanes du Tarot Gothique.</p>
+            
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="jeu-tarot-cinq-joueurs-menu-principal.jpg" alt="Jeu Tarot 5 Joueurs Menu Principal">
