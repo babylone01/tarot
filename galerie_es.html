@@ -95,54 +95,9 @@
             padding: 0.8rem 1rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
-        .media-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            align-items: center;
-            flex: 1;
-            min-height: 0;
-        }
-        .hero-banner, .video-container {
-            width: 100%;
-            height: 100%;
-            max-height: 100%;
-            border-radius: 8px;
-            border: 2px solid var(--primary-gold);
-            box-shadow: 0 0 16px rgba(212, 175, 55, 0.5);
-            object-fit: cover;
-            background-color: #000;
-            box-sizing: border-box;
-        }
-        .video-container iframe { width: 100%; height: 100%; border: none; }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.8rem;
-            flex-shrink: 0;
-        }
-        .feature-card h3 { color: var(--primary-gold); margin: 0 0 0.3rem 0; font-size: 1.02rem; }
-        .feature-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; line-height: 1.3; }
-        .cta-container { text-align: center; margin: 0.2rem 0; flex-shrink: 0; }
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-gold);
-            color: #0b0b0f;
-            padding: 0.6rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.02rem;
-            box-shadow: 0 0 14px rgba(212, 175, 55, 0.6);
-        }
-        table.rules-table { width: 100%; border-collapse: collapse; margin: 0.3rem 0; background-color: rgba(18, 18, 26, 0.88); }
-        table.rules-table th, table.rules-table td { border: 1px solid var(--border-color); padding: 0.4rem 0.7rem; font-size: 0.88rem; }
-        table.rules-table th { color: var(--primary-gold); background-color: rgba(26, 26, 38, 0.95); }
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
         .gallery-img { width: 100%; max-height: 140px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
         .gallery-caption { padding: 0.5rem; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
-        .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-        .testimonial-author { margin-top: 0.4rem; font-weight: bold; color: var(--primary-gold); text-align: right; font-size: 0.9rem; }
         footer {
             background-color: var(--header-bg);
             backdrop-filter: blur(10px);
@@ -154,7 +109,7 @@
             flex-shrink: 0;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
-        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .gallery-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -162,10 +117,10 @@
         <h1>Galería de Fotos - Capturas Visuales del Juego de Tarot</h1>
         
         <nav class="main-nav">
-            <a href="index_es.html" class="">Inicio</a>
-            <a href="regles_es.html" class="">Reglas</a>
+            <a href="index_es.html">Inicio</a>
+            <a href="regles_es.html">Reglas</a>
             <a href="galerie_es.html" class="active">Galería</a>
-            <a href="apropos_es.html" class="">Acerca de y FAQ</a>
+            <a href="apropos_es.html">Acerca de y FAQ</a>
             <div style="display:inline-flex; gap:3px; margin-left:10px;">
                 <a href="index.html" class="lang-switch">🇫🇷 FR</a>
                 <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
@@ -195,12 +150,12 @@
                 <div class="gallery-caption">Tablero de este juego gratuito de cartas de tarot</div>
             </div>
             <div class="gallery-item">
-                <img src="banner.jpg" alt="Banner" class="gallery-img" loading="lazy">
+                <img src="jeu_de_tarot_2026.jpg" alt="Main menu" class="gallery-img" loading="lazy">
                 <div class="gallery-caption">Menú principal y aplicación del tarot gótico</div>
             </div>
             <div class="gallery-item">
-                <img src="banner.jpg" alt="Banner" class="gallery-img" loading="lazy">
-                <div class="gallery-caption">Respeto de las reglas y bazas</div>
+                <img src="faucheuse_cartes_tarot_gothique.jpg" alt="Tournament" class="gallery-img" loading="lazy">
+                <div class="gallery-caption">Torneo de fin de semana y clasificaciones</div>
             </div>
         </div>
         
