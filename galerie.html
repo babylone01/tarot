@@ -147,9 +147,10 @@
         table.rules-table { width: 100%; border-collapse: collapse; margin: 0.3rem 0; background-color: rgba(18, 18, 26, 0.88); }
         table.rules-table th, table.rules-table td { border: 1px solid var(--border-color); padding: 0.4rem 0.7rem; font-size: 0.88rem; }
         table.rules-table th { color: var(--primary-gold); background-color: rgba(26, 26, 38, 0.95); }
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-        .gallery-img { width: 100%; max-height: 140px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
-        .gallery-caption { padding: 0.5rem; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+        .gallery-item { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding: 0.4rem; }
+        .gallery-img { width: 100%; max-height: 110px; object-fit: cover; border-radius: 4px; border-bottom: 1px solid var(--border-color); }
+        .gallery-caption { padding: 0.3rem; color: var(--text-muted); font-size: 0.78rem; text-align: center; }
         .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
         .testimonial-author { margin-top: 0.4rem; font-weight: bold; color: var(--primary-gold); text-align: right; font-size: 0.9rem; }
         footer {
@@ -194,12 +195,20 @@
         </div>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="galerie1.jpg" alt="Tapis de Jeu Tarot Gothique 5 Joueurs" class="gallery-img">
-                <div class="gallery-caption" id="design">Table de Jeu à 5 Joueurs & Appel du Roi</div>
+                <img src="jeu-tarot-gothique-ambiance-principale.jpg" alt="Ambiance Principale - Haut Gauche" class="gallery-img">
+                <div class="gallery-caption" id="design">1. Ambiance Principale (Haut Gauche)</div>
             </div>
             <div class="gallery-item">
-                <img src="galerie2.jpg" alt="Interface d'Enchères et Cartes Gothiques" class="gallery-img">
-                <div class="gallery-caption">Écran d'Enchères FFT et Cartes Personnalisées</div>
+                <img src="jeu_de_tarot_2026.jpg" alt="Salle Gothique & Cartes - Haut Droite" class="gallery-img">
+                <div class="gallery-caption">2. Salle Gothique & Cartes (Haut Droite)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="application-jeu_tarot_gothique.jpg" alt="Table de Jeu Active - Bas Gauche" class="gallery-img">
+                <div class="gallery-caption">3. Table de Jeu Active (Bas Gauche)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="faucheuse_cartes_tarot_gothique.jpg" alt="Tournoi du Week-End - Bas Droite" class="gallery-img">
+                <div class="gallery-caption">4. Tournoi du Week-End (Bas Droite)</div>
             </div>
         </div>
     </main>
