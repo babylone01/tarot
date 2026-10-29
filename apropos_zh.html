@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于与FAQ - 哥特塔罗 2026</title>
-    <meta name="description" content="了解由 Cyril Darbost 开发的 Gothic Tarot 2026 的一切。常见问题、玩家评价与法律声明。">
+    <title>About & FAQ - Gothic Tarot</title>
+    <meta name="description" content="Toutes les informations sur le projet Tarot Gothique 2026 développé par Cyril Darbost.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/apropos_zh.html">
+    <link rel="alternate" hreflang="fr" href="https://babylone01.github.io/tarot/apropos.html">
+    <link rel="alternate" hreflang="en" href="https://babylone01.github.io/tarot/apropos_en.html">
+    <link rel="alternate" hreflang="de" href="https://babylone01.github.io/tarot/apropos_de.html">
+    <link rel="alternate" hreflang="es" href="https://babylone01.github.io/tarot/apropos_es.html">
+    <link rel="alternate" hreflang="pt" href="https://babylone01.github.io/tarot/apropos_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://babylone01.github.io/tarot/apropos_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://babylone01.github.io/tarot/apropos_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://babylone01.github.io/tarot/apropos_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://babylone01.github.io/tarot/apropos.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
     <style>
         :root {
@@ -87,7 +96,7 @@
             display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem;
             overflow: hidden;
         }
-        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card {
+        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card, .content-box, .box {
             background-color: var(--card-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
@@ -154,58 +163,53 @@
             flex-shrink: 0;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
+        a { color: var(--primary-gold); }
         @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>关于哥特塔罗项目</h1>
-        
-        <nav class="main-nav">
-            <a href="index_zh.html" class="">首页</a>
-            <a href="regles_zh.html" class="">规则</a>
-            <a href="galerie_zh.html" class="">图库</a>
+        <h1>About & FAQ - Gothic Tarot</h1>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a href="index_zh.html">首页</a>
+            <a href="regles_zh.html">规则</a>
+            <a href="galerie_zh.html">图库</a>
             <a href="apropos_zh.html" class="active">关于</a>
             <div style="display:inline-flex; gap:3px; margin-left:10px;">
-                <a href="index.html" class="lang-switch">🇫🇷 FR</a>
-                <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
-                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
-                <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
-                <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
-                <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
-                <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
-                <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+                <a href="apropos.html" class="lang-switch">🇫🇷 FR</a>
+                <a href="apropos_en.html" class="lang-switch">🇬🇧 EN</a>
+                <a href="apropos_de.html" class="lang-switch">🇩🇪 DE</a>
+                <a href="apropos_es.html" class="lang-switch">🇪🇸 ES</a>
+                <a href="apropos_pt.html" class="lang-switch">🇵🇹 PT</a>
+                <a href="apropos_ru.html" class="lang-switch">🇷🇺 RU</a>
+                <a href="apropos_ja.html" class="lang-switch">🇯🇵 JA</a>
+                <a href="apropos_zh.html" class="lang-switch">🇨🇳 ZH</a>
             </div>
         </nav>
-    
     </header>
     <main>
-        
         <div class="info-card">
-            <h3>哥特塔罗 2026 项目</h3>
-            <p>由 <strong>Cyril Darbost</strong> 构思并开发的 <strong>Gothic Tarot 2026</strong> 旨在提供一款兼具强大、黑暗且精致视觉风格的传统纸牌游戏，并确保移动端和网页端完美的性能表现。</p>
-            <p>本项目结合了流畅的人机对战引擎、实时多人联机系统以及为塔罗爱好者打造的沉浸式体验。</p>
+            <h2 id="projet">The Gothic Tarot 2026 Project</h2>
+            <p>Conceived and developed by <strong>Cyril Darbost</strong>, <strong>Gothic Tarot 2026</strong> provides a traditional card game experience with a dark visual aesthetic. Learn how to play on our <a href="regles_en.html#regles-base">Tarot Rules page</a>.</p>
         </div>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                « 终于有一款尊重朋友聚会真实规则的手机塔罗游戏了！暗黑哥特氛围绝佳，而且完全免费。 »
-                <div class="testimonial-author">— 托马斯 M.（测试玩家）</div>
+                « Finally a mobile tarot game that respects true rules! The gothic atmosphere is sublime. »
+                <div class="testimonial-author">— Thomas M. (Beta Tester)</div>
             </div>
             <div class="testimonial-card">
-                « 呼叫国王的5人模式完美运行。广告非常克制，从不打断游戏。 »
-                <div class="testimonial-author">— 萨拉 L.（塔罗爱好者）</div>
+                « 5-player mode works flawlessly. Very discreet ads. »
+                <div class="testimonial-author">— Sarah L. (Tarot Enthusiast)</div>
             </div>
         </div>
         <div class="info-card">
-            <h3>常见问题 (FAQ)</h3>
-            <p><strong>应用是免费的吗？</strong><br>是的，哥特塔罗的所有桌位和模式均 100% 免费使用。</p>
-            <p><strong>兼容手机和电脑吗？</strong><br>当然，AI单人模式和安卓应用与官方网站完美结合。</p>
-            <p style="margin-bottom: 0;"><strong>如何联系开发者？</strong><br>如有任何建议或bug反馈，请通过项目的官方 GitHub 仓库或社区 Discord 服务器联系我们。</p>
+            <h2 id="faq">Frequently Asked Questions (FAQ)</h2>
+            <p><strong>Is the app free?</strong><br>Yes, Gothic Tarot is 100% free for all tables and game modes.</p>
+            <p><strong>Data Privacy & Rights?</strong><br>Check our <a href="privacy_en.html">Privacy Policy</a> and <a href="delete_en.html">Account Deletion Policy</a>.</p>
         </div>
-        
     </main>
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_zh.html">首页</a> | <a href="apropos_zh.html">法律声明</a> | <a href="privacy_zh.html">隐私</a> | <a href="delete_zh.html">删除账户</a></p>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_zh.html">首页</a> | <a href="regles_zh.html">规则</a> | <a href="galerie_zh.html">图库</a> | <a href="apropos_zh.html">关于</a> | <a href="privacy_zh.html">隐私</a> | <a href="delete_zh.html">删除账户</a></p>
     </footer>
 </body>
 </html>

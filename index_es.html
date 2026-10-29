@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarot Gótico 2026 - Juego de Tarot Francés Gratuito Online</title>
-    <meta name="description" content="Descubre Tarot Gótico 2026, el mejor juego de cartas de tarot francés. Juega gratis en solitario contra IA o en multijugador online con diseño oscuro.">
+    <title>Gothic Tarot 2026 - Online & Solo AI Card Game</title>
+    <meta name="description" content="Play French Tarot online or solo against an advanced AI.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/index_es.html">
+    <link rel="alternate" hreflang="fr" href="https://babylone01.github.io/tarot/index.html">
+    <link rel="alternate" hreflang="en" href="https://babylone01.github.io/tarot/index_en.html">
+    <link rel="alternate" hreflang="de" href="https://babylone01.github.io/tarot/index_de.html">
+    <link rel="alternate" hreflang="es" href="https://babylone01.github.io/tarot/index_es.html">
+    <link rel="alternate" hreflang="pt" href="https://babylone01.github.io/tarot/index_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://babylone01.github.io/tarot/index_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://babylone01.github.io/tarot/index_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://babylone01.github.io/tarot/index_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://babylone01.github.io/tarot/index.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
     <style>
         :root {
@@ -87,7 +96,7 @@
             display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem;
             overflow: hidden;
         }
-        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card {
+        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card, .content-box, .box {
             background-color: var(--card-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
@@ -135,6 +144,14 @@
             font-size: 1.02rem;
             box-shadow: 0 0 14px rgba(212, 175, 55, 0.6);
         }
+        table.rules-table { width: 100%; border-collapse: collapse; margin: 0.3rem 0; background-color: rgba(18, 18, 26, 0.88); }
+        table.rules-table th, table.rules-table td { border: 1px solid var(--border-color); padding: 0.4rem 0.7rem; font-size: 0.88rem; }
+        table.rules-table th { color: var(--primary-gold); background-color: rgba(26, 26, 38, 0.95); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .gallery-img { width: 100%; max-height: 140px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
+        .gallery-caption { padding: 0.5rem; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
+        .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+        .testimonial-author { margin-top: 0.4rem; font-weight: bold; color: var(--primary-gold); text-align: right; font-size: 0.9rem; }
         footer {
             background-color: var(--header-bg);
             backdrop-filter: blur(10px);
@@ -146,22 +163,23 @@
             flex-shrink: 0;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
-        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid { grid-template-columns: 1fr; } }
+        a { color: var(--primary-gold); }
+        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>Tarot Gótico — Centro Oficial de Tarot Francés</h1>
-        <nav class="main-nav">
+        <h1>Gothic Tarot 2026 - Online & Solo AI Card Game</h1>
+        <nav class="main-nav" aria-label="Navigation principale">
             <a href="index_es.html" class="active">Inicio</a>
             <a href="regles_es.html">Reglas</a>
             <a href="galerie_es.html">Galería</a>
-            <a href="apropos_es.html">Acerca de y FAQ</a>
+            <a href="apropos_es.html">Acerca de</a>
             <div style="display:inline-flex; gap:3px; margin-left:10px;">
                 <a href="index.html" class="lang-switch">🇫🇷 FR</a>
                 <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
-                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
                 <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
+                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
                 <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
                 <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
                 <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
@@ -171,39 +189,35 @@
     </header>
     <main>
         <div class="top-description">
-            <h2>La Experiencia Definitiva de Tarot Francés Online</h2>
-            <p>Bienvenido a Tarot Gótico. Disfruta de un juego de cartas tradicional francés único de temática oscura. Juega totalmente gratis en solitario contra una IA inteligente o únete a mesas multijugador competitivas.</p>
+            <h2 id="presentation">Gothic Tarot Game - Multiplayer & Solo AI</h2>
+            <p>Immerse yourself in the dark and captivating world of <strong>Gothic Tarot 2026</strong>. Play for free solo against our advanced artificial intelligence or challenge players worldwide. Check our <a href="regles_en.html#regles-base">detailed Tarot rules</a> or explore gameplay screenshots in our <a href="galerie_en.html#captures">photo gallery</a>.</p>
         </div>
         <div class="media-row">
-            <div class="media-item" style="height: 100%;">
-                <img src="banner.jpg" alt="Juego de Tarot - Banner oficial del tarot gótico" class="hero-banner">
-            </div>
-            <div class="media-item" style="height: 100%;">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/Hp_oTuAgBX8" loading="lazy" title="Teaser" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+            <img src="banner.jpg" alt="Gothic Tarot 2026 Banner" class="hero-banner">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Gothic Tarot Presentation" allowfullscreen></iframe>
             </div>
         </div>
         <div class="features-grid">
             <div class="feature-card">
-                <h3>Multijugador y Solitario</h3>
-                <p>Disfruta de partidas offline contra la IA o compite en multijugador en tiempo real con amigos.</p>
+                <h3><a href="regles_en.html#variantes" style="text-decoration:none;">3, 4, and 5 Player Modes</a></h3>
+                <p>Full support for King Call in 5-player mode and official French Tarot Federation bidding rules.</p>
             </div>
             <div class="feature-card">
-                <h3>Diseño Gótico Oscuro</h3>
-                <p>Sumérgete en una estética gótica impresionante con refinados detalles dorados.</p>
+                <h3><a href="apropos_en.html#faq" style="text-decoration:none;">Advanced Solo AI</a></h3>
+                <p>Practice offline anytime against a strategic and adaptive artificial intelligence.</p>
             </div>
             <div class="feature-card">
-                <h3>Reglas Oficiales</h3>
-                <p>Domina las reglas oficiales del tarot francés, contratos y puntuación para 3, 4 y 5 jugadores.</p>
+                <h3><a href="galerie_en.html#design" style="text-decoration:none;">Sublime Graphics</a></h3>
+                <p>Dark gothic artistic design, fully optimized for mobile devices, tablets, and desktop computers.</p>
             </div>
         </div>
         <div class="cta-container">
-            <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Descargar en Google Play</a>
+            <a href="https://play.google.com/store/apps/details?id=com.tarot.gothique" class="cta-button" target="_blank" rel="noopener">Download Android App</a>
         </div>
     </main>
     <footer>
-        <p>© 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_es.html">Inicio del Juego</a> | <a href="apropos_es.html">Aviso Legal</a> | <a href="privacy_es.html">Privacidad</a> | <a href="delete_es.html">Eliminar Cuenta</a></p>
+        <p>&copy; 2026 <strong>Tarot Gótico</strong> (Cyril Darbost) | <a href="index_es.html">Inicio</a> | <a href="regles_es.html">Reglas</a> | <a href="galerie_es.html">Galería</a> | <a href="apropos_es.html">Acerca de</a> | <a href="privacy_es.html">Privacidad</a> | <a href="delete_es.html">Eliminar Cuenta</a></p>
     </footer>
 </body>
 </html>

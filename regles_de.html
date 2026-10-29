@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarot-Regeln & Punktwertung - Gotisches Tarot 2026</title>
-    <meta name="description" content="Entdecken Sie die offiziellen französischen Tarot-Regeln für 3, 4 und 5 Spieler. Lernen Sie das Punktewählen und Verträge.">
+    <title>Official French Tarot Rules - Gothic Tarot</title>
+    <meta name="description" content="Découvrez toutes les règles officielles du tarot français : bouts, points, enchères et variantes à 3, 4 ou 5 joueurs.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/regles_de.html">
+    <link rel="alternate" hreflang="fr" href="https://babylone01.github.io/tarot/regles.html">
+    <link rel="alternate" hreflang="en" href="https://babylone01.github.io/tarot/regles_en.html">
+    <link rel="alternate" hreflang="de" href="https://babylone01.github.io/tarot/regles_de.html">
+    <link rel="alternate" hreflang="es" href="https://babylone01.github.io/tarot/regles_es.html">
+    <link rel="alternate" hreflang="pt" href="https://babylone01.github.io/tarot/regles_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://babylone01.github.io/tarot/regles_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://babylone01.github.io/tarot/regles_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://babylone01.github.io/tarot/regles_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://babylone01.github.io/tarot/regles.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
     <style>
         :root {
@@ -84,10 +93,10 @@
             margin: 0 auto;
             padding: 0.8rem 1rem;
             box-sizing: border-box;
-            display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; align-content: stretch;
+            display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem;
             overflow: hidden;
         }
-        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card {
+        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card, .content-box, .box {
             background-color: var(--card-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
@@ -154,75 +163,56 @@
             flex-shrink: 0;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
+        a { color: var(--primary-gold); }
         @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>Offizielle Regeln & Gotisches Tarot-Handbuch</h1>
-        
-        <nav class="main-nav">
-            <a href="index_de.html" class="">Startseite</a>
+        <h1>Official French Tarot Rules - Gothic Tarot</h1>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a href="index_de.html">Startseite</a>
             <a href="regles_de.html" class="active">Regeln</a>
-            <a href="galerie_de.html" class="">Galerie</a>
-            <a href="apropos_de.html" class="">Über uns</a>
+            <a href="galerie_de.html">Galerie</a>
+            <a href="apropos_de.html">Über uns</a>
             <div style="display:inline-flex; gap:3px; margin-left:10px;">
-                <a href="index.html" class="lang-switch">🇫🇷 FR</a>
-                <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
-                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
-                <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
-                <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
-                <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
-                <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
-                <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+                <a href="regles.html" class="lang-switch">🇫🇷 FR</a>
+                <a href="regles_en.html" class="lang-switch">🇬🇧 EN</a>
+                <a href="regles_de.html" class="lang-switch">🇩🇪 DE</a>
+                <a href="regles_es.html" class="lang-switch">🇪🇸 ES</a>
+                <a href="regles_pt.html" class="lang-switch">🇵🇹 PT</a>
+                <a href="regles_ru.html" class="lang-switch">🇷🇺 RU</a>
+                <a href="regles_ja.html" class="lang-switch">🇯🇵 JA</a>
+                <a href="regles_zh.html" class="lang-switch">🇨🇳 ZH</a>
             </div>
         </nav>
-    
     </header>
     <main>
-        
         <div class="rules-card">
-            <h3>1. Varianten nach Spieleranzahl (3, 4, 5 Spieler)</h3>
-            <ul>
-                <li><strong>Zu 3 Spielern:</strong> 24 Tarotkarten ausgeteilt, 6 im Talon. Jeder spielt für sich gegen die beiden anderen.</li>
-                <li><strong>Zu 4 Spielern:</strong> 18 Karten pro Spieler, 6 im Talon. Klassisches Solo gegen die Verteidigung.</li>
-                <li><strong>Zu 5 Spielern (Gothic-Besonderheit):</strong> Der Alleinspieler ruft einen König einer bestimmten Farbe. Wer diesen König hat, wird sein geheimes Partner.</li>
-            </ul>
+            <h2 id="regles-base">Official French Tarot Rules</h2>
+            <p>French Tarot is played with a 78-card deck consisting of 21 Trumps, The Fool, and 4 traditional suits. Learn more about our project development on our <a href="apropos_en.html#projet">About page</a>.</p>
         </div>
         <div class="rules-card">
-            <h3>2. Spezifische Gothic-Regeln</h3>
-            <ul>
-                <li><strong>Regel der gerufenen Farbe:</strong> Die Farbe des gerufenen Königs darf im ersten Stich nicht gespielt werden, <em>außer der anspielende Spieler besitzt und spielt diesen König direkt</em>.</li>
-                <li><strong>Regel des Pyts (Excuse) im letzten Stich:</strong> Wird die Excuse beim letzten Stich gespielt, geht sie verloren. Punkte und Karte gehen an das gegnerische Team.</li>
-            </ul>
-        </div>
-        <div class="rules-card">
-            <h3>3. Kartenwerte (Stichwertung)</h3>
-            <p>Am Ende der Runde werden Karten für die Wertung paarweise kombiniert (eine hohe + eine niedrige Karte):</p>
+            <h3 id="bouts">Oudlers (Bouts) & Required Points</h3>
             <table class="rules-table">
-                <tr><th>Kartentyp</th><th>Punktwert</th></tr>
-                <tr><td>Der Petit (1er Truc), 21er Truc und Excuse (Die 3 Bouts)</td><td><strong>4.5 Punkte</strong> je</td></tr>
-                <tr><td>Ein König</td><td><strong>4.5 Punkte</strong></td></tr>
-                <tr><td>Eine Dame</td><td><strong>3.5 Punkte</strong></td></tr>
-                <tr><td>Ein Cavelier</td><td><strong>2.5 Punkte</strong></td></tr>
-                <tr><td>Ein Bube</td><td><strong>1.5 Punkt</strong></td></tr>
-                <tr><td>Kleine / einfache Karten</td><td><strong>0.5 Punkt</strong></td></tr>
+                <thead>
+                    <tr><th>Oudlers Owned</th><th>Target Points for Taker</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>3 Oudlers (1, 21, Fool)</td><td>36 points</td></tr>
+                    <tr><td>2 Oudlers</td><td>41 points</td></tr>
+                    <tr><td>1 Oudler</td><td>51 points</td></tr>
+                    <tr><td>0 Oudlers</td><td>56 points</td></tr>
+                </tbody>
             </table>
         </div>
         <div class="rules-card">
-            <h3>4. Verträge und benötigte Bouts</h3>
-            <p>Der Alleinspieler muss je nach eroberten Bouts (1, 21, Excuse) eine genaue Punkteschwelle erreichen:</p>
-            <ul>
-                <li><strong>Mit 3 Bouts:</strong> 36 Punkte Mindestbedarf.</li>
-                <li><strong>Mit 2 Bouts:</strong> 41 Punkte Mindestbedarf.</li>
-                <li><strong>Mit 1 Bout:</strong> 51 Punkte Mindestbedarf.</li>
-                <li><strong>Mit 0 Bouts:</strong> 56 Punkte Mindestbedarf.</li>
-            </ul>
+            <h3 id="variantes">Bidding & Variants (3, 4, and 5 Players)</h3>
+            <p>Bidding options include <em>Push</em>, <em>Guard</em>, <em>Guard Without</em>, and <em>Guard Against</em>. In 5-player games, the taker calls a King before opening. Explore graphics in our <a href="galerie_en.html#captures">Gallery</a>.</p>
         </div>
-        
     </main>
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_de.html">Startseite</a> | <a href="apropos_de.html">Impressum</a> | <a href="privacy_de.html">Datenschutz</a> | <a href="delete_de.html">Konto löschen</a></p>
+        <p>&copy; 2026 <strong>Gotisches Tarot</strong> (Cyril Darbost) | <a href="index_de.html">Startseite</a> | <a href="regles_de.html">Regeln</a> | <a href="galerie_de.html">Galerie</a> | <a href="apropos_de.html">Über uns</a> | <a href="privacy_de.html">Datenschutz</a> | <a href="delete_de.html">Konto löschen</a></p>
     </footer>
 </body>
 </html>

@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About & FAQ - Gothic Tarot 2026</title>
-    <meta name="description" content="Everything about Gothic Tarot 2026, developed by Cyril Darbost. Frequently asked questions, reviews, and legal notices.">
+    <title>About & FAQ - Gothic Tarot</title>
+    <meta name="description" content="Toutes les informations sur le projet Tarot Gothique 2026 développé par Cyril Darbost.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/apropos_en.html">
+    <link rel="alternate" hreflang="fr" href="https://babylone01.github.io/tarot/apropos.html">
+    <link rel="alternate" hreflang="en" href="https://babylone01.github.io/tarot/apropos_en.html">
+    <link rel="alternate" hreflang="de" href="https://babylone01.github.io/tarot/apropos_de.html">
+    <link rel="alternate" hreflang="es" href="https://babylone01.github.io/tarot/apropos_es.html">
+    <link rel="alternate" hreflang="pt" href="https://babylone01.github.io/tarot/apropos_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://babylone01.github.io/tarot/apropos_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://babylone01.github.io/tarot/apropos_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://babylone01.github.io/tarot/apropos_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://babylone01.github.io/tarot/apropos.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
     <style>
         :root {
@@ -87,7 +96,7 @@
             display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem;
             overflow: hidden;
         }
-        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card {
+        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card, .content-box, .box {
             background-color: var(--card-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
@@ -154,58 +163,53 @@
             flex-shrink: 0;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
+        a { color: var(--primary-gold); }
         @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>About the Gothic Tarot Project</h1>
-        
-        <nav class="main-nav">
-            <a href="index_en.html" class="">Home / Game</a>
-            <a href="regles_en.html" class="">Tarot Rules</a>
-            <a href="galerie_en.html" class="">Photo Gallery</a>
+        <h1>About & FAQ - Gothic Tarot</h1>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a href="index_en.html">Home / Game</a>
+            <a href="regles_en.html">Tarot Rules</a>
+            <a href="galerie_en.html">Photo Gallery</a>
             <a href="apropos_en.html" class="active">About & FAQ</a>
             <div style="display:inline-flex; gap:3px; margin-left:10px;">
-                <a href="index.html" class="lang-switch">🇫🇷 FR</a>
-                <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
-                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
-                <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
-                <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
-                <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
-                <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
-                <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+                <a href="apropos.html" class="lang-switch">🇫🇷 FR</a>
+                <a href="apropos_en.html" class="lang-switch">🇬🇧 EN</a>
+                <a href="apropos_de.html" class="lang-switch">🇩🇪 DE</a>
+                <a href="apropos_es.html" class="lang-switch">🇪🇸 ES</a>
+                <a href="apropos_pt.html" class="lang-switch">🇵🇹 PT</a>
+                <a href="apropos_ru.html" class="lang-switch">🇷🇺 RU</a>
+                <a href="apropos_ja.html" class="lang-switch">🇯🇵 JA</a>
+                <a href="apropos_zh.html" class="lang-switch">🇨🇳 ZH</a>
             </div>
         </nav>
-    
     </header>
     <main>
-        
         <div class="info-card">
-            <h3>The Gothic Tarot 2026 Project</h3>
-            <p>Conceived and developed by <strong>Cyril Darbost</strong>, <strong>Gothic Tarot 2026</strong> was born from the desire to offer a traditional card game with a strong, dark, and polished visual identity, while ensuring flawless technical performance on mobile and web.</p>
-            <p>The project combines a fluid solo game engine against artificial intelligence, a real-time multiplayer system, and an immersive user experience designed for tarot enthusiasts.</p>
+            <h2 id="projet">The Gothic Tarot 2026 Project</h2>
+            <p>Conceived and developed by <strong>Cyril Darbost</strong>, <strong>Gothic Tarot 2026</strong> provides a traditional card game experience with a dark visual aesthetic. Learn how to play on our <a href="regles_en.html#regles-base">Tarot Rules page</a>.</p>
         </div>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                « Finally a mobile tarot game that respects the true rules of our game nights with friends! The gothic visual atmosphere is sublime and the game is totally free. »
+                « Finally a mobile tarot game that respects true rules! The gothic atmosphere is sublime. »
                 <div class="testimonial-author">— Thomas M. (Beta Tester)</div>
             </div>
             <div class="testimonial-card">
-                « The 5-player mode with king calling works to perfection. Ads are extremely discreet and never interrupt mid-game. »
+                « 5-player mode works flawlessly. Very discreet ads. »
                 <div class="testimonial-author">— Sarah L. (Tarot Enthusiast)</div>
             </div>
         </div>
         <div class="info-card">
-            <h3>Frequently Asked Questions (FAQ)</h3>
-            <p><strong>Is the app free?</strong><br>Yes, Gothic Tarot is 100% free to access for all tables and game modes.</p>
-            <p><strong>Is the app compatible with mobile & PC?</strong><br>Absolutely, the solo mode against artificial intelligence and the Android app work hand in hand with the website.</p>
-            <p style="margin-bottom: 0;"><strong>Where to contact the developer?</strong><br>For any suggestions or bug reports, you can use the official GitHub repository of the project or the community Discord server.</p>
+            <h2 id="faq">Frequently Asked Questions (FAQ)</h2>
+            <p><strong>Is the app free?</strong><br>Yes, Gothic Tarot is 100% free for all tables and game modes.</p>
+            <p><strong>Data Privacy & Rights?</strong><br>Check our <a href="privacy_en.html">Privacy Policy</a> and <a href="delete_en.html">Account Deletion Policy</a>.</p>
         </div>
-        
     </main>
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_en.html">Game Home</a> | <a href="apropos_en.html">Legal Notice</a> | <a href="privacy_en.html">Privacy</a> | <a href="delete_en.html">Delete Account</a></p>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_en.html">Home</a> | <a href="regles_en.html">Rules</a> | <a href="galerie_en.html">Gallery</a> | <a href="apropos_en.html">About</a> | <a href="privacy_en.html">Privacy</a> | <a href="delete_en.html">Delete Account</a></p>
     </footer>
 </body>
 </html>

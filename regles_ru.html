@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Правила Таро и Подсчет Очков - Готический Таро 2026</title>
-    <meta name="description" content="Официальные правила французского таро для 3, 4 и 5 игроков. Узнайте как считать очки и контракты.">
+    <title>Official French Tarot Rules - Gothic Tarot</title>
+    <meta name="description" content="Découvrez toutes les règles officielles du tarot français : bouts, points, enchères et variantes à 3, 4 ou 5 joueurs.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/regles_ru.html">
+    <link rel="alternate" hreflang="fr" href="https://babylone01.github.io/tarot/regles.html">
+    <link rel="alternate" hreflang="en" href="https://babylone01.github.io/tarot/regles_en.html">
+    <link rel="alternate" hreflang="de" href="https://babylone01.github.io/tarot/regles_de.html">
+    <link rel="alternate" hreflang="es" href="https://babylone01.github.io/tarot/regles_es.html">
+    <link rel="alternate" hreflang="pt" href="https://babylone01.github.io/tarot/regles_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://babylone01.github.io/tarot/regles_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://babylone01.github.io/tarot/regles_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://babylone01.github.io/tarot/regles_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://babylone01.github.io/tarot/regles.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
     <style>
         :root {
@@ -84,10 +93,10 @@
             margin: 0 auto;
             padding: 0.8rem 1rem;
             box-sizing: border-box;
-            display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; align-content: stretch;
+            display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem;
             overflow: hidden;
         }
-        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card {
+        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card, .content-box, .box {
             background-color: var(--card-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
@@ -154,75 +163,56 @@
             flex-shrink: 0;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
+        a { color: var(--primary-gold); }
         @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>Официальные Правила и Руководство по Готическому Таро</h1>
-        
-        <nav class="main-nav">
-            <a href="index_ru.html" class="">Главная</a>
+        <h1>Official French Tarot Rules - Gothic Tarot</h1>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a href="index_ru.html">Главная</a>
             <a href="regles_ru.html" class="active">Правила</a>
-            <a href="galerie_ru.html" class="">Галерея</a>
-            <a href="apropos_ru.html" class="">О проекте</a>
+            <a href="galerie_ru.html">Галерея</a>
+            <a href="apropos_ru.html">О проекте</a>
             <div style="display:inline-flex; gap:3px; margin-left:10px;">
-                <a href="index.html" class="lang-switch">🇫🇷 FR</a>
-                <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
-                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
-                <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
-                <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
-                <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
-                <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
-                <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+                <a href="regles.html" class="lang-switch">🇫🇷 FR</a>
+                <a href="regles_en.html" class="lang-switch">🇬🇧 EN</a>
+                <a href="regles_de.html" class="lang-switch">🇩🇪 DE</a>
+                <a href="regles_es.html" class="lang-switch">🇪🇸 ES</a>
+                <a href="regles_pt.html" class="lang-switch">🇵🇹 PT</a>
+                <a href="regles_ru.html" class="lang-switch">🇷🇺 RU</a>
+                <a href="regles_ja.html" class="lang-switch">🇯🇵 JA</a>
+                <a href="regles_zh.html" class="lang-switch">🇨🇳 ZH</a>
             </div>
         </nav>
-    
     </header>
     <main>
-        
         <div class="rules-card">
-            <h3>1. Варианты по количеству игроков (3, 4, 5 игроков)</h3>
-            <ul>
-                <li><strong>На 3 игрока:</strong> раздается 24 карты таро, 6 в прикуп. Каждый играет сам за себя против двоих других.</li>
-                <li><strong>На 4 игрока:</strong> 18 карт игроку, 6 в прикуп. Классическая игра соло против защиты.</li>
-                <li><strong>На 5 игроков:</strong> Берущий вызывает короля нужной масти. Игрок с этим королем становится его тайным партнером.</li>
-            </ul>
+            <h2 id="regles-base">Official French Tarot Rules</h2>
+            <p>French Tarot is played with a 78-card deck consisting of 21 Trumps, The Fool, and 4 traditional suits. Learn more about our project development on our <a href="apropos_en.html#projet">About page</a>.</p>
         </div>
         <div class="rules-card">
-            <h3>2. Особые правила готического варианта</h3>
-            <ul>
-                <li><strong>Правило вызванной масти:</strong> Масть вызванного короля не может быть сыграна в первой взятке, <em>если только ходящий сам не играет этим королем</em>.</li>
-                <li><strong>Правило Апологии (Excuse) на последней взятке:</strong> Если Excuse разыграна на последней взятке, она считается проигранной.</li>
-            </ul>
-        </div>
-        <div class="rules-card">
-            <h3>3. Стоимость карт (Подсчет взяток)</h3>
-            <p>В конце раунда карты объединяются в пары (старшая + младшая) для подсчета:</p>
+            <h3 id="bouts">Oudlers (Bouts) & Required Points</h3>
             <table class="rules-table">
-                <tr><th>Тип карты</th><th>Стоимость в очках</th></tr>
-                <tr><td>Пети (1 козырь), 21 козырь и Excuse (3 Упаковки / Bouts)</td><td><strong>4.5 очка</strong> каждая</td></tr>
-                <tr><td>Король</td><td><strong>4.5 очка</strong></td></tr>
-                <tr><td>Дама</td><td><strong>3.5 очка</strong></td></tr>
-                <tr><td>Кавалер</td><td><strong>2.5 очка</strong></td></tr>
-                <tr><td>Валет</td><td><strong>1.5 очка</strong></td></tr>
-                <tr><td>Младшие / обычные карты</td><td><strong>0.5 очка</strong></td></tr>
+                <thead>
+                    <tr><th>Oudlers Owned</th><th>Target Points for Taker</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>3 Oudlers (1, 21, Fool)</td><td>36 points</td></tr>
+                    <tr><td>2 Oudlers</td><td>41 points</td></tr>
+                    <tr><td>1 Oudler</td><td>51 points</td></tr>
+                    <tr><td>0 Oudlers</td><td>56 points</td></tr>
+                </tbody>
             </table>
         </div>
         <div class="rules-card">
-            <h3>4. Контракты и необходимые Bouts</h3>
-            <p>Берущий должен набрать точный порог очков в зависимости от захваченных Bouts (1, 21, Excuse):</p>
-            <ul>
-                <li><strong>С 3 Bouts:</strong> требуется минимум 36 очков.</li>
-                <li><strong>С 2 Bouts:</strong> требуется минимум 41 очко.</li>
-                <li><strong>С 1 Bout:</strong> требуется минимум 51 очко.</li>
-                <li><strong>Без Bouts:</strong> требуется минимум 56 очков.</li>
-            </ul>
+            <h3 id="variantes">Bidding & Variants (3, 4, and 5 Players)</h3>
+            <p>Bidding options include <em>Push</em>, <em>Guard</em>, <em>Guard Without</em>, and <em>Guard Against</em>. In 5-player games, the taker calls a King before opening. Explore graphics in our <a href="galerie_en.html#captures">Gallery</a>.</p>
         </div>
-        
     </main>
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ru.html">Главная</a> | <a href="apropos_ru.html">Правовая информация</a> | <a href="privacy_ru.html">Конфиденциальность</a> | <a href="delete_ru.html">Удалить аккаунт</a></p>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ru.html">Главная</a> | <a href="regles_ru.html">Правила</a> | <a href="galerie_ru.html">Галерея</a> | <a href="apropos_ru.html">О проекте</a> | <a href="privacy_ru.html">Конфиденциальность</a> | <a href="delete_ru.html">Удалить аккаунт</a></p>
     </footer>
 </body>
 </html>

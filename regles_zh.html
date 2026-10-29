@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>塔罗规则与计分指南 - 哥特塔罗 2026</title>
-    <meta name="description" content="探索3人、4人和5人局法国塔罗官方规则。学习计分方法与契约策略。">
+    <title>Official French Tarot Rules - Gothic Tarot</title>
+    <meta name="description" content="Découvrez toutes les règles officielles du tarot français : bouts, points, enchères et variantes à 3, 4 ou 5 joueurs.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/regles_zh.html">
+    <link rel="alternate" hreflang="fr" href="https://babylone01.github.io/tarot/regles.html">
+    <link rel="alternate" hreflang="en" href="https://babylone01.github.io/tarot/regles_en.html">
+    <link rel="alternate" hreflang="de" href="https://babylone01.github.io/tarot/regles_de.html">
+    <link rel="alternate" hreflang="es" href="https://babylone01.github.io/tarot/regles_es.html">
+    <link rel="alternate" hreflang="pt" href="https://babylone01.github.io/tarot/regles_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://babylone01.github.io/tarot/regles_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://babylone01.github.io/tarot/regles_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://babylone01.github.io/tarot/regles_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://babylone01.github.io/tarot/regles.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
     <style>
         :root {
@@ -84,10 +93,10 @@
             margin: 0 auto;
             padding: 0.8rem 1rem;
             box-sizing: border-box;
-            display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; align-content: stretch;
+            display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem;
             overflow: hidden;
         }
-        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card {
+        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card, .content-box, .box {
             background-color: var(--card-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
@@ -154,75 +163,56 @@
             flex-shrink: 0;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
+        a { color: var(--primary-gold); }
         @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>官方规则与哥特塔罗指南</h1>
-        
-        <nav class="main-nav">
-            <a href="index_zh.html" class="">首页</a>
+        <h1>Official French Tarot Rules - Gothic Tarot</h1>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a href="index_zh.html">首页</a>
             <a href="regles_zh.html" class="active">规则</a>
-            <a href="galerie_zh.html" class="">图库</a>
-            <a href="apropos_zh.html" class="">关于</a>
+            <a href="galerie_zh.html">图库</a>
+            <a href="apropos_zh.html">关于</a>
             <div style="display:inline-flex; gap:3px; margin-left:10px;">
-                <a href="index.html" class="lang-switch">🇫🇷 FR</a>
-                <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
-                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
-                <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
-                <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
-                <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
-                <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
-                <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+                <a href="regles.html" class="lang-switch">🇫🇷 FR</a>
+                <a href="regles_en.html" class="lang-switch">🇬🇧 EN</a>
+                <a href="regles_de.html" class="lang-switch">🇩🇪 DE</a>
+                <a href="regles_es.html" class="lang-switch">🇪🇸 ES</a>
+                <a href="regles_pt.html" class="lang-switch">🇵🇹 PT</a>
+                <a href="regles_ru.html" class="lang-switch">🇷🇺 RU</a>
+                <a href="regles_ja.html" class="lang-switch">🇯🇵 JA</a>
+                <a href="regles_zh.html" class="lang-switch">🇨🇳 ZH</a>
             </div>
         </nav>
-    
     </header>
     <main>
-        
         <div class="rules-card">
-            <h3>1. 玩家人数变体（3、4、5人局）</h3>
-            <ul>
-                <li><strong>3人局：</strong> 发24张塔罗牌，6张在底牌（chien）。每人各为一营，对抗另外两人。</li>
-                <li><strong>4人局：</strong> 每人发18张牌，6张在底牌。经典的单人对抗防御方模式。</li>
-                <li><strong>5人局（哥特特色）：</strong> 叫牌者呼叫特定花色的国王。拥有该国王的玩家将成为其本局的秘密同伴。</li>
-            </ul>
+            <h2 id="regles-base">Official French Tarot Rules</h2>
+            <p>French Tarot is played with a 78-card deck consisting of 21 Trumps, The Fool, and 4 traditional suits. Learn more about our project development on our <a href="apropos_en.html#projet">About page</a>.</p>
         </div>
         <div class="rules-card">
-            <h3>2. 哥特变体特殊规则</h3>
-            <ul>
-                <li><strong>被叫花色规则：</strong> 第一墩牌不能出被呼叫国王的花色，<em>除非首攻的玩家持有并直接出了该国王</em>。</li>
-                <li><strong>最后一墩的愚者（Excuse）规则：</strong> 如果在最后一墩出了愚者（Excuse），则视为失败，其分数和卡牌归对方所有。</li>
-            </ul>
-        </div>
-        <div class="rules-card">
-            <h3>3. 卡牌价值（计分方式）</h3>
-            <p>每局结束时，卡牌按对子（一张大牌 + 一张小牌）进行计分：</p>
+            <h3 id="bouts">Oudlers (Bouts) & Required Points</h3>
             <table class="rules-table">
-                <tr><th>卡牌类型</th><th>分值</th></tr>
-                <tr><td>小牌（1点主牌）、21点主牌与愚者（3个Bout）</td><td>各 <strong>4.5分</strong></td></tr>
-                <tr><td>国王 (King)</td><td><strong>4.5分</strong></td></tr>
-                <tr><td>王后 (Queen)</td><td><strong>3.5分</strong></td></tr>
-                <tr><td>骑士 (Knight)</td><td><strong>2.5分</strong></td></tr>
-                <tr><td>侍从 (Jack)</td><td><strong>1.5分</strong></td></tr>
-                <tr><td>低阶 / 普通牌</td><td><strong>0.5分</strong></td></tr>
+                <thead>
+                    <tr><th>Oudlers Owned</th><th>Target Points for Taker</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>3 Oudlers (1, 21, Fool)</td><td>36 points</td></tr>
+                    <tr><td>2 Oudlers</td><td>41 points</td></tr>
+                    <tr><td>1 Oudler</td><td>51 points</td></tr>
+                    <tr><td>0 Oudlers</td><td>56 points</td></tr>
+                </tbody>
             </table>
         </div>
         <div class="rules-card">
-            <h3>4. 契约与所需的Bout数</h3>
-            <p>叫牌者必须根据捕获的Bout数（1、21、愚者）达到精确的分数阈值：</p>
-            <ul>
-                <li><strong>拥有 3 个 Bout：</strong> 至少需要 36 分。</li>
-                <li><strong>拥有 2 个 Bout：</strong> 至少需要 41 分。</li>
-                <li><strong>拥有 1 个 Bout：</strong> 至少需要 51 分。</li>
-                <li><strong>拥有 0 个 Bout：</strong> 至少需要 56 分。</li>
-            </ul>
+            <h3 id="variantes">Bidding & Variants (3, 4, and 5 Players)</h3>
+            <p>Bidding options include <em>Push</em>, <em>Guard</em>, <em>Guard Without</em>, and <em>Guard Against</em>. In 5-player games, the taker calls a King before opening. Explore graphics in our <a href="galerie_en.html#captures">Gallery</a>.</p>
         </div>
-        
     </main>
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_zh.html">首页</a> | <a href="apropos_zh.html">法律声明</a> | <a href="privacy_zh.html">隐私</a> | <a href="delete_zh.html">删除账户</a></p>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_zh.html">首页</a> | <a href="regles_zh.html">规则</a> | <a href="galerie_zh.html">图库</a> | <a href="apropos_zh.html">关于</a> | <a href="privacy_zh.html">隐私</a> | <a href="delete_zh.html">删除账户</a></p>
     </footer>
 </body>
 </html>

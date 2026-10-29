@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Fotos - Tarot Gótico 2026</title>
-    <meta name="description" content="Jogo de Tarô - Atmosfera visual do jogo">
+    <title>Photo Gallery - Gothic Tarot</title>
+    <meta name="description" content="Captures d'écran et visuels officiels de l'application Tarot Gothique 2026.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/galerie_pt.html">
+    <link rel="alternate" hreflang="fr" href="https://babylone01.github.io/tarot/galerie.html">
+    <link rel="alternate" hreflang="en" href="https://babylone01.github.io/tarot/galerie_en.html">
+    <link rel="alternate" hreflang="de" href="https://babylone01.github.io/tarot/galerie_de.html">
+    <link rel="alternate" hreflang="es" href="https://babylone01.github.io/tarot/galerie_es.html">
+    <link rel="alternate" hreflang="pt" href="https://babylone01.github.io/tarot/galerie_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://babylone01.github.io/tarot/galerie_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://babylone01.github.io/tarot/galerie_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://babylone01.github.io/tarot/galerie_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://babylone01.github.io/tarot/galerie.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
     <style>
         :root {
@@ -84,10 +93,10 @@
             margin: 0 auto;
             padding: 0.8rem 1rem;
             box-sizing: border-box;
-            display: flex; flex-direction: column; justify-content: center; gap: 0.8rem;
+            display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem;
             overflow: hidden;
         }
-        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card {
+        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card, .content-box, .box {
             background-color: var(--card-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
@@ -95,9 +104,54 @@
             padding: 0.8rem 1rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
+        .media-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            align-items: center;
+            flex: 1;
+            min-height: 0;
+        }
+        .hero-banner, .video-container {
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+            border: 2px solid var(--primary-gold);
+            box-shadow: 0 0 16px rgba(212, 175, 55, 0.5);
+            object-fit: cover;
+            background-color: #000;
+            box-sizing: border-box;
+        }
+        .video-container iframe { width: 100%; height: 100%; border: none; }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            flex-shrink: 0;
+        }
+        .feature-card h3 { color: var(--primary-gold); margin: 0 0 0.3rem 0; font-size: 1.02rem; }
+        .feature-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; line-height: 1.3; }
+        .cta-container { text-align: center; margin: 0.2rem 0; flex-shrink: 0; }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-gold);
+            color: #0b0b0f;
+            padding: 0.6rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.02rem;
+            box-shadow: 0 0 14px rgba(212, 175, 55, 0.6);
+        }
+        table.rules-table { width: 100%; border-collapse: collapse; margin: 0.3rem 0; background-color: rgba(18, 18, 26, 0.88); }
+        table.rules-table th, table.rules-table td { border: 1px solid var(--border-color); padding: 0.4rem 0.7rem; font-size: 0.88rem; }
+        table.rules-table th { color: var(--primary-gold); background-color: rgba(26, 26, 38, 0.95); }
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
         .gallery-img { width: 100%; max-height: 140px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
         .gallery-caption { padding: 0.5rem; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
+        .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+        .testimonial-author { margin-top: 0.4rem; font-weight: bold; color: var(--primary-gold); text-align: right; font-size: 0.9rem; }
         footer {
             background-color: var(--header-bg);
             backdrop-filter: blur(10px);
@@ -109,55 +163,48 @@
             flex-shrink: 0;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
-        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .gallery-grid { grid-template-columns: 1fr; } }
+        a { color: var(--primary-gold); }
+        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>Galeria de Fotos - Visuais do Jogo de Tarô</h1>
-        <nav class="main-nav">
+        <h1>Photo Gallery - Gothic Tarot</h1>
+        <nav class="main-nav" aria-label="Navigation principale">
             <a href="index_pt.html">Início</a>
             <a href="regles_pt.html">Regras</a>
             <a href="galerie_pt.html" class="active">Galeria</a>
             <a href="apropos_pt.html">Sobre</a>
             <div style="display:inline-flex; gap:3px; margin-left:10px;">
-                <a href="index.html" class="lang-switch">🇫🇷 FR</a>
-                <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
-                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
-                <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
-                <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
-                <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
-                <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
-                <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+                <a href="galerie.html" class="lang-switch">🇫🇷 FR</a>
+                <a href="galerie_en.html" class="lang-switch">🇬🇧 EN</a>
+                <a href="galerie_de.html" class="lang-switch">🇩🇪 DE</a>
+                <a href="galerie_es.html" class="lang-switch">🇪🇸 ES</a>
+                <a href="galerie_pt.html" class="lang-switch">🇵🇹 PT</a>
+                <a href="galerie_ru.html" class="lang-switch">🇷🇺 RU</a>
+                <a href="galerie_ja.html" class="lang-switch">🇯🇵 JA</a>
+                <a href="galerie_zh.html" class="lang-switch">🇨🇳 ZH</a>
             </div>
         </nav>
     </header>
     <main>
         <div class="gallery-intro">
-            <h2>Imersão visual no nosso jogo de tarô</h2>
-            <p>Explore os visuais deste jogo gratuito de tarô gótico antes de consultar as regras.</p>
+            <h2 id="captures">Gameplay Screenshots Gallery</h2>
+            <p>Explore the dark gothic interface and beautiful card tables of Gothic Tarot 2026. Ready to play? Go to the <a href="index_en.html#presentation">Game Home page</a>.</p>
         </div>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="jeu-de-tarot.jpg" alt="Jogo de Tarô - Atmosfera visual do jogo" class="gallery-img" loading="lazy">
-                <div class="gallery-caption">Atmosfera visual do nosso jogo de tarô</div>
+                <img src="galerie1.jpg" alt="5 Player Gothic Tarot Game Table" class="gallery-img">
+                <div class="gallery-caption" id="design">5-Player Game Table & King Call</div>
             </div>
             <div class="gallery-item">
-                <img src="banner.jpg" alt="Tarô Gótico 2026 - Tabuleiro do jogo de cartas" class="gallery-img" loading="lazy">
-                <div class="gallery-caption">Tabuleiro deste jogo gratuito de cartas de tarô</div>
-            </div>
-            <div class="gallery-item">
-                <img src="jeu_de_tarot_2026.jpg" alt="Jogo de Tarô Multijugador - Menu e aplicativo móvel" class="gallery-img" loading="lazy">
-                <div class="gallery-caption">Menu principal e aplicativo de tarô gótico</div>
-            </div>
-            <div class="gallery-item">
-                <img src="faucheuse_cartes_tarot_gothique.jpg" alt="Jogo de Tarô Competição - Torneio e classificação" class="gallery-img" loading="lazy">
-                <div class="gallery-caption">Torneio de fim de semana e classificações</div>
+                <img src="galerie2.jpg" alt="Bidding Interface and Custom Gothic Cards" class="gallery-img">
+                <div class="gallery-caption">Official Bidding Screen & Custom Cards</div>
             </div>
         </div>
     </main>
     <footer>
-        <p>© 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_pt.html">Início</a> | <a href="apropos_pt.html">Avisos Legais</a> | <a href="privacy_pt.html">Privacidade</a> | <a href="delete_pt.html">Excluir Conta</a></p>
+        <p>&copy; 2026 <strong>Tarot Gótico</strong> (Cyril Darbost) | <a href="index_pt.html">Início</a> | <a href="regles_pt.html">Regras</a> | <a href="galerie_pt.html">Galeria</a> | <a href="apropos_pt.html">Sobre</a> | <a href="privacy_pt.html">Privacidade</a> | <a href="delete_pt.html">Excluir Conta</a></p>
     </footer>
 </body>
 </html>
