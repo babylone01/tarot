@@ -135,14 +135,6 @@
             font-size: 1.02rem;
             box-shadow: 0 0 14px rgba(212, 175, 55, 0.6);
         }
-        table.rules-table { width: 100%; border-collapse: collapse; margin: 0.3rem 0; background-color: rgba(18, 18, 26, 0.88); }
-        table.rules-table th, table.rules-table td { border: 1px solid var(--border-color); padding: 0.4rem 0.7rem; font-size: 0.88rem; }
-        table.rules-table th { color: var(--primary-gold); background-color: rgba(26, 26, 38, 0.95); }
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-        .gallery-img { width: 100%; max-height: 140px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
-        .gallery-caption { padding: 0.5rem; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
-        .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-        .testimonial-author { margin-top: 0.4rem; font-weight: bold; color: var(--primary-gold); text-align: right; font-size: 0.9rem; }
         footer {
             background-color: var(--header-bg);
             backdrop-filter: blur(10px);
@@ -154,18 +146,17 @@
             flex-shrink: 0;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
-        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
         <h1>Tarot Gótico — Hub Oficial de Tarô Francês</h1>
-        
         <nav class="main-nav">
             <a href="index_pt.html" class="active">Início</a>
-            <a href="regles_pt.html" class="">Regras</a>
-            <a href="galerie_pt.html" class="">Galeria</a>
-            <a href="apropos_pt.html" class="">Sobre</a>
+            <a href="regles_pt.html">Regras</a>
+            <a href="galerie_pt.html">Galeria</a>
+            <a href="apropos_pt.html">Sobre</a>
             <div style="display:inline-flex; gap:3px; margin-left:10px;">
                 <a href="index.html" class="lang-switch">🇫🇷 FR</a>
                 <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
@@ -177,17 +168,15 @@
                 <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
             </div>
         </nav>
-    
     </header>
     <main>
-        
         <div class="top-description">
             <h2>A Experiência Definitiva de Tarô Francês Online</h2>
             <p>Bem-vindo ao Tarot Gótico. Desfrute de um jogo de cartas tradicional francês exclusivo com tema sombrio. Jogue totalmente grátis no modo solo contra IA inteligente ou participe de partidas multiplayer online.</p>
         </div>
         <div class="media-row">
             <div class="media-item" style="height: 100%;">
-                <img src="banner.jpg" alt="Banner" class="hero-banner">
+                <img src="banner.jpg" alt="Jogo de Tarô - Banner oficial do tarô gótico" class="hero-banner">
             </div>
             <div class="media-item" style="height: 100%;">
                 <div class="video-container">
@@ -212,10 +201,9 @@
         <div class="cta-container">
             <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Baixar no Google Play</a>
         </div>
-        
     </main>
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_pt.html">Início</a> | <a href="apropos_pt.html">Avisos Legais</a> | <a href="privacy_pt.html">Privacidade</a> | <a href="delete_pt.html">Excluir Conta</a></p>
+        <p>© 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_pt.html">Início</a> | <a href="apropos_pt.html">Avisos Legais</a> | <a href="privacy_pt.html">Privacidade</a> | <a href="delete_pt.html">Excluir Conta</a></p>
     </footer>
 </body>
 </html>
