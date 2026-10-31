@@ -66,17 +66,6 @@
             color: var(--primary-gold);
             text-decoration: underline;
         }
-        .lang-switch {
-            background: var(--card-bg);
-            border: 1px solid var(--primary-gold);
-            border-radius: 4px;
-            padding: 2px 5px;
-            color: var(--primary-gold);
-            text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: bold;
-        }
-        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         main {
             flex: 1;
             max-width: 1200px;
@@ -155,6 +144,20 @@
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
         @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
     </style>
 </head>
 <body>
@@ -166,15 +169,15 @@
             <a href="regles_es.html" class="active">Reglas</a>
             <a href="galerie_es.html" class="">Galería</a>
             <a href="apropos_es.html" class="">Acerca de y FAQ</a>
-            <div style="display:inline-flex; gap:3px; margin-left:10px;">
-                <a href="index.html" class="lang-switch">🇫🇷 FR</a>
-                <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
-                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
-                <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
-                <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
-                <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
-                <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
-                <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+            <div class="lang-bar">
+                <a href="regles.html" class="lang-switch" hreflang="fr">🇫🇷 FR</a>
+                <a href="regles_en.html" class="lang-switch" hreflang="en">🇬🇧 EN</a>
+                <a href="regles_es.html" class="lang-switch active-lang" hreflang="es">🇪🇸 ES</a>
+                <a href="regles_de.html" class="lang-switch" hreflang="de">🇩🇪 DE</a>
+                <a href="regles_pt.html" class="lang-switch" hreflang="pt">🇵🇹 PT</a>
+                <a href="regles_ru.html" class="lang-switch" hreflang="ru">🇷🇺 RU</a>
+                <a href="regles_ja.html" class="lang-switch" hreflang="ja">🇯🇵 JA</a>
+                <a href="regles_zh.html" class="lang-switch" hreflang="zh">🇨🇳 ZH</a>
             </div>
         </nav>
     

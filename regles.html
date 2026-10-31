@@ -18,25 +18,6 @@
             --border-color: #d4af37;
         }
 
-        .goog-te-banner-frame,
-        .goog-te-banner-frame.skiptranslate,
-        #goog-gt-tt,
-        .goog-te-balloon-frame,
-        .goog-te-spinner-pos,
-        .VIpgJd-yD32fd-Aca33b,
-        iframe.skiptranslate,
-        iframe[id*=":1.container"],
-        iframe[id*=":2.container"] {
-            display: none !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            height: 0 !important;
-            width: 0 !important;
-            pointer-events: none !important;
-        }
-
-        body { top: 0px !important; position: static !important; }
-
         html, body {
             height: 100vh;
             max-height: 100vh;
@@ -85,43 +66,6 @@
         .main-nav a:hover, .main-nav a.active {
             color: var(--primary-gold);
             text-decoration: underline;
-        }
-
-        .custom-lang-container {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: var(--card-bg);
-            border: 1px solid var(--primary-gold);
-            border-radius: 6px;
-            padding: 3px 8px;
-            margin-left: 0.5rem;
-        }
-        .lang-earth-icon {
-            width: 18px;
-            height: 18px;
-            object-fit: cover;
-            border-radius: 50%;
-            display: block;
-            flex-shrink: 0;
-        }
-        .custom-lang-select {
-            background: transparent;
-            color: var(--text-main);
-            border: none;
-            font-size: 0.85rem;
-            font-weight: bold;
-            cursor: pointer;
-            outline: none;
-            font-family: inherit;
-        }
-        .custom-lang-select option {
-            background-color: #161622;
-            color: var(--text-main);
-        }
-
-        #google_translate_element {
-            display: none !important;
         }
 
         main {
@@ -208,6 +152,20 @@
         @media (max-width: 900px) {
             main { grid-template-columns: 1fr; }
         }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
     </style>
 </head>
 <body>
@@ -220,23 +178,18 @@
             <a href="galerie.html">Galerie Photo</a>
             <a href="apropos.html">À propos & FAQ</a>
             
-            <div class="custom-lang-container">
-                <img src="terre.jpeg" alt="Langue" class="lang-earth-icon">
-                <select id="languageSelect" class="custom-lang-select" onchange="changeLanguage(this.value)">
-                    <option value="fr">Français</option>
-                    <option value="en">English</option>
-                    <option value="de">Deutsch</option>
-                    <option value="es">Español</option>
-                    <option value="it">Italiano</option>
-                    <option value="pt">Português</option>
-                    <option value="ru">Русский</option>
-                    <option value="ja">日本語</option>
-                </select>
+            <div class="lang-bar">
+                <a href="regles.html" class="lang-switch active-lang" hreflang="fr">🇫🇷 FR</a>
+                <a href="regles_en.html" class="lang-switch" hreflang="en">🇬🇧 EN</a>
+                <a href="regles_es.html" class="lang-switch" hreflang="es">🇪🇸 ES</a>
+                <a href="regles_de.html" class="lang-switch" hreflang="de">🇩🇪 DE</a>
+                <a href="regles_pt.html" class="lang-switch" hreflang="pt">🇵🇹 PT</a>
+                <a href="regles_ru.html" class="lang-switch" hreflang="ru">🇷🇺 RU</a>
+                <a href="regles_ja.html" class="lang-switch" hreflang="ja">🇯🇵 JA</a>
+                <a href="regles_zh.html" class="lang-switch" hreflang="zh">🇨🇳 ZH</a>
             </div>
         </nav>
     </header>
-
-    <div id="google_translate_element"></div>
 
     <main>
         <div class="rules-card">
@@ -283,32 +236,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 <strong>Tarot Gothique</strong> - Tous droits réservés | <a href="index.html">Accueil du Jeu</a></p>
+        <p>&copy; 2026 <strong>Tarot Gothique</strong> (Cyril Darbost) | <a href="index.html">Accueil</a> | <a href="regles.html">Règles</a> | <a href="galerie.html">Galerie</a> | <a href="apropos.html">Mentions légales</a> | <a href="privacy.html">Confidentialité</a> | <a href="delete.html">Supprimer le compte</a></p>
     </footer>
-
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'fr',
-          includedLanguages: 'fr,en,de,es,it,pt,ru,ja',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-        }, 'google_translate_element');
-      }
-
-      function changeLanguage(langCode) {
-        var selectObj = document.querySelector('.goog-te-combo');
-        if (selectObj) {
-            selectObj.value = langCode;
-            selectObj.dispatchEvent(new Event('change'));
-        } else {
-            document.cookie = "googtrans=/fr/" + langCode + "; path=/;";
-            document.cookie = "googtrans=/fr/" + langCode + "; domain=" + window.location.hostname + "; path=/;";
-            location.reload();
-        }
-      }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
