@@ -7,18 +7,6 @@
     <meta name="description" content="Découvrez notre jeu de tarot en ligne et solo. Profitez d'un jeu de cartes unique aux règles officielles et à l'ambiance gothique.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
-    
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'fr',
-          includedLanguages: 'fr,en,de,es,it,pt,ru,ja',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-        }, 'google_translate_element');
-      }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <style>
         :root {
@@ -29,23 +17,6 @@
             --text-muted: #e2e8f0;
             --border-color: #d4af37;
         }
-
-        .goog-te-banner-frame,
-        .goog-te-banner-frame.skiptranslate,
-        #goog-gt-tt,
-        .goog-te-balloon-frame,
-        .goog-te-spinner-pos,
-        .VIpgJd-yD32fd-Aca33b,
-        iframe.skiptranslate {
-            display: none !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            height: 0 !important;
-            width: 0 !important;
-            pointer-events: none !important;
-        }
-
-        body { top: 0px !important; position: static !important; }
 
         html, body {
             height: 100vh;
@@ -98,41 +69,6 @@
             color: var(--primary-gold);
             text-decoration: underline;
         }
-
-        .custom-lang-container {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: var(--card-bg);
-            border: 1px solid var(--primary-gold);
-            border-radius: 6px;
-            padding: 2px 8px;
-            margin-left: 0.5rem;
-        }
-        .lang-earth-icon {
-            width: 18px;
-            height: 18px;
-            object-fit: cover;
-            border-radius: 50%;
-            display: block;
-            flex-shrink: 0;
-        }
-        .custom-lang-select {
-            background: transparent;
-            color: var(--text-main);
-            border: none;
-            font-size: 0.85rem;
-            font-weight: bold;
-            cursor: pointer;
-            outline: none;
-            font-family: inherit;
-        }
-        .custom-lang-select option {
-            background-color: #161622;
-            color: var(--text-main);
-        }
-
-        #google_translate_element { display: none !important; }
 
         main {
             flex: 1;
@@ -260,6 +196,20 @@
             html, body { overflow: auto; height: auto; }
             .media-row, .features-grid { grid-template-columns: 1fr; }
         }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
     </style>
 </head>
 <body>
@@ -272,23 +222,18 @@
             <a href="galerie.html">Galerie Photo</a>
             <a href="apropos.html">À propos & FAQ</a>
             
-            <div class="custom-lang-container">
-                <img src="terre.jpeg" alt="Langue" class="lang-earth-icon">
-                <select id="languageSelect" class="custom-lang-select" onchange="changeLanguage(this.value)">
-                    <option value="fr">Français</option>
-                    <option value="en">English</option>
-                    <option value="de">Deutsch</option>
-                    <option value="es">Español</option>
-                    <option value="it">Italiano</option>
-                    <option value="pt">Português</option>
-                    <option value="ru">Русский</option>
-                    <option value="ja">日本語</option>
-                </select>
+            <div class="lang-bar">
+                <a href="index.html" class="lang-switch active-lang" hreflang="fr">🇫🇷 FR</a>
+                <a href="index_en.html" class="lang-switch" hreflang="en">🇬🇧 EN</a>
+                <a href="index_es.html" class="lang-switch" hreflang="es">🇪🇸 ES</a>
+                <a href="index_de.html" class="lang-switch" hreflang="de">🇩🇪 DE</a>
+                <a href="index_pt.html" class="lang-switch" hreflang="pt">🇵🇹 PT</a>
+                <a href="index_ru.html" class="lang-switch" hreflang="ru">🇷🇺 RU</a>
+                <a href="index_ja.html" class="lang-switch" hreflang="ja">🇯🇵 JA</a>
+                <a href="index_zh.html" class="lang-switch" hreflang="zh">🇨🇳 ZH</a>
             </div>
         </nav>
     </header>
-
-    <div id="google_translate_element"></div>
 
     <main>
         <div class="top-description">
@@ -302,7 +247,7 @@
             </div>
             <div class="media-item" style="height: 100%;">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/Hp_oTuAgBX8" loading="lazy" title="Teaser officiel du jeu de tarot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/7l3TdJiCd7I" loading="lazy" title="Teaser officiel du jeu de tarot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -328,32 +273,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 <strong>Tarot Gothique</strong> - Jeu de tarot et règles | <a href="apropos.html">Mentions Légales</a> | <a href="privacy.html">Confidentialité</a> | <a href="delete.html">Suppression Compte</a></p>
+        <p>&copy; 2026 <strong>Tarot Gothique</strong> (Cyril Darbost) | <a href="index.html">Accueil</a> | <a href="regles.html">Règles</a> | <a href="galerie.html">Galerie</a> | <a href="apropos.html">Mentions légales</a> | <a href="privacy.html">Confidentialité</a> | <a href="delete.html">Supprimer le compte</a></p>
     </footer>
-
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'fr',
-          includedLanguages: 'fr,en,de,es,it,pt,ru,ja',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false
-        }, 'google_translate_element');
-      }
-
-      function changeLanguage(langCode) {
-        var selectObj = document.querySelector('.goog-te-combo');
-        if (selectObj) {
-            selectObj.value = langCode;
-            selectObj.dispatchEvent(new Event('change'));
-        } else {
-            document.cookie = "googtrans=/fr/" + langCode + "; path=/;";
-            document.cookie = "googtrans=/fr/" + langCode + "; domain=" + window.location.hostname + "; path=/;";
-            location.reload();
-        }
-      }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

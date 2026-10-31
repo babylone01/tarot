@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery - Gothic Tarot</title>
-    <meta name="description" content="Captures d'écran et visuels officiels de l'application Tarot Gothique 2026.">
+    <title>Fotogalerie - Gotisches Tarot 2026</title>
+    <meta name="description" content="Screenshots und offizielle Bilder der App Gotisches Tarot 2026.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/galerie_de.html">
     <link rel="alternate" hreflang="fr" href="https://babylone01.github.io/tarot/galerie.html">
     <link rel="alternate" hreflang="en" href="https://babylone01.github.io/tarot/galerie_en.html">
@@ -216,60 +216,71 @@
                 min-height: 200px;
             }
         }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Photo Gallery - Gothic Tarot</h1>
-        <nav class="main-nav" aria-label="Navigation principale">
+        <h1>Fotogalerie - Gotisches Tarot</h1>
+        <nav class="main-nav" aria-label="Hauptnavigation">
             <a href="index_de.html">Startseite</a>
             <a href="regles_de.html">Regeln</a>
             <a href="galerie_de.html" class="active">Galerie</a>
             <a href="apropos_de.html">Über uns</a>
-            <div class="lang-dropdown-container" style="display:inline-block; margin-left:8px;">
-            <select class="lang-select" onchange="if(this.value) window.location.href=this.value;" aria-label="Choisir la langue" style="background:var(--card-bg); color:var(--primary-gold); border:1px solid var(--primary-gold); border-radius:4px; padding:3px 6px; font-size:0.8rem; font-weight:bold; cursor:pointer; font-family:inherit;">
-                <option value="" disabled>🌍 Langue</option>
-                <option value="galerie.html">FR</option>
-                <option value="galerie_en.html">EN</option>
-                <option value="galerie_de.html" selected>DE</option>
-                <option value="galerie_es.html">ES</option>
-                <option value="galerie_pt.html">PT</option>
-                <option value="galerie_ru.html">RU</option>
-                <option value="galerie_ja.html">JA</option>
-                <option value="galerie_zh.html">ZH</option>
-            </select>
-        </div>
+            <div class="lang-bar">
+                <a href="galerie.html" class="lang-switch" hreflang="fr">🇫🇷 FR</a>
+                <a href="galerie_en.html" class="lang-switch" hreflang="en">🇬🇧 EN</a>
+                <a href="galerie_es.html" class="lang-switch" hreflang="es">🇪🇸 ES</a>
+                <a href="galerie_de.html" class="lang-switch active-lang" hreflang="de">🇩🇪 DE</a>
+                <a href="galerie_pt.html" class="lang-switch" hreflang="pt">🇵🇹 PT</a>
+                <a href="galerie_ru.html" class="lang-switch" hreflang="ru">🇷🇺 RU</a>
+                <a href="galerie_ja.html" class="lang-switch" hreflang="ja">🇯🇵 JA</a>
+                <a href="galerie_zh.html" class="lang-switch" hreflang="zh">🇨🇳 ZH</a>
+            </div>
         </nav>
     </header>
     <main>
         <div class="gallery-intro">
-            <h2 id="captures">Gameplay Screenshots Gallery</h2>
-            <p>Explore the dark gothic interface and beautiful card tables of Gothic Tarot 2026. Ready to play? Go to the <a href="index_en.html#presentation">Game Home page</a>.</p>
+            <h2 id="captures">Galerie der Screenshots</h2>
+            <p>Entdecken Sie die gepflegte gotische Oberfläche und die stimmungsvollen Spieltische von Gotisches Tarot 2026. Bereit zum Spielen? Besuchen Sie die <a href="index_de.html#presentation">Startseite des Spiels</a>.</p>
         </div>
         <div class="gallery-grid">
             <div class="gallery-item">
                 <div class="gallery-img-wrapper">
-                    <img src="jeu-tarot-gothique-ambiance-principale.jpg" alt="Main Ambience - Top Left" class="gallery-img">
+                    <img src="jeu-tarot-gothique-ambiance-principale.jpg" alt="Hauptambiente - oben links" class="gallery-img">
                 </div>
-                <div class="gallery-caption" id="design">1. Main Ambience (Top Left)</div>
+                <div class="gallery-caption" id="design">1. Hauptambiente (oben links)</div>
             </div>
             <div class="gallery-item">
                 <div class="gallery-img-wrapper">
-                    <img src="jeu_de_tarot_2026.jpg" alt="Gothic Room & Cards - Top Right" class="gallery-img">
+                    <img src="jeu_de_tarot_2026.jpg" alt="Gotischer Saal & Karten - oben rechts" class="gallery-img">
                 </div>
-                <div class="gallery-caption">2. Gothic Room & Cards (Top Right)</div>
+                <div class="gallery-caption">2. Gotischer Saal & Karten (oben rechts)</div>
             </div>
             <div class="gallery-item">
                 <div class="gallery-img-wrapper">
-                    <img src="application-jeu_tarot_gothique.jpg" alt="Active Game Table - Bottom Left" class="gallery-img">
+                    <img src="application-jeu_tarot_gothique.jpg" alt="Aktiver Spieltisch - unten links" class="gallery-img">
                 </div>
-                <div class="gallery-caption">3. Active Game Table (Bottom Left)</div>
+                <div class="gallery-caption">3. Aktiver Spieltisch (unten links)</div>
             </div>
             <div class="gallery-item">
                 <div class="gallery-img-wrapper">
-                    <img src="faucheuse_cartes_tarot_gothique.jpg" alt="Weekend Tournament - Bottom Right" class="gallery-img">
+                    <img src="faucheuse_cartes_tarot_gothique.jpg" alt="Wochenendturnier - unten rechts" class="gallery-img">
                 </div>
-                <div class="gallery-caption">4. Weekend Tournament (Bottom Right)</div>
+                <div class="gallery-caption">4. Wochenendturnier (unten rechts)</div>
             </div>
         </div>
     </main>

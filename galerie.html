@@ -216,6 +216,20 @@
                 min-height: 200px;
             }
         }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
     </style>
 </head>
 <body>
@@ -226,19 +240,16 @@
             <a href="regles.html">Règles du Tarot</a>
             <a href="galerie.html" class="active">Galerie Photo</a>
             <a href="apropos.html">À propos & FAQ</a>
-            <div class="lang-dropdown-container" style="display:inline-block; margin-left:8px;">
-            <select class="lang-select" onchange="if(this.value) window.location.href=this.value;" aria-label="Choisir la langue" style="background:var(--card-bg); color:var(--primary-gold); border:1px solid var(--primary-gold); border-radius:4px; padding:3px 6px; font-size:0.8rem; font-weight:bold; cursor:pointer; font-family:inherit;">
-                <option value="" disabled>🌍 Langue</option>
-                <option value="galerie.html" selected>FR</option>
-                <option value="galerie_en.html">EN</option>
-                <option value="galerie_de.html">DE</option>
-                <option value="galerie_es.html">ES</option>
-                <option value="galerie_pt.html">PT</option>
-                <option value="galerie_ru.html">RU</option>
-                <option value="galerie_ja.html">JA</option>
-                <option value="galerie_zh.html">ZH</option>
-            </select>
-        </div>
+            <div class="lang-bar">
+                <a href="galerie.html" class="lang-switch active-lang" hreflang="fr">🇫🇷 FR</a>
+                <a href="galerie_en.html" class="lang-switch" hreflang="en">🇬🇧 EN</a>
+                <a href="galerie_es.html" class="lang-switch" hreflang="es">🇪🇸 ES</a>
+                <a href="galerie_de.html" class="lang-switch" hreflang="de">🇩🇪 DE</a>
+                <a href="galerie_pt.html" class="lang-switch" hreflang="pt">🇵🇹 PT</a>
+                <a href="galerie_ru.html" class="lang-switch" hreflang="ru">🇷🇺 RU</a>
+                <a href="galerie_ja.html" class="lang-switch" hreflang="ja">🇯🇵 JA</a>
+                <a href="galerie_zh.html" class="lang-switch" hreflang="zh">🇨🇳 ZH</a>
+            </div>
         </nav>
     </header>
     <main>
