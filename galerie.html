@@ -15,7 +15,7 @@
     <link rel="alternate" hreflang="ja" href="https://babylone01.github.io/tarot/galerie_ja.html">
     <link rel="alternate" hreflang="zh" href="https://babylone01.github.io/tarot/galerie_zh.html">
     <link rel="alternate" hreflang="x-default" href="https://babylone01.github.io/tarot/galerie.html">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
+    <text y='.9em' font-size='90'>🃏</text></svg>">
     <style>
         :root {
             --primary-gold: #f3d060;
@@ -26,7 +26,7 @@
             --border-color: #d4af37;
         }
         html, body {
-            min-height: 100vh;
+            min-min-height: 100vh;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -109,7 +109,7 @@
             box-shadow: 0 0 16px rgba(212, 175, 55, 0.5);
             background-color: #000;
             box-sizing: border-box;
-            overflow: hidden;
+            overflow-y: auto; overflow-x: hidden;
             display: flex;
         }
         .hero-banner {
@@ -161,7 +161,7 @@
             background-color: var(--card-bg); 
             border: 1px solid var(--border-color); 
             border-radius: 8px; 
-            overflow: hidden; 
+            overflow-y: auto; overflow-x: hidden; 
             display: flex; 
             flex-direction: column; 
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -172,7 +172,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            overflow-y: auto; overflow-x: hidden;
             border-bottom: 1px solid var(--border-color);
         }
         .gallery-img { 
@@ -231,6 +231,7 @@
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
     </style>
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <header>

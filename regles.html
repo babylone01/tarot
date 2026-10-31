@@ -6,7 +6,7 @@
     <title>Règles du Jeu de Tarot & Comptage des Points - Tarot Gothique 2026</title>
     <meta name="description" content="Découvrez les règles officielles du tarot à 3, 4 et 5 joueurs. Apprenez à compter les points, maîtriser les contrats et la valeur des cartes.">
     <link rel="canonical" href="https://babylone01.github.io/tarot/regles.html">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
+    <text y='.9em' font-size='90'>🃏</text></svg>">
 
     <style>
         :root {
@@ -19,11 +19,11 @@
         }
 
         html, body {
-            height: 100vh;
-            max-height: 100vh;
+            min-height: 100vh;
+            max-min-height: 100vh;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow-y: auto; overflow-x: hidden;
             background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
             background-size: cover;
             background-position: center;
@@ -78,7 +78,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0.8rem;
-            overflow: hidden;
+            overflow-y: auto; overflow-x: hidden;
             align-content: stretch;
         }
 
@@ -167,6 +167,7 @@
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
     </style>
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
