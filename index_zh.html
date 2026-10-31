@@ -3,38 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gothic Tarot 2026 - Online & Solo AI Card Game</title>
-    <meta name="description" content="Play French Tarot online or solo against an advanced AI.">
+    <title>哥特塔罗 2026 - 免费在线法国塔罗牌游戏</title>
+    <meta name="description" content="探索哥特塔罗2026，独特的暗黑暗黑风格法国塔罗牌游戏。免费单人对战智能AI或加入在线多人竞技。">
     <link rel="canonical" href="https://babylone01.github.io/tarot/index_zh.html">
-    <link rel="alternate" hreflang="fr" href="https://babylone01.github.io/tarot/index.html">
-    <link rel="alternate" hreflang="en" href="https://babylone01.github.io/tarot/index_en.html">
-    <link rel="alternate" hreflang="de" href="https://babylone01.github.io/tarot/index_de.html">
-    <link rel="alternate" hreflang="es" href="https://babylone01.github.io/tarot/index_es.html">
-    <link rel="alternate" hreflang="pt" href="https://babylone01.github.io/tarot/index_pt.html">
-    <link rel="alternate" hreflang="ru" href="https://babylone01.github.io/tarot/index_ru.html">
-    <link rel="alternate" hreflang="ja" href="https://babylone01.github.io/tarot/index_ja.html">
-    <link rel="alternate" hreflang="zh" href="https://babylone01.github.io/tarot/index_zh.html">
-    <link rel="alternate" hreflang="x-default" href="https://babylone01.github.io/tarot/index.html">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
     <style>
         :root {
             --primary-gold: #f3d060;
-            --card-bg: rgba(22, 22, 34, 0.88);
-            --header-bg: rgba(18, 18, 26, 0.92);
+            --card-bg: rgba(22, 22, 34, 0.82);
+            --header-bg: rgba(18, 18, 26, 0.88);
             --text-main: #f8fafc;
             --text-muted: #e2e8f0;
             --border-color: #d4af37;
         }
         html, body {
-            min-height: 100vh;
+            height: 100vh;
+            max-height: 100vh;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
-            overflow-y: auto;
-            background: linear-gradient(rgba(11, 11, 15, 0.4), rgba(11, 11, 15, 0.5)), url('background.jpg');
+            overflow: hidden;
+            background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             color: var(--text-main);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             display: flex;
@@ -62,7 +52,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1.2rem;
             flex-wrap: wrap;
         }
         .main-nav a {
@@ -76,67 +66,64 @@
             color: var(--primary-gold);
             text-decoration: underline;
         }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         main {
             flex: 1;
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
-            padding: 1rem;
+            padding: 0.8rem 1rem;
             box-sizing: border-box;
-            display: flex; 
-            flex-direction: column; 
-            gap: 1rem;
+            display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem;
+            overflow: hidden;
         }
-        .top-description, .rules-card, .info-card, .gallery-intro, .content-box, .box {
+        .top-description, .rules-card, .info-card, .gallery-intro, .gallery-item, .testimonial-card {
             background-color: var(--card-bg);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 1rem;
+            padding: 0.8rem 1rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
         .media-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            align-items: stretch;
+            align-items: center;
+            flex: 1;
+            min-height: 0;
         }
         .hero-banner, .video-container {
             width: 100%;
-            min-height: 280px;
+            height: 100%;
+            max-height: 100%;
             border-radius: 8px;
             border: 2px solid var(--primary-gold);
             box-shadow: 0 0 16px rgba(212, 175, 55, 0.5);
+            object-fit: cover;
             background-color: #000;
             box-sizing: border-box;
-            overflow: hidden;
-            display: flex;
         }
-        .hero-banner {
-            object-fit: cover;
-        }
-        .video-container iframe { 
-            width: 100%; 
-            height: 100%; 
-            border: none; 
-            flex: 1;
-        }
+        .video-container iframe { width: 100%; height: 100%; border: none; }
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 0.8rem;
-        }
-        .feature-card {
-            background-color: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 0.8rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            flex-shrink: 0;
         }
         .feature-card h3 { color: var(--primary-gold); margin: 0 0 0.3rem 0; font-size: 1.02rem; }
         .feature-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0; line-height: 1.3; }
-        .cta-container { text-align: center; margin: 0.5rem 0; }
+        .cta-container { text-align: center; margin: 0.2rem 0; flex-shrink: 0; }
         .cta-button {
             display: inline-block;
             background-color: var(--primary-gold);
@@ -151,127 +138,84 @@
         table.rules-table { width: 100%; border-collapse: collapse; margin: 0.3rem 0; background-color: rgba(18, 18, 26, 0.88); }
         table.rules-table th, table.rules-table td { border: 1px solid var(--border-color); padding: 0.4rem 0.7rem; font-size: 0.88rem; }
         table.rules-table th { color: var(--primary-gold); background-color: rgba(26, 26, 38, 0.95); }
-        
-        .gallery-grid { 
-            display: grid; 
-            grid-template-columns: repeat(2, 1fr); 
-            gap: 1.2rem; 
-        }
-        .gallery-item { 
-            background-color: var(--card-bg); 
-            border: 1px solid var(--border-color); 
-            border-radius: 8px; 
-            overflow: hidden; 
-            display: flex; 
-            flex-direction: column; 
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-        }
-        .gallery-img-wrapper {
-            width: 100%;
-            background-color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .gallery-img { 
-            width: 100%; 
-            height: auto; 
-            display: block;
-            object-fit: contain;
-        }
-        .gallery-caption { 
-            padding: 0.6rem; 
-            color: var(--text-muted); 
-            font-size: 0.88rem; 
-            text-align: center; 
-            font-weight: bold;
-        }
-
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .gallery-img { width: 100%; max-height: 140px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
+        .gallery-caption { padding: 0.5rem; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
         .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
         .testimonial-author { margin-top: 0.4rem; font-weight: bold; color: var(--primary-gold); text-align: right; font-size: 0.9rem; }
         footer {
             background-color: var(--header-bg);
             backdrop-filter: blur(10px);
             text-align: center;
-            padding: 0.6rem;
+            padding: 0.5rem;
             font-size: 0.82rem;
             color: var(--text-muted);
             border-top: 1px solid var(--border-color);
             flex-shrink: 0;
-            margin-top: auto;
         }
         footer a { color: var(--primary-gold); text-decoration: none; }
-        a { color: var(--primary-gold); }
-
-        @media (max-width: 768px) { 
-            .media-row, .features-grid, .gallery-grid, .testimonials-grid { 
-                grid-template-columns: 1fr; 
-            } 
-            .gallery-img {
-                max-height: none;
-            }
-            .hero-banner, .video-container {
-                min-height: 200px;
-            }
-        }
+        @media (max-width: 900px) { html, body { overflow: auto; height: auto; } .media-row, .features-grid, .gallery-grid, .testimonials-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>Gothic Tarot 2026 - Online & Solo AI Card Game</h1>
-        <nav class="main-nav" aria-label="Navigation principale">
+        <h1>哥特塔罗 — 官方法国塔罗中心</h1>
+        
+        <nav class="main-nav">
             <a href="index_zh.html" class="active">首页</a>
-            <a href="regles_zh.html">规则</a>
-            <a href="galerie_zh.html">图库</a>
-            <a href="apropos_zh.html">关于</a>
-            <div class="lang-dropdown-container" style="display:inline-block; margin-left:8px;">
-            <select class="lang-select" onchange="if(this.value) window.location.href=this.value;" aria-label="Choisir la langue" style="background:var(--card-bg); color:var(--primary-gold); border:1px solid var(--primary-gold); border-radius:4px; padding:3px 6px; font-size:0.8rem; font-weight:bold; cursor:pointer; font-family:inherit;">
-                <option value="" disabled>🌍 Langue</option>
-                <option value="index.html">FR</option>
-                <option value="index_en.html">EN</option>
-                <option value="index_de.html">DE</option>
-                <option value="index_es.html">ES</option>
-                <option value="index_pt.html">PT</option>
-                <option value="index_ru.html">RU</option>
-                <option value="index_ja.html">JA</option>
-                <option value="index_zh.html" selected>ZH</option>
-            </select>
-        </div>
+            <a href="regles_zh.html" class="">规则</a>
+            <a href="galerie_zh.html" class="">图库</a>
+            <a href="apropos_zh.html" class="">关于</a>
+            <div style="display:inline-flex; gap:3px; margin-left:10px;">
+                <a href="index.html" class="lang-switch">🇫🇷 FR</a>
+                <a href="index_en.html" class="lang-switch">🇬🇧 EN</a>
+                <a href="index_es.html" class="lang-switch">🇪🇸 ES</a>
+                <a href="index_de.html" class="lang-switch">🇩🇪 DE</a>
+                <a href="index_pt.html" class="lang-switch">🇵🇹 PT</a>
+                <a href="index_ru.html" class="lang-switch">🇷🇺 RU</a>
+                <a href="index_ja.html" class="lang-switch">🇯🇵 JA</a>
+                <a href="index_zh.html" class="lang-switch">🇨🇳 ZH</a>
+            </div>
         </nav>
+    
     </header>
     <main>
+        
         <div class="top-description">
-            <h2 id="presentation">Gothic Tarot Game - Multiplayer & Solo AI</h2>
-            <p>Immerse yourself in the dark and captivating world of <strong>Gothic Tarot 2026</strong>. Play for free solo against our advanced artificial intelligence or challenge players worldwide. Check our <a href="regles_en.html#regles-base">detailed Tarot rules</a> or explore gameplay screenshots in our <a href="galerie_en.html#captures">photo gallery</a>.</p>
+            <h2>终极免费法国塔罗在线体验</h2>
+            <p>欢迎来到哥特塔罗。体验独一无二的暗黑风格传统法国塔罗牌游戏。完全免费与智能AI单人对战，或加入竞争激烈的在线多人牌局。</p>
         </div>
         <div class="media-row">
-            <img src="jeu-tarot-gothique-ambiance-principale.jpg" alt="Gothic Tarot 2026 Banner" class="hero-banner">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/Hp_oTuAgBX8" title="Gothic Tarot Presentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="media-item" style="height: 100%;">
+                <img src="banner.jpg" alt="Banner" class="hero-banner">
+            </div>
+            <div class="media-item" style="height: 100%;">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Hp_oTuAgBX8" loading="lazy" title="Teaser" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
         <div class="features-grid">
             <div class="feature-card">
-                <h3><a href="regles_en.html#variantes" style="text-decoration:none;">3, 4, and 5 Player Modes</a></h3>
-                <p>Full support for King Call in 5-player mode and official French Tarot Federation bidding rules.</p>
+                <h3>多人与单人模式</h3>
+                <p>享受离线对战AI或与好友进行实时多人竞技比赛。</p>
             </div>
             <div class="feature-card">
-                <h3><a href="apropos_en.html#faq" style="text-decoration:none;">Advanced Solo AI</a></h3>
-                <p>Practice offline anytime against a strategic and adaptive artificial intelligence.</p>
+                <h3>暗黑哥特设计</h3>
+                <p>沉浸在精美金色细节的震撼暗黑哥特美学中。</p>
             </div>
             <div class="feature-card">
-                <h3><a href="galerie_en.html#design" style="text-decoration:none;">Sublime Graphics</a></h3>
-                <p>Dark gothic artistic design, fully optimized for mobile devices, tablets, and desktop computers.</p>
+                <h3>官方规则</h3>
+                <p>掌握3人、4人和5人局的法国塔罗官方规则、契约策略与计分方式。</p>
             </div>
         </div>
         <div class="cta-container">
-            <a href="https://play.google.com/store/apps/details?id=com.tarot.gothique" class="cta-button" target="_blank" rel="noopener">Download Android App</a>
+            <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">在 Google Play 下载</a>
         </div>
+        
     </main>
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_zh.html">首页</a> | <a href="regles_zh.html">规则</a> | <a href="galerie_zh.html">图库</a> | <a href="apropos_zh.html">关于</a> | <a href="privacy_zh.html">隐私</a> | <a href="delete_zh.html">删除账户</a></p>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_zh.html">首页</a> | <a href="apropos_zh.html">法律声明</a> | <a href="privacy_zh.html">隐私</a> | <a href="delete_zh.html">删除账户</a></p>
     </footer>
 </body>
 </html>
