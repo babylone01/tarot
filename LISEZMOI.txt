@@ -1,0 +1,38 @@
+Tarot Gothique – site complet optimisé SEO – VERSION 3 FINALE (1er novembre 2026)
+Site : https://babylone01.github.io/tarot/      Branche git locale : seo-ameliorations
+
+MISE EN PRODUCTION
+1. Copier TOUS les fichiers de ce dossier à la racine du dépôt GitHub babylone01/tarot (noms d'origine conservés).
+2. Dans Google Search Console : soumettre https://babylone01.github.io/tarot/sitemap.xml, puis
+   « Inspection de l'URL » → « Demander une indexation » pour l'accueil, les règles, la galerie, à propos et confidentialité.
+
+CONTENU (77 fichiers)
+- 50 pages HTML (index, regles, galerie, apropos, privacy, delete × 8 langues + page testeurs
+  + google1c9ea1b806a18a05.html : vérification Search Console, NON modifiée)
+- sitemap.xml (41 URL indexables avec hreflang), robots.txt / BingSiteAuth.xml / app-ads.txt inchangés
+- Images JPEG d'origine + 8 WebP + favicon.png / favicon.ico / apple-touch-icon.png
+
+CORRECTIFS SEARCH CONSOLE (« Autre page avec balise canonique correcte » / « Explorée, actuellement non indexée »)
+- Les 22 liens internes vers « index.html » pointent désormais vers l'URL canonique « ./ » (= /tarot/) :
+  Google ne découvre plus de doublon /tarot/index.html. Ancres mortes « #presentation » supprimées.
+- Une seule balise canonique par page, absolue, auto-référente, identique à l'URL du sitemap ; aucune en double.
+- Contenu propre à chaque page (recouvrement maximal entre deux pages d'une même langue : ~10 %) :
+  Règles : introduction + section « Déroulement d'une manche » ; Galerie : introduction + description de chaque capture ;
+  À propos : carte « Une application conçue pour la stabilité » ; Confidentialité : introduction + section « Suppression du compte ».
+- Pages « Suppression de compte » en noindex, follow (pages utilitaires sans valeur de recherche) et retirées du sitemap :
+  elles restent accessibles (exigence Google Play) mais ne diluent plus la qualité perçue du site.
+
+APPLICATION MOBILE ANDROID
+- « Application mobile Android pour smartphones et tablettes » en toutes lettres, avec lien Google Play :
+  FAQ de l'accueil et carte « Le projet » de À propos, dans les 8 langues ; mentions dans les meta descriptions,
+  titres H2, page galerie et page confidentialité.
+- Données structurées : MobileApplication + availableOnDevice (Smartphone, Tablet) + downloadUrl / installUrl Google Play.
+
+PAGE TESTEURS
+- Légendes alignées sur le contenu réel des captures : « Machine à sous & jackpot de jetons », « Tableau des scores de fin
+  de manche », « Table à 5 joueurs & avatars », « Partie en cours sur le tapis ».
+
+RAPPEL DES VERSIONS PRÉCÉDENTES (toujours inclus)
+- Titles et descriptions uniques et localisés, hreflang réciproques, Open Graph/Twitter, JSON-LD par type de page,
+  suppression du fragment « "> », favicon, design unifié entre langues, galeries étrangères corrigées, H3→H2,
+  gras mesuré, « 2026 » dans le title FR, accueil sans recouvrement avec la page Règles.
