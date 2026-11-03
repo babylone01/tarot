@@ -62,7 +62,11 @@
           "author": {
             "@type": "Person",
             "@id": "https://babylone01.github.io/tarot/#auteur",
-            "name": "Cyril Darbost"
+            "name": "Cyril Darbost",
+            "email": [
+              "babylone.ch@gmail.com",
+              "cyrildarbost@gmail.com"
+            ]
           }
         },
         {
@@ -108,15 +112,15 @@
               "name": "应用是免费的吗？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "是的，哥特塔罗的所有桌位和模式均 100% 免费使用。"
+                "text": "是的，哥特塔罗的所有牌桌和游戏模式均100%免费。"
               }
             },
             {
               "@type": "Question",
-              "name": "兼容手机和电脑吗？",
+              "name": "可以在哪些设备上玩？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "当然，AI单人模式和安卓应用与官方网站完美结合。"
+                "text": "哥特塔罗是一款纯移动端游戏，可通过Google Play安装在Android手机和平板上。"
               }
             },
             {
@@ -124,10 +128,33 @@
               "name": "如何联系开发者？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "如有任何建议或bug反馈，请通过项目的官方 GitHub 仓库或社区 Discord 服务器联系我们。"
+                "text": "请发送邮件至Cyril Darbost：babylone.ch@gmail.com 或 cyrildarbost@gmail.com。您也可以在社区Discord服务器上与其他玩家交流。"
               }
             }
           ]
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://babylone01.github.io/tarot/apropos_zh.html#musique-1",
+          "name": "Freaky Halloween",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Alex-Productions"
+          },
+          "url": "https://onsound.eu",
+          "license": "https://creativecommons.org/licenses/by/3.0/",
+          "datePublished": "2024"
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://babylone01.github.io/tarot/apropos_zh.html#musique-2",
+          "name": "Slice",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Alex-Productions"
+          },
+          "url": "https://onsound.eu",
+          "license": "https://creativecommons.org/licenses/by/3.0/"
         }
       ]
     }
@@ -284,6 +311,9 @@
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
     </style>
 </head>
 <body>
@@ -309,35 +339,54 @@
     
     </header>
     <main>
-        
+
         <div class="info-card">
             <h2>哥特塔罗 2026 项目</h2>
-            <p>由 <strong>Cyril Darbost</strong> 构思并开发的 <strong>Gothic Tarot 2026</strong> 旨在提供一款兼具强大、黑暗且精致视觉风格的传统纸牌游戏，并确保移动端和网页端完美的性能表现。</p>
+            <p>由<strong>Cyril Darbost</strong>构思、开发并发行的<strong>哥特塔罗2026</strong>，旨在打造一款视觉风格鲜明、暗黑且精致的传统卡牌游戏，并确保在手机和平板上拥有出色的技术表现。</p>
             <p>本项目结合了流畅的人机对战引擎、实时多人联机系统以及为塔罗爱好者打造的沉浸式体验。</p>
-            <p>哥特塔罗是一款面向手机和平板的<strong>Android移动应用</strong>，可在<a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>免费获取。</p>
+            <p><strong>Tarot 2026</strong>是一款面向Android的社交塔罗牌游戏：一款适用于手机和平板的<strong>Android移动应用</strong>，可在<a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>免费下载。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>开发者与发行方</h2>
+            <p>哥特塔罗2026由Cyril Darbost独立创作、开发和发行。如有问题、建议或错误反馈，请联系<a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a>或<a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>。</p>
         </div>
 
         <div class="info-card">
             <h2>专注稳定性的应用</h2>
             <p>哥特塔罗2026采用Flutter开发，并使用Supabase管理账号、分数和实时多人牌桌。应用可在Android手机和平板上运行，支持8种语言，目前正在Google Play进行封闭测试，以确保在线对局稳定可靠。</p>
         </div>
+
         <div class="testimonials-grid">
-            <div class="testimonial-card">
+<div class="testimonial-card">
                 « 终于有一款尊重朋友聚会真实规则的手机塔罗游戏了！暗黑哥特氛围绝佳，而且完全免费。 »
                 <div class="testimonial-author">— 托马斯 M.（测试玩家）</div>
-            </div>
-            <div class="testimonial-card">
+</div>
+<div class="testimonial-card">
                 « 呼叫国王的5人模式完美运行。广告非常克制，从不打断游戏。 »
                 <div class="testimonial-author">— 萨拉 L.（塔罗爱好者）</div>
-            </div>
-        </div>
+</div>
+</div>
+
         <div class="info-card">
             <h2>常见问题 (FAQ)</h2>
-            <p><strong>应用是免费的吗？</strong><br>是的，哥特塔罗的所有桌位和模式均 100% 免费使用。</p>
-            <p><strong>兼容手机和电脑吗？</strong><br>当然，AI单人模式和安卓应用与官方网站完美结合。</p>
-            <p style="margin-bottom: 0;"><strong>如何联系开发者？</strong><br>如有任何建议或bug反馈，请通过项目的官方 GitHub 仓库或社区 Discord 服务器联系我们。</p>
+            <h3>应用是免费的吗？</h3>
+            <p>是的，哥特塔罗的所有牌桌和游戏模式均100%免费。</p>
+            <h3>可以在哪些设备上玩？</h3>
+            <p>哥特塔罗是一款纯移动端游戏，可通过Google Play安装在Android手机和平板上。</p>
+            <h3>如何联系开发者？</h3>
+            <p>请发送邮件至Cyril Darbost：<a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a> 或 <a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>。您也可以在社区Discord服务器上与其他玩家交流。</p>
         </div>
-        
+
+        <div class="info-card">
+            <h2>致谢与音乐版权</h2>
+            <p>应用中的音乐由Alex-Productions创作：</p>
+            <ul>
+                <li><strong>《Freaky Halloween》</strong>（2024）——欢迎界面音乐。来源：<a href="https://onsound.eu" target="_blank" rel="noopener">onsound.eu</a>。许可协议：<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">知识共享 署名 3.0（CC BY 3.0）</a>。</li>
+                <li><strong>《Slice》</strong>——开场音乐。来源：<a href="https://onsound.eu" target="_blank" rel="noopener">onsound.eu</a>。许可协议：<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">知识共享 署名 3.0（CC BY 3.0）</a>。</li>
+            </ul>
+        </div>
+
     </main>
     <footer>
         <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_zh.html">首页</a> | <a href="apropos_zh.html">法律声明</a> | <a href="privacy_zh.html">隐私</a> | <a href="delete_zh.html">删除账户</a></p>

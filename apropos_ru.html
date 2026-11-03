@@ -62,7 +62,11 @@
           "author": {
             "@type": "Person",
             "@id": "https://babylone01.github.io/tarot/#auteur",
-            "name": "Cyril Darbost"
+            "name": "Cyril Darbost",
+            "email": [
+              "babylone.ch@gmail.com",
+              "cyrildarbost@gmail.com"
+            ]
           }
         },
         {
@@ -108,15 +112,15 @@
               "name": "Приложение бесплатное?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Да, Gothic Tarot на 100% бесплатно для всех столов и режимов."
+                "text": "Да, Готический Таро на 100 % бесплатен за всеми столами и во всех режимах игры."
               }
             },
             {
               "@type": "Question",
-              "name": "Совместимо с мобильными и ПК?",
+              "name": "На каких устройствах можно играть?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Конечно, соло-режим против ИИ и приложение для Android работают вместе с сайтом."
+                "text": "Готический Таро — исключительно мобильная игра: она устанавливается на смартфоны и планшеты Android через Google Play."
               }
             },
             {
@@ -124,10 +128,33 @@
               "name": "Как связаться с разработчиком?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Для предложений или багов используйте официальный репозиторий GitHub или Discord."
+                "text": "Пишите Cyril Darbost: babylone.ch@gmail.com или cyrildarbost@gmail.com. Также можно общаться с игроками на Discord-сервере сообщества."
               }
             }
           ]
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://babylone01.github.io/tarot/apropos_ru.html#musique-1",
+          "name": "Freaky Halloween",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Alex-Productions"
+          },
+          "url": "https://onsound.eu",
+          "license": "https://creativecommons.org/licenses/by/3.0/",
+          "datePublished": "2024"
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://babylone01.github.io/tarot/apropos_ru.html#musique-2",
+          "name": "Slice",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Alex-Productions"
+          },
+          "url": "https://onsound.eu",
+          "license": "https://creativecommons.org/licenses/by/3.0/"
         }
       ]
     }
@@ -284,6 +311,9 @@
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
     </style>
 </head>
 <body>
@@ -309,35 +339,54 @@
     
     </header>
     <main>
-        
+
         <div class="info-card">
             <h2>Проект Готический Таро 2026</h2>
-            <p>Разработанный <strong>Сирилом Дарбо</strong>, <strong>Gothic Tarot 2026</strong> предлагает традиционную карточную игру с мощной темной визуальной эстетикой и безупречной производительностью.</p>
+            <p>Задуманный, разработанный и изданный <strong>Cyril Darbost</strong>, <strong>Готический Таро 2026</strong> родился из желания предложить традиционную карточную игру с сильным, мрачным и продуманным визуальным стилем и безупречной технической работой на смартфонах и планшетах.</p>
             <p>Проект объединяет плавный искусственный интеллект, многопользовательскую систему в реальном времени и погружение.</p>
-            <p>Готический Таро — <strong>мобильное приложение для Android</strong> для смартфонов и планшетов, бесплатно доступное в <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>.</p>
+            <p><strong>Tarot 2026</strong> — социальная игра в таро для Android: <strong>мобильное приложение для Android</strong> для смартфонов и планшетов, бесплатно в <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Автор и издатель</h2>
+            <p>Готический Таро 2026 полностью создан, разработан и издан Cyril Darbost. По вопросам, предложениям и ошибкам пишите: <a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a> или <a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>.</p>
         </div>
 
         <div class="info-card">
             <h2>Приложение, созданное для стабильной игры</h2>
             <p>Готический Таро 2026 разработан на Flutter и использует Supabase для аккаунтов, результатов и столов мультиплеера в реальном времени. Приложение работает на смартфонах и планшетах Android, поддерживает восемь языков и проходит закрытое бета-тестирование в Google Play, чтобы онлайн-партии шли без сбоев.</p>
         </div>
+
         <div class="testimonials-grid">
-            <div class="testimonial-card">
+<div class="testimonial-card">
                 « Наконец-то мобильное таро, уважающее настоящие правила! Готическая атмосфера великолепна, игра полностью бесплатна. »
                 <div class="testimonial-author">— Томас М. (Бета-тестер)</div>
-            </div>
-            <div class="testimonial-card">
+</div>
+<div class="testimonial-card">
                 « Режим на 5 игроков работает идеально. Реклама никогда не мешает игре. »
                 <div class="testimonial-author">— Сара Л. (Любительница таро)</div>
-            </div>
-        </div>
+</div>
+</div>
+
         <div class="info-card">
             <h2>Часто задаваемые вопросы (FAQ)</h2>
-            <p><strong>Приложение бесплатное?</strong><br>Да, Gothic Tarot на 100% бесплатно для всех столов и режимов.</p>
-            <p><strong>Совместимо с мобильными и ПК?</strong><br>Конечно, соло-режим против ИИ и приложение для Android работают вместе с сайтом.</p>
-            <p style="margin-bottom: 0;"><strong>Как связаться с разработчиком?</strong><br>Для предложений или багов используйте официальный репозиторий GitHub или Discord.</p>
+            <h3>Приложение бесплатное?</h3>
+            <p>Да, Готический Таро на 100 % бесплатен за всеми столами и во всех режимах игры.</p>
+            <h3>На каких устройствах можно играть?</h3>
+            <p>Готический Таро — исключительно мобильная игра: она устанавливается на смартфоны и планшеты Android через Google Play.</p>
+            <h3>Как связаться с разработчиком?</h3>
+            <p>Пишите Cyril Darbost: <a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a> или <a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>. Также можно общаться с игроками на Discord-сервере сообщества.</p>
         </div>
-        
+
+        <div class="info-card">
+            <h2>Благодарности и музыка</h2>
+            <p>Музыку для приложения написал Alex-Productions:</p>
+            <ul>
+                <li><strong>«Freaky Halloween»</strong> (2024) – музыка главного экрана. Источник: <a href="https://onsound.eu" target="_blank" rel="noopener">onsound.eu</a>. Лицензия: <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">Creative Commons Attribution 3.0 (CC BY 3.0)</a>.</li>
+                <li><strong>«Slice»</strong> – музыка вступления. Источник: <a href="https://onsound.eu" target="_blank" rel="noopener">onsound.eu</a>. Лицензия: <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">Creative Commons Attribution 3.0 (CC BY 3.0)</a>.</li>
+            </ul>
+        </div>
+
     </main>
     <footer>
         <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ru.html">Главная</a> | <a href="apropos_ru.html">Правовая информация</a> | <a href="privacy_ru.html">Конфиденциальность</a> | <a href="delete_ru.html">Удалить аккаунт</a></p>

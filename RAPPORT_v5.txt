@@ -1,0 +1,36 @@
+Tarot Gothique – site complet – VERSION 5 (3 novembre 2026)
+Mise en production : copier tout ce dossier à la racine du dépôt GitHub babylone01/tarot (noms d'origine conservés).
+
+1. COMPATIBILITÉ – JEU EXCLUSIVEMENT MOBILE ANDROID
+   Supprimé partout (texte visible, balises meta, JSON-LD), dans les 8 langues :
+   - À propos : FAQ « compatible mobile & PC / sur le web » remplacée par « jeu exclusivement mobile, smartphones et
+     tablettes Android via Google Play » ; « sur mobile et sur le web » → « sur smartphone et tablette ».
+   - Page testeurs : « Android (Téléphone / Tablette) & PC » → « Android (Téléphone / Tablette) ».
+   - Accueils : « jouer seul contre l'ordinateur » → « contre l'intelligence artificielle » (aucune ambiguïté de plateforme).
+   Contrôle automatique final : 0 mention PC / ordinateur / desktop / web dans les 54 pages.
+
+2. PAGE « À PROPOS » OFFICIELLE (8 langues)
+   - Présentation : « Tarot 2026, jeu de tarot social pour Android » + application mobile smartphones/tablettes + lien Google Play.
+   - Créateur et éditeur : Cyril Darbost ; contact babylone.ch@gmail.com / cyrildarbost@gmail.com (liens mailto). Aucune aide extérieure.
+   - Remerciements et crédits musiques (Alex-Productions) :
+     « Freaky Halloween » (2024), musique d'accueil – Source onsound.eu – Licence CC BY 3.0
+     « Slice », musique d'introduction – Source onsound.eu – Licence CC BY 3.0
+     Liens : https://onsound.eu et https://creativecommons.org/licenses/by/3.0/
+     (l'adresse « creativemons.org » des consignes contenait une faute de frappe : l'adresse officielle est utilisée).
+   - Données structurées : AboutPage, FAQPage (nouvelles questions), 2 × MusicRecording (auteur, licence), e-mails de l'auteur.
+
+3. PAGES MULTILINGUES : 8 langues × 6 pages = 48 pages, toutes présentes et traitées (DE, PT, RU, ZH, JA compris).
+
+4. PAGES D'ERREUR : 401.html, 402.html, 403.html, 404.html au style sombre et gothique (noindex, hors sitemap,
+   chemins absolus /tarot/…, liens vers l'accueil, les règles, la galerie et les 8 langues).
+   GitHub Pages sert automatiquement 404.html (statut HTTP 404) ; il ne produit jamais de 401/402/403 (site statique
+   sans authentification) : ces 3 pages sont en place mais ne s'afficheront que si on y accède directement.
+
+5. SITEMAP & HREFLANG : sitemap.xml = 41 URL indexables (pages de suppression en noindex et pages d'erreur exclues),
+   chacune avec ses 8 alternates + x-default ; hreflang 100 % réciproques ; 1 canonique auto-référente par page ;
+   0 canonique en double ; liens internes vers /tarot/ (plus de /tarot/index.html).
+
+6. GRILLE DE GAINS (nouveau en v5) – page Règles, section « 6. Grille de gains », 8 langues, tableau Mise / Gain :
+   200 → 300 · 500 → 700 · 1 000 → 1 500 · 2 000 → 3 000 jetons (format des nombres adapté à chaque langue).
+
+Le code de l'application mobile (Flutter) et le build .aab ne font PAS partie de ce travail et n'ont pas été modifiés.

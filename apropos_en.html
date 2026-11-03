@@ -62,7 +62,11 @@
           "author": {
             "@type": "Person",
             "@id": "https://babylone01.github.io/tarot/#auteur",
-            "name": "Cyril Darbost"
+            "name": "Cyril Darbost",
+            "email": [
+              "babylone.ch@gmail.com",
+              "cyrildarbost@gmail.com"
+            ]
           }
         },
         {
@@ -108,26 +112,49 @@
               "name": "Is the app free?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, Gothic Tarot is 100% free to access for all tables and game modes."
+                "text": "Yes, Gothic Tarot is 100% free for every table and game mode."
               }
             },
             {
               "@type": "Question",
-              "name": "Is the app compatible with mobile & PC?",
+              "name": "Which devices can I play on?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Absolutely, the solo mode against artificial intelligence and the Android app work hand in hand with the website."
+                "text": "Gothic Tarot is a mobile-only game: it installs on Android smartphones and tablets from Google Play."
               }
             },
             {
               "@type": "Question",
-              "name": "Where to contact the developer?",
+              "name": "How can I contact the developer?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "For any suggestions or bug reports, you can use the official GitHub repository of the project or the community Discord server."
+                "text": "Write to Cyril Darbost: babylone.ch@gmail.com or cyrildarbost@gmail.com. You can also chat with other players on the community Discord server."
               }
             }
           ]
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://babylone01.github.io/tarot/apropos_en.html#musique-1",
+          "name": "Freaky Halloween",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Alex-Productions"
+          },
+          "url": "https://onsound.eu",
+          "license": "https://creativecommons.org/licenses/by/3.0/",
+          "datePublished": "2024"
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://babylone01.github.io/tarot/apropos_en.html#musique-2",
+          "name": "Slice",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Alex-Productions"
+          },
+          "url": "https://onsound.eu",
+          "license": "https://creativecommons.org/licenses/by/3.0/"
         }
       ]
     }
@@ -284,6 +311,9 @@
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
     </style>
 </head>
 <body>
@@ -309,35 +339,54 @@
     
     </header>
     <main>
-        
+
         <div class="info-card">
             <h2>The Gothic Tarot 2026 Project</h2>
-            <p>Conceived and developed by <strong>Cyril Darbost</strong>, <strong>Gothic Tarot 2026</strong> was born from the desire to offer a traditional card game with a strong, dark, and polished visual identity, while ensuring flawless technical performance on mobile and web.</p>
+            <p>Designed, developed and published by <strong>Cyril Darbost</strong>, <strong>Gothic Tarot 2026</strong> was born from the desire to offer a traditional card game with a strong, dark and polished visual identity, while ensuring flawless technical performance on smartphones and tablets.</p>
             <p>The project combines a fluid solo game engine against artificial intelligence, a real-time multiplayer system, and an immersive user experience designed for tarot enthusiasts.</p>
-            <p>Gothic Tarot is an <strong>Android mobile app</strong> for smartphones and tablets, available for free on <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>.</p>
+            <p><strong>Tarot 2026</strong> is a social tarot game for Android: an <strong>Android mobile app</strong> for smartphones and tablets, available for free on <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Creator and publisher</h2>
+            <p>Gothic Tarot 2026 is entirely created, developed and published by Cyril Darbost. For any question, suggestion or bug report: <a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a> or <a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>.</p>
         </div>
 
         <div class="info-card">
             <h2>An app built for stability</h2>
             <p>Gothic Tarot 2026 is built with Flutter and relies on Supabase for accounts, scores and real-time multiplayer tables. The app runs on Android smartphones and tablets, offers eight languages and is going through a closed beta on Google Play to make online games reliable.</p>
         </div>
+
         <div class="testimonials-grid">
-            <div class="testimonial-card">
+<div class="testimonial-card">
                 « Finally a mobile tarot game that respects the true rules of our game nights with friends! The gothic visual atmosphere is sublime and the game is totally free. »
                 <div class="testimonial-author">— Thomas M. (Beta Tester)</div>
-            </div>
-            <div class="testimonial-card">
+</div>
+<div class="testimonial-card">
                 « The 5-player mode with king calling works to perfection. Ads are extremely discreet and never interrupt mid-game. »
                 <div class="testimonial-author">— Sarah L. (Tarot Enthusiast)</div>
-            </div>
-        </div>
+</div>
+</div>
+
         <div class="info-card">
             <h2>Frequently Asked Questions (FAQ)</h2>
-            <p><strong>Is the app free?</strong><br>Yes, Gothic Tarot is 100% free to access for all tables and game modes.</p>
-            <p><strong>Is the app compatible with mobile & PC?</strong><br>Absolutely, the solo mode against artificial intelligence and the Android app work hand in hand with the website.</p>
-            <p style="margin-bottom: 0;"><strong>Where to contact the developer?</strong><br>For any suggestions or bug reports, you can use the official GitHub repository of the project or the community Discord server.</p>
+            <h3>Is the app free?</h3>
+            <p>Yes, Gothic Tarot is 100% free for every table and game mode.</p>
+            <h3>Which devices can I play on?</h3>
+            <p>Gothic Tarot is a mobile-only game: it installs on Android smartphones and tablets from Google Play.</p>
+            <h3>How can I contact the developer?</h3>
+            <p>Write to Cyril Darbost: <a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a> or <a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>. You can also chat with other players on the community Discord server.</p>
         </div>
-        
+
+        <div class="info-card">
+            <h2>Acknowledgements and music credits</h2>
+            <p>The app&#x27;s music is composed by Alex-Productions:</p>
+            <ul>
+                <li><strong>“Freaky Halloween”</strong> (2024) – welcome music. Source: <a href="https://onsound.eu" target="_blank" rel="noopener">onsound.eu</a>. License: <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">Creative Commons Attribution 3.0 (CC BY 3.0)</a>.</li>
+                <li><strong>“Slice”</strong> – intro music. Source: <a href="https://onsound.eu" target="_blank" rel="noopener">onsound.eu</a>. License: <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">Creative Commons Attribution 3.0 (CC BY 3.0)</a>.</li>
+            </ul>
+        </div>
+
     </main>
     <footer>
         <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_en.html">Game Home</a> | <a href="apropos_en.html">Legal Notice</a> | <a href="privacy_en.html">Privacy</a> | <a href="delete_en.html">Delete Account</a></p>

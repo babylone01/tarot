@@ -62,7 +62,11 @@
           "author": {
             "@type": "Person",
             "@id": "https://babylone01.github.io/tarot/#auteur",
-            "name": "Cyril Darbost"
+            "name": "Cyril Darbost",
+            "email": [
+              "babylone.ch@gmail.com",
+              "cyrildarbost@gmail.com"
+            ]
           }
         },
         {
@@ -108,15 +112,15 @@
               "name": "アプリは無料ですか？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "はい、Gothic Tarotはすべてのテーブルとモードで100%無料です。"
+                "text": "はい、ゴシック・タロットはすべてのテーブルとゲームモードが100％無料です。"
               }
             },
             {
               "@type": "Question",
-              "name": "モバイルとPCに対応していますか？",
+              "name": "どの端末で遊べますか？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "もちろんです。AIとのソロモードとAndroidアプリはWebサイトと連動しています。"
+                "text": "ゴシック・タロットはモバイル専用のゲームです。Google PlayからAndroidのスマートフォンとタブレットにインストールできます。"
               }
             },
             {
@@ -124,10 +128,33 @@
               "name": "開発者への連絡先は？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "提案やバグ報告は公式GitHubリポジトリまたはDiscordサーバーまでお気軽にどうぞ。"
+                "text": "Cyril Darbost（babylone.ch@gmail.com または cyrildarbost@gmail.com）までメールでご連絡ください。コミュニティのDiscordサーバーで他のプレイヤーと交流することもできます。"
               }
             }
           ]
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://babylone01.github.io/tarot/apropos_ja.html#musique-1",
+          "name": "Freaky Halloween",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Alex-Productions"
+          },
+          "url": "https://onsound.eu",
+          "license": "https://creativecommons.org/licenses/by/3.0/",
+          "datePublished": "2024"
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://babylone01.github.io/tarot/apropos_ja.html#musique-2",
+          "name": "Slice",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Alex-Productions"
+          },
+          "url": "https://onsound.eu",
+          "license": "https://creativecommons.org/licenses/by/3.0/"
         }
       ]
     }
@@ -284,6 +311,9 @@
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
     </style>
 </head>
 <body>
@@ -309,35 +339,54 @@
     
     </header>
     <main>
-        
+
         <div class="info-card">
             <h2>ゴシック・タロット 2026 プロジェクト</h2>
-            <p><strong>Cyril Darbost</strong>によって構想・開発された<strong>Gothic Tarot 2026</strong>は、強力でダークな洗練されたビジュアルアイデンティティを持つ伝統的なカードゲームを提供するために生まれました。</p>
+            <p><strong>Cyril Darbost</strong>が企画・開発・配信する<strong>ゴシック・タロット2026</strong>は、力強くダークで洗練されたビジュアルを持つ伝統的なカードゲームを、スマートフォンとタブレットで快適に遊べる技術品質とともに届けたいという思いから生まれました。</p>
             <p>AIとの滑らかなソロゲームエンジン、リアルタイムマルチプレイヤーシステム、没入型の体験を融合しています。</p>
-            <p>ゴシック・タロットはスマートフォン・タブレット向けの<strong>Androidモバイルアプリ</strong>で、<a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>で無料配信中です。</p>
+            <p><strong>Tarot 2026</strong>はAndroid向けのソーシャル・タロットゲームです。スマートフォン・タブレット向けの<strong>Androidモバイルアプリ</strong>として、<a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>で無料配信中です。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>開発者・パブリッシャー</h2>
+            <p>ゴシック・タロット2026は、Cyril Darbostが単独で制作・開発・配信しています。ご質問、ご提案、不具合のご報告は<a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a>または<a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>までお寄せください。</p>
         </div>
 
         <div class="info-card">
             <h2>安定性を重視したアプリ</h2>
             <p>ゴシック・タロット2026はFlutterで開発され、アカウント、スコア、リアルタイムのマルチプレイ卓にSupabaseを採用しています。アプリはAndroidのスマートフォンとタブレットで動作し、8か国語に対応。オンライン対戦の安定性を確保するため、Google Playでクローズドベータを実施しています。</p>
         </div>
+
         <div class="testimonials-grid">
-            <div class="testimonial-card">
+<div class="testimonial-card">
                 « 友達とのゲームナイトの真のルールを尊重したモバイルタロット！ゴシックなビジュアルが素晴らしくて完全に無料。 »
                 <div class="testimonial-author">— トーマス M.（ベータテスター）</div>
-            </div>
-            <div class="testimonial-card">
+</div>
+<div class="testimonial-card">
                 « キング呼び出しのある5人モードが完璧に機能します。広告も控えめです。 »
                 <div class="testimonial-author">— サラ L.（タロット愛好家）</div>
-            </div>
-        </div>
+</div>
+</div>
+
         <div class="info-card">
             <h2>よくある質問 (FAQ)</h2>
-            <p><strong>アプリは無料ですか？</strong><br>はい、Gothic Tarotはすべてのテーブルとモードで100%無料です。</p>
-            <p><strong>モバイルとPCに対応していますか？</strong><br>もちろんです。AIとのソロモードとAndroidアプリはWebサイトと連動しています。</p>
-            <p style="margin-bottom: 0;"><strong>開発者への連絡先は？</strong><br>提案やバグ報告は公式GitHubリポジトリまたはDiscordサーバーまでお気軽にどうぞ。</p>
+            <h3>アプリは無料ですか？</h3>
+            <p>はい、ゴシック・タロットはすべてのテーブルとゲームモードが100％無料です。</p>
+            <h3>どの端末で遊べますか？</h3>
+            <p>ゴシック・タロットはモバイル専用のゲームです。Google PlayからAndroidのスマートフォンとタブレットにインストールできます。</p>
+            <h3>開発者への連絡先は？</h3>
+            <p>Cyril Darbost（<a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a> または <a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>）までメールでご連絡ください。コミュニティのDiscordサーバーで他のプレイヤーと交流することもできます。</p>
         </div>
-        
+
+        <div class="info-card">
+            <h2>謝辞と音楽クレジット</h2>
+            <p>アプリの音楽はAlex-Productionsが作曲しています：</p>
+            <ul>
+                <li><strong>「Freaky Halloween」</strong>（2024）—タイトル画面の音楽。出典：<a href="https://onsound.eu" target="_blank" rel="noopener">onsound.eu</a>。ライセンス：<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">クリエイティブ・コモンズ 表示 3.0（CC BY 3.0）</a>。</li>
+                <li><strong>「Slice」</strong>—イントロの音楽。出典：<a href="https://onsound.eu" target="_blank" rel="noopener">onsound.eu</a>。ライセンス：<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">クリエイティブ・コモンズ 表示 3.0（CC BY 3.0）</a>。</li>
+            </ul>
+        </div>
+
     </main>
     <footer>
         <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ja.html">ホーム</a> | <a href="apropos_ja.html">法的事項</a> | <a href="privacy_ja.html">プライバシー</a> | <a href="delete_ja.html">アカウント削除</a></p>

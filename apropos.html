@@ -62,7 +62,11 @@
           "author": {
             "@type": "Person",
             "@id": "https://babylone01.github.io/tarot/#auteur",
-            "name": "Cyril Darbost"
+            "name": "Cyril Darbost",
+            "email": [
+              "babylone.ch@gmail.com",
+              "cyrildarbost@gmail.com"
+            ]
           }
         },
         {
@@ -108,15 +112,15 @@
               "name": "L'application est-elle gratuite ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Oui, Tarot Gothique est 100 % gratuit d'accès pour toutes les tables et modes de jeu."
+                "text": "Oui, Tarot Gothique est 100 % gratuit d'accès pour toutes les tables et tous les modes de jeu."
               }
             },
             {
               "@type": "Question",
-              "name": "L'application est-elle compatible mobile & PC ?",
+              "name": "Sur quels appareils peut-on jouer ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Absolument, le mode solo contre l'intelligence artificielle et l'application Android fonctionnent de pair avec le site web."
+                "text": "Tarot Gothique est un jeu exclusivement mobile : il s'installe sur les smartphones et tablettes Android depuis Google Play."
               }
             },
             {
@@ -124,10 +128,33 @@
               "name": "Où contacter le développeur ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Pour toute suggestion ou remontée de bug, vous pouvez passer par le dépôt GitHub officiel du projet ou le serveur Discord de la communauté."
+                "text": "Écrivez à Cyril Darbost : babylone.ch@gmail.com ou cyrildarbost@gmail.com. Vous pouvez aussi échanger avec les joueurs sur le serveur Discord de la communauté."
               }
             }
           ]
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://babylone01.github.io/tarot/apropos.html#musique-1",
+          "name": "Freaky Halloween",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Alex-Productions"
+          },
+          "url": "https://onsound.eu",
+          "license": "https://creativecommons.org/licenses/by/3.0/",
+          "datePublished": "2024"
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://babylone01.github.io/tarot/apropos.html#musique-2",
+          "name": "Slice",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Alex-Productions"
+          },
+          "url": "https://onsound.eu",
+          "license": "https://creativecommons.org/licenses/by/3.0/"
         }
       ]
     }
@@ -285,6 +312,9 @@
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
     </style>
 </head>
 <body>
@@ -311,11 +341,17 @@
     </header>
 
     <main>
+
         <div class="info-card">
             <h2>Le Projet Tarot Gothique 2026</h2>
-            <p>Conçu et développé par <strong>Cyril Darbost</strong>, <strong>Tarot Gothique 2026</strong> est né de la volonté de proposer un jeu de cartes traditionnel doté d'une identité visuelle forte, sombre et soignée, tout en garantissant des performances techniques irréprochables sur mobile et sur le web.</p>
+            <p>Conçu, développé et édité par <strong>Cyril Darbost</strong>, <strong>Tarot Gothique 2026</strong> est né de la volonté de proposer un jeu de cartes traditionnel doté d&#x27;une identité visuelle forte, sombre et soignée, tout en garantissant des performances techniques irréprochables sur smartphone et tablette.</p>
             <p>Le projet réunit à la fois un moteur de jeu fluide en solo contre l'intelligence artificielle, un système multijoueur temps réel et une expérience utilisateur immersive pensée pour les passionnés de tarot.</p>
-            <p>Tarot Gothique est une <strong>application mobile Android</strong> pour smartphones et tablettes, disponible gratuitement sur <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>.</p>
+            <p><strong>Tarot 2026</strong> est un jeu de tarot social pour Android : une <strong>application mobile Android</strong> pour smartphones et tablettes, disponible gratuitement sur <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Créateur et éditeur</h2>
+            <p>Tarot Gothique 2026 est entièrement créé, développé et édité par Cyril Darbost. Pour toute question, suggestion ou remontée de bug : <a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a> ou <a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>.</p>
         </div>
 
         <div class="info-card">
@@ -324,27 +360,35 @@
         </div>
 
         <div class="testimonials-grid">
-            <div class="testimonial-card">
+<div class="testimonial-card">
                 « Enfin un jeu de tarot sur mobile qui respecte les vraies règles de nos soirées entre amis ! L'ambiance visuelle gothique est sublime et le jeu est totalement gratuit. »
                 <div class="testimonial-author">— Thomas M. (Testeur Bêta)</div>
-            </div>
-            <div class="testimonial-card">
+</div>
+<div class="testimonial-card">
                 « Le mode 5 joueurs avec l'appel du roi fonctionne à la perfection. Les pubs sont extrêmement discrètes et ne coupent jamais en plein milieu d'une partie. »
                 <div class="testimonial-author">— Sarah L. (Passionnée de Tarot)</div>
-            </div>
-        </div>
+</div>
+</div>
 
         <div class="info-card">
             <h2>Foire Aux Questions (FAQ)</h2>
-            <p><strong>L'application est-elle gratuite ?</strong><br>
-            Oui, Tarot Gothique est 100 % gratuit d'accès pour toutes les tables et modes de jeu.</p>
-            
-            <p><strong>L'application est-elle compatible mobile & PC ?</strong><br>
-            Absolument, le mode solo contre l'intelligence artificielle et l'application Android fonctionnent de pair avec le site web.</p>
-
-            <p style="margin-bottom: 0;"><strong>Où contacter le développeur ?</strong><br>
-            Pour toute suggestion ou remontée de bug, vous pouvez passer par le dépôt GitHub officiel du projet ou le serveur Discord de la communauté.</p>
+            <h3>L&#x27;application est-elle gratuite ?</h3>
+            <p>Oui, Tarot Gothique est 100 % gratuit d&#x27;accès pour toutes les tables et tous les modes de jeu.</p>
+            <h3>Sur quels appareils peut-on jouer ?</h3>
+            <p>Tarot Gothique est un jeu exclusivement mobile : il s&#x27;installe sur les smartphones et tablettes Android depuis Google Play.</p>
+            <h3>Où contacter le développeur ?</h3>
+            <p>Écrivez à Cyril Darbost : <a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a> ou <a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>. Vous pouvez aussi échanger avec les joueurs sur le serveur Discord de la communauté.</p>
         </div>
+
+        <div class="info-card">
+            <h2>Remerciements et crédits musiques</h2>
+            <p>Les musiques de l&#x27;application sont composées par Alex-Productions :</p>
+            <ul>
+                <li><strong>« Freaky Halloween »</strong> (2024) – musique d&#x27;accueil. Source : <a href="https://onsound.eu" target="_blank" rel="noopener">onsound.eu</a>. Licence : <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">Creative Commons Attribution 3.0 (CC BY 3.0)</a>.</li>
+                <li><strong>« Slice »</strong> – musique d&#x27;introduction. Source : <a href="https://onsound.eu" target="_blank" rel="noopener">onsound.eu</a>. Licence : <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">Creative Commons Attribution 3.0 (CC BY 3.0)</a>.</li>
+            </ul>
+        </div>
+
     </main>
 
     <footer>
