@@ -79,6 +79,7 @@
         }
         header {
             background: linear-gradient(rgba(11, 12, 16, 0.75), rgba(11, 12, 16, 0.9)), url('background_tarot_gothique.jpg') no-repeat center center/cover;
+            background-image: linear-gradient(rgba(11, 12, 16, 0.75), rgba(11, 12, 16, 0.9)), image-set(url('background_tarot_gothique.webp') type('image/webp'), url('background_tarot_gothique.jpg') type('image/jpeg'));
             text-align: center;
             padding: 100px 20px;
             border-bottom: 2px solid var(--accent);
@@ -188,6 +189,7 @@
             border-top: 1px solid #21262d;
         }
         footer a { color: #d4af37; text-decoration: none; }
+        .card ol li + li { margin-top: 0.9rem; }
     </style>
 </head>
 <body>
@@ -197,7 +199,7 @@
         <p>Rejoignez la bêta fermée et participez au stress-test des tables multijoueurs en temps réel !</p>
     </header>
 
-    <div class="container">
+    <main class="container">
         
         <div class="card">
             <h2>À propos du projet</h2>
@@ -228,7 +230,6 @@
                 <li><strong>Rejoindre le Google Group :</strong><br>
                     Accéder au groupe Google via le lien de la communauté.
                 </li>
-                <br>
                 <li><strong>Télécharger l'application sur Google Play :</strong><br>
                     Télécharger la bêta directement sur Google Play.
                 </li>
@@ -269,7 +270,7 @@
             <a href="https://discord.gg/mBJM33Nyg" class="btn" target="_blank">Rejoindre le Discord</a>
         </div>
 
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 Tarot Gothique - Tous droits réservés. | <a href="./">Accueil du jeu de tarot</a> | <a href="regles.html">Règles du tarot</a> | <a href="galerie.html">Galerie</a> | <a href="apropos.html">À propos &amp; FAQ</a> | <a href="privacy.html">Confidentialité</a></p>

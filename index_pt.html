@@ -184,11 +184,11 @@
 
         html, body {
             min-height: 100vh;
-            max-min-height: 100vh;
             margin: 0;
             padding: 0;
             overflow-y: auto; overflow-x: hidden;
             background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-image: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), image-set(url('background.webp') type('image/webp'), url('background.jpg') type('image/jpeg'));
             background-size: cover;
             background-position: center;
             color: var(--text-main);
@@ -410,6 +410,14 @@
         }
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
+        .video-facade { position: relative; display: block; width: 100%; height: 100%; }
+        .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .video-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%);
+            background: rgba(204, 0, 0, 0.9); border-radius: 12px; transition: background 0.2s; }
+        .video-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-left: 18px solid #fff;
+            border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+        .video-facade:hover .video-play { background: #ff0000; }
+        .video-facade:focus-visible { outline: 3px solid var(--primary-gold); outline-offset: 2px; }
     </style>
 </head>
 <body>
@@ -438,7 +446,7 @@
         
         <div class="top-description">
             <h2>A Experiência Definitiva de Tarô Francês Online</h2>
-            <p>Bem-vindo ao Tarot Gótico. Desfrute de um jogo de cartas tradicional francês exclusivo com tema sombrio. Jogue totalmente grátis no modo solo contra IA inteligente ou participe de partidas multiplayer online.</p>
+            <p>Bem-vindo ao site oficial do Tarot Gótico 2026, um jogo de tarô social para Android. Jogue online contra outros jogadores ou treine sozinho contra a IA, em um universo gótico com acabamentos dourados e com as regras oficiais para 3, 4 e 5 jogadores.</p>
         </div>
         <div class="media-row">
             <div class="media-item">
@@ -446,14 +454,14 @@
             </div>
             <div class="media-item">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/7l3TdJiCd7I" loading="lazy" title="Teaser" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="video-facade" href="https://www.youtube.com/watch?v=7l3TdJiCd7I" target="_blank" rel="noopener" data-video="7l3TdJiCd7I" aria-label="Assistir ao trailer do Tarot Gótico"><img src="https://i.ytimg.com/vi/7l3TdJiCd7I/hqdefault.jpg" width="480" height="360" loading="lazy" decoding="async" alt="Trailer do Tarot Gótico 2026"><span class="video-play" aria-hidden="true"></span></a>
                 </div>
             </div>
         </div>
         <div class="features-grid">
             <div class="feature-card">
                 <h3>Multiplayer e Solo</h3>
-                <p>Divirta-se jogando offline contra IA ou compita em partidas multiplayer em tempo real com amigos.</p>
+                <p>Enfrente outros fãs de tarô online ou treine sozinho contra a inteligência artificial.</p>
             </div>
             <div class="feature-card">
                 <h3>Design Gótico Sombrio</h3>
@@ -514,5 +522,19 @@
     <footer>
         <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_pt.html">Início</a> | <a href="apropos_pt.html">Avisos Legais</a> | <a href="privacy_pt.html">Privacidade</a> | <a href="delete_pt.html">Excluir Conta</a></p>
     </footer>
+    <script>
+    /* Vignette vidéo : YouTube n'est chargé qu'au clic (page plus rapide). Sans JavaScript, le lien ouvre la vidéo sur YouTube. */
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest('.video-facade');
+        if (!a) return;
+        e.preventDefault();
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + a.dataset.video + '?autoplay=1';
+        f.title = a.getAttribute('aria-label');
+        f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        f.allowFullscreen = true;
+        a.replaceWith(f);
+    });
+    </script>
 </body>
 </html>

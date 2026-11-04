@@ -184,11 +184,11 @@
 
         html, body {
             min-height: 100vh;
-            max-min-height: 100vh;
             margin: 0;
             padding: 0;
             overflow-y: auto; overflow-x: hidden;
             background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-image: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), image-set(url('background.webp') type('image/webp'), url('background.jpg') type('image/jpeg'));
             background-size: cover;
             background-position: center;
             color: var(--text-main);
@@ -410,6 +410,14 @@
         }
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
+        .video-facade { position: relative; display: block; width: 100%; height: 100%; }
+        .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .video-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%);
+            background: rgba(204, 0, 0, 0.9); border-radius: 12px; transition: background 0.2s; }
+        .video-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-left: 18px solid #fff;
+            border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+        .video-facade:hover .video-play { background: #ff0000; }
+        .video-facade:focus-visible { outline: 3px solid var(--primary-gold); outline-offset: 2px; }
     </style>
 </head>
 <body>
@@ -438,7 +446,7 @@
         
         <div class="top-description">
             <h2>La Experiencia Definitiva de Tarot Francés Online</h2>
-            <p>Bienvenido a Tarot Gótico. Disfruta de un juego de cartas tradicional francés único de temática oscura. Juega totalmente gratis en solitario contra una IA inteligente o únete a mesas multijugador competitivas.</p>
+            <p>Bienvenido al sitio oficial de Tarot Gótico 2026, un juego de tarot social para Android. Juega online contra otros jugadores o entrénate en solitario contra la IA, en un universo gótico con acabados dorados y con las reglas oficiales para 3, 4 y 5 jugadores.</p>
         </div>
         <div class="media-row">
             <div class="media-item">
@@ -446,14 +454,14 @@
             </div>
             <div class="media-item">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/7l3TdJiCd7I" loading="lazy" title="Teaser" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="video-facade" href="https://www.youtube.com/watch?v=7l3TdJiCd7I" target="_blank" rel="noopener" data-video="7l3TdJiCd7I" aria-label="Ver el tráiler de Tarot Gótico"><img src="https://i.ytimg.com/vi/7l3TdJiCd7I/hqdefault.jpg" width="480" height="360" loading="lazy" decoding="async" alt="Tráiler de Tarot Gótico 2026"><span class="video-play" aria-hidden="true"></span></a>
                 </div>
             </div>
         </div>
         <div class="features-grid">
             <div class="feature-card">
                 <h3>Multijugador y Solitario</h3>
-                <p>Disfruta de partidas offline contra la IA o compite en multijugador en tiempo real con amigos.</p>
+                <p>Enfréntate a otros aficionados al tarot online o entrénate en solitario contra la inteligencia artificial.</p>
             </div>
             <div class="feature-card">
                 <h3>Diseño Gótico Oscuro</h3>
@@ -514,5 +522,19 @@
     <footer>
         <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_es.html">Inicio del Juego</a> | <a href="apropos_es.html">Aviso Legal</a> | <a href="privacy_es.html">Privacidad</a> | <a href="delete_es.html">Eliminar Cuenta</a></p>
     </footer>
+    <script>
+    /* Vignette vidéo : YouTube n'est chargé qu'au clic (page plus rapide). Sans JavaScript, le lien ouvre la vidéo sur YouTube. */
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest('.video-facade');
+        if (!a) return;
+        e.preventDefault();
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + a.dataset.video + '?autoplay=1';
+        f.title = a.getAttribute('aria-label');
+        f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        f.allowFullscreen = true;
+        a.replaceWith(f);
+    });
+    </script>
 </body>
 </html>

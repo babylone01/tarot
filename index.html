@@ -185,11 +185,11 @@
 
         html, body {
             min-height: 100vh;
-            max-min-height: 100vh;
             margin: 0;
             padding: 0;
             overflow-y: auto; overflow-x: hidden;
             background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-image: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), image-set(url('background.webp') type('image/webp'), url('background.jpg') type('image/jpeg'));
             background-size: cover;
             background-position: center;
             color: var(--text-main);
@@ -411,6 +411,14 @@
         }
         .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
+        .video-facade { position: relative; display: block; width: 100%; height: 100%; }
+        .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .video-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%);
+            background: rgba(204, 0, 0, 0.9); border-radius: 12px; transition: background 0.2s; }
+        .video-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-left: 18px solid #fff;
+            border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+        .video-facade:hover .video-play { background: #ff0000; }
+        .video-facade:focus-visible { outline: 3px solid var(--primary-gold); outline-offset: 2px; }
     </style>
 </head>
 <body>
@@ -439,7 +447,7 @@
     <main>
         <div class="top-description">
             <h2>L'expérience ultime du jeu de tarot en ligne</h2>
-            <p>Bienvenue sur notre jeu de tarot de référence. Ce jeu de tarot vous propose un authentique jeu de cartes inspiré du tarot traditionnel. Profitez de ce jeu gratuit au design gothique unique et consultez nos règles officielles pour maîtriser chaque partie.</p>
+            <p>Bienvenue sur le site officiel de Tarot Gothique 2026, un jeu de tarot social pour Android. Affrontez d&#x27;autres joueurs en ligne ou entraînez-vous en solo contre l&#x27;IA, dans un univers gothique aux finitions dorées, avec les règles officielles à 3, 4 et 5 joueurs.</p>
         </div>
 
         <div class="media-row">
@@ -448,7 +456,7 @@
             </div>
             <div class="media-item">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/7l3TdJiCd7I" loading="lazy" title="Teaser officiel du jeu de tarot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="video-facade" href="https://www.youtube.com/watch?v=7l3TdJiCd7I" target="_blank" rel="noopener" data-video="7l3TdJiCd7I" aria-label="Lire la vidéo de présentation de Tarot Gothique"><img src="https://i.ytimg.com/vi/7l3TdJiCd7I/hqdefault.jpg" width="480" height="360" loading="lazy" decoding="async" alt="Vidéo de présentation de Tarot Gothique 2026"><span class="video-play" aria-hidden="true"></span></a>
                 </div>
             </div>
         </div>
@@ -456,7 +464,7 @@
         <div class="features-grid">
             <div class="feature-card">
                 <h3>Multijoueur & Solo</h3>
-                <p>Découvrez ce jeu de tarot en ligne avec d'autres passionnés de jeu de cartes ou profitez d'un jeu gratuit hors-ligne.</p>
+                <p>Affrontez d&#x27;autres passionnés de tarot en ligne ou entraînez-vous en solo contre l&#x27;intelligence artificielle.</p>
             </div>
             <div class="feature-card">
                 <h3>Ambiance Gothique</h3>
@@ -519,6 +527,20 @@
     <footer>
         <p>&copy; 2026 <strong>Tarot Gothique</strong> (Cyril Darbost) | <a href="./">Accueil</a> | <a href="regles.html">Règles</a> | <a href="galerie.html">Galerie</a> | <a href="apropos.html">Mentions légales</a> | <a href="privacy.html">Confidentialité</a> | <a href="delete.html">Supprimer le compte</a></p>
     </footer>
+    <script>
+    /* Vignette vidéo : YouTube n'est chargé qu'au clic (page plus rapide). Sans JavaScript, le lien ouvre la vidéo sur YouTube. */
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest('.video-facade');
+        if (!a) return;
+        e.preventDefault();
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + a.dataset.video + '?autoplay=1';
+        f.title = a.getAttribute('aria-label');
+        f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        f.allowFullscreen = true;
+        a.replaceWith(f);
+    });
+    </script>
 
 </body>
 </html>

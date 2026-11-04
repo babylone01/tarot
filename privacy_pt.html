@@ -112,11 +112,11 @@
         }
         html, body {
             min-height: 100vh;
-            max-min-height: 100vh;
             margin: 0;
             padding: 0;
             overflow-y: auto; overflow-x: hidden;
             background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-image: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), image-set(url('background.webp') type('image/webp'), url('background.jpg') type('image/jpeg'));
             background-size: cover;
             background-position: center;
             color: var(--text-main);
