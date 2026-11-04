@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://babylone01.github.io/tarot/sitemap.xml
+Sitemap: https://tarot-gothique-2026.com/sitemap.xml
