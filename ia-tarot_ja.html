@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゴシック・タロットのAI：コンピューターとタロット対戦</title>
+    <meta name="description" content="ゴシック・タロット2026のAIの仕組み：カードの記憶、プレイヤーの癖の学習、7%の人間らしさ、トーナメントに合わせた強さ。">
+    <link rel="canonical" href="https://tarot-gothique-2026.com/ia-tarot_ja.html">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Cyril Darbost">
+    <meta name="theme-color" content="#0b0b0f">
+
+    <!-- Versions linguistiques (hreflang) -->
+    <link rel="alternate" hreflang="fr" href="https://tarot-gothique-2026.com/ia-tarot.html">
+    <link rel="alternate" hreflang="en" href="https://tarot-gothique-2026.com/ia-tarot_en.html">
+    <link rel="alternate" hreflang="es" href="https://tarot-gothique-2026.com/ia-tarot_es.html">
+    <link rel="alternate" hreflang="de" href="https://tarot-gothique-2026.com/ia-tarot_de.html">
+    <link rel="alternate" hreflang="pt" href="https://tarot-gothique-2026.com/ia-tarot_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://tarot-gothique-2026.com/ia-tarot_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://tarot-gothique-2026.com/ia-tarot_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://tarot-gothique-2026.com/ia-tarot_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://tarot-gothique-2026.com/ia-tarot.html">
+
+    <!-- Icônes -->
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Aperçus réseaux sociaux (Open Graph / Twitter) -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ゴシック・タロット">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:url" content="https://tarot-gothique-2026.com/ia-tarot_ja.html">
+    <meta property="og:title" content="ゴシック・タロットのAI：コンピューターとタロット対戦">
+    <meta property="og:description" content="ゴシック・タロット2026のAIの仕組み：カードの記憶、プレイヤーの癖の学習、7%の人間らしさ、トーナメントに合わせた強さ。">
+    <meta property="og:image" content="https://tarot-gothique-2026.com/banner.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="572">
+    <meta property="og:image:alt" content="ゴシック・タロット2026：ゴシック大聖堂でタロットカードを持つ死神">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ゴシック・タロットのAI：コンピューターとタロット対戦">
+    <meta name="twitter:description" content="ゴシック・タロット2026のAIの仕組み：カードの記憶、プレイヤーの癖の学習、7%の人間らしさ、トーナメントに合わせた強さ。">
+    <meta name="twitter:image" content="https://tarot-gothique-2026.com/banner.jpg">
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://tarot-gothique-2026.com/#site",
+          "url": "https://tarot-gothique-2026.com/",
+          "name": "Tarot Gothique"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://tarot-gothique-2026.com/#auteur",
+          "name": "Cyril Darbost"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_ja.html#page",
+          "url": "https://tarot-gothique-2026.com/ia-tarot_ja.html",
+          "name": "ゴシック・タロットのAI：コンピューターとタロット対戦",
+          "description": "ゴシック・タロット2026のAIの仕組み：カードの記憶、プレイヤーの癖の学習、7%の人間らしさ、トーナメントに合わせた強さ。",
+          "inLanguage": "ja",
+          "isPartOf": {
+            "@id": "https://tarot-gothique-2026.com/#site"
+          },
+          "dateModified": "2026-11-01",
+          "breadcrumb": {
+            "@id": "https://tarot-gothique-2026.com/ia-tarot_ja.html#ariane"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_ja.html#ariane",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "ホーム",
+              "item": "https://tarot-gothique-2026.com/index_ja.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "ゲームのAI"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_ja.html#article",
+          "headline": "ゴシック・タロットのAI：あなたのプレイを覚える対戦相手",
+          "description": "ゴシック・タロット2026のAIの仕組み：カードの記憶、プレイヤーの癖の学習、7%の人間らしさ、トーナメントに合わせた強さ。",
+          "inLanguage": "ja",
+          "image": "https://tarot-gothique-2026.com/banner.jpg",
+          "dateModified": "2026-11-01",
+          "author": {
+            "@id": "https://tarot-gothique-2026.com/#auteur"
+          },
+          "publisher": {
+            "@id": "https://tarot-gothique-2026.com/#auteur"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://tarot-gothique-2026.com/ia-tarot_ja.html#page"
+          },
+          "about": {
+            "@id": "https://tarot-gothique-2026.com/#jeu"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_ja.html#faq",
+          "inLanguage": "ja",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "ひとりでコンピューターとタロットを遊べますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "はい。空席はAIが埋めるので、AndroidのスマートフォンやタブレットでAIを相手に、3人・4人・5人のタロットをひとりで最後まで遊べます。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "AIは私のカードを見ていますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "いいえ。AIが知っているのは自分の手札と全員に見えるカードだけです。推理は人間のプレイヤーと同じく、出されたトリックから行います。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "AIは私のレベルに合わせてくれますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "トーナメントでは合わせます。ボットの強さは、勝率から計算されるあなたのカテゴリーによって決まります。トーナメント以外では、AIは約7%の意図的に不完全な手を交えつつ全力でプレイします。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "私のプレイの癖はインターネットに送られますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "いいえ。癖のプロフィールは端末内に残ります。サーバーに送られるのは、トーナメントのカテゴリーを決めるためのプレイしたラウンド数と勝ったラウンド数だけです。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root {
+            --primary-gold: #f3d060;
+            --card-bg: rgba(22, 22, 34, 0.82);
+            --header-bg: rgba(18, 18, 26, 0.88);
+            --text-main: #f8fafc;
+            --text-muted: #e2e8f0;
+            --border-color: #d4af37;
+        }
+
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto; overflow-x: hidden;
+            background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-image: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), image-set(url('background.webp') type('image/webp'), url('background.jpg') type('image/jpeg'));
+            background-size: cover;
+            background-position: center;
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-gold);
+            flex-shrink: 0;
+        }
+        h1 {
+            color: var(--primary-gold);
+            margin: 0 0 0.3rem 0;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.6rem 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.6rem;
+            overflow-y: auto; overflow-x: hidden;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .info-card h2 {
+            color: var(--primary-gold);
+            font-size: 1.25rem;
+            margin: 0 0 0.4rem 0;
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 0.6rem;
+        }
+        .info-card p {
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+        .testimonial-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            font-style: italic;
+            color: var(--text-main);
+            font-size: 1.02rem;
+            line-height: 1.45;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .testimonial-author {
+            margin-top: 0.4rem;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--primary-gold);
+            font-size: 0.92rem;
+            text-align: right;
+        }
+
+        footer {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 0.8rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        footer a { color: var(--primary-gold); text-decoration: none; }
+
+        @media (max-width: 900px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
+        .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
+        .ariane { font-size: 0.85rem; color: var(--text-muted); }
+        .ariane a { color: var(--primary-gold); }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; }
+        .info-card th, .info-card td { border: 1px solid var(--border-color); padding: 0.45rem 0.6rem; text-align: left;
+            font-size: 0.9rem; color: var(--text-muted); vertical-align: top; }
+        .info-card th { color: var(--primary-gold); }
+        .table-defile { overflow-x: auto; }
+        .info-card a.cta-ia { display: inline-block; background: var(--primary-gold); color: #0b0b0f; padding: 0.6rem 1.6rem;
+            border-radius: 8px; font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ゴシック・タロットのAI：あなたのプレイを覚える対戦相手</h1>
+        
+        <nav class="main-nav">
+            <a href="index_ja.html" class="">ホーム</a>
+            <a href="regles_ja.html" class="">ルール</a>
+            <a href="galerie_ja.html" class="">ギャラリー</a>
+            <a href="ia-tarot_ja.html" class="active">ゲームのAI</a>
+            <a href="apropos_ja.html">概要</a>
+            <div class="lang-bar">
+                <a href="ia-tarot.html" class="lang-switch" hreflang="fr">🇫🇷 FR</a>
+                <a href="ia-tarot_en.html" class="lang-switch" hreflang="en">🇬🇧 EN</a>
+                <a href="ia-tarot_es.html" class="lang-switch" hreflang="es">🇪🇸 ES</a>
+                <a href="ia-tarot_de.html" class="lang-switch" hreflang="de">🇩🇪 DE</a>
+                <a href="ia-tarot_pt.html" class="lang-switch" hreflang="pt">🇵🇹 PT</a>
+                <a href="ia-tarot_ru.html" class="lang-switch" hreflang="ru">🇷🇺 RU</a>
+                <a href="ia-tarot_ja.html" class="lang-switch active-lang" hreflang="ja">🇯🇵 JA</a>
+                <a href="ia-tarot_zh.html" class="lang-switch" hreflang="zh">🇨🇳 ZH</a>
+            </div>
+        </nav>
+    
+    </header>
+    <main>
+        <nav class="ariane" aria-label="パンくずリスト"><a href="index_ja.html">ホーム</a> › <span aria-current="page">ゲームのAI</span></nav>
+
+        <div class="info-card">
+            <p>ゴシック・タロット2026では、テーブルの空席を<strong>人工知能（AI）</strong>が埋めます。AIは人間のプレイヤーと同じようにビッドし、5人プレイではキングを呼び、カードを出し、点数を数えます。ひとりで<strong>コンピューターとフレンチ・タロット</strong>を楽しむことも、人数が足りないときにテーブルを埋めることもできます。</p>
+            <p>このページでは、このAIが何をしているのかを詳しく説明します。1回のディールの間に何を覚えているのか、対局を重ねるごとにあなたについて何を学ぶのか、なぜときどきわざとミスをするのか、そして大会でどのように強さが調整されるのかを紹介します。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>AIの強さの秘密</h2>
+            <ul>
+                <li><strong>反則ゼロ：</strong> 出すカードはすべてタロットのルールに従っています。</li>
+                <li><strong>考え抜かれたビッド：</strong> テイクする前に、熟練プレイヤーのように手札を評価します。</li>
+                <li><strong>熟練者のコールと捨て札：</strong> 5人プレイでは、自陣に役立つようにキングを選び、捨て札を準備します。</li>
+                <li><strong>完璧な記憶力：</strong> カードを数え、欠けているスートを見抜き、隠れたパートナーを推理します。</li>
+                <li><strong>トリックごとの確率計算：</strong> 切り札で切られるリスクと、トリックを取れる見込みを見積もります。</li>
+                <li><strong>プチの扱いの巧みさ：</strong> 最後まで持ち込むべきときと、救うべきときを見極めます。</li>
+                <li><strong>あなたのプレイを学習：</strong> プレイヤーごとに10の癖を記録し、常に見直します。</li>
+                <li><strong>人間らしいふるまい：</strong> 7%のゆらぎ。ただし勝負に関係のないカードだけです。</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>必ずルールを守るプレイヤー</h2>
+            <p>AIは毎回、ルールで許されたカードだけを候補にします。<strong>リードされたスートを出す</strong>、出せなければ<strong>切り札を出す</strong>、必要なときは<strong>より強い切り札を出す</strong>。反則のカードを出すことは決してなく、AIとの対局は本物のテーブルとまったく同じように進みます。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>考え抜かれたビッド</h2>
+            <p>テイクするかどうかを決めるとき、AIは熟練プレイヤーのように手札を調べます。<strong>Bout</strong>、<strong>切り札の枚数と強さ</strong>、<strong>キングとクイーン</strong>、<strong>長いスート</strong>、<strong>欠けているスートやシングルトン</strong>。そこから、プティット（Petite）からガルド・コントル（Garde contre）までの適切なコントラクトを選ぶか、パスします。</p>
+            <p>また、<strong>守りの弱いプチ</strong>にも用心します。守るための切り札が少なすぎると奪われる危険があるため、AIは勝負に出る前にそれを考慮します。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>熟練者のキングコールと捨て札</h2>
+            <p>5人プレイでテイカーになったAIは、<strong>自分が持っていない、最も長いスートのキングを呼びます</strong>。自分の強みを生かし、他のプレイヤーにそのスートで切り札を使わせるためです。自分自身を呼ぶのは最後の手段だけです。捨て札は次のように行います：</p>
+            <ul>
+                <li><strong>切り札で切る準備：</strong> まず最も短いスートを捨て、そのスートを切れるようにします。</li>
+                <li><strong>価値あるカードは捨てない：</strong> キングもBoutも決して捨てません。</li>
+                <li><strong>パートナーを守る：</strong> 呼んだキングのスートを空にすることはありません。自分のパートナーのキングを切り札で切らずに済むようにするためです。</li>
+                <li><strong>切り札は最後の手段：</strong> ルールで認められ、ほかに方法がない場合にだけ、小さな切り札を捨てます。</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>ディールのすべてを記憶</h2>
+            <p>各ディールの間、AIは非常に強いプレイヤーが頭に入れていることをすべて記録します。次のディールですべてリセットされます。</p>
+            <ul>
+                <li><strong>出たカード：</strong> 最初のトリックから出されたすべてのカード。各スートでまだ見えていないカードを把握し、<strong>最強のカード（マスターカード）</strong>を見分けます。</li>
+                <li><strong>欠けているスート：</strong> あるプレイヤーがスートを出せなかった時点で、そのスート（切り札を含む）を持っていないと記録します。</li>
+                <li><strong>切り札のないプレイヤー：</strong> 切り札で切らずに別のカードを捨てたプレイヤーは、もう切り札がありません。AIはこれをもとに、誰がまだそのスートを切れるかを判断します。</li>
+                <li><strong>捨て札のサイン：</strong> 別のスートの6〜10を捨てることは、そのスートへの呼びかけと読み取ります。</li>
+                <li><strong>テイカー自身の捨て札：</strong> テイカーのAIは、自分が捨てたカードを把握し、計算から除外します。</li>
+            </ul>
+            <p><strong>5人プレイでは、隠れたパートナーを推理します</strong>。テイカーのトリックに点数の高いカードを入れるプレイヤーは疑わしく、ディフェンス側に点数を入れるプレイヤーは安心材料となり、呼ばれたキングが出た時点でパートナーが確定します。ディフェンスでは、2トリック目に呼ばれたスートの最も低いカードをリードし、キングを引き出すことさえあります。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>トリックごとの確率計算</h2>
+            <p>記憶をもとに、AIはカードを出す前に計算します：</p>
+            <ul>
+                <li><strong>切り札で切られるリスク：</strong> そのスートを持っていないが切り札は持っているプレイヤーは切ってきます。そうでない場合は、まだ見えていないカードを1枚も持っていない確率を、そのプレイヤーの切りたがる傾向も考慮して見積もります。</li>
+                <li><strong>トリックを取れる見込み：</strong> カードごとに、後に続くプレイヤーに対して最強のままでいられるかを見積もります。</li>
+            </ul>
+            <p><strong>スートに従うとき</strong>は、確実に取れるトリックや確かな味方が取るトリックに点数を入れます。<strong>捨てるとき</strong>は、自分のキングのスートを知らせるか、短いスートの低いカードを捨てて切れる状態を作ります。<strong>リードするとき</strong>は、攻撃と守備で異なる戦略をとり、どの相手も切れないスートを優先して選びます。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>プチの扱いの巧みさ</h2>
+            <ul>
+                <li><strong>切り札が多い手札のとき：</strong> 計算で十分な見込みがあれば、プチを<strong>最後のトリック</strong>のために温存します。自分の切り札と、相手の手にまだ隠れている切り札を比べて判断します。</li>
+                <li><strong>切り札が少ないとき、またはリスクが高まったとき：</strong> 安全なトリックに紛れ込ませて、できるだけ早く<strong>プチを救います</strong>。</li>
+            </ul>
+            <p>プチ（トランプ1）は3つのBoutのひとつで、最後のトリックまで持ち込むとボーナスが得られます。AIは計画的に扱います：</p>
+        </div>
+
+        <div class="info-card">
+            <h2>あなたの癖を学ぶAI</h2>
+            <p>ディールを重ねるごとに、AIは各プレイヤーのプレイを観察し、テイカー・ディフェンス・パートナーという役割ごとにプロフィールを作ります。</p>
+            <p>さらに、各プレイヤーの<strong>総合プロフィール</strong>も記録します。テイクの頻度、好きなコントラクト、攻撃性、切り札で切る傾向、成功率です。</p>
+            <p>癖は<strong>十分な回数観察されて</strong>はじめて考慮され、<strong>最近の機会ほど重視されます</strong>。プレイスタイルを変えたプレイヤーはすぐに見直され、1回の対局だけで決めつけられることはありません。</p>
+            <p>AIはこれを判断に生かします。早めに切り札を引くことが多い攻撃的なテイカーに対しては、<strong>ディフェンスは強い切り札を温存します</strong>。また、テイカーのトリックに点数を入れる癖のあるディフェンスを、それだけでパートナーと見なすことはなくなります。</p>
+            <p><strong>公開情報のみ</strong>：AIが観察するのは全員に見えるカードだけで、他のプレイヤーの手札は決して見ません。プロフィールは<strong>あなたのスマートフォン内</strong>に保存されます。サーバーに送られるのは、ログイン中のプレイヤーのプレイしたラウンド数と勝ったラウンド数だけで、トーナメントのカテゴリー決定に使われます。</p>
+            <div class="table-defile"><table>
+                <tr><th scope="col">観察する癖</th><th scope="col">AIが記録すること</th></tr>
+                <tr><td>早めに切り札を引く</td><td>テイカーが最初の3回のリードのうちに切り札をリードする</td></tr>
+                <tr><td>切り札でリードする</td><td>スートではなく切り札でリードする</td></tr>
+                <tr><td>呼ばれたスートをリードする</td><td>5人プレイで、ディフェンスが最初の4トリック以内に呼ばれたキングのスートをリードする</td></tr>
+                <tr><td>テイカーに点数を渡す</td><td>テイカーが取るトリックに点数のあるカードを出す</td></tr>
+                <tr><td>エクスキューズを最後まで取っておく</td><td>エクスキューズを最後の2トリックで出す</td></tr>
+                <tr><td>プチを最後まで持ち込む</td><td>プチを最後のトリックで出す</td></tr>
+                <tr><td>はっきりサインを出す</td><td>呼びかけの捨て札のあとに、そのスートのキングを出す</td></tr>
+                <tr><td>ポワニェを宣言する</td><td>ポワニェ（poignée）を持っているときに宣言する</td></tr>
+                <tr><td>弱い手でテイクする</td><td>テイカーが出す切り札が少なく、Boutも1枚以下</td></tr>
+                <tr><td>コントラクトに失敗する</td><td>テイカー側が必要な点数に届かない</td></tr>
+            </table></div>
+        </div>
+
+        <div class="info-card">
+            <h2>中立的なカードに限った7%の人間らしさ</h2>
+            <p>常に完璧な手を打つAIは読みやすく、対戦してもあまり楽しくありません。そこでゴシック・タロットのAIは、<strong>判断の約7%</strong>で、人間のプレイヤーのように最善とは別の低いカードを出します。</p>
+            <p>この人間らしさが関わるのは<strong>中立的なカード</strong>だけです。点数のあるカード、切り札、プチ、エクスキューズは<strong>決して</strong>対象にならず、トリックの勝者が変わるような手もありません。AIはプレイに変化をつけつつ、相手に点数を与えることはありません。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>トーナメントに合わせた強さ</h2>
+            <p>トーナメント以外では、AIは7%の人間らしさだけを残して全力でプレイします。<strong>週末のトーナメント</strong>では、ボットの強さはプレイヤーのカテゴリーによって変わります。カテゴリーはサーバーが<strong>勝率</strong>に応じて決めます。</p>
+            <div class="table-defile"><table>
+                <tr><th scope="col">カテゴリー</th><th scope="col">割り当て条件</th><th scope="col">テーブルのボットがランダムに打つ手の割合</th></tr>
+                <tr><td>グリーン</td><td>勝ったラウンドが40%未満</td><td>30%</td></tr>
+                <tr><td>イエロー</td><td>40〜55%、またはプレイしたラウンドが9回未満</td><td>12%</td></tr>
+                <tr><td>レッド</td><td>勝ったラウンドが55%以上</td><td>0%</td></tr>
+            </table></div>
+            <p>カテゴリーは金曜日の予選終了時に決まり、自分で選ぶことはできません。レベルの低いボットは、プレイでもビッドでもミスが多くなり、あなたの癖もあまり考慮しません。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>AIに関するよくある質問</h2>
+            <h3>ひとりでコンピューターとタロットを遊べますか？</h3>
+            <p>はい。空席はAIが埋めるので、AndroidのスマートフォンやタブレットでAIを相手に、3人・4人・5人のタロットをひとりで最後まで遊べます。</p>
+            <h3>AIは私のカードを見ていますか？</h3>
+            <p>いいえ。AIが知っているのは自分の手札と全員に見えるカードだけです。推理は人間のプレイヤーと同じく、出されたトリックから行います。</p>
+            <h3>AIは私のレベルに合わせてくれますか？</h3>
+            <p>トーナメントでは合わせます。ボットの強さは、勝率から計算されるあなたのカテゴリーによって決まります。トーナメント以外では、AIは約7%の意図的に不完全な手を交えつつ全力でプレイします。</p>
+            <h3>私のプレイの癖はインターネットに送られますか？</h3>
+            <p>いいえ。癖のプロフィールは端末内に残ります。サーバーに送られるのは、トーナメントのカテゴリーを決めるためのプレイしたラウンド数と勝ったラウンド数だけです。</p>
+        </div>
+
+        <div class="info-card">
+            <p><a class="cta-ia" href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google PlayでAIと対戦する</a></p>
+            <p>まずは<a href="regles_ja.html">タロットの公式ルール</a>を読むか、<a href="index_ja.html">タロットゲームのホーム</a>に戻りましょう。</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ja.html">ホーム</a> | <a href="apropos_ja.html">法的事項</a> | <a href="privacy_ja.html">プライバシー</a> | <a href="delete_ja.html">アカウント削除</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哥特塔罗的AI：与电脑对战法式塔罗牌</title>
+    <meta name="description" content="哥特塔罗2026的AI如何运作：记牌、学习玩家习惯、7%的人性化因素，以及在锦标赛中自适应的难度。">
+    <link rel="canonical" href="https://tarot-gothique-2026.com/ia-tarot_zh.html">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Cyril Darbost">
+    <meta name="theme-color" content="#0b0b0f">
+
+    <!-- Versions linguistiques (hreflang) -->
+    <link rel="alternate" hreflang="fr" href="https://tarot-gothique-2026.com/ia-tarot.html">
+    <link rel="alternate" hreflang="en" href="https://tarot-gothique-2026.com/ia-tarot_en.html">
+    <link rel="alternate" hreflang="es" href="https://tarot-gothique-2026.com/ia-tarot_es.html">
+    <link rel="alternate" hreflang="de" href="https://tarot-gothique-2026.com/ia-tarot_de.html">
+    <link rel="alternate" hreflang="pt" href="https://tarot-gothique-2026.com/ia-tarot_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://tarot-gothique-2026.com/ia-tarot_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://tarot-gothique-2026.com/ia-tarot_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://tarot-gothique-2026.com/ia-tarot_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://tarot-gothique-2026.com/ia-tarot.html">
+
+    <!-- Icônes -->
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Aperçus réseaux sociaux (Open Graph / Twitter) -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="哥特塔罗">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:url" content="https://tarot-gothique-2026.com/ia-tarot_zh.html">
+    <meta property="og:title" content="哥特塔罗的AI：与电脑对战法式塔罗牌">
+    <meta property="og:description" content="哥特塔罗2026的AI如何运作：记牌、学习玩家习惯、7%的人性化因素，以及在锦标赛中自适应的难度。">
+    <meta property="og:image" content="https://tarot-gothique-2026.com/banner.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="572">
+    <meta property="og:image:alt" content="哥特塔罗2026：哥特大教堂中手持塔罗牌的死神">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="哥特塔罗的AI：与电脑对战法式塔罗牌">
+    <meta name="twitter:description" content="哥特塔罗2026的AI如何运作：记牌、学习玩家习惯、7%的人性化因素，以及在锦标赛中自适应的难度。">
+    <meta name="twitter:image" content="https://tarot-gothique-2026.com/banner.jpg">
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://tarot-gothique-2026.com/#site",
+          "url": "https://tarot-gothique-2026.com/",
+          "name": "Tarot Gothique"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://tarot-gothique-2026.com/#auteur",
+          "name": "Cyril Darbost"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_zh.html#page",
+          "url": "https://tarot-gothique-2026.com/ia-tarot_zh.html",
+          "name": "哥特塔罗的AI：与电脑对战法式塔罗牌",
+          "description": "哥特塔罗2026的AI如何运作：记牌、学习玩家习惯、7%的人性化因素，以及在锦标赛中自适应的难度。",
+          "inLanguage": "zh",
+          "isPartOf": {
+            "@id": "https://tarot-gothique-2026.com/#site"
+          },
+          "dateModified": "2026-11-01",
+          "breadcrumb": {
+            "@id": "https://tarot-gothique-2026.com/ia-tarot_zh.html#ariane"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_zh.html#ariane",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://tarot-gothique-2026.com/index_zh.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "游戏AI"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_zh.html#article",
+          "headline": "哥特塔罗的AI：一个记住你打法的对手",
+          "description": "哥特塔罗2026的AI如何运作：记牌、学习玩家习惯、7%的人性化因素，以及在锦标赛中自适应的难度。",
+          "inLanguage": "zh",
+          "image": "https://tarot-gothique-2026.com/banner.jpg",
+          "dateModified": "2026-11-01",
+          "author": {
+            "@id": "https://tarot-gothique-2026.com/#auteur"
+          },
+          "publisher": {
+            "@id": "https://tarot-gothique-2026.com/#auteur"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://tarot-gothique-2026.com/ia-tarot_zh.html#page"
+          },
+          "about": {
+            "@id": "https://tarot-gothique-2026.com/#jeu"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_zh.html#faq",
+          "inLanguage": "zh",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "可以一个人和电脑玩塔罗牌吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "可以。空位由AI补上：你可以在Android手机或平板上独自完整地玩一局3人、4人或5人的塔罗牌。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "AI能看到我的牌吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "不能。它只知道自己的手牌和所有人都能看到的牌；它的推理和真人玩家一样，来自已经打出的牌墩。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "AI会根据我的水平调整吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "在锦标赛中会：机器人的水平取决于你的类别，而类别根据你的胜率计算。锦标赛之外，AI以全力出战，约有7%的出牌是刻意不完美的。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "我的出牌习惯会被发送到网上吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "不会。你的习惯档案保存在你的设备上。只有你打过和赢下的局数会发送到服务器，用于确定你的锦标赛类别。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root {
+            --primary-gold: #f3d060;
+            --card-bg: rgba(22, 22, 34, 0.82);
+            --header-bg: rgba(18, 18, 26, 0.88);
+            --text-main: #f8fafc;
+            --text-muted: #e2e8f0;
+            --border-color: #d4af37;
+        }
+
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto; overflow-x: hidden;
+            background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-image: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), image-set(url('background.webp') type('image/webp'), url('background.jpg') type('image/jpeg'));
+            background-size: cover;
+            background-position: center;
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-gold);
+            flex-shrink: 0;
+        }
+        h1 {
+            color: var(--primary-gold);
+            margin: 0 0 0.3rem 0;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.6rem 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.6rem;
+            overflow-y: auto; overflow-x: hidden;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .info-card h2 {
+            color: var(--primary-gold);
+            font-size: 1.25rem;
+            margin: 0 0 0.4rem 0;
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 0.6rem;
+        }
+        .info-card p {
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+        .testimonial-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            font-style: italic;
+            color: var(--text-main);
+            font-size: 1.02rem;
+            line-height: 1.45;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .testimonial-author {
+            margin-top: 0.4rem;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--primary-gold);
+            font-size: 0.92rem;
+            text-align: right;
+        }
+
+        footer {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 0.8rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        footer a { color: var(--primary-gold); text-decoration: none; }
+
+        @media (max-width: 900px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
+        .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
+        .ariane { font-size: 0.85rem; color: var(--text-muted); }
+        .ariane a { color: var(--primary-gold); }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; }
+        .info-card th, .info-card td { border: 1px solid var(--border-color); padding: 0.45rem 0.6rem; text-align: left;
+            font-size: 0.9rem; color: var(--text-muted); vertical-align: top; }
+        .info-card th { color: var(--primary-gold); }
+        .table-defile { overflow-x: auto; }
+        .info-card a.cta-ia { display: inline-block; background: var(--primary-gold); color: #0b0b0f; padding: 0.6rem 1.6rem;
+            border-radius: 8px; font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>哥特塔罗的AI：一个记住你打法的对手</h1>
+        
+        <nav class="main-nav">
+            <a href="index_zh.html" class="">首页</a>
+            <a href="regles_zh.html" class="">规则</a>
+            <a href="galerie_zh.html" class="">图库</a>
+            <a href="ia-tarot_zh.html" class="active">游戏AI</a>
+            <a href="apropos_zh.html">关于</a>
+            <div class="lang-bar">
+                <a href="ia-tarot.html" class="lang-switch" hreflang="fr">🇫🇷 FR</a>
+                <a href="ia-tarot_en.html" class="lang-switch" hreflang="en">🇬🇧 EN</a>
+                <a href="ia-tarot_es.html" class="lang-switch" hreflang="es">🇪🇸 ES</a>
+                <a href="ia-tarot_de.html" class="lang-switch" hreflang="de">🇩🇪 DE</a>
+                <a href="ia-tarot_pt.html" class="lang-switch" hreflang="pt">🇵🇹 PT</a>
+                <a href="ia-tarot_ru.html" class="lang-switch" hreflang="ru">🇷🇺 RU</a>
+                <a href="ia-tarot_ja.html" class="lang-switch" hreflang="ja">🇯🇵 JA</a>
+                <a href="ia-tarot_zh.html" class="lang-switch active-lang" hreflang="zh">🇨🇳 ZH</a>
+            </div>
+        </nav>
+    
+    </header>
+    <main>
+        <nav class="ariane" aria-label="面包屑导航"><a href="index_zh.html">首页</a> › <span aria-current="page">游戏AI</span></nav>
+
+        <div class="info-card">
+            <p>在哥特塔罗2026中，牌桌上的空位由<strong>人工智能</strong>补上：它会像真人玩家一样叫牌、在5人局中叫王、出牌并计分。你可以独自<strong>与电脑对战法式塔罗牌</strong>，也可以在人数不足时用它补齐牌桌。</p>
+            <p>本页详细介绍这个AI的工作方式：它在一局中记住什么、在一局又一局中从你身上学到什么、为什么有时会故意失误，以及它的难度如何在比赛中自动调整。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>AI的强大之处</h2>
+            <ul>
+                <li><strong>零违规：</strong> 每一张出牌都符合塔罗牌规则。</li>
+                <li><strong>深思熟虑的叫牌：</strong> 当庄之前，它会像老练玩家一样评估手牌。</li>
+                <li><strong>高手级的叫王与扣牌：</strong> 在5人局中，它会为己方选择国王并安排扣牌。</li>
+                <li><strong>完美的记忆：</strong> 它会记牌、发现缺门，并推理出隐藏的同伴。</li>
+                <li><strong>每墩都算概率：</strong> 它会估算被王牌毙掉的风险和赢下这一墩的机会。</li>
+                <li><strong>精通小牌（Petit）：</strong> 它知道何时把小牌留到最后，何时把它救下。</li>
+                <li><strong>学习你的打法：</strong> 为每位玩家追踪十种习惯，并持续更新。</li>
+                <li><strong>像人一样出牌：</strong> 7%的变化，只出现在无关紧要的牌上。</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>始终遵守规则的玩家</h2>
+            <p>每次出牌前，AI只考虑规则允许的牌：<strong>跟出所领的花色</strong>，无法跟出时<strong>出王牌毙牌</strong>，必须时<strong>压上更大的王牌</strong>。它从不出违规的牌，与它对局就和在真实牌桌上一模一样。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>深思熟虑的叫牌</h2>
+            <p>在决定是否当庄时，AI会像老练玩家一样审视手牌：它的<strong>Bout</strong>、<strong>王牌的数量与大小</strong>、<strong>国王与王后</strong>、<strong>长套花色</strong>、<strong>缺门与单张</strong>。据此，它会选择合适的契约——从Petite到Garde contre——或者选择不叫。</p>
+            <p>它也会提防<strong>保护不足的小牌</strong>：如果用来保护它的王牌太少，小牌可能被吃掉，AI在决定叫牌前会考虑这一点。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>老练玩家般的叫王与扣牌</h2>
+            <p>在5人局中，当庄的AI会<strong>叫自己最长花色中、自己手上没有的那张国王</strong>：借助自身优势，并迫使其他人在该花色上动用王牌。只有在别无选择时才会叫自己。扣牌时，它的做法如下：</p>
+            <ul>
+                <li><strong>提前制造缺门：</strong> 先扣掉最短的花色，为自己创造缺门以便毙牌。</li>
+                <li><strong>从不扣贵重的牌：</strong> 绝不扣国王，绝不扣Bout。</li>
+                <li><strong>保护同伴：</strong> 绝不把被叫国王的花色扣光，以免不得不用王牌毙掉自己同伴的国王。</li>
+                <li><strong>王牌是最后手段：</strong> 只有在规则允许且别无他法时，才会扣掉小王牌。</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>完整记住整局牌</h2>
+            <p>在每一局中，AI都会记录一位顶尖玩家心中所记的一切。下一局开始时，一切清零。</p>
+            <ul>
+                <li><strong>已出的牌：</strong> 从第一墩起打出的所有牌。因此它知道每种花色还有哪些牌未出现，并能认出<strong>最大牌</strong>。</li>
+                <li><strong>缺门：</strong> 一旦某位玩家没有跟出某个花色，AI就会记下他已缺这门，包括王牌。</li>
+                <li><strong>没有王牌的玩家：</strong> 垫牌而不毙牌的玩家已经没有王牌；AI会据此判断谁还能毙掉某个花色。</li>
+                <li><strong>垫牌信号：</strong> 垫出另一花色的6到10，会被解读为对该花色的呼叫。</li>
+                <li><strong>庄家自己的扣牌：</strong> 当庄的AI知道自己扣了哪些牌，并把它们从计算中排除。</li>
+            </ul>
+            <p><strong>在5人局中，它会调查隐藏的同伴</strong>：往庄家赢的墩里送分的玩家会变得可疑，往防守方送分的玩家则让人放心，而被叫的国王一出现，同伴身份就得到确认。防守时，它甚至会在第二墩首攻被叫花色中最小的牌，逼国王现身。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>每墩都算概率</h2>
+            <p>凭借记忆，AI在出牌前会计算：</p>
+            <ul>
+                <li><strong>被毙的风险：</strong> 已缺该花色但仍有王牌的玩家一定会毙牌；否则，AI会结合该玩家爱毙牌的倾向，估算他手上没有任何未出现牌的概率。</li>
+                <li><strong>赢下这一墩的机会：</strong> 对每张牌，它都会估算面对后面出牌的玩家时，这张牌能否保持最大。</li>
+            </ul>
+            <p><strong>跟牌时</strong>，如果这一墩稳赢或必定归属确定的盟友，它就往里送分。<strong>垫牌时</strong>，它会示意自己国王的花色，或用短套中的小牌为自己制造缺门。<strong>首攻时</strong>，它在进攻和防守中采用不同的策略，并优先选择没有对手能毙的花色。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>精通小牌</h2>
+            <ul>
+                <li><strong>王牌多的手牌：</strong> 只要计算显示机会很大，它就把小牌留到<strong>最后一墩</strong>：它会比较自己的王牌与对手手中尚未出现的王牌。</li>
+                <li><strong>王牌少，或风险增大时：</strong> 它会尽早<strong>救下小牌</strong>，把它塞进一个稳赢的墩里。</li>
+            </ul>
+            <p>小牌（Petit，即1号王牌）是三张Bout之一，如果在最后一墩打出可获得奖励。AI会有条不紊地处理它：</p>
+        </div>
+
+        <div class="info-card">
+            <h2>一个会学习你习惯的AI</h2>
+            <p>一局又一局，AI观察每位玩家的打法并建立档案，按所担任的角色分类：庄家、防守方或同伴。</p>
+            <p>此外，它还为每位玩家建立<strong>整体档案</strong>：当庄频率、偏好的契约、激进程度、毙牌倾向、成功率。</p>
+            <p>一个习惯只有在<strong>被观察到足够多次</strong>后才会计入，而且<strong>越近期的情况权重越大</strong>：改变风格的玩家很快会被重新评估，仅凭一局绝不会被贴上标签。</p>
+            <p>AI会把这些用在决策中。面对经常很早调主的激进庄家，<strong>防守方会保留自己的大王牌</strong>；习惯往庄家墩里送分的防守者，不会再仅凭这一点被当成庄家的同伴。</p>
+            <p><strong>只使用公开信息</strong>：AI只观察所有人都能看到的牌，从不看其他玩家的手牌。档案保存在<strong>你的手机上</strong>；只有已登录玩家打过和赢下的局数会发送到服务器，用于确定锦标赛类别。</p>
+            <div class="table-defile"><table>
+                <tr><th scope="col">观察到的习惯</th><th scope="col">AI记录的内容</th></tr>
+                <tr><td>很早调主</td><td>庄家在前三次首攻中出王牌</td></tr>
+                <tr><td>首攻出王牌</td><td>玩家首攻王牌而不是普通花色</td></tr>
+                <tr><td>首攻被叫花色</td><td>5人局中，防守方在前四墩内首攻被叫国王的花色</td></tr>
+                <tr><td>给庄家送分</td><td>玩家在庄家赢下的墩里打出有分值的牌</td></tr>
+                <tr><td>把愚者留到最后</td><td>愚者（Excuse）在最后两墩打出</td></tr>
+                <tr><td>把小牌带到最后</td><td>小牌在最后一墩打出</td></tr>
+                <tr><td>信号明确</td><td>呼叫性的垫牌之后，跟着打出该花色的国王</td></tr>
+                <tr><td>宣布poignée</td><td>玩家持有poignée（王牌组合）时会宣布</td></tr>
+                <tr><td>弱牌当庄</td><td>庄家打出的王牌很少，且最多只有一张Bout</td></tr>
+                <tr><td>宕约</td><td>庄家一方没有达到所需分数</td></tr>
+            </table></div>
+        </div>
+
+        <div class="info-card">
+            <h2>中性牌上7%的人性化因素</h2>
+            <p>总是打出完美一手的AI容易被看穿，对战起来也不够有趣。因此，在<strong>约7%的决策中</strong>，哥特塔罗的AI会像真人玩家一样，打出另一张小牌而不是最佳的那张。</p>
+            <p>这种人性化因素只涉及<strong>中性牌</strong>：<strong>绝不会</strong>是有分值的牌、王牌、小牌或愚者，也绝不会是改变该墩赢家的一手。AI让打法有所变化，却从不白送分给对手。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>锦标赛中的自适应难度</h2>
+            <p>在锦标赛之外，AI以全力出战，只保留7%的人性化因素。在<strong>周末锦标赛</strong>中，机器人的水平取决于玩家的类别，该类别由服务器根据其<strong>胜率</strong>分配。</p>
+            <div class="table-defile"><table>
+                <tr><th scope="col">类别</th><th scope="col">分配条件</th><th scope="col">该桌机器人随机出牌的比例</th></tr>
+                <tr><td>绿色</td><td>赢局比例低于40%</td><td>30%</td></tr>
+                <tr><td>黄色</td><td>介于40%与55%之间，或打过的局数少于9局</td><td>12%</td></tr>
+                <tr><td>红色</td><td>赢局比例达到55%或以上</td><td>0%</td></tr>
+            </table></div>
+            <p>类别在周五资格赛结束时分配，无法自行选择。水平较低的机器人在出牌和叫牌时都更常失误，也更少考虑你的习惯。</p>
+        </div>
+
+        <div class="info-card">
+            <h2>关于AI的常见问题</h2>
+            <h3>可以一个人和电脑玩塔罗牌吗？</h3>
+            <p>可以。空位由AI补上：你可以在Android手机或平板上独自完整地玩一局3人、4人或5人的塔罗牌。</p>
+            <h3>AI能看到我的牌吗？</h3>
+            <p>不能。它只知道自己的手牌和所有人都能看到的牌；它的推理和真人玩家一样，来自已经打出的牌墩。</p>
+            <h3>AI会根据我的水平调整吗？</h3>
+            <p>在锦标赛中会：机器人的水平取决于你的类别，而类别根据你的胜率计算。锦标赛之外，AI以全力出战，约有7%的出牌是刻意不完美的。</p>
+            <h3>我的出牌习惯会被发送到网上吗？</h3>
+            <p>不会。你的习惯档案保存在你的设备上。只有你打过和赢下的局数会发送到服务器，用于确定你的锦标赛类别。</p>
+        </div>
+
+        <div class="info-card">
+            <p><a class="cta-ia" href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">在Google Play与AI对战</a></p>
+            <p>想要顺利上手，请阅读<a href="regles_zh.html">塔罗牌官方规则</a>，或返回<a href="index_zh.html">塔罗牌游戏首页</a>。</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_zh.html">首页</a> | <a href="apropos_zh.html">法律声明</a> | <a href="privacy_zh.html">隐私</a> | <a href="delete_zh.html">删除账户</a></p>
+    </footer>
+</body>
+</html>

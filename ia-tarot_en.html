@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gothic Tarot AI: play French tarot against the computer</title>
+    <meta name="description" content="How the Gothic Tarot 2026 AI works: card memory, player habits, a 7% human factor and a level adapted to tournaments.">
+    <link rel="canonical" href="https://tarot-gothique-2026.com/ia-tarot_en.html">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Cyril Darbost">
+    <meta name="theme-color" content="#0b0b0f">
+
+    <!-- Versions linguistiques (hreflang) -->
+    <link rel="alternate" hreflang="fr" href="https://tarot-gothique-2026.com/ia-tarot.html">
+    <link rel="alternate" hreflang="en" href="https://tarot-gothique-2026.com/ia-tarot_en.html">
+    <link rel="alternate" hreflang="es" href="https://tarot-gothique-2026.com/ia-tarot_es.html">
+    <link rel="alternate" hreflang="de" href="https://tarot-gothique-2026.com/ia-tarot_de.html">
+    <link rel="alternate" hreflang="pt" href="https://tarot-gothique-2026.com/ia-tarot_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://tarot-gothique-2026.com/ia-tarot_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://tarot-gothique-2026.com/ia-tarot_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://tarot-gothique-2026.com/ia-tarot_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://tarot-gothique-2026.com/ia-tarot.html">
+
+    <!-- Icônes -->
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Aperçus réseaux sociaux (Open Graph / Twitter) -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Gothic Tarot">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:url" content="https://tarot-gothique-2026.com/ia-tarot_en.html">
+    <meta property="og:title" content="Gothic Tarot AI: play French tarot against the computer">
+    <meta property="og:description" content="How the Gothic Tarot 2026 AI works: card memory, player habits, a 7% human factor and a level adapted to tournaments.">
+    <meta property="og:image" content="https://tarot-gothique-2026.com/banner.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="572">
+    <meta property="og:image:alt" content="Gothic Tarot 2026: the Grim Reaper holding tarot cards in a gothic cathedral">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gothic Tarot AI: play French tarot against the computer">
+    <meta name="twitter:description" content="How the Gothic Tarot 2026 AI works: card memory, player habits, a 7% human factor and a level adapted to tournaments.">
+    <meta name="twitter:image" content="https://tarot-gothique-2026.com/banner.jpg">
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://tarot-gothique-2026.com/#site",
+          "url": "https://tarot-gothique-2026.com/",
+          "name": "Tarot Gothique"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://tarot-gothique-2026.com/#auteur",
+          "name": "Cyril Darbost"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_en.html#page",
+          "url": "https://tarot-gothique-2026.com/ia-tarot_en.html",
+          "name": "Gothic Tarot AI: play French tarot against the computer",
+          "description": "How the Gothic Tarot 2026 AI works: card memory, player habits, a 7% human factor and a level adapted to tournaments.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://tarot-gothique-2026.com/#site"
+          },
+          "dateModified": "2026-11-01",
+          "breadcrumb": {
+            "@id": "https://tarot-gothique-2026.com/ia-tarot_en.html#ariane"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_en.html#ariane",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://tarot-gothique-2026.com/index_en.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "The game's AI"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_en.html#article",
+          "headline": "The Gothic Tarot AI: an opponent that remembers how you play",
+          "description": "How the Gothic Tarot 2026 AI works: card memory, player habits, a 7% human factor and a level adapted to tournaments.",
+          "inLanguage": "en",
+          "image": "https://tarot-gothique-2026.com/banner.jpg",
+          "dateModified": "2026-11-01",
+          "author": {
+            "@id": "https://tarot-gothique-2026.com/#auteur"
+          },
+          "publisher": {
+            "@id": "https://tarot-gothique-2026.com/#auteur"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://tarot-gothique-2026.com/ia-tarot_en.html#page"
+          },
+          "about": {
+            "@id": "https://tarot-gothique-2026.com/#jeu"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_en.html#faq",
+          "inLanguage": "en",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can I play tarot alone against the computer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Empty seats are filled by the AI: you can play a full game of tarot with 3, 4 or 5 players on your own, on an Android smartphone or tablet."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can the AI see my cards?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. It only knows its own hand and the cards everyone can see; its deductions come from the tricks played, just like a human player's."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the AI adapt to my level?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In tournaments, yes: the bots' level depends on your category, calculated from your win rate. Outside tournaments, the AI plays at full strength, with about 7% deliberately imperfect moves."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are my playing habits sent over the Internet?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The profile of your habits stays on your device. Only your numbers of rounds played and won are sent to the server, to set your tournament category."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root {
+            --primary-gold: #f3d060;
+            --card-bg: rgba(22, 22, 34, 0.82);
+            --header-bg: rgba(18, 18, 26, 0.88);
+            --text-main: #f8fafc;
+            --text-muted: #e2e8f0;
+            --border-color: #d4af37;
+        }
+
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto; overflow-x: hidden;
+            background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-image: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), image-set(url('background.webp') type('image/webp'), url('background.jpg') type('image/jpeg'));
+            background-size: cover;
+            background-position: center;
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-gold);
+            flex-shrink: 0;
+        }
+        h1 {
+            color: var(--primary-gold);
+            margin: 0 0 0.3rem 0;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.6rem 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.6rem;
+            overflow-y: auto; overflow-x: hidden;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .info-card h2 {
+            color: var(--primary-gold);
+            font-size: 1.25rem;
+            margin: 0 0 0.4rem 0;
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 0.6rem;
+        }
+        .info-card p {
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+        .testimonial-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            font-style: italic;
+            color: var(--text-main);
+            font-size: 1.02rem;
+            line-height: 1.45;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .testimonial-author {
+            margin-top: 0.4rem;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--primary-gold);
+            font-size: 0.92rem;
+            text-align: right;
+        }
+
+        footer {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 0.8rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        footer a { color: var(--primary-gold); text-decoration: none; }
+
+        @media (max-width: 900px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
+        .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
+        .ariane { font-size: 0.85rem; color: var(--text-muted); }
+        .ariane a { color: var(--primary-gold); }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; }
+        .info-card th, .info-card td { border: 1px solid var(--border-color); padding: 0.45rem 0.6rem; text-align: left;
+            font-size: 0.9rem; color: var(--text-muted); vertical-align: top; }
+        .info-card th { color: var(--primary-gold); }
+        .table-defile { overflow-x: auto; }
+        .info-card a.cta-ia { display: inline-block; background: var(--primary-gold); color: #0b0b0f; padding: 0.6rem 1.6rem;
+            border-radius: 8px; font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Gothic Tarot AI: an opponent that remembers how you play</h1>
+        
+        <nav class="main-nav">
+            <a href="index_en.html" class="">Home / Game</a>
+            <a href="regles_en.html" class="">Tarot Rules</a>
+            <a href="galerie_en.html" class="">Photo Gallery</a>
+            <a href="ia-tarot_en.html" class="active">The game&#x27;s AI</a>
+            <a href="apropos_en.html">About & FAQ</a>
+            <div class="lang-bar">
+                <a href="ia-tarot.html" class="lang-switch" hreflang="fr">🇫🇷 FR</a>
+                <a href="ia-tarot_en.html" class="lang-switch active-lang" hreflang="en">🇬🇧 EN</a>
+                <a href="ia-tarot_es.html" class="lang-switch" hreflang="es">🇪🇸 ES</a>
+                <a href="ia-tarot_de.html" class="lang-switch" hreflang="de">🇩🇪 DE</a>
+                <a href="ia-tarot_pt.html" class="lang-switch" hreflang="pt">🇵🇹 PT</a>
+                <a href="ia-tarot_ru.html" class="lang-switch" hreflang="ru">🇷🇺 RU</a>
+                <a href="ia-tarot_ja.html" class="lang-switch" hreflang="ja">🇯🇵 JA</a>
+                <a href="ia-tarot_zh.html" class="lang-switch" hreflang="zh">🇨🇳 ZH</a>
+            </div>
+        </nav>
+    
+    </header>
+    <main>
+        <nav class="ariane" aria-label="Breadcrumb"><a href="index_en.html">Home</a> › <span aria-current="page">The game&#x27;s AI</span></nav>
+
+        <div class="info-card">
+            <p>In Gothic Tarot 2026, the empty seats at a table are filled by an <strong>artificial intelligence</strong>: it bids, calls a king in 5-player games, plays its cards and counts points just like a human player. You can play <strong>French tarot against the computer</strong> on your own, or fill a table when players are missing.</p>
+            <p>This page describes exactly what this AI does: what it remembers during a deal, what it learns about you from one game to the next, why it sometimes makes deliberate mistakes, and how its level adapts in competition.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>What makes the AI strong</h2>
+            <ul>
+                <li><strong>Zero illegal moves:</strong> every card it plays follows the rules of tarot.</li>
+                <li><strong>Thoughtful bidding:</strong> it assesses its hand like a seasoned player before taking.</li>
+                <li><strong>Expert calling and discarding:</strong> in 5-player games, it chooses its king and prepares its discard to help its side.</li>
+                <li><strong>Flawless memory:</strong> it counts cards, spots voids and investigates the hidden partner.</li>
+                <li><strong>Probabilities on every trick:</strong> it estimates the risk of being trumped and its chances of winning the trick.</li>
+                <li><strong>Mastery of the Petit:</strong> it knows when to bring it home and when to save it.</li>
+                <li><strong>It learns your game:</strong> ten habits tracked per player, constantly reassessed.</li>
+                <li><strong>Human-like behaviour:</strong> 7% variation, only on cards that do not matter.</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>A player that always follows the rules</h2>
+            <p>Before each move, the AI only considers the cards the rules allow: <strong>follow the suit led</strong>, <strong>trump</strong> when it cannot, <strong>overtrump</strong> when required. It never plays an illegal card, so a game against it plays out exactly as it would around a real table.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Thoughtful bidding</h2>
+            <p>To decide whether to take, the AI examines its hand like an experienced player: its <strong>Bouts</strong>, the <strong>length and strength of its trumps</strong>, its <strong>kings and queens</strong>, its <strong>long suits</strong>, its <strong>voids and singletons</strong>. From this it chooses the right contract, from the Petite to the Garde contre, or it passes.</p>
+            <p>It is also wary of a <strong>poorly protected Petit</strong>: with too few trumps to defend it, it may be captured, and the AI takes this into account before committing.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>King calling and discarding like an experienced player</h2>
+            <p>In 5-player games, the AI taker <strong>calls the king of its longest suit</strong> that it does not hold: it builds on its strength and forces the others to trump that suit. It only calls itself as a last resort. For the discard, it proceeds as follows:</p>
+            <ul>
+                <li><strong>Voids prepared in advance:</strong> it first discards its shortest suits to create voids.</li>
+                <li><strong>Nothing valuable discarded:</strong> never a king, never a Bout.</li>
+                <li><strong>Its partner protected:</strong> it never empties the suit of the called king, so it never has to trump its own partner&#x27;s king.</li>
+                <li><strong>Trumps as a last resort:</strong> it only discards small trumps if the rules allow it and no other option exists.</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>A complete memory of the deal</h2>
+            <p>During each deal, the AI keeps track of what a very good player keeps in mind. Everything is reset for the next deal.</p>
+            <ul>
+                <li><strong>Cards played:</strong> every card played since the first trick. It therefore knows which cards of each suit are still hidden, and recognises a <strong>master card</strong>.</li>
+                <li><strong>Missing suits:</strong> as soon as a player fails to follow a suit, the AI notes that they are void in it, trumps included.</li>
+                <li><strong>Players without trumps:</strong> a player who discards instead of trumping has no trumps left; the AI takes this into account to judge who can still trump a suit.</li>
+                <li><strong>Discard signals:</strong> discarding a 6 to 10 of another suit is read as a call in that suit.</li>
+                <li><strong>The discard, for the taker:</strong> the AI taker knows which cards it put in its discard and removes them from its calculations.</li>
+            </ul>
+            <p><strong>In 5-player games, it investigates the hidden partner</strong>: a player who loads the taker&#x27;s tricks with points becomes a suspect, a player who loads the defence&#x27;s tricks is reassuring, and the partner is confirmed as soon as the called king appears. In defence, on the second trick, it even leads the lowest card of the called suit to force the king out.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Probabilities on every trick</h2>
+            <p>Thanks to its memory, the AI calculates before playing:</p>
+            <ul>
+                <li><strong>The risk of being trumped:</strong> a player who has run out of the suit but still holds trumps will trump; otherwise, the AI estimates the probability that they hold none of the hidden cards, taking into account their tendency to trump.</li>
+                <li><strong>Its chances of winning the trick:</strong> for each card, it estimates whether it will remain the strongest against the players still to play.</li>
+            </ul>
+            <p><strong>When following</strong>, it loads the trick with points when it is safe or when it goes to a certain ally. <strong>When discarding</strong>, it signals the suit of its king or creates a void with a low card from a short suit. <strong>When leading</strong>, it adopts a different strategy in attack and in defence, and prefers a suit that no opponent can trump.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Mastery of the Petit</h2>
+            <ul>
+                <li><strong>With a hand rich in trumps:</strong> it keeps the Petit for the <strong>last trick</strong>, provided its calculation gives it good chances: it compares its trumps with those still hidden in the opponents&#x27; hands.</li>
+                <li><strong>With few trumps, or when the risk grows:</strong> it <strong>saves the Petit</strong> as soon as possible, slipping it into a safe trick.</li>
+            </ul>
+            <p>The Petit (1 of trumps) is one of the three Bouts and earns a bonus if it is played on the last trick. The AI handles it methodically:</p>
+        </div>
+
+        <div class="info-card">
+            <h2>An AI that learns your habits</h2>
+            <p>From one deal to the next, the AI observes how each player plays and builds a profile, sorted by the role they held: taker, defence or partner.</p>
+            <p>It complements this tracking with an <strong>overall profile</strong> of each player: how often they take, favourite contract, aggressiveness, tendency to trump, success rate.</p>
+            <p>A habit only counts once it has been <strong>observed often enough</strong>, and <strong>recent occasions weigh more</strong>: a player who changes style is quickly reassessed, and a single game is never enough to label them.</p>
+            <p>The AI uses this in its decisions. Against an aggressive taker who often draws trumps early, <strong>the defence keeps its master trumps</strong>; a defender who habitually feeds the taker&#x27;s tricks is no longer mistaken for the taker&#x27;s partner on that clue alone.</p>
+            <p><strong>Public information only</strong>: the AI only observes cards everyone can see, never another player&#x27;s hand. Profiles stay <strong>on your phone</strong>; only the number of rounds played and won by the signed-in player is sent to the server, for the tournament category.</p>
+            <div class="table-defile"><table>
+                <tr><th scope="col">Habit observed</th><th scope="col">What the AI records</th></tr>
+                <tr><td>Drawing trumps early</td><td>The taker leads trumps within their first three leads</td></tr>
+                <tr><td>Leading trumps</td><td>A player leads a trump rather than a suit</td></tr>
+                <tr><td>Leading the called suit</td><td>In 5-player games, a defender leads the called king&#x27;s suit within the first four tricks</td></tr>
+                <tr><td>Feeding the taker</td><td>A player gives a card worth points on a trick won by the taker</td></tr>
+                <tr><td>Keeping the Excuse for the end</td><td>The Excuse is played in the last two tricks</td></tr>
+                <tr><td>Bringing the Petit home</td><td>The Petit is played on the last trick</td></tr>
+                <tr><td>Signalling clearly</td><td>A calling discard is followed by the king of that suit</td></tr>
+                <tr><td>Declaring handfuls</td><td>The player declares a handful (poignée) when they hold one</td></tr>
+                <tr><td>Taking with a weak hand</td><td>The taker plays few trumps and at most one Bout</td></tr>
+                <tr><td>Going down</td><td>The taker&#x27;s side does not reach the required points</td></tr>
+            </table></div>
+        </div>
+
+        <div class="info-card">
+            <h2>A 7% human factor on neutral cards</h2>
+            <p>An AI that always plays the perfect move is predictable and not much fun to face. In <strong>about 7% of its decisions</strong>, the Gothic Tarot AI therefore plays a different low card from the best one, as a human player would.</p>
+            <p>This human factor only applies to <strong>neutral cards</strong>: <strong>never</strong> a card worth points, a trump, the Petit or the Excuse, and never a move that would change who wins the trick. The AI varies its play without ever giving points away to its opponents.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>A level adapted to tournaments</h2>
+            <p>Outside tournaments, the AI plays at full strength, with only its 7% human factor. In the <strong>weekend tournament</strong>, the bots&#x27; level depends on the player&#x27;s category, assigned by the server according to their <strong>win rate</strong>.</p>
+            <div class="table-defile"><table>
+                <tr><th scope="col">Category</th><th scope="col">Assignment</th><th scope="col">Random moves played by the table&#x27;s bots</th></tr>
+                <tr><td>Green</td><td>Under 40% of rounds won</td><td>30%</td></tr>
+                <tr><td>Yellow</td><td>Between 40 and 55%, or fewer than 9 rounds played</td><td>12%</td></tr>
+                <tr><td>Red</td><td>55% of rounds won or more</td><td>0%</td></tr>
+            </table></div>
+            <p>The category is assigned at the end of Friday&#x27;s qualifiers and cannot be chosen. A lower-level bot makes mistakes more often, in play as in bidding, and pays less attention to your habits.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Frequently asked questions about the AI</h2>
+            <h3>Can I play tarot alone against the computer?</h3>
+            <p>Yes. Empty seats are filled by the AI: you can play a full game of tarot with 3, 4 or 5 players on your own, on an Android smartphone or tablet.</p>
+            <h3>Can the AI see my cards?</h3>
+            <p>No. It only knows its own hand and the cards everyone can see; its deductions come from the tricks played, just like a human player&#x27;s.</p>
+            <h3>Does the AI adapt to my level?</h3>
+            <p>In tournaments, yes: the bots&#x27; level depends on your category, calculated from your win rate. Outside tournaments, the AI plays at full strength, with about 7% deliberately imperfect moves.</p>
+            <h3>Are my playing habits sent over the Internet?</h3>
+            <p>No. The profile of your habits stays on your device. Only your numbers of rounds played and won are sent to the server, to set your tournament category.</p>
+        </div>
+
+        <div class="info-card">
+            <p><a class="cta-ia" href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Play against the AI on Google Play</a></p>
+            <p>To get started, read the <a href="regles_en.html">official tarot rules</a> or go back to the <a href="index_en.html">tarot game home page</a>.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_en.html">Game Home</a> | <a href="apropos_en.html">Legal Notice</a> | <a href="privacy_en.html">Privacy</a> | <a href="delete_en.html">Delete Account</a></p>
+    </footer>
+</body>
+</html>

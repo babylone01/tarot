@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИИ Готического Таро: игра в таро против компьютера</title>
+    <meta name="description" content="Как устроен ИИ Готического Таро 2026: память карт, привычки игроков, человеческий фактор 7 % и уровень, адаптированный для турнира.">
+    <link rel="canonical" href="https://tarot-gothique-2026.com/ia-tarot_ru.html">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Cyril Darbost">
+    <meta name="theme-color" content="#0b0b0f">
+
+    <!-- Versions linguistiques (hreflang) -->
+    <link rel="alternate" hreflang="fr" href="https://tarot-gothique-2026.com/ia-tarot.html">
+    <link rel="alternate" hreflang="en" href="https://tarot-gothique-2026.com/ia-tarot_en.html">
+    <link rel="alternate" hreflang="es" href="https://tarot-gothique-2026.com/ia-tarot_es.html">
+    <link rel="alternate" hreflang="de" href="https://tarot-gothique-2026.com/ia-tarot_de.html">
+    <link rel="alternate" hreflang="pt" href="https://tarot-gothique-2026.com/ia-tarot_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://tarot-gothique-2026.com/ia-tarot_ru.html">
+    <link rel="alternate" hreflang="ja" href="https://tarot-gothique-2026.com/ia-tarot_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://tarot-gothique-2026.com/ia-tarot_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://tarot-gothique-2026.com/ia-tarot.html">
+
+    <!-- Icônes -->
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Aperçus réseaux sociaux (Open Graph / Twitter) -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Готический Таро">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:url" content="https://tarot-gothique-2026.com/ia-tarot_ru.html">
+    <meta property="og:title" content="ИИ Готического Таро: игра в таро против компьютера">
+    <meta property="og:description" content="Как устроен ИИ Готического Таро 2026: память карт, привычки игроков, человеческий фактор 7 % и уровень, адаптированный для турнира.">
+    <meta property="og:image" content="https://tarot-gothique-2026.com/banner.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="572">
+    <meta property="og:image:alt" content="Готический Таро 2026: Смерть с косой держит карты таро в готическом соборе">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ИИ Готического Таро: игра в таро против компьютера">
+    <meta name="twitter:description" content="Как устроен ИИ Готического Таро 2026: память карт, привычки игроков, человеческий фактор 7 % и уровень, адаптированный для турнира.">
+    <meta name="twitter:image" content="https://tarot-gothique-2026.com/banner.jpg">
+
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://tarot-gothique-2026.com/#site",
+          "url": "https://tarot-gothique-2026.com/",
+          "name": "Tarot Gothique"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://tarot-gothique-2026.com/#auteur",
+          "name": "Cyril Darbost"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_ru.html#page",
+          "url": "https://tarot-gothique-2026.com/ia-tarot_ru.html",
+          "name": "ИИ Готического Таро: игра в таро против компьютера",
+          "description": "Как устроен ИИ Готического Таро 2026: память карт, привычки игроков, человеческий фактор 7 % и уровень, адаптированный для турнира.",
+          "inLanguage": "ru",
+          "isPartOf": {
+            "@id": "https://tarot-gothique-2026.com/#site"
+          },
+          "dateModified": "2026-11-01",
+          "breadcrumb": {
+            "@id": "https://tarot-gothique-2026.com/ia-tarot_ru.html#ariane"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_ru.html#ariane",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Главная",
+              "item": "https://tarot-gothique-2026.com/index_ru.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "ИИ игры"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_ru.html#article",
+          "headline": "ИИ Готического Таро: соперник, который запоминает вашу игру",
+          "description": "Как устроен ИИ Готического Таро 2026: память карт, привычки игроков, человеческий фактор 7 % и уровень, адаптированный для турнира.",
+          "inLanguage": "ru",
+          "image": "https://tarot-gothique-2026.com/banner.jpg",
+          "dateModified": "2026-11-01",
+          "author": {
+            "@id": "https://tarot-gothique-2026.com/#auteur"
+          },
+          "publisher": {
+            "@id": "https://tarot-gothique-2026.com/#auteur"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://tarot-gothique-2026.com/ia-tarot_ru.html#page"
+          },
+          "about": {
+            "@id": "https://tarot-gothique-2026.com/#jeu"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tarot-gothique-2026.com/ia-tarot_ru.html#faq",
+          "inLanguage": "ru",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Можно ли играть в таро одному против компьютера?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Да. Свободные места занимает ИИ: вы можете в одиночку сыграть полную партию в таро на 3, 4 или 5 игроков на смартфоне или планшете Android."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Видит ли ИИ мои карты?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Нет. Он знает только свою руку и карты, открытые для всех; его выводы основаны на сыгранных взятках, как у живого игрока."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Подстраивается ли ИИ под мой уровень?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "В турнире — да: уровень ботов зависит от вашей категории, рассчитанной по доле побед. Вне турнира ИИ играет в полную силу, примерно с 7 % намеренно неидеальных ходов."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Отправляются ли мои игровые привычки в интернет?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Нет. Профиль ваших привычек остаётся на устройстве. На сервер уходит только число сыгранных и выигранных раздач, чтобы определить вашу турнирную категорию."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root {
+            --primary-gold: #f3d060;
+            --card-bg: rgba(22, 22, 34, 0.82);
+            --header-bg: rgba(18, 18, 26, 0.88);
+            --text-main: #f8fafc;
+            --text-muted: #e2e8f0;
+            --border-color: #d4af37;
+        }
+
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto; overflow-x: hidden;
+            background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-image: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), image-set(url('background.webp') type('image/webp'), url('background.jpg') type('image/jpeg'));
+            background-size: cover;
+            background-position: center;
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-gold);
+            flex-shrink: 0;
+        }
+        h1 {
+            color: var(--primary-gold);
+            margin: 0 0 0.3rem 0;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.6rem 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.6rem;
+            overflow-y: auto; overflow-x: hidden;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .info-card h2 {
+            color: var(--primary-gold);
+            font-size: 1.25rem;
+            margin: 0 0 0.4rem 0;
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 0.6rem;
+        }
+        .info-card p {
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+        .testimonial-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            font-style: italic;
+            color: var(--text-main);
+            font-size: 1.02rem;
+            line-height: 1.45;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .testimonial-author {
+            margin-top: 0.4rem;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--primary-gold);
+            font-size: 0.92rem;
+            text-align: right;
+        }
+
+        footer {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 0.8rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        footer a { color: var(--primary-gold); text-decoration: none; }
+
+        @media (max-width: 900px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
+        .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
+        .ariane { font-size: 0.85rem; color: var(--text-muted); }
+        .ariane a { color: var(--primary-gold); }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; }
+        .info-card th, .info-card td { border: 1px solid var(--border-color); padding: 0.45rem 0.6rem; text-align: left;
+            font-size: 0.9rem; color: var(--text-muted); vertical-align: top; }
+        .info-card th { color: var(--primary-gold); }
+        .table-defile { overflow-x: auto; }
+        .info-card a.cta-ia { display: inline-block; background: var(--primary-gold); color: #0b0b0f; padding: 0.6rem 1.6rem;
+            border-radius: 8px; font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ИИ Готического Таро: соперник, который запоминает вашу игру</h1>
+        
+        <nav class="main-nav">
+            <a href="index_ru.html" class="">Главная</a>
+            <a href="regles_ru.html" class="">Правила</a>
+            <a href="galerie_ru.html" class="">Галерея</a>
+            <a href="ia-tarot_ru.html" class="active">ИИ игры</a>
+            <a href="apropos_ru.html">О проекте</a>
+            <div class="lang-bar">
+                <a href="ia-tarot.html" class="lang-switch" hreflang="fr">🇫🇷 FR</a>
+                <a href="ia-tarot_en.html" class="lang-switch" hreflang="en">🇬🇧 EN</a>
+                <a href="ia-tarot_es.html" class="lang-switch" hreflang="es">🇪🇸 ES</a>
+                <a href="ia-tarot_de.html" class="lang-switch" hreflang="de">🇩🇪 DE</a>
+                <a href="ia-tarot_pt.html" class="lang-switch" hreflang="pt">🇵🇹 PT</a>
+                <a href="ia-tarot_ru.html" class="lang-switch active-lang" hreflang="ru">🇷🇺 RU</a>
+                <a href="ia-tarot_ja.html" class="lang-switch" hreflang="ja">🇯🇵 JA</a>
+                <a href="ia-tarot_zh.html" class="lang-switch" hreflang="zh">🇨🇳 ZH</a>
+            </div>
+        </nav>
+    
+    </header>
+    <main>
+        <nav class="ariane" aria-label="Навигационная цепочка"><a href="index_ru.html">Главная</a> › <span aria-current="page">ИИ игры</span></nav>
+
+        <div class="info-card">
+            <p>В Готическом Таро 2026 свободные места за столом занимает <strong>искусственный интеллект</strong>: он торгуется, вызывает короля при игре впятером, разыгрывает карты и считает очки, как живой игрок. Так вы можете играть во <strong>французское таро против компьютера</strong> в одиночку или дополнить стол, когда не хватает игроков.</p>
+            <p>На этой странице подробно описано, что делает этот ИИ: что он запоминает за раздачу, что узнаёт о вас от партии к партии, почему иногда ошибается намеренно и как его уровень подстраивается в соревнованиях.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>В чём сила ИИ</h2>
+            <ul>
+                <li><strong>Ни одного запрещённого хода:</strong> каждая сыгранная карта соответствует правилам таро.</li>
+                <li><strong>Продуманная торговля:</strong> он оценивает руку как опытный игрок, прежде чем взять контракт.</li>
+                <li><strong>Вызов и снос как у эксперта:</strong> впятером он выбирает короля и готовит снос в интересах своей команды.</li>
+                <li><strong>Безупречная память:</strong> он считает карты, замечает отсутствующие масти и вычисляет скрытого партнёра.</li>
+                <li><strong>Вероятности в каждой взятке:</strong> он оценивает риск того, что карту побьют козырем, и свои шансы взять взятку.</li>
+                <li><strong>Владение Пти:</strong> он знает, когда довести Пти до конца, а когда его спасти.</li>
+                <li><strong>Он изучает вашу игру:</strong> десять привычек каждого игрока, которые постоянно пересматриваются.</li>
+                <li><strong>Человеческое поведение:</strong> 7 % отклонений, только на картах, которые ничего не решают.</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>Игрок, который всегда соблюдает правила</h2>
+            <p>Перед каждым ходом ИИ рассматривает только те карты, которые разрешены правилами: <strong>ходить в масть</strong>, <strong>бить козырем</strong>, если масти нет, <strong>перебивать старшим козырем</strong>, когда это обязательно. Он никогда не делает запрещённый ход, и партия против него идёт точно так же, как за настоящим столом.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Продуманная торговля</h2>
+            <p>Решая, брать ли контракт, ИИ изучает руку как опытный игрок: свои <strong>Bouts</strong>, <strong>длину и силу козырей</strong>, <strong>королей и дам</strong>, <strong>длинные масти</strong>, <strong>отсутствующие масти и синглетоны</strong>. Исходя из этого он выбирает подходящий контракт, от Petite до Garde contre, или пасует.</p>
+            <p>Он также опасается <strong>плохо защищённого Пти</strong>: если козырей для его защиты слишком мало, его могут перехватить, и ИИ учитывает это, прежде чем рисковать.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Вызов короля и снос опытного игрока</h2>
+            <p>При игре впятером ИИ, взявший контракт, <strong>вызывает короля своей самой длинной масти</strong>, которого у него нет: он опирается на свою силу и заставляет остальных бить эту масть козырем. Себя он вызывает только в крайнем случае. Снос он делает так:</p>
+            <ul>
+                <li><strong>Заранее подготовленные пустые масти:</strong> сначала он сносит самые короткие масти, чтобы освободиться от них.</li>
+                <li><strong>Ничего ценного в сносе:</strong> никогда не король и никогда не Bout.</li>
+                <li><strong>Защита партнёра:</strong> он никогда не избавляется от масти вызванного короля полностью, чтобы не пришлось бить козырем короля собственного партнёра.</li>
+                <li><strong>Козыри только в крайнем случае:</strong> мелкие козыри он сносит, только если это разрешено правилами и другого выхода нет.</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>Полная память раздачи</h2>
+            <p>В каждой раздаче ИИ отслеживает всё, что держит в голове очень сильный игрок. В следующей раздаче всё обнуляется.</p>
+            <ul>
+                <li><strong>Вышедшие карты:</strong> все карты, сыгранные с первой взятки. Поэтому он знает, какие карты каждой масти ещё скрыты, и распознаёт <strong>старшую карту</strong>.</li>
+                <li><strong>Отсутствующие масти:</strong> как только игрок не ходит в масть, ИИ отмечает, что у него её нет, включая козыри.</li>
+                <li><strong>Игроки без козырей:</strong> игрок, который сбрасывает карту вместо того, чтобы бить козырем, козырей больше не имеет; ИИ учитывает это, оценивая, кто ещё может побить масть.</li>
+                <li><strong>Сигналы сброса:</strong> сброс карты от 6 до 10 другой масти читается как вызов в этой масти.</li>
+                <li><strong>Снос, для взявшего контракт:</strong> ИИ знает, какие карты он отложил в снос, и исключает их из расчётов.</li>
+            </ul>
+            <p><strong>Впятером он ведёт расследование, кто скрытый партнёр</strong>: игрок, который нагружает очками взятки взявшего контракт, становится подозреваемым, тот, кто нагружает взятки защиты, внушает доверие, а партнёр подтверждается, как только выходит вызванный король. В защите на второй взятке он даже ходит младшей картой вызванной масти, чтобы заставить короля выйти.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Вероятности в каждой взятке</h2>
+            <p>Благодаря памяти ИИ просчитывает перед ходом:</p>
+            <ul>
+                <li><strong>Риск удара козырем:</strong> игрок, у которого нет масти, но есть козыри, побьёт; иначе ИИ оценивает вероятность того, что у него нет ни одной из ещё скрытых карт, с учётом его склонности бить козырем.</li>
+                <li><strong>Шансы взять взятку:</strong> для каждой карты он оценивает, останется ли она самой сильной против следующих игроков.</li>
+            </ul>
+            <p><strong>Отвечая в масть</strong>, он нагружает взятку очками, когда она надёжна или достаётся верному союзнику. <strong>Сбрасывая</strong>, он подаёт сигнал о масти своего короля или освобождается от короткой масти младшей картой. <strong>Делая первый ход</strong>, он применяет разные стратегии в нападении и в защите и по возможности выбирает масть, которую ни один соперник не может побить козырем.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Владение Пти</h2>
+            <ul>
+                <li><strong>С рукой, богатой козырями:</strong> он бережёт Пти для <strong>последней взятки</strong>, если расчёт даёт хорошие шансы: он сравнивает свои козыри с теми, что ещё скрыты у соперников.</li>
+                <li><strong>С малым числом козырей или при растущем риске:</strong> он <strong>спасает Пти</strong> как можно раньше, отдавая его в надёжную взятку.</li>
+            </ul>
+            <p>Пти (козырь 1, Petit) — один из трёх Bouts; если провести его до последней взятки, начисляется премия. ИИ обращается с ним методично:</p>
+        </div>
+
+        <div class="info-card">
+            <h2>ИИ, который изучает ваши привычки</h2>
+            <p>От раздачи к раздаче ИИ наблюдает за манерой игры каждого и составляет профиль, распределённый по ролям: взявший контракт, защита или партнёр.</p>
+            <p>Дополняет это <strong>общий профиль</strong> каждого игрока: как часто он берёт контракт, любимый контракт, агрессивность, склонность бить козырем, доля успехов.</p>
+            <p>Привычка учитывается, только когда она <strong>замечена достаточно часто</strong>, а <strong>недавние случаи весят больше</strong>: игрок, сменивший стиль, быстро переоценивается, и одной партии никогда не хватит, чтобы навесить на него ярлык.</p>
+            <p>ИИ использует это в своих решениях. Против агрессивного взявшего, который часто рано вытягивает козыри, <strong>защита бережёт старшие козыри</strong>; защитника, который привык нагружать взятки взявшего, больше не принимают за его партнёра по одному этому признаку.</p>
+            <p><strong>Только общедоступная информация</strong>: ИИ видит лишь карты, открытые для всех, и никогда — руку другого игрока. Профили остаются <strong>на вашем телефоне</strong>; на сервер отправляется только число сыгранных и выигранных раздач вошедшего игрока, для турнирной категории.</p>
+            <div class="table-defile"><table>
+                <tr><th scope="col">Наблюдаемая привычка</th><th scope="col">Что отмечает ИИ</th></tr>
+                <tr><td>Рано вытягивать козыри</td><td>Взявший контракт ходит с козыря в одном из первых трёх ходов</td></tr>
+                <tr><td>Ходить с козыря</td><td>Игрок ходит с козыря, а не с масти</td></tr>
+                <tr><td>Ходить в вызванную масть</td><td>Впятером защитник ходит в масть вызванного короля в первых четырёх взятках</td></tr>
+                <tr><td>Нагружать взявшего</td><td>Игрок отдаёт карту с очками во взятку, которую берёт взявший контракт</td></tr>
+                <tr><td>Беречь Excuse на конец</td><td>Excuse играется в двух последних взятках</td></tr>
+                <tr><td>Доводить Пти до конца</td><td>Пти играется в последней взятке</td></tr>
+                <tr><td>Чётко сигналить</td><td>За сигнальным сбросом следует король этой масти</td></tr>
+                <tr><td>Объявлять пуаньи</td><td>Игрок объявляет пуаньи (poignée), когда она у него есть</td></tr>
+                <tr><td>Брать со слабой рукой</td><td>Взявший контракт играет мало козырей и не больше одного Bout</td></tr>
+                <tr><td>Проваливать контракт</td><td>Команда взявшего не набирает нужных очков</td></tr>
+            </table></div>
+        </div>
+
+        <div class="info-card">
+            <h2>Человеческий фактор 7 % на нейтральных картах</h2>
+            <p>ИИ, который всегда делает идеальный ход, предсказуем, и играть против него неинтересно. Поэтому примерно <strong>в 7 % решений</strong> ИИ Готического Таро играет другую младшую карту вместо лучшей, как сделал бы человек.</p>
+            <p>Этот человеческий фактор касается только <strong>нейтральных карт</strong>: <strong>никогда</strong> не карта с очками, не козырь, не Пти и не Excuse, и никогда не ход, который изменил бы победителя взятки. ИИ разнообразит игру, не отдавая соперникам ни одного очка.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Уровень, адаптированный для турнира</h2>
+            <p>Вне турнира ИИ играет в полную силу, лишь с человеческим фактором 7 %. В <strong>турнире выходного дня</strong> уровень ботов зависит от категории игрока, которую сервер назначает по его <strong>доле побед</strong>.</p>
+            <div class="table-defile"><table>
+                <tr><th scope="col">Категория</th><th scope="col">Назначение</th><th scope="col">Случайные ходы ботов за столом</th></tr>
+                <tr><td>Зелёная</td><td>Меньше 40 % выигранных раздач</td><td>30 %</td></tr>
+                <tr><td>Жёлтая</td><td>От 40 до 55 % или меньше 9 сыгранных раздач</td><td>12 %</td></tr>
+                <tr><td>Красная</td><td>55 % выигранных раздач и больше</td><td>0 %</td></tr>
+            </table></div>
+            <p>Категория назначается по итогам отборочного этапа в пятницу, выбрать её нельзя. Бот более низкого уровня чаще ошибается и в игре, и в торговле, и меньше учитывает ваши привычки.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Частые вопросы об ИИ</h2>
+            <h3>Можно ли играть в таро одному против компьютера?</h3>
+            <p>Да. Свободные места занимает ИИ: вы можете в одиночку сыграть полную партию в таро на 3, 4 или 5 игроков на смартфоне или планшете Android.</p>
+            <h3>Видит ли ИИ мои карты?</h3>
+            <p>Нет. Он знает только свою руку и карты, открытые для всех; его выводы основаны на сыгранных взятках, как у живого игрока.</p>
+            <h3>Подстраивается ли ИИ под мой уровень?</h3>
+            <p>В турнире — да: уровень ботов зависит от вашей категории, рассчитанной по доле побед. Вне турнира ИИ играет в полную силу, примерно с 7 % намеренно неидеальных ходов.</p>
+            <h3>Отправляются ли мои игровые привычки в интернет?</h3>
+            <p>Нет. Профиль ваших привычек остаётся на устройстве. На сервер уходит только число сыгранных и выигранных раздач, чтобы определить вашу турнирную категорию.</p>
+        </div>
+
+        <div class="info-card">
+            <p><a class="cta-ia" href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Играть против ИИ в Google Play</a></p>
+            <p>Для начала прочитайте <a href="regles_ru.html">официальные правила таро</a> или вернитесь на <a href="index_ru.html">главную страницу игры в таро</a>.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ru.html">Главная</a> | <a href="apropos_ru.html">Правовая информация</a> | <a href="privacy_ru.html">Конфиденциальность</a> | <a href="delete_ru.html">Удалить аккаунт</a></p>
+    </footer>
+</body>
+</html>
