@@ -103,7 +103,7 @@
             "Tarô"
           ],
           "gamePlatform": "Android",
-          "operatingSystem": "Android",
+          "operatingSystem": "Android, Windows 10, Windows 11",
           "applicationCategory": "GameApplication",
           "playMode": [
             "SinglePlayer",
@@ -117,12 +117,23 @@
           "author": {
             "@id": "https://tarot-gothique-2026.com/#auteur"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock"
-          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Android",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Windows",
+              "price": "14.99",
+              "priceCurrency": "EUR",
+              "url": "https://tarot-gothique-2026.com/windows_pt.html",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
           "availableOnDevice": [
             "Smartphone",
             "Tablet"
@@ -140,7 +151,7 @@
               "name": "O Tarot Gótico é grátis?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim. O Tarot Gótico é 100% grátis em todas as mesas e modos de jogo, solo ou multijogador. Os anúncios são discretos e nunca interrompem uma partida."
+                "text": "Sim. O Tarot Gótico é 100% grátis em todas as mesas e modos de jogo, solo ou multijogador. Os anúncios são discretos e nunca interrompem uma partida. Isto se aplica à versão Android; a versão para PC Windows custa 14,99 €."
               }
             },
             {
@@ -420,6 +431,13 @@
         .video-facade:focus-visible { outline: 3px solid var(--primary-gold); outline-offset: 2px; }
         .teaser-faucheuse { border: 1px solid var(--primary-gold); box-shadow: 0 0 18px rgba(243, 208, 96, 0.25); }
         .teaser-faucheuse h2 { color: var(--primary-gold); }
+    
+        .main-nav a.nav-windows { color: #0b0b0f; background: var(--primary-gold); border-radius: 6px; padding: 0.2rem 0.6rem; font-weight: bold; }
+        .offre-pc { max-width: 900px; margin: 0.8rem auto; padding: 1rem 1.2rem; text-align: center; box-sizing: border-box;
+            background: var(--card-bg); border: 2px solid var(--primary-gold); border-radius: 10px; box-shadow: 0 0 18px rgba(212, 175, 55, 0.45); }
+        .offre-pc h2 { color: var(--primary-gold); font-size: 1.45rem; margin: 0 0 0.3rem; }
+        .offre-pc p { margin: 0 0 0.7rem; color: var(--text-main); }
+        .offre-pc a { display: inline-block; background: var(--primary-gold); color: #0b0b0f; padding: 0.6rem 1.6rem; border-radius: 8px; font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -427,6 +445,7 @@
         <h1>Tarot Gótico: jogo de tarô francês grátis, online e solo</h1>
         
         <nav class="main-nav">
+            <a href="windows_pt.html" class="nav-windows">Windows – 14,99 €</a>
             <a href="index_pt.html" class="active">Início</a>
             <a href="regles_pt.html" class="">Regras</a>
             <a href="galerie_pt.html" class="">Galeria</a>
@@ -446,6 +465,11 @@
     
     </header>
     <main>
+        <section class="offre-pc">
+            <h2>Disponível para PC Windows – 14,99 €</h2>
+            <p>Versão concebida especificamente para Windows. O jogo completo na tela grande: solo contra a IA, partidas online e torneios, sem anúncios.</p>
+            <a href="windows_pt.html">Comprar para Windows – 14,99 €</a>
+        </section>
         
         <div class="top-description">
             <h2>A Experiência Definitiva de Tarô Francês Online</h2>
@@ -522,7 +546,7 @@
             <section class="content-card wide">
                 <h2>Perguntas frequentes sobre o jogo de tarô</h2>
                 <h3>O Tarot Gótico é grátis?</h3>
-                <p>Sim. O Tarot Gótico é 100% grátis em todas as mesas e modos de jogo, solo ou multijogador. Os anúncios são discretos e nunca interrompem uma partida.</p>
+                <p>Sim. O Tarot Gótico é 100% grátis em todas as mesas e modos de jogo, solo ou multijogador. Os anúncios são discretos e nunca interrompem uma partida. Isto se aplica à versão Android; a versão para PC Windows custa 14,99 €.</p>
                 <h3>Dá para jogar tarô sozinho contra a inteligência artificial?</h3>
                 <p>Sim. O modo solo coloca você contra uma inteligência artificial, ideal para aprender as regras ou treinar entre partidas com os amigos.</p>
                 <h3>O tarô é jogado com quantos jogadores?</h3>
@@ -533,7 +557,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_pt.html">Início</a> | <a href="apropos_pt.html">Avisos Legais</a> | <a href="privacy_pt.html">Privacidade</a> | <a href="delete_pt.html">Excluir Conta</a></p>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_pt.html">Início</a> | <a href="apropos_pt.html">Avisos Legais</a> | <a href="privacy_pt.html">Privacidade</a> | <a href="delete_pt.html">Excluir Conta</a> | <a href="cgv_en.html">Condições de venda</a></p>
     </footer>
     <script>
     /* Vignette vidéo : YouTube n'est chargé qu'au clic (page plus rapide). Sans JavaScript, le lien ouvre la vidéo sur YouTube. */

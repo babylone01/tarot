@@ -103,7 +103,7 @@
             "Tarot"
           ],
           "gamePlatform": "Android",
-          "operatingSystem": "Android",
+          "operatingSystem": "Android, Windows 10, Windows 11",
           "applicationCategory": "GameApplication",
           "playMode": [
             "SinglePlayer",
@@ -117,12 +117,23 @@
           "author": {
             "@id": "https://tarot-gothique-2026.com/#auteur"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock"
-          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Android",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Windows",
+              "price": "14.99",
+              "priceCurrency": "EUR",
+              "url": "https://tarot-gothique-2026.com/windows.html",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
           "availableOnDevice": [
             "Smartphone",
             "Tablet"
@@ -140,7 +151,7 @@
               "name": "Le jeu de tarot gothique est-il gratuit ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Oui. Tarot Gothique est 100 % gratuit pour toutes les tables et tous les modes de jeu, en solo comme en multijoueur. Les publicités sont discrètes et n'interrompent jamais une partie en cours."
+                "text": "Oui. Tarot Gothique est 100 % gratuit pour toutes les tables et tous les modes de jeu, en solo comme en multijoueur. Les publicités sont discrètes et n'interrompent jamais une partie en cours. Cette gratuité concerne la version Android ; la version PC pour Windows est vendue 14,99 €."
               }
             },
             {
@@ -421,6 +432,13 @@
         .video-facade:focus-visible { outline: 3px solid var(--primary-gold); outline-offset: 2px; }
         .teaser-faucheuse { border: 1px solid var(--primary-gold); box-shadow: 0 0 18px rgba(243, 208, 96, 0.25); }
         .teaser-faucheuse h2 { color: var(--primary-gold); }
+    
+        .main-nav a.nav-windows { color: #0b0b0f; background: var(--primary-gold); border-radius: 6px; padding: 0.2rem 0.6rem; font-weight: bold; }
+        .offre-pc { max-width: 900px; margin: 0.8rem auto; padding: 1rem 1.2rem; text-align: center; box-sizing: border-box;
+            background: var(--card-bg); border: 2px solid var(--primary-gold); border-radius: 10px; box-shadow: 0 0 18px rgba(212, 175, 55, 0.45); }
+        .offre-pc h2 { color: var(--primary-gold); font-size: 1.45rem; margin: 0 0 0.3rem; }
+        .offre-pc p { margin: 0 0 0.7rem; color: var(--text-main); }
+        .offre-pc a { display: inline-block; background: var(--primary-gold); color: #0b0b0f; padding: 0.6rem 1.6rem; border-radius: 8px; font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -428,6 +446,7 @@
     <header>
         <h1>Jeu de Tarot Gothique gratuit : en ligne et en solo</h1>
         <nav class="main-nav">
+            <a href="windows.html" class="nav-windows">Windows – 14,99 €</a>
             <a href="./" class="active">Accueil / Jeu</a>
             <a href="regles.html">Règles du Tarot</a>
             <a href="galerie.html">Galerie Photo</a>
@@ -448,6 +467,11 @@
     </header>
 
     <main>
+        <section class="offre-pc">
+            <h2>Disponible sur PC Windows – 14,99 €</h2>
+            <p>Version conçue spécifiquement pour Windows. Le jeu complet sur grand écran : solo contre l&#x27;IA, parties en ligne et tournois, sans publicité.</p>
+            <a href="windows.html">Acheter pour Windows – 14,99 €</a>
+        </section>
         <div class="top-description">
             <h2>L'expérience ultime du jeu de tarot en ligne</h2>
             <p>Bienvenue sur le site officiel de Tarot Gothique 2026, un jeu de tarot social pour Android. Affrontez d&#x27;autres joueurs en ligne ou entraînez-vous en solo contre l&#x27;IA, dans un univers gothique aux finitions dorées, avec les règles officielles à 3, 4 et 5 joueurs.</p>
@@ -538,7 +562,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 <strong>Tarot Gothique</strong> (Cyril Darbost) | <a href="./">Accueil</a> | <a href="regles.html">Règles</a> | <a href="galerie.html">Galerie</a> | <a href="apropos.html">Mentions légales</a> | <a href="privacy.html">Confidentialité</a> | <a href="delete.html">Supprimer le compte</a></p>
+        <p>&copy; 2026 <strong>Tarot Gothique</strong> (Cyril Darbost) | <a href="./">Accueil</a> | <a href="regles.html">Règles</a> | <a href="galerie.html">Galerie</a> | <a href="apropos.html">Mentions légales</a> | <a href="privacy.html">Confidentialité</a> | <a href="delete.html">Supprimer le compte</a> | <a href="cgv.html">CGV</a></p>
     </footer>
     <script>
     /* Vignette vidéo : YouTube n'est chargé qu'au clic (page plus rapide). Sans JavaScript, le lien ouvre la vidéo sur YouTube. */

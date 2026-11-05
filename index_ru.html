@@ -103,7 +103,7 @@
             "Таро"
           ],
           "gamePlatform": "Android",
-          "operatingSystem": "Android",
+          "operatingSystem": "Android, Windows 10, Windows 11",
           "applicationCategory": "GameApplication",
           "playMode": [
             "SinglePlayer",
@@ -117,12 +117,23 @@
           "author": {
             "@id": "https://tarot-gothique-2026.com/#auteur"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock"
-          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Android",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Windows",
+              "price": "14.99",
+              "priceCurrency": "EUR",
+              "url": "https://tarot-gothique-2026.com/windows_ru.html",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
           "availableOnDevice": [
             "Smartphone",
             "Tablet"
@@ -140,7 +151,7 @@
               "name": "Готический Таро бесплатный?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Да. Готический Таро на 100 % бесплатен за всеми столами и во всех режимах — соло и мультиплеер. Реклама ненавязчива и никогда не прерывает партию."
+                "text": "Да. Готический Таро на 100 % бесплатен за всеми столами и во всех режимах — соло и мультиплеер. Реклама ненавязчива и никогда не прерывает партию. Это относится к версии для Android; версия для ПК с Windows стоит 14,99 €."
               }
             },
             {
@@ -420,6 +431,13 @@
         .video-facade:focus-visible { outline: 3px solid var(--primary-gold); outline-offset: 2px; }
         .teaser-faucheuse { border: 1px solid var(--primary-gold); box-shadow: 0 0 18px rgba(243, 208, 96, 0.25); }
         .teaser-faucheuse h2 { color: var(--primary-gold); }
+    
+        .main-nav a.nav-windows { color: #0b0b0f; background: var(--primary-gold); border-radius: 6px; padding: 0.2rem 0.6rem; font-weight: bold; }
+        .offre-pc { max-width: 900px; margin: 0.8rem auto; padding: 1rem 1.2rem; text-align: center; box-sizing: border-box;
+            background: var(--card-bg); border: 2px solid var(--primary-gold); border-radius: 10px; box-shadow: 0 0 18px rgba(212, 175, 55, 0.45); }
+        .offre-pc h2 { color: var(--primary-gold); font-size: 1.45rem; margin: 0 0 0.3rem; }
+        .offre-pc p { margin: 0 0 0.7rem; color: var(--text-main); }
+        .offre-pc a { display: inline-block; background: var(--primary-gold); color: #0b0b0f; padding: 0.6rem 1.6rem; border-radius: 8px; font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -427,6 +445,7 @@
         <h1>Готический Таро: бесплатный французский таро онлайн и соло</h1>
         
         <nav class="main-nav">
+            <a href="windows_ru.html" class="nav-windows">Windows – 14,99 €</a>
             <a href="index_ru.html" class="active">Главная</a>
             <a href="regles_ru.html" class="">Правила</a>
             <a href="galerie_ru.html" class="">Галерея</a>
@@ -446,6 +465,11 @@
     
     </header>
     <main>
+        <section class="offre-pc">
+            <h2>Доступно на ПК с Windows – 14,99 €</h2>
+            <p>Версия, созданная специально для Windows. Полная игра на большом экране: соло против ИИ, онлайн-партии и турниры, без рекламы.</p>
+            <a href="windows_ru.html">Купить для Windows – 14,99 €</a>
+        </section>
         
         <div class="top-description">
             <h2>Лучший Французский Таро Онлайн</h2>
@@ -522,7 +546,7 @@
             <section class="content-card wide">
                 <h2>Частые вопросы об игре в таро</h2>
                 <h3>Готический Таро бесплатный?</h3>
-                <p>Да. Готический Таро на 100 % бесплатен за всеми столами и во всех режимах — соло и мультиплеер. Реклама ненавязчива и никогда не прерывает партию.</p>
+                <p>Да. Готический Таро на 100 % бесплатен за всеми столами и во всех режимах — соло и мультиплеер. Реклама ненавязчива и никогда не прерывает партию. Это относится к версии для Android; версия для ПК с Windows стоит 14,99 €.</p>
                 <h3>Можно ли играть в таро одному против ИИ?</h3>
                 <p>Да. В одиночном режиме вы играете против искусственного интеллекта — идеально, чтобы выучить правила или потренироваться между партиями с друзьями.</p>
                 <h3>Сколько игроков нужно для таро?</h3>
@@ -533,7 +557,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ru.html">Главная</a> | <a href="apropos_ru.html">Правовая информация</a> | <a href="privacy_ru.html">Конфиденциальность</a> | <a href="delete_ru.html">Удалить аккаунт</a></p>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ru.html">Главная</a> | <a href="apropos_ru.html">Правовая информация</a> | <a href="privacy_ru.html">Конфиденциальность</a> | <a href="delete_ru.html">Удалить аккаунт</a> | <a href="cgv_en.html">Условия продажи</a></p>
     </footer>
     <script>
     /* Vignette vidéo : YouTube n'est chargé qu'au clic (page plus rapide). Sans JavaScript, le lien ouvre la vidéo sur YouTube. */

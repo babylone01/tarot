@@ -103,7 +103,7 @@
             "タロット"
           ],
           "gamePlatform": "Android",
-          "operatingSystem": "Android",
+          "operatingSystem": "Android, Windows 10, Windows 11",
           "applicationCategory": "GameApplication",
           "playMode": [
             "SinglePlayer",
@@ -117,12 +117,23 @@
           "author": {
             "@id": "https://tarot-gothique-2026.com/#auteur"
           },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock"
-          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Android",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Windows",
+              "price": "14.99",
+              "priceCurrency": "EUR",
+              "url": "https://tarot-gothique-2026.com/windows_ja.html",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
           "availableOnDevice": [
             "Smartphone",
             "Tablet"
@@ -140,7 +151,7 @@
               "name": "ゴシック・タロットは無料ですか？",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "はい。ゴシック・タロットはソロでもマルチプレイでも、すべてのテーブルとモードが100％無料です。広告は控えめで、対戦を中断することはありません。"
+                "text": "はい。ゴシック・タロットはソロでもマルチプレイでも、すべてのテーブルとモードが100％無料です。広告は控えめで、対戦を中断することはありません。 これはAndroid版の場合です。Windows PC版は€14.99です。"
               }
             },
             {
@@ -420,6 +431,13 @@
         .video-facade:focus-visible { outline: 3px solid var(--primary-gold); outline-offset: 2px; }
         .teaser-faucheuse { border: 1px solid var(--primary-gold); box-shadow: 0 0 18px rgba(243, 208, 96, 0.25); }
         .teaser-faucheuse h2 { color: var(--primary-gold); }
+    
+        .main-nav a.nav-windows { color: #0b0b0f; background: var(--primary-gold); border-radius: 6px; padding: 0.2rem 0.6rem; font-weight: bold; }
+        .offre-pc { max-width: 900px; margin: 0.8rem auto; padding: 1rem 1.2rem; text-align: center; box-sizing: border-box;
+            background: var(--card-bg); border: 2px solid var(--primary-gold); border-radius: 10px; box-shadow: 0 0 18px rgba(212, 175, 55, 0.45); }
+        .offre-pc h2 { color: var(--primary-gold); font-size: 1.45rem; margin: 0 0 0.3rem; }
+        .offre-pc p { margin: 0 0 0.7rem; color: var(--text-main); }
+        .offre-pc a { display: inline-block; background: var(--primary-gold); color: #0b0b0f; padding: 0.6rem 1.6rem; border-radius: 8px; font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -427,6 +445,7 @@
         <h1>ゴシック・タロット：無料のフランス式タロット（オンライン・ソロ）</h1>
         
         <nav class="main-nav">
+            <a href="windows_ja.html" class="nav-windows">Windows – €14.99</a>
             <a href="index_ja.html" class="active">ホーム</a>
             <a href="regles_ja.html" class="">ルール</a>
             <a href="galerie_ja.html" class="">ギャラリー</a>
@@ -446,6 +465,11 @@
     
     </header>
     <main>
+        <section class="offre-pc">
+            <h2>Windows PC版 発売中 – €14.99</h2>
+            <p>Windows専用に設計されたバージョン。大画面で楽しむ完全版：AIとのソロ対戦、オンライン対戦、トーナメント。広告はありません。</p>
+            <a href="windows_ja.html">Windows版を購入 – €14.99</a>
+        </section>
         
         <div class="top-description">
             <h2>究極の無料フランス式タロットオンライン体験</h2>
@@ -522,7 +546,7 @@
             <section class="content-card wide">
                 <h2>タロットゲームに関するよくある質問</h2>
                 <h3>ゴシック・タロットは無料ですか？</h3>
-                <p>はい。ゴシック・タロットはソロでもマルチプレイでも、すべてのテーブルとモードが100％無料です。広告は控えめで、対戦を中断することはありません。</p>
+                <p>はい。ゴシック・タロットはソロでもマルチプレイでも、すべてのテーブルとモードが100％無料です。広告は控えめで、対戦を中断することはありません。 これはAndroid版の場合です。Windows PC版は€14.99です。</p>
                 <h3>AI相手に1人でタロットを遊べますか？</h3>
                 <p>はい。ソロモードではAIと対戦できます。ルールを覚えたり、友達との対戦の合間に練習したりするのに最適です。</p>
                 <h3>タロットは何人で遊びますか？</h3>
@@ -533,7 +557,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ja.html">ホーム</a> | <a href="apropos_ja.html">法的事項</a> | <a href="privacy_ja.html">プライバシー</a> | <a href="delete_ja.html">アカウント削除</a></p>
+        <p>&copy; 2026 <strong>Gothic Tarot</strong> (Cyril Darbost) | <a href="index_ja.html">ホーム</a> | <a href="apropos_ja.html">法的事項</a> | <a href="privacy_ja.html">プライバシー</a> | <a href="delete_ja.html">アカウント削除</a> | <a href="cgv_en.html">販売条件</a></p>
     </footer>
     <script>
     /* Vignette vidéo : YouTube n'est chargé qu'au clic (page plus rapide). Sans JavaScript, le lien ouvre la vidéo sur YouTube. */

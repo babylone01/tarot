@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande – Tarot Gothique</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+    <style>
+        :root { --or: #f3d060; }
+        body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;
+            background: #0b0b0f; color: #f8fafc; font-family: system-ui, sans-serif; }
+        main { width: 100%; max-width: 520px; padding: 1.2rem; box-sizing: border-box; background: rgba(22, 22, 34, 0.9); border: 1px solid #d4af37; border-radius: 10px; text-align: center; }
+        h1 { color: var(--or); font-size: 1.4rem; margin-top: 0; }
+        button { padding: 0.7rem 1.4rem; font-size: 1rem; font-weight: bold; border: 0; border-radius: 8px; background: var(--or); color: #0b0b0f; cursor: pointer; }
+        input { display: block; width: 100%; box-sizing: border-box; padding: 0.6rem; margin: 0.4rem 0 0.7rem; font-size: 1rem; border-radius: 6px; border: 1px solid #d4af37; }
+        form[hidden], button[hidden] { display: none; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="titre"></h1>
+        <p id="etat" role="status"></p>
+        <button id="dl" hidden></button>
+        <form id="renvoi" hidden>
+            <label><span id="mail"></span><input type="email" id="adresse" autocomplete="email" required></label>
+            <button type="submit" id="ren"></button>
+        </form>
+    </main>
+    <script>
+    (function () {
+        var API = 'https://ruixknekqinalyccxotp.supabase.co/functions/v1';
+        var TEXTES = {"fr": {"titre": "Votre commande", "attente": "Vérification du paiement…", "paye": "Paiement encaissé. Le lien de téléchargement part vers votre boîte e-mail (pensez aux indésirables).", "traitement": "Votre paiement est en cours de confirmation. Le lien vous sera envoyé par e-mail dès qu'il sera encaissé.", "dl": "Télécharger le jeu", "prep": "Préparation du téléchargement…", "invalide": "Ce lien n'est pas valable.", "expire": "Ce lien a expiré ou a atteint sa limite. Demandez-en un nouveau ci-dessous.", "ren": "Renvoyer mon lien", "mail": "L'adresse e-mail de votre achat", "envoye": "Si cette adresse correspond à un achat payé, un nouveau lien vient d'être envoyé.", "erreur": "Erreur réseau, réessayez."}, "en": {"titre": "Your order", "attente": "Checking your payment…", "paye": "Payment received. The download link is on its way to your inbox (check your spam folder).", "traitement": "Your payment is being confirmed. The link will be emailed to you as soon as it has been received.", "dl": "Download the game", "prep": "Preparing the download…", "invalide": "This link is not valid.", "expire": "This link has expired or reached its limit. Request a new one below.", "ren": "Resend my link", "mail": "The email address of your purchase", "envoye": "If this address matches a paid purchase, a new link has just been sent.", "erreur": "Network error, please try again."}, "es": {"titre": "Tu pedido", "attente": "Comprobando el pago…", "paye": "Pago recibido. El enlace de descarga va camino de tu correo (revisa el spam).", "traitement": "Tu pago se está confirmando. Recibirás el enlace por correo en cuanto se haya cobrado.", "dl": "Descargar el juego", "prep": "Preparando la descarga…", "invalide": "Este enlace no es válido.", "expire": "Este enlace ha caducado o alcanzado su límite. Solicita otro a continuación.", "ren": "Reenviar mi enlace", "mail": "El correo de tu compra", "envoye": "Si esta dirección corresponde a una compra pagada, se acaba de enviar un nuevo enlace.", "erreur": "Error de red, inténtalo de nuevo."}, "de": {"titre": "Ihre Bestellung", "attente": "Zahlung wird geprüft…", "paye": "Zahlung eingegangen. Der Download-Link ist unterwegs zu Ihrem Postfach (prüfen Sie auch den Spam-Ordner).", "traitement": "Ihre Zahlung wird bestätigt. Der Link wird Ihnen nach Zahlungseingang per E-Mail gesendet.", "dl": "Spiel herunterladen", "prep": "Download wird vorbereitet…", "invalide": "Dieser Link ist ungültig.", "expire": "Dieser Link ist abgelaufen oder hat sein Limit erreicht. Fordern Sie unten einen neuen an.", "ren": "Link erneut senden", "mail": "Die E-Mail-Adresse Ihres Kaufs", "envoye": "Falls diese Adresse zu einem bezahlten Kauf gehört, wurde soeben ein neuer Link gesendet.", "erreur": "Netzwerkfehler, bitte erneut versuchen."}, "pt": {"titre": "O seu pedido", "attente": "A verificar o pagamento…", "paye": "Pagamento recebido. O link de download está a caminho do seu e-mail (verifique o spam).", "traitement": "O seu pagamento está a ser confirmado. O link será enviado por e-mail assim que for recebido.", "dl": "Baixar o jogo", "prep": "A preparar o download…", "invalide": "Este link não é válido.", "expire": "Este link expirou ou atingiu o limite. Peça um novo abaixo.", "ren": "Reenviar o meu link", "mail": "O e-mail da sua compra", "envoye": "Se este endereço corresponder a uma compra paga, um novo link acabou de ser enviado.", "erreur": "Erro de rede, tente novamente."}, "ru": {"titre": "Ваш заказ", "attente": "Проверяем оплату…", "paye": "Оплата получена. Ссылка на загрузку отправлена на ваш e-mail (проверьте папку «Спам»).", "traitement": "Ваш платёж подтверждается. Ссылка придёт на e-mail сразу после поступления оплаты.", "dl": "Скачать игру", "prep": "Подготовка загрузки…", "invalide": "Эта ссылка недействительна.", "expire": "Срок действия ссылки истёк или достигнут лимит. Запросите новую ниже.", "ren": "Отправить ссылку ещё раз", "mail": "E-mail, указанный при покупке", "envoye": "Если этот адрес соответствует оплаченной покупке, новая ссылка уже отправлена.", "erreur": "Ошибка сети, попробуйте ещё раз."}, "ja": {"titre": "ご注文", "attente": "お支払いを確認しています…", "paye": "お支払いを確認しました。ダウンロードリンクをメールでお送りします（迷惑メールフォルダもご確認ください）。", "traitement": "お支払いを確認中です。確認でき次第、リンクをメールでお送りします。", "dl": "ゲームをダウンロード", "prep": "ダウンロードを準備しています…", "invalide": "このリンクは無効です。", "expire": "このリンクは期限切れか上限に達しました。下から再発行してください。", "ren": "リンクを再送する", "mail": "ご購入時のメールアドレス", "envoye": "このアドレスが支払い済みの購入と一致する場合、新しいリンクを送信しました。", "erreur": "ネットワークエラーです。もう一度お試しください。"}, "zh": {"titre": "您的订单", "attente": "正在核实付款…", "paye": "已收到付款。下载链接正发送至您的邮箱（请检查垃圾邮件）。", "traitement": "您的付款正在确认中。收到付款后，链接将通过电子邮件发送给您。", "dl": "下载游戏", "prep": "正在准备下载…", "invalide": "此链接无效。", "expire": "此链接已过期或已达上限。请在下方重新申请。", "ren": "重新发送链接", "mail": "您购买时使用的电子邮箱", "envoye": "如果此地址对应已付款的订单，新链接已发送。", "erreur": "网络错误，请重试。"}};
+        var q = new URLSearchParams(location.search);
+        var t = TEXTES[q.get('l')] || TEXTES.fr;
+        document.documentElement.lang = TEXTES[q.get('l')] ? q.get('l') : 'fr';
+        var el = function (i) { return document.getElementById(i); };
+        el('titre').textContent = t.titre; el('mail').textContent = t.mail; el('ren').textContent = t.ren; el('dl').textContent = t.dl;
+        var etat = function (m) { el('etat').textContent = m; };
+        var appel = function (f, corps) {
+            return fetch(API + '/' + f, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(corps) })
+                .then(function (r) { return r.json(); });
+        };
+        var jeton = new URLSearchParams(location.hash.slice(1)).get('t');
+        el('renvoi').addEventListener('submit', function (e) {
+            e.preventDefault();
+            appel('vente-renvoyer', { email: el('adresse').value.trim() }).then(function () { etat(t.envoye); }).catch(function () { etat(t.erreur); });
+        });
+        if (jeton) {
+            // Un clic réel est exigé : les antivirus de messagerie ouvrent les liens sans cliquer.
+            el('dl').hidden = false;
+            el('dl').addEventListener('click', function () {
+                etat(t.prep);
+                appel('vente-telecharger', { jeton: jeton }).then(function (r) {
+                    if (r.url) { etat(''); location.href = r.url; return; }
+                    etat(r.motif === 'lien_expire' ? t.expire : t.invalide);
+                    el('dl').hidden = true; el('renvoi').hidden = false;
+                }).catch(function () { etat(t.erreur); });
+            });
+        } else if (q.get('p') === 'paypal' && q.get('token')) {
+            etat(t.attente);
+            appel('vente-capturer-paypal', { ordre: q.get('token') }).then(function (r) {
+                etat(r.paye ? t.paye : t.traitement);
+            }).catch(function () { etat(t.traitement); });
+        } else if (q.get('p') === 'stripe') {
+            // Page de retour : n'affirme rien de plus, seul le webhook déclenche la livraison.
+            etat(t.traitement);
+        } else {
+            el('renvoi').hidden = false;
+        }
+    })();
+    </script>
+</body>
+</html>
