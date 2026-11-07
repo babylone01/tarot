@@ -413,6 +413,8 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .video-facade { position: relative; display: block; width: 100%; height: 100%; }
         .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .cta-note { max-width: 640px; margin: 0.75rem auto 0; font-size: 0.95rem; text-align: center; }
+        .cta-note a { color: var(--primary-gold); }
         .video-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%);
             background: rgba(204, 0, 0, 0.9); border-radius: 12px; transition: background 0.2s; }
         .video-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-left: 18px solid #fff;
@@ -451,11 +453,12 @@
         <div class="top-description">
             <h2>L'expérience ultime du jeu de tarot en ligne</h2>
             <p>Bienvenue sur le site officiel de Tarot Gothique 2026, un jeu de tarot social pour Android. Affrontez d&#x27;autres joueurs en ligne ou entraînez-vous en solo contre l&#x27;IA, dans un univers gothique aux finitions dorées, avec les règles officielles à 3, 4 et 5 joueurs.</p>
+            <p>Le jeu en ligne se joue depuis l&#x27;application Android, et non dans le navigateur : installez-la une fois, puis rejoignez des tables multijoueur en temps réel ou lancez une partie solo, même sans autres joueurs disponibles.</p>
         </div>
 
         <div class="media-row">
             <div class="media-item">
-                <picture><source srcset="banner.webp" type="image/webp"><img src="banner.jpg" width="1024" height="572" fetchpriority="high" decoding="async" alt="Tarot Gothique 2026 : la faucheuse tient des cartes de tarot dans une cathédrale gothique" class="hero-banner"></picture>
+                <picture><source type="image/avif" srcset="banner-640.avif 640w, banner.avif 1024w" sizes="(max-width: 900px) 100vw, 580px"><source type="image/webp" srcset="banner-640.webp 640w, banner.webp 1024w" sizes="(max-width: 900px) 100vw, 580px"><img src="banner.jpg" width="1024" height="572" fetchpriority="high" decoding="async" alt="Tarot Gothique 2026 : la faucheuse tient des cartes de tarot dans une cathédrale gothique" class="hero-banner"></picture>
             </div>
             <div class="media-item">
                 <div class="video-container">
@@ -481,6 +484,7 @@
 
         <div class="cta-container">
             <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Télécharger le jeu de tarot sur Google Play</a>
+            <p class="cta-note">L&#x27;application est en <strong>test fermé</strong> sur Google Play : pour l&#x27;installer, rejoignez d&#x27;abord le groupe des testeurs. <a href="tarot_gothique_testeurs.html">Devenir testeur bêta de Tarot Gothique</a></p>
         </div>
         <div class="seo-content">
             <section class="content-card">
@@ -493,10 +497,11 @@
             <section class="content-card">
                 <h2>Le tarot à 3, 4 et 5 joueurs</h2>
                 <ul>
-                    <li><strong>À 3 joueurs :</strong> une partie nerveuse où chacun joue pour soi.</li>
-                    <li><strong>À 4 joueurs :</strong> la formule de référence : un preneur seul face à trois défenseurs.</li>
-                    <li><strong>À 5 joueurs :</strong> l&#x27;appel du roi crée une alliance secrète que les autres joueurs doivent démasquer.</li>
+                    <li><strong>À 3 joueurs :</strong> une partie nerveuse où chacun joue pour soi. Chaque joueur reçoit 24 cartes et 6 cartes forment le chien.</li>
+                    <li><strong>À 4 joueurs :</strong> la formule de référence : 18 cartes par joueur, 6 au chien, et un preneur seul face à trois défenseurs.</li>
+                    <li><strong>À 5 joueurs :</strong> le preneur appelle un roi. Le joueur qui le détient devient son partenaire secret pour la manche, et les autres doivent le démasquer avant que le roi appelé ne tombe.</li>
                 </ul>
+                <p>Quel que soit le nombre de joueurs, le preneur doit atteindre un nombre de points qui dépend des Bouts (le Petit, le 21 d&#x27;atout et l&#x27;Excuse) qu&#x27;il remporte : 56 points sans Bout, 51 avec un, 41 avec deux et 36 avec les trois. Les places libres d&#x27;une table sont tenues par l&#x27;IA : vous pouvez jouer à 3, 4 ou 5 même seul.</p>
                 <h3>La variante gothique</h3>
                 <p>Tarot Gothique applique une règle précise sur le roi appelé : au premier tour, sa couleur ne peut être entamée qu&#x27;avec le roi lui-même. Elle est expliquée en détail avec les règles du jeu.</p>
             </section>
@@ -520,7 +525,15 @@
 
             <section class="content-card wide">
                 <h2>Une IA qui retient votre façon de jouer</h2>
-                <p>L&#x27;intelligence artificielle de Tarot Gothique mémorise les cartes de chaque donne, apprend les habitudes des joueurs et garde un facteur humain d&#x27;environ 7 %. Découvrez <a href="ia-tarot.html">comment fonctionne l&#x27;IA du jeu</a>.</p>
+                <p>Dans Tarot Gothique, l&#x27;intelligence artificielle tient les places libres d&#x27;une table : elle enchérit, appelle un roi à 5, joue ses cartes et compte les points comme un joueur humain. Elle ne joue jamais un coup interdit.</p>
+                <ul>
+                    <li><strong>Une mémoire de la donne :</strong> elle retient toutes les cartes tombées, note les couleurs qui manquent à chaque joueur et sait qui n&#x27;a plus d&#x27;atout.</li>
+                    <li><strong>Des probabilités à chaque pli :</strong> elle estime le risque de coupe et ses chances de remporter le pli avant de choisir sa carte.</li>
+                    <li><strong>La maîtrise du Petit :</strong> avec beaucoup d&#x27;atouts, elle tente de le mener au dernier pli ; sinon, elle le sauve dès qu&#x27;un pli sûr se présente.</li>
+                    <li><strong>Vos habitudes :</strong> d&#x27;une donne à l&#x27;autre, elle suit dix habitudes par joueur, comme tirer atout tôt ou charger les plis du preneur. Ces profils restent sur votre téléphone.</li>
+                    <li><strong>Un facteur humain de 7 % :</strong> elle varie parfois son jeu, uniquement sur des cartes sans enjeu, sans jamais offrir de points.</li>
+                </ul>
+                <p>Dans le tournoi du week-end, le niveau des bots s&#x27;adapte à votre catégorie : ils jouent 30 % de coups au hasard en catégorie verte, 12 % en jaune et aucun en rouge. Tous les détails sont sur la page <a href="ia-tarot.html">comment fonctionne l&#x27;IA du jeu</a>.</p>
             </section>
 
             <section class="content-card wide">
