@@ -412,6 +412,8 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .video-facade { position: relative; display: block; width: 100%; height: 100%; }
         .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .cta-note { max-width: 640px; margin: 0.75rem auto 0; font-size: 0.95rem; text-align: center; }
+        .cta-note a { color: var(--primary-gold); }
         .video-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%);
             background: rgba(204, 0, 0, 0.9); border-radius: 12px; transition: background 0.2s; }
         .video-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-left: 18px solid #fff;
@@ -450,6 +452,7 @@
         <div class="top-description">
             <h2>La Experiencia Definitiva de Tarot Francés Online</h2>
             <p>Bienvenido al sitio oficial de Tarot Gótico 2026, un juego de tarot social para Android. Juega online contra otros jugadores o entrénate en solitario contra la IA, en un universo gótico con acabados dorados y con las reglas oficiales para 3, 4 y 5 jugadores.</p>
+            <p>El juego online se juega desde la aplicación Android, no en el navegador: instálala una vez y únete a mesas multijugador en tiempo real o empieza una partida en solitario, aunque no haya otros jugadores disponibles.</p>
         </div>
         <div class="media-row">
             <div class="media-item">
@@ -477,6 +480,7 @@
         </div>
         <div class="cta-container">
             <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Descarga el juego de tarot en Google Play</a>
+            <p class="cta-note">La aplicación está en <strong>prueba cerrada</strong> en Google Play: para instalarla, únete primero al grupo de testers. <a href="tarot_gothique_testeurs.html">Hazte tester beta de Tarot Gótico</a> (página en francés)</p>
         </div>
         <div class="seo-content">
             <section class="content-card">
@@ -489,10 +493,11 @@
             <section class="content-card">
                 <h2>El tarot para 3, 4 y 5 jugadores</h2>
                 <ul>
-                    <li><strong>3 jugadores:</strong> una partida trepidante en la que cada uno juega para sí.</li>
-                    <li><strong>4 jugadores:</strong> la fórmula de referencia: un tomador solo frente a tres defensores.</li>
-                    <li><strong>5 jugadores:</strong> la llamada del rey crea una alianza secreta que los demás deben descubrir.</li>
+                    <li><strong>3 jugadores:</strong> una partida trepidante en la que cada uno juega para sí. Cada jugador recibe 24 cartas y 6 cartas forman el perrillo.</li>
+                    <li><strong>4 jugadores:</strong> la fórmula de referencia: 18 cartas por jugador, 6 al perrillo, y un tomador solo frente a tres defensores.</li>
+                    <li><strong>5 jugadores:</strong> el tomador llama a un rey. El jugador que lo tiene se convierte en su compañero secreto durante la mano, y los demás deben descubrirlo antes de que salga el rey llamado.</li>
                 </ul>
+                <p>Sea cual sea el número de jugadores, el tomador debe alcanzar una cantidad de puntos que depende de los Bouts (el Petit, el 21 de triunfo y la Excusa) que gane: 56 puntos sin Bout, 51 con uno, 41 con dos y 36 con los tres. La IA ocupa los puestos libres de una mesa: puedes jugar a 3, 4 o 5 incluso tú solo.</p>
                 <h3>La variante gótica</h3>
                 <p>Tarot Gótico aplica una regla precisa sobre el rey llamado: en la primera baza, su palo solo puede salir con el propio rey. Se explica en detalle junto con las reglas del juego.</p>
             </section>
@@ -516,7 +521,15 @@
 
             <section class="content-card wide">
                 <h2>Una IA que recuerda tu forma de jugar</h2>
-                <p>La inteligencia artificial de Tarot Gótico memoriza las cartas de cada mano, aprende los hábitos de los jugadores y mantiene un factor humano de alrededor del 7 %. Descubre <a href="ia-tarot_es.html">cómo funciona la IA del juego</a>.</p>
+                <p>En Tarot Gótico, la inteligencia artificial ocupa los puestos libres de una mesa: puja, llama a un rey a 5, juega sus cartas y cuenta los puntos como un jugador humano. Nunca hace una jugada ilegal.</p>
+                <ul>
+                    <li><strong>Memoria de la mano:</strong> recuerda todas las cartas jugadas, anota los palos que le faltan a cada jugador y sabe quién ya no tiene triunfos.</li>
+                    <li><strong>Probabilidades en cada baza:</strong> antes de elegir su carta, calcula el riesgo de que le fallen y sus posibilidades de ganar la baza.</li>
+                    <li><strong>El dominio del Petit:</strong> con muchos triunfos, intenta llevarlo hasta la última baza; si no, lo salva en cuanto aparece una baza segura.</li>
+                    <li><strong>Tus hábitos:</strong> de una mano a otra, sigue diez hábitos por jugador, como sacar triunfos pronto o cargar las bazas del tomador. Estos perfiles se quedan en tu teléfono.</li>
+                    <li><strong>Un factor humano del 7 %:</strong> a veces varía su juego, solo en cartas sin importancia, sin regalar nunca puntos.</li>
+                </ul>
+                <p>En el torneo del fin de semana, el nivel de los bots se adapta a tu categoría: juegan un 30 % de jugadas al azar en la categoría Verde, un 12 % en Amarilla y ninguna en Roja. Todos los detalles están en la página <a href="ia-tarot_es.html">cómo funciona la IA del juego</a>.</p>
             </section>
 
             <section class="content-card wide">

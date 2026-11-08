@@ -412,6 +412,8 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .video-facade { position: relative; display: block; width: 100%; height: 100%; }
         .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .cta-note { max-width: 640px; margin: 0.75rem auto 0; font-size: 0.95rem; text-align: center; }
+        .cta-note a { color: var(--primary-gold); }
         .video-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%);
             background: rgba(204, 0, 0, 0.9); border-radius: 12px; transition: background 0.2s; }
         .video-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-left: 18px solid #fff;
@@ -450,6 +452,7 @@
         <div class="top-description">
             <h2>The Ultimate Free French Tarot Online Experience</h2>
             <p>Welcome to the official website of Gothic Tarot 2026, a social tarot game for Android. Play against others online or practise solo against the AI, in a gothic world with gold finishes, using the official rules for 3, 4 and 5 players.</p>
+            <p>Online play happens in the Android app, not in your browser: install it once, then join real-time multiplayer tables or start a solo game, even when no other players are available.</p>
         </div>
         <div class="media-row">
             <div class="media-item">
@@ -477,6 +480,7 @@
         </div>
         <div class="cta-container">
             <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Download the tarot game on Google Play</a>
+            <p class="cta-note">The app is in <strong>closed testing</strong> on Google Play: to install it, first join the tester group. <a href="tarot_gothique_testeurs.html">Become a Gothic Tarot beta tester</a> (page in French)</p>
         </div>
         <div class="seo-content">
             <section class="content-card">
@@ -489,10 +493,11 @@
             <section class="content-card">
                 <h2>Tarot for 3, 4 and 5 players</h2>
                 <ul>
-                    <li><strong>3 players:</strong> a fast-paced game where everyone plays for themselves.</li>
-                    <li><strong>4 players:</strong> the reference format: a lone taker against three defenders.</li>
-                    <li><strong>5 players:</strong> calling the king creates a secret alliance the other players must unmask.</li>
+                    <li><strong>3 players:</strong> a fast-paced game where everyone plays for themselves. Each player receives 24 cards and 6 cards form the dog.</li>
+                    <li><strong>4 players:</strong> the reference format: 18 cards per player, 6 in the dog, and a lone taker against three defenders.</li>
+                    <li><strong>5 players:</strong> the taker calls a king. The player holding it becomes their secret partner for the round, and the others must unmask them before the called king is played.</li>
                 </ul>
+                <p>Whatever the number of players, the taker must reach a score that depends on the Bouts (the Petit, the 21 of trumps and the Excuse) they win: 56 points with no Bout, 51 with one, 41 with two and 36 with all three. Empty seats at a table are filled by the AI, so you can play with 3, 4 or 5 even on your own.</p>
                 <h3>The gothic variant</h3>
                 <p>Gothic Tarot applies a specific rule for the called king: on the first trick, its suit can only be led with the king itself. It is explained in full with the game rules.</p>
             </section>
@@ -516,7 +521,15 @@
 
             <section class="content-card wide">
                 <h2>An AI that remembers how you play</h2>
-                <p>The Gothic Tarot artificial intelligence memorises the cards of every deal, learns players&#x27; habits and keeps a human factor of about 7%. Find out <a href="ia-tarot_en.html">how the game&#x27;s AI works</a>.</p>
+                <p>In Gothic Tarot, the artificial intelligence fills the empty seats at a table: it bids, calls a king with 5 players, plays its cards and counts points like a human player. It never makes an illegal move.</p>
+                <ul>
+                    <li><strong>Memory of the deal:</strong> it remembers every card played, notes which suits each player is missing and knows who has run out of trumps.</li>
+                    <li><strong>Probabilities on every trick:</strong> it estimates the risk of being trumped and its chances of winning the trick before choosing a card.</li>
+                    <li><strong>Handling the Petit:</strong> with plenty of trumps, it tries to bring it home on the last trick; otherwise it saves it as soon as a safe trick comes up.</li>
+                    <li><strong>Your habits:</strong> from one deal to the next, it tracks ten habits per player, such as drawing trumps early or loading the taker&#x27;s tricks. These profiles stay on your phone.</li>
+                    <li><strong>A 7% human factor:</strong> it sometimes varies its play, only on cards that do not matter, without ever giving away points.</li>
+                </ul>
+                <p>In the weekend tournament, the bots&#x27; level adapts to your category: they play 30% random moves in the Green category, 12% in Yellow and none in Red. All the details are on the page <a href="ia-tarot_en.html">how the game&#x27;s AI works</a>.</p>
             </section>
 
             <section class="content-card wide">

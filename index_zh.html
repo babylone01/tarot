@@ -412,6 +412,8 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .video-facade { position: relative; display: block; width: 100%; height: 100%; }
         .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .cta-note { max-width: 640px; margin: 0.75rem auto 0; font-size: 0.95rem; text-align: center; }
+        .cta-note a { color: var(--primary-gold); }
         .video-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%);
             background: rgba(204, 0, 0, 0.9); border-radius: 12px; transition: background 0.2s; }
         .video-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-left: 18px solid #fff;
@@ -450,6 +452,7 @@
         <div class="top-description">
             <h2>终极免费法国塔罗在线体验</h2>
             <p>欢迎来到哥特塔罗2026官方网站，这是一款面向Android的社交塔罗牌游戏。您可以在线与其他玩家对战，或与AI单人练习，在镶金的哥特世界中按照3人、4人、5人局官方规则畅玩。</p>
+            <p>在线对战通过Android应用进行，而不是在浏览器中：安装一次后，即可加入实时多人牌桌，或在没有其他玩家时开始单人对局。</p>
         </div>
         <div class="media-row">
             <div class="media-item">
@@ -477,6 +480,7 @@
         </div>
         <div class="cta-container">
             <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">在 Google Play 下载塔罗牌游戏</a>
+            <p class="cta-note">该应用目前在Google Play上处于<strong>封闭测试</strong>阶段：如需安装，请先加入测试者群组。<a href="tarot_gothique_testeurs.html">成为哥特塔罗的测试玩家</a>（法语页面）</p>
         </div>
         <div class="seo-content">
             <section class="content-card">
@@ -489,10 +493,11 @@
             <section class="content-card">
                 <h2>3人、4人和5人塔罗牌</h2>
                 <ul>
-                    <li><strong>3人局：</strong>节奏紧凑，人人各自为战。</li>
-                    <li><strong>4人局：</strong>经典玩法：一名庄家对抗三名防守者。</li>
-                    <li><strong>5人局：</strong>叫王规则会形成秘密同盟，其他玩家需要识破它。</li>
+                    <li><strong>3人局：</strong> 节奏紧凑，人人各自为战。每名玩家拿到24张牌，另有6张作为底牌。</li>
+                    <li><strong>4人局：</strong> 经典玩法：每人18张牌，底牌6张，一名庄家对抗三名防守者。</li>
+                    <li><strong>5人局：</strong> 庄家叫一张国王。持有这张国王的玩家成为他本局的秘密搭档，其他玩家需要在被叫国王打出之前识破他。</li>
                 </ul>
+                <p>无论几人对局，庄家都必须根据赢得的Bout（小牌、21点主牌和愚者）数量达到相应分数：没有Bout需56分，1个需51分，2个需41分，3个需36分。牌桌上的空位由AI补齐，所以即使只有你一个人，也能进行3人、4人或5人对局。</p>
                 <h3>哥特变体</h3>
                 <p>哥特塔罗对被叫国王有一条明确规则：第一墩中，该花色只能由国王本身领出。详细说明请见游戏规则。</p>
             </section>
@@ -516,7 +521,15 @@
 
             <section class="content-card wide">
                 <h2>一个记住你打法的AI</h2>
-                <p>哥特塔罗的人工智能会记住每一局的牌、学习玩家的习惯，并保留约7%的人性化因素。了解<a href="ia-tarot_zh.html">游戏AI的运作方式</a>。</p>
+                <p>在哥特塔罗中，人工智能会补齐牌桌上的空位：它会叫牌、在5人局中叫王、出牌，并像真人玩家一样计分。它从不出违规的牌。</p>
+                <ul>
+                    <li><strong>记住整局牌：</strong> 记住所有已出的牌，记录每位玩家缺少的花色，并知道谁已经没有主牌。</li>
+                    <li><strong>每墩计算概率：</strong> 出牌前估算被主牌吃掉的风险，以及赢下这一墩的机会。</li>
+                    <li><strong>掌控小牌：</strong> 主牌多时，尝试把小牌留到最后一墩；否则一有安全的墩就把它救下。</li>
+                    <li><strong>你的习惯：</strong> 在一局又一局之间，它会追踪每位玩家的十种习惯，例如过早出主牌或往庄家的墩里送分。这些档案保存在你的手机上。</li>
+                    <li><strong>7%的人性化因素：</strong> 偶尔改变打法，但只在无关紧要的牌上，绝不会白送分数。</li>
+                </ul>
+                <p>在周末锦标赛中，机器人的水平会根据你的级别调整：绿色级别中它们有30%的随机出牌，黄色为12%，红色则没有。详细内容请见<a href="ia-tarot_zh.html">游戏AI的运作方式</a>页面。</p>
             </section>
 
             <section class="content-card wide">

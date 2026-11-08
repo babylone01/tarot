@@ -412,6 +412,8 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .video-facade { position: relative; display: block; width: 100%; height: 100%; }
         .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .cta-note { max-width: 640px; margin: 0.75rem auto 0; font-size: 0.95rem; text-align: center; }
+        .cta-note a { color: var(--primary-gold); }
         .video-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%);
             background: rgba(204, 0, 0, 0.9); border-radius: 12px; transition: background 0.2s; }
         .video-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-left: 18px solid #fff;
@@ -450,6 +452,7 @@
         <div class="top-description">
             <h2>Das Ultimative Kostenlose Französische Tarot-Erlebnis</h2>
             <p>Willkommen auf der offiziellen Website von Gotisches Tarot 2026, einem sozialen Tarot-Spiel für Android. Spiele online gegen andere oder trainiere solo gegen die KI – in einer gotischen Welt mit goldenen Details und nach den offiziellen Regeln für 3, 4 und 5 Spieler.</p>
+            <p>Online gespielt wird in der Android-App, nicht im Browser: Installiere sie einmal und tritt dann Multiplayer-Tischen in Echtzeit bei oder starte eine Solo-Partie, auch wenn gerade keine anderen Spieler da sind.</p>
         </div>
         <div class="media-row">
             <div class="media-item">
@@ -477,6 +480,7 @@
         </div>
         <div class="cta-container">
             <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Tarot-Spiel bei Google Play herunterladen</a>
+            <p class="cta-note">Die App befindet sich bei Google Play im <strong>geschlossenen Test</strong>: Um sie zu installieren, tritt zuerst der Testergruppe bei. <a href="tarot_gothique_testeurs.html">Beta-Tester von Gotisches Tarot werden</a> (Seite auf Französisch)</p>
         </div>
         <div class="seo-content">
             <section class="content-card">
@@ -489,10 +493,11 @@
             <section class="content-card">
                 <h2>Tarot mit 3, 4 und 5 Spielern</h2>
                 <ul>
-                    <li><strong>3 Spieler:</strong> eine temporeiche Partie, in der jeder für sich spielt.</li>
-                    <li><strong>4 Spieler:</strong> die Referenzvariante: ein Alleinspieler gegen drei Verteidiger.</li>
-                    <li><strong>5 Spieler:</strong> der Königsruf schafft ein geheimes Bündnis, das die anderen aufdecken müssen.</li>
+                    <li><strong>3 Spieler:</strong> eine temporeiche Partie, in der jeder für sich spielt. Jeder Spieler erhält 24 Karten, 6 Karten bilden den Talon.</li>
+                    <li><strong>4 Spieler:</strong> die Referenzvariante: 18 Karten pro Spieler, 6 im Talon und ein Alleinspieler gegen drei Verteidiger.</li>
+                    <li><strong>5 Spieler:</strong> der Alleinspieler ruft einen König. Wer ihn hält, wird für diese Runde sein geheimer Partner, und die anderen müssen ihn entlarven, bevor der gerufene König fällt.</li>
                 </ul>
+                <p>Unabhängig von der Spielerzahl muss der Alleinspieler eine Punktzahl erreichen, die von den gewonnenen Bouts (dem Petit, der 21 und der Excuse) abhängt: 56 Punkte ohne Bout, 51 mit einem, 41 mit zwei und 36 mit allen drei. Freie Plätze am Tisch übernimmt die KI: Du kannst also auch allein zu dritt, zu viert oder zu fünft spielen.</p>
                 <h3>Die gotische Variante</h3>
                 <p>Gotisches Tarot wendet eine klare Regel zum gerufenen König an: Im ersten Stich darf seine Farbe nur mit dem König selbst ausgespielt werden. Sie wird ausführlich bei den Spielregeln erklärt.</p>
             </section>
@@ -516,7 +521,15 @@
 
             <section class="content-card wide">
                 <h2>Eine KI, die sich dein Spiel merkt</h2>
-                <p>Die künstliche Intelligenz von Gotisches Tarot merkt sich die Karten jedes Spiels, lernt die Gewohnheiten der Spieler und behält einen menschlichen Faktor von etwa 7 %. Erfahre, <a href="ia-tarot_de.html">wie die KI des Spiels funktioniert</a>.</p>
+                <p>In Gotisches Tarot besetzt die künstliche Intelligenz die freien Plätze am Tisch: Sie reizt, ruft zu fünft einen König, spielt ihre Karten und zählt die Punkte wie ein menschlicher Spieler. Einen regelwidrigen Zug macht sie nie.</p>
+                <ul>
+                    <li><strong>Gedächtnis für das Spiel:</strong> Sie merkt sich jede gespielte Karte, notiert, welche Farben jedem Spieler fehlen, und weiß, wer keinen Trumpf mehr hat.</li>
+                    <li><strong>Wahrscheinlichkeiten in jedem Stich:</strong> Vor jeder Karte schätzt sie das Risiko, gestochen zu werden, und ihre Chancen, den Stich zu gewinnen.</li>
+                    <li><strong>Der Umgang mit dem Petit:</strong> Mit vielen Trümpfen versucht sie, ihn bis zum letzten Stich durchzubringen; sonst rettet sie ihn, sobald sich ein sicherer Stich bietet.</li>
+                    <li><strong>Deine Gewohnheiten:</strong> Von Spiel zu Spiel verfolgt sie zehn Gewohnheiten pro Spieler, etwa frühes Trumpfziehen oder Punkte in die Stiche des Alleinspielers zu geben. Diese Profile bleiben auf deinem Handy.</li>
+                    <li><strong>Ein menschlicher Faktor von 7 %:</strong> Gelegentlich variiert sie ihr Spiel, nur bei Karten ohne Bedeutung, ohne je Punkte zu verschenken.</li>
+                </ul>
+                <p>Im Wochenendturnier passt sich das Niveau der Bots deiner Kategorie an: In Grün spielen sie 30 % Zufallszüge, in Gelb 12 % und in Rot keine. Alle Details findest du auf der Seite <a href="ia-tarot_de.html">wie die KI des Spiels funktioniert</a>.</p>
             </section>
 
             <section class="content-card wide">

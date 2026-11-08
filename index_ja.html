@@ -412,6 +412,8 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .video-facade { position: relative; display: block; width: 100%; height: 100%; }
         .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .cta-note { max-width: 640px; margin: 0.75rem auto 0; font-size: 0.95rem; text-align: center; }
+        .cta-note a { color: var(--primary-gold); }
         .video-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; transform: translate(-50%, -50%);
             background: rgba(204, 0, 0, 0.9); border-radius: 12px; transition: background 0.2s; }
         .video-play::after { content: ""; position: absolute; left: 27px; top: 14px; border-left: 18px solid #fff;
@@ -450,6 +452,7 @@
         <div class="top-description">
             <h2>究極の無料フランス式タロットオンライン体験</h2>
             <p>Android向けソーシャル・タロットゲーム「ゴシック・タロット2026」の公式サイトへようこそ。オンラインで他のプレイヤーと対戦したり、AIを相手にソロで練習したりできます。金の装飾が映えるゴシックな世界で、3人・4人・5人の公式ルールに沿って遊べます。</p>
+            <p>オンライン対戦はブラウザではなく、Androidアプリで遊びます。一度インストールすれば、リアルタイムのマルチプレイ卓に参加したり、他のプレイヤーがいなくてもソロ対局を始めたりできます。</p>
         </div>
         <div class="media-row">
             <div class="media-item">
@@ -477,6 +480,7 @@
         </div>
         <div class="cta-container">
             <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">タロットゲームをGoogle Playでダウンロード</a>
+            <p class="cta-note">アプリは現在Google Playで<strong>クローズドテスト</strong>中です。インストールするには、まずテスターグループに参加してください。<a href="tarot_gothique_testeurs.html">ゴシック・タロットのベータテスターになる</a>（フランス語のページ）</p>
         </div>
         <div class="seo-content">
             <section class="content-card">
@@ -489,10 +493,11 @@
             <section class="content-card">
                 <h2>3人・4人・5人で遊ぶタロット</h2>
                 <ul>
-                    <li><strong>3人プレイ：</strong>全員が自分のために戦うスピーディーな対戦。</li>
-                    <li><strong>4人プレイ：</strong>1人のテイカーが3人のディフェンスに挑む、基本となる形式。</li>
-                    <li><strong>5人プレイ：</strong>キングの指名によって秘密の同盟が生まれ、他のプレイヤーはその正体を見抜かなければなりません。</li>
+                    <li><strong>3人プレイ：</strong> 全員が自分のために戦うスピーディーな対戦。各プレイヤーに24枚が配られ、6枚が犬（チアン）になります。</li>
+                    <li><strong>4人プレイ：</strong> 基本となる形式。1人18枚、犬は6枚で、1人のテイカーが3人のディフェンスに挑みます。</li>
+                    <li><strong>5人プレイ：</strong> テイカーがキングを1枚指名します。そのキングを持つプレイヤーがそのラウンドの秘密のパートナーとなり、他のプレイヤーは指名されたキングが出る前にその正体を見抜かなければなりません。</li>
                 </ul>
+                <p>人数にかかわらず、テイカーは獲得したBout（プチ、21、エキューズ）の数に応じた点数を取る必要があります。Boutなしで56点、1つで51点、2つで41点、3つすべてで36点です。空いた席はAIが担当するので、1人でも3人・4人・5人の対局を遊べます。</p>
                 <h3>ゴシック・バリアント</h3>
                 <p>ゴシック・タロットでは、指名されたキングに特別なルールがあります。最初のトリックでは、そのスートはキング自身でしかリードできません。詳しくはゲームのルールで解説しています。</p>
             </section>
@@ -516,7 +521,15 @@
 
             <section class="content-card wide">
                 <h2>あなたのプレイを覚えるAI</h2>
-                <p>ゴシック・タロットの人工知能は、各ディールのカードを記憶し、プレイヤーの癖を学び、約7%の人間らしさを残しています。<a href="ia-tarot_ja.html">ゲームのAIの仕組み</a>をご覧ください。</p>
+                <p>ゴシック・タロットでは、卓の空いた席を人工知能が担当します。ビッドを行い、5人戦ではキングを指名し、カードを出し、人間のプレイヤーと同じように点数を数えます。ルール違反の手は決して打ちません。</p>
+                <ul>
+                    <li><strong>ディールの記憶：</strong> 出たカードをすべて覚え、各プレイヤーに欠けているスートを記録し、切り札がなくなったプレイヤーを把握します。</li>
+                    <li><strong>トリックごとの確率：</strong> カードを選ぶ前に、切り札で切られる危険と、そのトリックを取れる見込みを見積もります。</li>
+                    <li><strong>プチの扱い：</strong> 切り札が多ければ最後のトリックまで持ち込もうとし、そうでなければ安全なトリックが来た時点で救い出します。</li>
+                    <li><strong>あなたの癖：</strong> ディールをまたいで、早めに切り札を出す、テイカーのトリックに点数を乗せるなど、プレイヤーごとに10の癖を追跡します。これらのプロフィールはあなたのスマートフォン内に保存されます。</li>
+                    <li><strong>7%の人間らしさ：</strong> 勝負に関係のないカードに限って時々プレイを変えますが、相手に点数を与えることはありません。</li>
+                </ul>
+                <p>週末のトーナメントでは、ボットの強さがあなたのカテゴリーに合わせて変わります。グリーンでは30%、イエローでは12%の手をランダムに打ち、レッドではランダムな手を打ちません。詳しくは<a href="ia-tarot_ja.html">ゲームのAIの仕組み</a>をご覧ください。</p>
             </section>
 
             <section class="content-card wide">
