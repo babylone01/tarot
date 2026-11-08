@@ -1,0 +1,28 @@
+# Tarot Gothique 2026
+
+> Free French tarot card game for Android (smartphones and tablets), with a gothic theme. Play online against other players in real time or solo against an AI, at 3, 4 or 5 players, following the official French tarot rules. Created and published by Cyril Darbost. The game and this site are available in 8 languages (fr, en, es, de, pt, ru, ja, zh). The Android app is currently in closed beta on Google Play.
+
+## Main pages (French)
+
+- [Accueil – Jeu de Tarot Gothique 2026](https://tarot-gothique-2026.com/): presentation of the game, 3/4/5-player modes, FAQ
+- [Règles du tarot à 3, 4 et 5 joueurs](https://tarot-gothique-2026.com/regles.html): deal, contracts, card values, Bouts, how to count points, petit au bout, poignées
+- [L'IA de Tarot Gothique](https://tarot-gothique-2026.com/ia-tarot.html): how the computer opponents play
+- [Divination par la Faucheuse](https://tarot-gothique-2026.com/divination-faucheuse.html): secret reward for the winner of an online game
+- [Galerie](https://tarot-gothique-2026.com/galerie.html): screenshots of the app
+- [À propos et FAQ](https://tarot-gothique-2026.com/apropos.html): creator, technology, contact
+- [Devenir testeur bêta](https://tarot-gothique-2026.com/tarot_gothique_testeurs.html): how to join the closed beta
+
+## Other languages
+
+- [English](https://tarot-gothique-2026.com/index_en.html)
+- [Español](https://tarot-gothique-2026.com/index_es.html)
+- [Deutsch](https://tarot-gothique-2026.com/index_de.html)
+- [Português](https://tarot-gothique-2026.com/index_pt.html)
+- [Русский](https://tarot-gothique-2026.com/index_ru.html)
+- [日本語](https://tarot-gothique-2026.com/index_ja.html)
+- [中文](https://tarot-gothique-2026.com/index_zh.html)
+
+## Optional
+
+- [Privacy policy](https://tarot-gothique-2026.com/privacy.html)
+- [Sitemap](https://tarot-gothique-2026.com/sitemap.xml)
