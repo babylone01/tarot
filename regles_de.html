@@ -75,7 +75,7 @@
           "isPartOf": {
             "@id": "https://tarot-gothique-2026.com/#site"
           },
-          "dateModified": "2026-11-01",
+          "dateModified": "2026-11-08",
           "breadcrumb": {
             "@id": "https://tarot-gothique-2026.com/regles_de.html#ariane"
           }
@@ -101,11 +101,11 @@
         {
           "@type": "Article",
           "@id": "https://tarot-gothique-2026.com/regles_de.html#article",
-          "headline": "Offizielle Regeln & Gotisches Tarot-Handbuch",
+          "headline": "Tarot-Regeln für 3, 4 und 5 Spieler: der Leitfaden von Gotisches Tarot",
           "description": "Offizielle Regeln des französischen Tarot für 3, 4 und 5 Spieler: Austeilen, Königsruf, Kartenwerte, Bouts und benötigte Punkte je Vertrag.",
           "inLanguage": "de",
           "image": "https://tarot-gothique-2026.com/banner.jpg",
-          "dateModified": "2026-11-01",
+          "dateModified": "2026-11-08",
           "author": {
             "@id": "https://tarot-gothique-2026.com/#auteur"
           },
@@ -118,6 +118,45 @@
           "about": {
             "@id": "https://tarot-gothique-2026.com/#jeu"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tarot-gothique-2026.com/regles_de.html#faq",
+          "inLanguage": "de",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Wie viele Karten erhält jeder Spieler beim Tarot?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bei 3 Spielern erhält jeder 24 Karten, 6 Karten bilden den Talon. Bei 4 Spielern 18 Karten pro Spieler und 6 im Talon. Bei 5 Spielern 15 Karten pro Spieler und 3 im Talon."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Wie zählt man beim Tarot die Punkte?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Man addiert die Punkte in den Stichen des Alleinspielers und vergleicht sie mit dem Ziel, das seine Bouts vorgeben (56, 51, 41 oder 36 Punkte). Das Spiel ist dann 25 Punkte plus Abstand wert, multipliziert mit dem Vertrag: 1 für eine Petite, 2 für eine Garde, 4 für eine Garde sans und 6 für eine Garde contre."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Was ist der Petit au bout?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Damit ist gemeint, den letzten Stich mit dem Petit, der Trumpf-1, zu gewinnen. Die Partei, der das gelingt, erhält eine Prämie von 10 Punkten multipliziert mit dem Vertrag, auch wenn sie das Spiel verliert."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Wie spielt man Tarot zu fünft?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bei 5 Spielern erhält jeder 15 Karten, der Talon hat 3 Karten. Der Alleinspieler ruft einen König: Wer ihn hält, wird sein geheimer Partner. Der Alleinspieler gewinnt oder verliert den doppelten Spielwert, sein Partner den einfachen."
+              }
+            }
+          ]
         }
       ]
     }
@@ -282,11 +321,13 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .rules-card.wide { grid-column: 1 / -1; }
         .rules-card ol { margin: 0.3rem 0 0; padding-left: 1.3rem; }
+        .rules-card a { color: var(--primary-gold); }
+        .rules-card h3 { color: var(--primary-gold); font-size: 1rem; margin: 0.8rem 0 0.2rem; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Offizielle Regeln & Gotisches Tarot-Handbuch</h1>
+        <h1>Tarot-Regeln für 3, 4 und 5 Spieler: der Leitfaden von Gotisches Tarot</h1>
         
         <nav class="main-nav">
             <a href="index_de.html" class="">Startseite</a>
@@ -316,9 +357,9 @@
         <div class="rules-card">
             <h2>1. Varianten nach Spieleranzahl (3, 4, 5 Spieler)</h2>
             <ul>
-                <li><strong>Zu 3 Spielern:</strong> 24 Tarotkarten ausgeteilt, 6 im Talon. Jeder spielt für sich gegen die beiden anderen.</li>
+                <li><strong>Zu 3 Spielern:</strong> 24 Karten pro Spieler, 6 im Talon. Jeder spielt für sich gegen die beiden anderen.</li>
                 <li><strong>Zu 4 Spielern:</strong> 18 Karten pro Spieler, 6 im Talon. Klassisches Solo gegen die Verteidigung.</li>
-                <li><strong>Zu 5 Spielern (Gothic-Besonderheit):</strong> Der Alleinspieler ruft einen König einer bestimmten Farbe. Wer diesen König hat, wird sein geheimes Partner.</li>
+                <li><strong>Zu 5 Spielern (Gothic-Besonderheit):</strong> 15 Karten pro Spieler, 3 im Talon. Der Alleinspieler ruft einen König einer bestimmten Farbe. Wer diesen König hat, wird sein geheimes Partner.</li>
             </ul>
         </div>
         <div class="rules-card">
@@ -326,6 +367,7 @@
             <ul>
                 <li><strong>Regel der gerufenen Farbe:</strong> Die Farbe des gerufenen Königs darf im ersten Stich nicht gespielt werden, <em>außer der anspielende Spieler besitzt und spielt diesen König direkt</em>.</li>
                 <li><strong>Regel der Excuse im letzten Stich:</strong> Wird die Excuse im letzten Stich gespielt, geht sie an die Partei, die diesen Stich gewinnt. Ausnahme: Beim Schlemm gewinnt die Excuse, die von der Schlemm-Partei im letzten Stich gespielt wird, diesen Stich.</li>
+                <li><strong>Schlemm (Chelem):</strong> alle Stiche des Spiels gewinnen. Ein Schlemm kann während des Reizens angesagt werden.</li>
             </ul>
         </div>
         <div class="rules-card">
@@ -352,7 +394,18 @@
             </ul>
         </div>
         <div class="rules-card wide">
-            <h2>5. Ablauf einer Runde</h2>
+            <h2>5. Die Verträge: Petite, Garde, Garde sans, Garde contre</h2>
+            <p>Beim Reizen passt jeder Spieler oder sagt einen höheren Vertrag als den vorherigen an. Je höher der Vertrag, desto mehr Punkte bringt (oder kostet) das Spiel:</p>
+            <table class="rules-table">
+                <tr><th>Vertrag</th><th>Der Talon</th><th>Multiplikator</th></tr>
+                <tr><td>Petite (Klein)</td><td>Aufgedeckt, vom Alleinspieler aufgenommen, der ablegt</td><td><strong>× 1</strong></td></tr>
+                <tr><td>Garde</td><td>Aufgedeckt, vom Alleinspieler aufgenommen, der ablegt</td><td><strong>× 2</strong></td></tr>
+                <tr><td>Garde sans (Garde ohne)</td><td>Nicht aufgedeckt, zählt für den Alleinspieler</td><td><strong>× 4</strong></td></tr>
+                <tr><td>Garde contre (Garde gegen)</td><td>Nicht aufgedeckt, zählt für die Verteidigung</td><td><strong>× 6</strong></td></tr>
+            </table>
+        </div>
+        <div class="rules-card wide">
+            <h2>6. Ablauf einer Runde</h2>
             <ol>
                 <li><strong>Austeilen:</strong> die Karten werden verteilt, einige werden beiseitegelegt und bilden den Hund.</li>
                 <li><strong>Reizen:</strong> jeder Spieler sagt an, ob er spielen will; das höchste Gebot bestimmt den Alleinspieler.</li>
@@ -363,7 +416,27 @@
         </div>
 
         <div class="rules-card wide">
-            <h2>6. Gewinntabelle</h2>
+            <h2>7. Wie man beim Tarot die Punkte zählt</h2>
+            <p>Am Ende des Spiels werden die Punkte in den Stichen des Alleinspielers (und bei 5 Spielern seines Partners) einschließlich des Ablegens addiert. Diese Summe wird mit dem Ziel verglichen, das sich aus der Zahl der gewonnenen Bouts ergibt: Die Differenz heißt Abstand.</p>
+            <ul>
+                <li><strong>Formel:</strong> Spielwert = (25 + Abstand) × Multiplikator des Vertrags. Der Alleinspieler gewinnt diesen Wert von jedem Verteidiger, wenn er erfüllt, oder zahlt ihn, wenn er verliert.</li>
+                <li><strong>Bei 3 oder 4 Spielern:</strong> der Alleinspieler erhält (oder zahlt) den Spielwert einmal pro Gegner.</li>
+                <li><strong>Bei 5 Spielern:</strong> jeder Verteidiger zahlt (oder erhält) den Spielwert; der Alleinspieler erhält den doppelten Wert, sein Partner den einfachen. Hat der Alleinspieler sich selbst gerufen, spielt er allein gegen vier.</li>
+            </ul>
+            <p><strong>Beispiel mit 4 Spielern:</strong> der Alleinspieler sagt eine Garde an, gewinnt 2 Bouts und erzielt 47 Punkte. Mit 2 Bouts brauchte er 41: Der Abstand beträgt 6. Das Spiel ist (25 + 6) × 2 = 62 Punkte wert. Jeder der drei Verteidiger verliert 62 Punkte, der Alleinspieler gewinnt 186.</p>
+            <p>In Gotisches Tarot übernimmt die App diese Berechnung automatisch und zeigt sie am Ende jedes Spiels auf dem Punkteblatt an.</p>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>8. Petit au bout, Handvoll und Prämien</h2>
+            <ul>
+                <li><strong>Petit au bout:</strong> die Partei, die den letzten Stich mit dem Petit (der Trumpf-1) gewinnt, erhält eine Prämie von 10 Punkten, multipliziert mit dem Vertrag. Sie gilt auch dann, wenn diese Partei das Spiel verliert.</li>
+                <li><strong>Handvoll (Poignée):</strong> wer viele Trümpfe hat, kann sie vor dem Ausspielen seiner ersten Karte zeigen. In Gotisches Tarot ist die Prämie 20 Punkte für eine einfache, 30 für eine doppelte und 50 für eine dreifache Handvoll wert. Sie wird nicht mit dem Vertrag multipliziert und geht an die Partei, die das Spiel gewinnt, auch wenn die andere Partei sie gezeigt hat. Die App zeigt die Schaltfläche „Handvoll ansagen“, sobald Ihre Hand es erlaubt.</li>
+            </ul>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>9. Gewinntabelle</h2>
             <p>Die folgende Tabelle zeigt den Gewinn für jeden Einsatz.</p>
             <table class="rules-table">
                 <tr><th>Einsatz</th><th>Gewinn</th></tr>
@@ -372,6 +445,19 @@
                 <tr><td>1.000 Jetons</td><td><strong>1.500 Jetons</strong></td></tr>
                 <tr><td>2.000 Jetons</td><td><strong>3.000 Jetons</strong></td></tr>
             </table>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>Häufige Fragen zu den Tarot-Regeln</h2>
+            <h3>Wie viele Karten erhält jeder Spieler beim Tarot?</h3>
+            <p>Bei 3 Spielern erhält jeder 24 Karten, 6 Karten bilden den Talon. Bei 4 Spielern 18 Karten pro Spieler und 6 im Talon. Bei 5 Spielern 15 Karten pro Spieler und 3 im Talon.</p>
+            <h3>Wie zählt man beim Tarot die Punkte?</h3>
+            <p>Man addiert die Punkte in den Stichen des Alleinspielers und vergleicht sie mit dem Ziel, das seine Bouts vorgeben (56, 51, 41 oder 36 Punkte). Das Spiel ist dann 25 Punkte plus Abstand wert, multipliziert mit dem Vertrag: 1 für eine Petite, 2 für eine Garde, 4 für eine Garde sans und 6 für eine Garde contre.</p>
+            <h3>Was ist der Petit au bout?</h3>
+            <p>Damit ist gemeint, den letzten Stich mit dem Petit, der Trumpf-1, zu gewinnen. Die Partei, der das gelingt, erhält eine Prämie von 10 Punkten multipliziert mit dem Vertrag, auch wenn sie das Spiel verliert.</p>
+            <h3>Wie spielt man Tarot zu fünft?</h3>
+            <p>Bei 5 Spielern erhält jeder 15 Karten, der Talon hat 3 Karten. Der Alleinspieler ruft einen König: Wer ihn hält, wird sein geheimer Partner. Der Alleinspieler gewinnt oder verliert den doppelten Spielwert, sein Partner den einfachen.</p>
+            <p>Lust zu üben? Treten Sie allein gegen die <a href="ia-tarot_de.html">KI des Spiels</a> an oder entdecken Sie die <a href="divination-faucheuse_de.html">Weissagung des Sensenmanns</a>, die den Siegern vorbehalten ist.</p>
         </div>
     </main>
     <footer>

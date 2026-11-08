@@ -75,7 +75,7 @@
           "isPartOf": {
             "@id": "https://tarot-gothique-2026.com/#site"
           },
-          "dateModified": "2026-11-01",
+          "dateModified": "2026-11-08",
           "breadcrumb": {
             "@id": "https://tarot-gothique-2026.com/regles_pt.html#ariane"
           }
@@ -101,11 +101,11 @@
         {
           "@type": "Article",
           "@id": "https://tarot-gothique-2026.com/regles_pt.html#article",
-          "headline": "Regras Oficiais e Guia do Tarot Gótico",
+          "headline": "Regras do tarô para 3, 4 e 5 jogadores: o guia do Tarot Gótico",
           "description": "Regras oficiais do tarô francês para 3, 4 e 5 jogadores: distribuição, chamada do rei, valor das cartas, Bouts e pontos necessários por contrato.",
           "inLanguage": "pt",
           "image": "https://tarot-gothique-2026.com/banner.jpg",
-          "dateModified": "2026-11-01",
+          "dateModified": "2026-11-08",
           "author": {
             "@id": "https://tarot-gothique-2026.com/#auteur"
           },
@@ -118,6 +118,45 @@
           "about": {
             "@id": "https://tarot-gothique-2026.com/#jeu"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tarot-gothique-2026.com/regles_pt.html#faq",
+          "inLanguage": "pt",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quantas cartas recebe cada jogador no tarô?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Com 3 jogadores, cada um recebe 24 cartas e 6 formam o monte. Com 4 jogadores, 18 cartas cada e 6 no monte. Com 5 jogadores, 15 cartas cada e 3 no monte."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como se contam os pontos no tarô?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Somam-se os pontos das vazas do tomador e comparam-se com o mínimo definido pelos seus Bouts (56, 51, 41 ou 36 pontos). A mão vale então 25 pontos mais a margem, multiplicados pelo contrato: 1 para uma Petite, 2 para uma Garde, 4 para uma Garde sans e 6 para uma Garde contre."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O que é o petit au bout?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "É vencer a última vaza com o Petit, o 1 de trunfo. O lado que consegue ganha um prémio de 10 pontos multiplicado pelo contrato, mesmo que perca a mão."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como se joga tarô com 5 jogadores?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Com 5 jogadores, cada um recebe 15 cartas e o monte tem 3. O tomador chama um rei: quem o tem torna-se seu parceiro secreto. O tomador ganha ou perde o dobro do valor da mão e o parceiro uma vez."
+              }
+            }
+          ]
         }
       ]
     }
@@ -282,11 +321,13 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .rules-card.wide { grid-column: 1 / -1; }
         .rules-card ol { margin: 0.3rem 0 0; padding-left: 1.3rem; }
+        .rules-card a { color: var(--primary-gold); }
+        .rules-card h3 { color: var(--primary-gold); font-size: 1rem; margin: 0.8rem 0 0.2rem; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Regras Oficiais e Guia do Tarot Gótico</h1>
+        <h1>Regras do tarô para 3, 4 e 5 jogadores: o guia do Tarot Gótico</h1>
         
         <nav class="main-nav">
             <a href="index_pt.html" class="">Início</a>
@@ -316,9 +357,9 @@
         <div class="rules-card">
             <h2>1. Variações por número de jogadores (3, 4, 5 jogadores)</h2>
             <ul>
-                <li><strong>Em 3 jogadores:</strong> 24 cartas de tarô distribuídas, 6 no monte. Cada jogador joga por si contra os outros dois.</li>
+                <li><strong>Em 3 jogadores:</strong> 24 cartas por jogador, 6 no monte. Cada jogador joga por si contra os outros dois.</li>
                 <li><strong>Em 4 jogadores:</strong> 18 cartas distribuídas por jogador, 6 no monte. Jogo clássico solo contra a defesa.</li>
-                <li><strong>Em 5 jogadores (Especificidade Gótica):</strong> O tomador chama um rei de um naipe específico. Quem tem este rei torna-se seu parceiro secreto.</li>
+                <li><strong>Em 5 jogadores (Especificidade Gótica):</strong> 15 cartas por jogador, 3 no monte. O tomador chama um rei de um naipe específico. Quem tem este rei torna-se seu parceiro secreto.</li>
             </ul>
         </div>
         <div class="rules-card">
@@ -326,6 +367,7 @@
             <ul>
                 <li><strong>Regra do naipe chamado:</strong> O naipe do rei chamado não pode ser jogado na primeira vaza, <em>a menos que o jogador que inicia possua e jogue diretamente esse rei</em>.</li>
                 <li><strong>Regra da Desculpa na última vaza:</strong> Se a Desculpa for jogada na última vaza, ela vai para o time que vence essa vaza. Exceção: em um chelem, a Desculpa jogada na última vaza pelo time que faz o chelem vence essa vaza.</li>
+                <li><strong>Chelem (slam):</strong> vencer todas as vazas da mão. O chelem pode ser anunciado durante os lances.</li>
             </ul>
         </div>
         <div class="rules-card">
@@ -352,7 +394,18 @@
             </ul>
         </div>
         <div class="rules-card wide">
-            <h2>5. Como se desenrola uma rodada</h2>
+            <h2>5. Os contratos: Petite, Garde, Garde sans, Garde contre</h2>
+            <p>Durante os lances, cada jogador passa ou anuncia um contrato mais alto que o anterior. Quanto mais alto o contrato, mais a mão vale (ou custa):</p>
+            <table class="rules-table">
+                <tr><th>Contrato</th><th>O monte</th><th>Multiplicador</th></tr>
+                <tr><td>Petite (pequena)</td><td>Revelado, ficado pelo tomador, que descarta</td><td><strong>× 1</strong></td></tr>
+                <tr><td>Garde (guarda)</td><td>Revelado, ficado pelo tomador, que descarta</td><td><strong>× 2</strong></td></tr>
+                <tr><td>Garde sans (guarda sem)</td><td>Não revelado, conta para o tomador</td><td><strong>× 4</strong></td></tr>
+                <tr><td>Garde contre (guarda contra)</td><td>Não revelado, conta para a defesa</td><td><strong>× 6</strong></td></tr>
+            </table>
+        </div>
+        <div class="rules-card wide">
+            <h2>6. Como se desenrola uma rodada</h2>
             <ol>
                 <li><strong>Distribuição:</strong> as cartas são distribuídas e algumas são separadas para formar o monte (chien).</li>
                 <li><strong>Lances:</strong> cada jogador diz se quer jogar; o lance mais alto define o tomador.</li>
@@ -363,7 +416,27 @@
         </div>
 
         <div class="rules-card wide">
-            <h2>6. Tabela de ganhos</h2>
+            <h2>7. Como contar os pontos no tarô</h2>
+            <p>No fim da mão, somam-se os pontos das vazas do tomador (e do parceiro, com 5 jogadores), incluindo o descarte. Esse total é comparado com o mínimo definido pelo número de Bouts conquistados: a diferença chama-se margem.</p>
+            <ul>
+                <li><strong>Fórmula:</strong> valor da mão = (25 + margem) × multiplicador do contrato. O tomador ganha esse valor de cada defensor se cumprir, ou paga-o se falhar.</li>
+                <li><strong>Com 3 ou 4 jogadores:</strong> o tomador recebe (ou paga) o valor da mão uma vez por adversário.</li>
+                <li><strong>Com 5 jogadores:</strong> cada defensor paga (ou recebe) o valor da mão; o tomador recebe o dobro e o parceiro uma vez. Se o tomador chamou o próprio rei, joga sozinho contra quatro.</li>
+            </ul>
+            <p><strong>Exemplo com 4 jogadores:</strong> o tomador anuncia uma Garde, conquista 2 Bouts e soma 47 pontos. Com 2 Bouts, precisava de 41: a margem é 6. A mão vale (25 + 6) × 2 = 62 pontos. Cada um dos três defensores perde 62 pontos e o tomador ganha 186.</p>
+            <p>No Tarot Gótico, o aplicativo faz este cálculo automaticamente e o mostra na folha de pontuação no fim de cada mão.</p>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>8. Petit au bout, punhados e prémios</h2>
+            <ul>
+                <li><strong>Petit au bout:</strong> o lado que vence a última vaza com o Petit (o 1 de trunfo) ganha um prémio de 10 pontos, multiplicado pelo contrato. Vale mesmo que esse lado perca a mão.</li>
+                <li><strong>Punhado (poignée):</strong> um jogador com muitos trunfos pode mostrá-los antes de jogar a primeira carta. No Tarot Gótico, o prémio vale 20 pontos por um punhado simples, 30 por um duplo e 50 por um triplo. Não é multiplicado pelo contrato e vai para o lado que vence a mão, mesmo que tenha sido o outro lado a mostrá-lo. O aplicativo mostra o botão «Anunciar punhado» assim que a sua mão permitir.</li>
+            </ul>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>9. Tabela de ganhos</h2>
             <p>A tabela abaixo indica o ganho correspondente a cada aposta.</p>
             <table class="rules-table">
                 <tr><th>Aposta</th><th>Ganho</th></tr>
@@ -372,6 +445,19 @@
                 <tr><td>1.000 fichas</td><td><strong>1.500 fichas</strong></td></tr>
                 <tr><td>2.000 fichas</td><td><strong>3.000 fichas</strong></td></tr>
             </table>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>Perguntas frequentes sobre as regras do tarô</h2>
+            <h3>Quantas cartas recebe cada jogador no tarô?</h3>
+            <p>Com 3 jogadores, cada um recebe 24 cartas e 6 formam o monte. Com 4 jogadores, 18 cartas cada e 6 no monte. Com 5 jogadores, 15 cartas cada e 3 no monte.</p>
+            <h3>Como se contam os pontos no tarô?</h3>
+            <p>Somam-se os pontos das vazas do tomador e comparam-se com o mínimo definido pelos seus Bouts (56, 51, 41 ou 36 pontos). A mão vale então 25 pontos mais a margem, multiplicados pelo contrato: 1 para uma Petite, 2 para uma Garde, 4 para uma Garde sans e 6 para uma Garde contre.</p>
+            <h3>O que é o petit au bout?</h3>
+            <p>É vencer a última vaza com o Petit, o 1 de trunfo. O lado que consegue ganha um prémio de 10 pontos multiplicado pelo contrato, mesmo que perca a mão.</p>
+            <h3>Como se joga tarô com 5 jogadores?</h3>
+            <p>Com 5 jogadores, cada um recebe 15 cartas e o monte tem 3. O tomador chama um rei: quem o tem torna-se seu parceiro secreto. O tomador ganha ou perde o dobro do valor da mão e o parceiro uma vez.</p>
+            <p>Quer praticar? Enfrente sozinho a <a href="ia-tarot_pt.html">IA do jogo</a> ou descubra a <a href="divination-faucheuse_pt.html">adivinhação da Ceifadora</a> reservada aos vencedores.</p>
         </div>
     </main>
     <footer>

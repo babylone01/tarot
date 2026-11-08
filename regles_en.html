@@ -75,7 +75,7 @@
           "isPartOf": {
             "@id": "https://tarot-gothique-2026.com/#site"
           },
-          "dateModified": "2026-11-01",
+          "dateModified": "2026-11-08",
           "breadcrumb": {
             "@id": "https://tarot-gothique-2026.com/regles_en.html#ariane"
           }
@@ -101,11 +101,11 @@
         {
           "@type": "Article",
           "@id": "https://tarot-gothique-2026.com/regles_en.html#article",
-          "headline": "Official Rules & Gothic Tarot Guide",
+          "headline": "Tarot rules for 3, 4 and 5 players: the Gothic Tarot guide",
           "description": "Official French tarot rules for 3, 4 and 5 players: dealing, calling the king, card values, Bouts and the points needed to win each contract.",
           "inLanguage": "en",
           "image": "https://tarot-gothique-2026.com/banner.jpg",
-          "dateModified": "2026-11-01",
+          "dateModified": "2026-11-08",
           "author": {
             "@id": "https://tarot-gothique-2026.com/#auteur"
           },
@@ -118,6 +118,45 @@
           "about": {
             "@id": "https://tarot-gothique-2026.com/#jeu"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tarot-gothique-2026.com/regles_en.html#faq",
+          "inLanguage": "en",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How many cards does each player get in tarot?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "With 3 players, each gets 24 cards and 6 cards form the dog. With 4 players, 18 cards each and 6 in the dog. With 5 players, 15 cards each and 3 in the dog."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you count points in tarot?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Add up the points in the taker's tricks and compare them with the target set by their Bouts (56, 51, 41 or 36 points). The hand is then worth 25 points plus the margin, multiplied by the contract: 1 for a Petite, 2 for a Garde, 4 for a Garde sans and 6 for a Garde contre."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the petit au bout?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It means winning the last trick with the Petit, the 1 of trumps. The side that does it earns a 10-point bonus multiplied by the contract, even if it loses the hand."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you play tarot with 5 players?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "With 5 players, each gets 15 cards and the dog has 3 cards. The taker calls a king: the player holding it becomes their secret partner. The taker wins or loses twice the hand value, their partner once."
+              }
+            }
+          ]
         }
       ]
     }
@@ -282,11 +321,13 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .rules-card.wide { grid-column: 1 / -1; }
         .rules-card ol { margin: 0.3rem 0 0; padding-left: 1.3rem; }
+        .rules-card a { color: var(--primary-gold); }
+        .rules-card h3 { color: var(--primary-gold); font-size: 1rem; margin: 0.8rem 0 0.2rem; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Official Rules & Gothic Tarot Guide</h1>
+        <h1>Tarot rules for 3, 4 and 5 players: the Gothic Tarot guide</h1>
         
         <nav class="main-nav">
             <a href="index_en.html" class="">Home / Game</a>
@@ -316,9 +357,9 @@
         <div class="rules-card">
             <h2>1. Variations by Player Count (3, 4, 5 Players)</h2>
             <ul>
-                <li><strong>3 Players:</strong> 24 tarot cards dealt, 6 in the dog. Each player plays for themselves against the other two.</li>
+                <li><strong>3 Players:</strong> 24 cards per player, 6 in the dog. Each player plays for themselves against the other two.</li>
                 <li><strong>4 Players:</strong> 18 cards dealt per player, 6 in the dog. Classic solo play against the defense.</li>
-                <li><strong>5 Players (Gothic Specificity):</strong> The taker calls a king of a specific suit. The player holding this king becomes their secret partner for the round.</li>
+                <li><strong>5 Players (Gothic Specificity):</strong> 15 cards per player, 3 in the dog. The taker calls a king of a specific suit. The player holding this king becomes their secret partner for the round.</li>
             </ul>
         </div>
         <div class="rules-card">
@@ -326,6 +367,7 @@
             <ul>
                 <li><strong>Called Suit Rule:</strong> The suit of the called king cannot be played on the first trick, <em>unless the player leading holds and directly plays that king</em>.</li>
                 <li><strong>Excuse on the last trick:</strong> If the Excuse is played on the last trick, it goes to the side that wins that trick. Exception: during a slam, the Excuse played on the last trick by the side making the slam wins that trick.</li>
+                <li><strong>Slam (chelem):</strong> winning every trick of the hand. A slam can be announced during the bidding.</li>
             </ul>
         </div>
         <div class="rules-card">
@@ -352,7 +394,18 @@
             </ul>
         </div>
         <div class="rules-card wide">
-            <h2>5. How a round unfolds</h2>
+            <h2>5. Contracts: Petite, Garde, Garde sans, Garde contre</h2>
+            <p>During the bidding, each player passes or announces a contract higher than the previous one. The higher the contract, the more the hand is worth (or costs):</p>
+            <table class="rules-table">
+                <tr><th>Contract</th><th>The dog</th><th>Multiplier</th></tr>
+                <tr><td>Petite (small)</td><td>Revealed, taken by the taker, who discards</td><td><strong>× 1</strong></td></tr>
+                <tr><td>Garde (guard)</td><td>Revealed, taken by the taker, who discards</td><td><strong>× 2</strong></td></tr>
+                <tr><td>Garde sans (guard without)</td><td>Not revealed, counted for the taker</td><td><strong>× 4</strong></td></tr>
+                <tr><td>Garde contre (guard against)</td><td>Not revealed, counted for the defence</td><td><strong>× 6</strong></td></tr>
+            </table>
+        </div>
+        <div class="rules-card wide">
+            <h2>6. How a round unfolds</h2>
             <ol>
                 <li><strong>Deal:</strong> the cards are dealt and a few are set aside to form the dog.</li>
                 <li><strong>Bidding:</strong> each player says whether they want to take; the highest bid decides the taker.</li>
@@ -363,7 +416,27 @@
         </div>
 
         <div class="rules-card wide">
-            <h2>6. Winnings table</h2>
+            <h2>7. How to count points in tarot</h2>
+            <p>At the end of the hand, add up the points in the taker&#x27;s tricks (and their partner&#x27;s at 5 players), discard included. Compare this total with the target set by the number of Bouts won: the difference is called the margin.</p>
+            <ul>
+                <li><strong>Formula:</strong> hand value = (25 + margin) × contract multiplier. The taker wins this value from each defender if they succeed, or pays it if they fail.</li>
+                <li><strong>3 or 4 players:</strong> the taker receives (or pays) the hand value once per opponent.</li>
+                <li><strong>5 players:</strong> each defender pays (or receives) the hand value; the taker receives twice the value, their partner once. If the taker called their own king, they play alone against four.</li>
+            </ul>
+            <p><strong>Example with 4 players:</strong> the taker bids a Garde, wins 2 Bouts and scores 47 points. With 2 Bouts they needed 41: the margin is 6. The hand is worth (25 + 6) × 2 = 62 points. Each of the three defenders loses 62 points and the taker wins 186.</p>
+            <p>In Gothic Tarot, the app does this calculation for you and shows it on the score sheet at the end of each hand.</p>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>8. Petit au bout, handfuls and bonuses</h2>
+            <ul>
+                <li><strong>Petit au bout:</strong> the side that wins the last trick with the Petit (the 1 of trumps) earns a 10-point bonus, multiplied by the contract. It applies even if that side loses the hand.</li>
+                <li><strong>Handful (poignée):</strong> a player holding many trumps may show them before playing their first card. In Gothic Tarot the bonus is 20 points for a single handful, 30 for a double and 50 for a triple. It is not multiplied by the contract and goes to the side that wins the hand, even if the other side showed it. The app displays an “Announce handful” button as soon as your hand qualifies.</li>
+            </ul>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>9. Winnings table</h2>
             <p>The table below shows the winnings for each stake.</p>
             <table class="rules-table">
                 <tr><th>Stake</th><th>Winnings</th></tr>
@@ -372,6 +445,19 @@
                 <tr><td>1,000 chips</td><td><strong>1,500 chips</strong></td></tr>
                 <tr><td>2,000 chips</td><td><strong>3,000 chips</strong></td></tr>
             </table>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>Frequently asked questions about tarot rules</h2>
+            <h3>How many cards does each player get in tarot?</h3>
+            <p>With 3 players, each gets 24 cards and 6 cards form the dog. With 4 players, 18 cards each and 6 in the dog. With 5 players, 15 cards each and 3 in the dog.</p>
+            <h3>How do you count points in tarot?</h3>
+            <p>Add up the points in the taker&#x27;s tricks and compare them with the target set by their Bouts (56, 51, 41 or 36 points). The hand is then worth 25 points plus the margin, multiplied by the contract: 1 for a Petite, 2 for a Garde, 4 for a Garde sans and 6 for a Garde contre.</p>
+            <h3>What is the petit au bout?</h3>
+            <p>It means winning the last trick with the Petit, the 1 of trumps. The side that does it earns a 10-point bonus multiplied by the contract, even if it loses the hand.</p>
+            <h3>How do you play tarot with 5 players?</h3>
+            <p>With 5 players, each gets 15 cards and the dog has 3 cards. The taker calls a king: the player holding it becomes their secret partner. The taker wins or loses twice the hand value, their partner once.</p>
+            <p>Want to practise? Take on the <a href="ia-tarot_en.html">game&#x27;s AI</a> solo or discover the <a href="divination-faucheuse_en.html">Reaper&#x27;s divination</a> reserved for winners.</p>
         </div>
     </main>
     <footer>

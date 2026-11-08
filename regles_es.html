@@ -75,7 +75,7 @@
           "isPartOf": {
             "@id": "https://tarot-gothique-2026.com/#site"
           },
-          "dateModified": "2026-11-01",
+          "dateModified": "2026-11-08",
           "breadcrumb": {
             "@id": "https://tarot-gothique-2026.com/regles_es.html#ariane"
           }
@@ -101,11 +101,11 @@
         {
           "@type": "Article",
           "@id": "https://tarot-gothique-2026.com/regles_es.html#article",
-          "headline": "Reglas Oficiales y Guía de Tarot Gótico",
+          "headline": "Reglas del tarot para 3, 4 y 5 jugadores: la guía de Tarot Gótico",
           "description": "Reglas oficiales del tarot francés para 3, 4 y 5 jugadores: reparto, llamada del rey, valor de las cartas, Bouts y puntos necesarios por contrato.",
           "inLanguage": "es",
           "image": "https://tarot-gothique-2026.com/banner.jpg",
-          "dateModified": "2026-11-01",
+          "dateModified": "2026-11-08",
           "author": {
             "@id": "https://tarot-gothique-2026.com/#auteur"
           },
@@ -118,6 +118,45 @@
           "about": {
             "@id": "https://tarot-gothique-2026.com/#jeu"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tarot-gothique-2026.com/regles_es.html#faq",
+          "inLanguage": "es",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuántas cartas recibe cada jugador en el tarot?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Con 3 jugadores, cada uno recibe 24 cartas y 6 forman el perrillo. Con 4 jugadores, 18 cartas cada uno y 6 al perrillo. Con 5 jugadores, 15 cartas cada uno y 3 al perrillo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo se cuentan los puntos en el tarot?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Se suman los puntos de las bazas del tomador y se comparan con el mínimo fijado por sus Bouts (56, 51, 41 o 36 puntos). La mano vale entonces 25 puntos más el margen, multiplicados por el contrato: 1 para una Petite, 2 para una Garde, 4 para una Garde sans y 6 para una Garde contre."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué es el petit au bout?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Es ganar la última baza con el Petit, el 1 de triunfo. El bando que lo consigue obtiene una prima de 10 puntos multiplicada por el contrato, aunque pierda la mano."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo se juega al tarot con 5 jugadores?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Con 5 jugadores, cada uno recibe 15 cartas y el perrillo tiene 3. El tomador llama a un rey: el jugador que lo tiene se convierte en su compañero secreto. El tomador gana o pierde el doble del valor de la mano y su compañero una vez."
+              }
+            }
+          ]
         }
       ]
     }
@@ -282,11 +321,13 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .rules-card.wide { grid-column: 1 / -1; }
         .rules-card ol { margin: 0.3rem 0 0; padding-left: 1.3rem; }
+        .rules-card a { color: var(--primary-gold); }
+        .rules-card h3 { color: var(--primary-gold); font-size: 1rem; margin: 0.8rem 0 0.2rem; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Reglas Oficiales y Guía de Tarot Gótico</h1>
+        <h1>Reglas del tarot para 3, 4 y 5 jugadores: la guía de Tarot Gótico</h1>
         
         <nav class="main-nav">
             <a href="index_es.html" class="">Inicio</a>
@@ -316,9 +357,9 @@
         <div class="rules-card">
             <h2>1. Variaciones según el número de jugadores (3, 4, 5 jugadores)</h2>
             <ul>
-                <li><strong>A 3 jugadores:</strong> 24 cartas de tarot repartidas, 6 al perrillo. Cada jugador juega para sí mismo contra los otros dos.</li>
+                <li><strong>A 3 jugadores:</strong> 24 cartas por jugador, 6 al perrillo. Cada jugador juega para sí mismo contra los otros dos.</li>
                 <li><strong>A 4 jugadores:</strong> 18 cartas repartidas por jugador, 6 al perrillo. Juego clásico en solitario contra la defensa.</li>
-                <li><strong>A 5 jugadores (Especificidad Gótica):</strong> El tomador llama a un rey de un palo específico. El jugador que posee este rey se convierte en su compañero secreto para la ronda.</li>
+                <li><strong>A 5 jugadores (Especificidad Gótica):</strong> 15 cartas por jugador, 3 al perrillo. El tomador llama a un rey de un palo específico. El jugador que posee este rey se convierte en su compañero secreto para la ronda.</li>
             </ul>
         </div>
         <div class="rules-card">
@@ -326,6 +367,7 @@
             <ul>
                 <li><strong>Regla del palo llamado:</strong> El palo del rey llamado no se puede jugar en la primera baza, <em>a menos que el jugador que sale posea y juegue directamente ese rey</em>.</li>
                 <li><strong>Regla de la Excusa en la última baza:</strong> Si la Excusa se juega en la última baza, va al bando que gana esa baza. Excepción: en un chelem, la Excusa jugada en la última baza por el bando que logra el chelem gana esa baza.</li>
+                <li><strong>Chelem (slam):</strong> ganar todas las bazas de la mano. El chelem se puede anunciar durante la subasta.</li>
             </ul>
         </div>
         <div class="rules-card">
@@ -352,7 +394,18 @@
             </ul>
         </div>
         <div class="rules-card wide">
-            <h2>5. Desarrollo de una mano</h2>
+            <h2>5. Los contratos: Petite, Garde, Garde sans, Garde contre</h2>
+            <p>Durante la subasta, cada jugador pasa o anuncia un contrato más alto que el anterior. Cuanto más alto es el contrato, más puntos vale (o cuesta) la mano:</p>
+            <table class="rules-table">
+                <tr><th>Contrato</th><th>El perrillo</th><th>Multiplicador</th></tr>
+                <tr><td>Petite (pequeña)</td><td>Se descubre, lo toma el tomador, que descarta</td><td><strong>× 1</strong></td></tr>
+                <tr><td>Garde (guardia)</td><td>Se descubre, lo toma el tomador, que descarta</td><td><strong>× 2</strong></td></tr>
+                <tr><td>Garde sans (guardia sin)</td><td>No se descubre, cuenta para el tomador</td><td><strong>× 4</strong></td></tr>
+                <tr><td>Garde contre (guardia contra)</td><td>No se descubre, cuenta para la defensa</td><td><strong>× 6</strong></td></tr>
+            </table>
+        </div>
+        <div class="rules-card wide">
+            <h2>6. Desarrollo de una mano</h2>
             <ol>
                 <li><strong>Reparto:</strong> se reparten las cartas y algunas se apartan para formar el perro.</li>
                 <li><strong>Subastas:</strong> cada jugador anuncia si quiere tomar; la subasta más alta designa al tomador.</li>
@@ -363,7 +416,27 @@
         </div>
 
         <div class="rules-card wide">
-            <h2>6. Tabla de ganancias</h2>
+            <h2>7. Cómo contar los puntos en el tarot</h2>
+            <p>Al final de la mano se suman los puntos de las bazas del tomador (y de su compañero con 5 jugadores), descarte incluido. Ese total se compara con el mínimo fijado por el número de Bouts ganados: la diferencia se llama margen.</p>
+            <ul>
+                <li><strong>Fórmula:</strong> valor de la mano = (25 + margen) × multiplicador del contrato. El tomador gana ese valor a cada defensor si cumple, o lo paga si falla.</li>
+                <li><strong>Con 3 o 4 jugadores:</strong> el tomador cobra (o paga) el valor de la mano una vez por adversario.</li>
+                <li><strong>Con 5 jugadores:</strong> cada defensor paga (o cobra) el valor de la mano; el tomador cobra el doble y su compañero una vez. Si el tomador se llamó a sí mismo, juega solo contra cuatro.</li>
+            </ul>
+            <p><strong>Ejemplo con 4 jugadores:</strong> el tomador anuncia una Garde, gana 2 Bouts y suma 47 puntos. Con 2 Bouts necesitaba 41: el margen es 6. La mano vale (25 + 6) × 2 = 62 puntos. Cada uno de los tres defensores pierde 62 puntos y el tomador gana 186.</p>
+            <p>En Tarot Gótico, la aplicación hace este cálculo automáticamente y lo muestra en la hoja de puntuación al final de cada mano.</p>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>8. Petit au bout, puñados y primas</h2>
+            <ul>
+                <li><strong>Petit au bout:</strong> el bando que gana la última baza con el Petit (el 1 de triunfo) obtiene una prima de 10 puntos, multiplicada por el contrato. Se aplica aunque ese bando pierda la mano.</li>
+                <li><strong>Puñado (poignée):</strong> un jugador con muchos triunfos puede mostrarlos antes de jugar su primera carta. En Tarot Gótico la prima vale 20 puntos por un puñado simple, 30 por uno doble y 50 por uno triple. No se multiplica por el contrato y va al bando que gana la mano, aunque lo haya mostrado el otro bando. La aplicación muestra el botón «Anunciar puñado» en cuanto tu mano lo permite.</li>
+            </ul>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>9. Tabla de ganancias</h2>
             <p>La tabla siguiente indica la ganancia correspondiente a cada apuesta.</p>
             <table class="rules-table">
                 <tr><th>Apuesta</th><th>Ganancia</th></tr>
@@ -372,6 +445,19 @@
                 <tr><td>1.000 fichas</td><td><strong>1.500 fichas</strong></td></tr>
                 <tr><td>2.000 fichas</td><td><strong>3.000 fichas</strong></td></tr>
             </table>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>Preguntas frecuentes sobre las reglas del tarot</h2>
+            <h3>¿Cuántas cartas recibe cada jugador en el tarot?</h3>
+            <p>Con 3 jugadores, cada uno recibe 24 cartas y 6 forman el perrillo. Con 4 jugadores, 18 cartas cada uno y 6 al perrillo. Con 5 jugadores, 15 cartas cada uno y 3 al perrillo.</p>
+            <h3>¿Cómo se cuentan los puntos en el tarot?</h3>
+            <p>Se suman los puntos de las bazas del tomador y se comparan con el mínimo fijado por sus Bouts (56, 51, 41 o 36 puntos). La mano vale entonces 25 puntos más el margen, multiplicados por el contrato: 1 para una Petite, 2 para una Garde, 4 para una Garde sans y 6 para una Garde contre.</p>
+            <h3>¿Qué es el petit au bout?</h3>
+            <p>Es ganar la última baza con el Petit, el 1 de triunfo. El bando que lo consigue obtiene una prima de 10 puntos multiplicada por el contrato, aunque pierda la mano.</p>
+            <h3>¿Cómo se juega al tarot con 5 jugadores?</h3>
+            <p>Con 5 jugadores, cada uno recibe 15 cartas y el perrillo tiene 3. El tomador llama a un rey: el jugador que lo tiene se convierte en su compañero secreto. El tomador gana o pierde el doble del valor de la mano y su compañero una vez.</p>
+            <p>¿Quieres practicar? Enfréntate en solitario a la <a href="ia-tarot_es.html">IA del juego</a> o descubre la <a href="divination-faucheuse_es.html">adivinación de la Parca</a> reservada a los ganadores.</p>
         </div>
     </main>
     <footer>

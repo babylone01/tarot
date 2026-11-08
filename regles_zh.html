@@ -75,7 +75,7 @@
           "isPartOf": {
             "@id": "https://tarot-gothique-2026.com/#site"
           },
-          "dateModified": "2026-11-01",
+          "dateModified": "2026-11-08",
           "breadcrumb": {
             "@id": "https://tarot-gothique-2026.com/regles_zh.html#ariane"
           }
@@ -101,11 +101,11 @@
         {
           "@type": "Article",
           "@id": "https://tarot-gothique-2026.com/regles_zh.html#article",
-          "headline": "官方规则与哥特塔罗指南",
+          "headline": "3人、4人和5人塔罗牌规则：哥特塔罗指南",
           "description": "法式塔罗牌3人、4人、5人局官方规则：发牌、叫王、牌面分值、Bout数量以及完成各契约所需的分数。",
           "inLanguage": "zh",
           "image": "https://tarot-gothique-2026.com/banner.jpg",
-          "dateModified": "2026-11-01",
+          "dateModified": "2026-11-08",
           "author": {
             "@id": "https://tarot-gothique-2026.com/#auteur"
           },
@@ -118,6 +118,45 @@
           "about": {
             "@id": "https://tarot-gothique-2026.com/#jeu"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tarot-gothique-2026.com/regles_zh.html#faq",
+          "inLanguage": "zh",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "塔罗牌每位玩家发多少张牌？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "3人局每人24张，6张作为底牌。4人局每人18张，底牌6张。5人局每人15张，底牌3张。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "塔罗牌如何计分？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "把庄家所赢墩中的分数相加，与其Bout数决定的目标分（56、51、41或36分）比较。本局价值为25分加差分，再乘以契约倍数：Petite为1，Garde为2，Garde sans为4，Garde contre为6。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "什么是petit au bout？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "指用Petit（王牌1）赢下最后一墩。做到的一方获得10分乘以契约倍数的奖励，即使输掉本局也照样计算。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "5人塔罗牌怎么玩？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "5人局每人15张牌，底牌3张。庄家叫一张国王：持有该国王的玩家成为其秘密搭档。庄家赢得或输掉两倍的本局价值，搭档为一倍。"
+              }
+            }
+          ]
         }
       ]
     }
@@ -282,11 +321,13 @@
         .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
         .rules-card.wide { grid-column: 1 / -1; }
         .rules-card ol { margin: 0.3rem 0 0; padding-left: 1.3rem; }
+        .rules-card a { color: var(--primary-gold); }
+        .rules-card h3 { color: var(--primary-gold); font-size: 1rem; margin: 0.8rem 0 0.2rem; }
     </style>
 </head>
 <body>
     <header>
-        <h1>官方规则与哥特塔罗指南</h1>
+        <h1>3人、4人和5人塔罗牌规则：哥特塔罗指南</h1>
         
         <nav class="main-nav">
             <a href="index_zh.html" class="">首页</a>
@@ -316,9 +357,9 @@
         <div class="rules-card">
             <h2>1. 玩家人数变体（3、4、5人局）</h2>
             <ul>
-                <li><strong>3人局：</strong> 发24张塔罗牌，6张在底牌（chien）。每人各为一营，对抗另外两人。</li>
+                <li><strong>3人局：</strong> 每人24张牌，底牌（chien）6张。每人各为一营，对抗另外两人。</li>
                 <li><strong>4人局：</strong> 每人发18张牌，6张在底牌。经典的单人对抗防御方模式。</li>
-                <li><strong>5人局（哥特特色）：</strong> 叫牌者呼叫特定花色的国王。拥有该国王的玩家将成为其本局的秘密同伴。</li>
+                <li><strong>5人局（哥特特色）：</strong> 每人15张牌，底牌3张。叫牌者呼叫特定花色的国王。拥有该国王的玩家将成为其本局的秘密同伴。</li>
             </ul>
         </div>
         <div class="rules-card">
@@ -326,6 +367,7 @@
             <ul>
                 <li><strong>被叫花色规则：</strong> 第一墩牌不能出被呼叫国王的花色，<em>除非首攻的玩家持有并直接出了该国王</em>。</li>
                 <li><strong>最后一墩的Excuse（愚者）：</strong> 如果在最后一墩打出Excuse，它归赢得该墩的一方所有。例外：在大满贯（chelem）中，完成大满贯的一方在最后一墩打出的Excuse赢得该墩。</li>
+                <li><strong>大满贯（chelem）：</strong> 赢下本局所有墩。大满贯可在叫牌阶段宣布。</li>
             </ul>
         </div>
         <div class="rules-card">
@@ -352,7 +394,18 @@
             </ul>
         </div>
         <div class="rules-card wide">
-            <h2>5. 一局的流程</h2>
+            <h2>5. 契约：Petite、Garde、Garde sans、Garde contre</h2>
+            <p>叫牌时，每位玩家选择不叫，或宣布比前一位更高的契约。契约越高，本局赢得（或输掉）的分数越多：</p>
+            <table class="rules-table">
+                <tr><th>契约</th><th>底牌</th><th>倍数</th></tr>
+                <tr><td>Petite（小）</td><td>翻开，由庄家收入手中再扣牌</td><td><strong>× 1</strong></td></tr>
+                <tr><td>Garde（守）</td><td>翻开，由庄家收入手中再扣牌</td><td><strong>× 2</strong></td></tr>
+                <tr><td>Garde sans（无底守）</td><td>不翻开，计入庄家</td><td><strong>× 4</strong></td></tr>
+                <tr><td>Garde contre（反底守）</td><td>不翻开，计入防守方</td><td><strong>× 6</strong></td></tr>
+            </table>
+        </div>
+        <div class="rules-card wide">
+            <h2>6. 一局的流程</h2>
             <ol>
                 <li><strong>发牌：</strong>发完牌后，留出几张作为底牌（chien）。</li>
                 <li><strong>叫牌：</strong>每位玩家表明是否要当庄，出价最高者成为庄家。</li>
@@ -363,7 +416,27 @@
         </div>
 
         <div class="rules-card wide">
-            <h2>6. 奖励表</h2>
+            <h2>7. 塔罗牌如何计分</h2>
+            <p>一局结束时，把庄家（5人局时连同搭档）所赢墩中的分数相加，包括扣牌。再把总分与所得Bout数决定的目标分比较，差值称为“差分”。</p>
+            <ul>
+                <li><strong>公式：</strong> 本局价值 =（25 + 差分）× 契约倍数。庄家成功时向每位防守者赢取该分数，失败时则向每位防守者支付。</li>
+                <li><strong>3人或4人局：</strong> 庄家对每位对手各收取（或支付）一次本局价值。</li>
+                <li><strong>5人局：</strong> 每位防守者支付（或收取）一次本局价值；庄家收取两倍，搭档收取一倍。若庄家叫到自己的国王，则一人对抗四人。</li>
+            </ul>
+            <p><strong>4人局示例：</strong> 庄家叫Garde，拿到2张Bout，共得47分。有2张Bout时需要41分：差分为6。本局价值为（25 + 6）× 2 = 62分。三名防守者各失62分，庄家获得186分。</p>
+            <p>在哥特塔罗中，应用会自动完成这项计算，并在每局结束时显示在记分表上。</p>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>8. Petit au bout、王牌展示与奖励</h2>
+            <ul>
+                <li><strong>Petit au bout：</strong> 用Petit（王牌1）赢下最后一墩的一方获得10分奖励，再乘以契约倍数。即使该方输掉本局也同样计算。</li>
+                <li><strong>王牌展示（poignée）：</strong> 手中王牌很多的玩家可在出第一张牌前亮出王牌。在哥特塔罗中，单展示奖励20分，双展示30分，三展示50分。该奖励不乘契约倍数，归赢下本局的一方所有，即使是另一方亮出的。当您的手牌符合条件时，应用会显示“宣布王牌展示”按钮。</li>
+            </ul>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>9. 奖励表</h2>
             <p>下表列出了每档下注对应的奖励。</p>
             <table class="rules-table">
                 <tr><th>下注</th><th>奖励</th></tr>
@@ -372,6 +445,19 @@
                 <tr><td>1,000筹码</td><td><strong>1,500筹码</strong></td></tr>
                 <tr><td>2,000筹码</td><td><strong>3,000筹码</strong></td></tr>
             </table>
+        </div>
+
+        <div class="rules-card wide">
+            <h2>塔罗牌规则常见问题</h2>
+            <h3>塔罗牌每位玩家发多少张牌？</h3>
+            <p>3人局每人24张，6张作为底牌。4人局每人18张，底牌6张。5人局每人15张，底牌3张。</p>
+            <h3>塔罗牌如何计分？</h3>
+            <p>把庄家所赢墩中的分数相加，与其Bout数决定的目标分（56、51、41或36分）比较。本局价值为25分加差分，再乘以契约倍数：Petite为1，Garde为2，Garde sans为4，Garde contre为6。</p>
+            <h3>什么是petit au bout？</h3>
+            <p>指用Petit（王牌1）赢下最后一墩。做到的一方获得10分乘以契约倍数的奖励，即使输掉本局也照样计算。</p>
+            <h3>5人塔罗牌怎么玩？</h3>
+            <p>5人局每人15张牌，底牌3张。庄家叫一张国王：持有该国王的玩家成为其秘密搭档。庄家赢得或输掉两倍的本局价值，搭档为一倍。</p>
+            <p>想练习一下？单人挑战<a href="ia-tarot_zh.html">游戏AI</a>，或了解只为赢家准备的<a href="divination-faucheuse_zh.html">死神占卜</a>。</p>
         </div>
     </main>
     <footer>
