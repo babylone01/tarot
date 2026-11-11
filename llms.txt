@@ -1,6 +1,6 @@
 # Tarot Gothique 2026
 
-> Free French tarot card game for Android (smartphones and tablets), with a gothic theme. Play online against other players in real time or solo against an AI, at 3, 4 or 5 players, following the official French tarot rules. Created and published by Cyril Darbost. The game and this site are available in 8 languages (fr, en, es, de, pt, ru, ja, zh). The Android app is currently in closed beta on Google Play.
+> French tarot card game for Android smartphones and tablets, with a gothic theme. Free to download and to play, with optional in-app purchases (chips and cosmetic items). Play online against other players in real time or solo against an AI, at 3, 4 or 5 players, following the rules of French tarot. Created and published by Cyril Darbost. The game and this site are available in 15 languages (fr, en, es, de, it, pt, ru, tr, ar, hi, bn, id, ja, ko, zh). The Android app is currently in closed beta on Google Play.
 
 ## Main pages (French)
 

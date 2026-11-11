@@ -1,0 +1,2 @@
+Drapeaux : flag-icons 7.2.3 (https://github.com/lipis/flag-icons), licence MIT.
+Copyright (c) 2013 Panayiotis Lipiridis. es.svg simplifié (sans armoiries).

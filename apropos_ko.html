@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>고딕 타로 2026 소개 – 제작자와 FAQ</title>
+<meta content="Cyril Darbost가 만든 무료 안드로이드 타로 모바일 앱, 고딕 타로 2026: 프로젝트 이야기, 사용된 기술, 자주 묻는 질문." name="description"/>
+<link href="https://tarot-gothique-2026.com/apropos_ko.html" rel="canonical"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="Cyril Darbost" name="author"/>
+<meta content="#0b0b0f" name="theme-color"/>
+<!-- Versions linguistiques (hreflang) -->
+    <link rel="alternate" hreflang="fr" href="https://tarot-gothique-2026.com/apropos.html">
+    <link rel="alternate" hreflang="en" href="https://tarot-gothique-2026.com/apropos_en.html">
+    <link rel="alternate" hreflang="es" href="https://tarot-gothique-2026.com/apropos_es.html">
+    <link rel="alternate" hreflang="de" href="https://tarot-gothique-2026.com/apropos_de.html">
+    <link rel="alternate" hreflang="it" href="https://tarot-gothique-2026.com/apropos_it.html">
+    <link rel="alternate" hreflang="pt" href="https://tarot-gothique-2026.com/apropos_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://tarot-gothique-2026.com/apropos_ru.html">
+    <link rel="alternate" hreflang="tr" href="https://tarot-gothique-2026.com/apropos_tr.html">
+    <link rel="alternate" hreflang="ar" href="https://tarot-gothique-2026.com/apropos_ar.html">
+    <link rel="alternate" hreflang="hi" href="https://tarot-gothique-2026.com/apropos_hi.html">
+    <link rel="alternate" hreflang="bn" href="https://tarot-gothique-2026.com/apropos_bn.html">
+    <link rel="alternate" hreflang="id" href="https://tarot-gothique-2026.com/apropos_id.html">
+    <link rel="alternate" hreflang="ja" href="https://tarot-gothique-2026.com/apropos_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://tarot-gothique-2026.com/apropos_ko.html">
+    <link rel="alternate" hreflang="zh" href="https://tarot-gothique-2026.com/apropos_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://tarot-gothique-2026.com/apropos.html">
+<!-- Icônes -->
+<link href="favicon.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="favicon.ico" rel="icon" sizes="48x48"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<!-- Aperçus réseaux sociaux (Open Graph / Twitter) -->
+<meta content="article" property="og:type"/>
+<meta content="Gothic Tarot" property="og:site_name"/>
+<meta content="ko_KR" property="og:locale"/>
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="it_IT">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="ar_AR">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:locale:alternate" content="bn_BD">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="zh_CN">
+<meta content="https://tarot-gothique-2026.com/apropos_ko.html" property="og:url"/>
+<meta content="고딕 타로 2026 소개 – 제작자와 FAQ" property="og:title"/>
+<meta content="Cyril Darbost가 만든 무료 안드로이드 타로 모바일 앱, 고딕 타로 2026: 프로젝트 이야기, 사용된 기술, 자주 묻는 질문." property="og:description"/>
+<meta content="https://tarot-gothique-2026.com/banner.jpg" property="og:image"/>
+<meta content="1024" property="og:image:width"/>
+<meta content="572" property="og:image:height"/>
+<meta content="고딕 타로 2026: 고딕 대성당에서 타로 카드를 든 사신" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="고딕 타로 2026 소개 – 제작자와 FAQ" name="twitter:title"/>
+<meta content="Cyril Darbost가 만든 무료 안드로이드 타로 모바일 앱, 고딕 타로 2026: 프로젝트 이야기, 사용된 기술, 자주 묻는 질문." name="twitter:description"/>
+<meta content="https://tarot-gothique-2026.com/banner.jpg" name="twitter:image"/>
+<!-- Données structurées Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://tarot-gothique-2026.com/#site",
+      "url": "https://tarot-gothique-2026.com/",
+      "name": "Tarot Gothique",
+      "author": {
+        "@type": "Person",
+        "@id": "https://tarot-gothique-2026.com/#auteur",
+        "name": "Cyril Darbost",
+        "email": [
+          "babylone.ch@gmail.com",
+          "cyrildarbost@gmail.com"
+        ]
+      }
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://tarot-gothique-2026.com/apropos_ko.html#page",
+      "url": "https://tarot-gothique-2026.com/apropos_ko.html",
+      "name": "고딕 타로 2026 소개 – 제작자와 FAQ",
+      "description": "Cyril Darbost가 만든 무료 안드로이드 타로 모바일 앱, 고딕 타로 2026: 프로젝트 이야기, 사용된 기술, 자주 묻는 질문.",
+      "inLanguage": "ko",
+      "isPartOf": {
+        "@id": "https://tarot-gothique-2026.com/#site"
+      },
+      "dateModified": "2026-11-01",
+      "breadcrumb": {
+        "@id": "https://tarot-gothique-2026.com/apropos_ko.html#ariane"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tarot-gothique-2026.com/apropos_ko.html#ariane",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://tarot-gothique-2026.com/index_ko.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "소개 및 FAQ",
+          "item": "https://tarot-gothique-2026.com/apropos_ko.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tarot-gothique-2026.com/apropos_ko.html#faq",
+      "inLanguage": "ko",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "앱은 무료인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 다운로드와 플레이가 무료입니다. 온라인 테이블에서는 게임으로 얻은 칩을 사용하며, 칩과 꾸미기 아이템은 선택적인 인앱 구매로도 제공됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "어떤 기기에서 플레이할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "고딕 타로는 모바일 전용 게임입니다: Google Play에서 안드로이드 스마트폰과 태블릿에 설치합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "개발자에게 어떻게 연락하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cyril Darbost에게 연락하세요: babylone.ch@gmail.com 또는 cyrildarbost@gmail.com. 커뮤니티 Discord 서버에서 다른 플레이어들과 대화할 수도 있습니다."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MusicRecording",
+      "@id": "https://tarot-gothique-2026.com/apropos_ko.html#musique-1",
+      "name": "Freaky Halloween",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Alex-Productions"
+      },
+      "url": "https://onsound.eu",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "datePublished": "2024"
+    },
+    {
+      "@type": "MusicRecording",
+      "@id": "https://tarot-gothique-2026.com/apropos_ko.html#musique-2",
+      "name": "Slice",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Alex-Productions"
+      },
+      "url": "https://onsound.eu",
+      "license": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  ]
+}
+</script>
+<style>
+        :root {
+            --primary-gold: #f3d060;
+            --card-bg: rgba(22, 22, 34, 0.82);
+            --header-bg: rgba(18, 18, 26, 0.88);
+            --text-main: #f8fafc;
+            --text-muted: #e2e8f0;
+            --border-color: #d4af37;
+        }
+
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto; overflow-x: hidden;
+            background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-image: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), image-set(url('background.webp') type('image/webp'), url('background.jpg') type('image/jpeg'));
+            background-size: cover;
+            background-position: center;
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-gold);
+            flex-shrink: 0;
+        }
+        h1 {
+            color: var(--primary-gold);
+            margin: 0 0 0.3rem 0;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.6rem 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.6rem;
+            overflow-y: auto; overflow-x: hidden;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .info-card h2 {
+            color: var(--primary-gold);
+            font-size: 1.25rem;
+            margin: 0 0 0.4rem 0;
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 0.6rem;
+        }
+        .info-card p {
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+        .testimonial-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            font-style: italic;
+            color: var(--text-main);
+            font-size: 1.02rem;
+            line-height: 1.45;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .testimonial-author {
+            margin-top: 0.4rem;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--primary-gold);
+            font-size: 0.92rem;
+            text-align: right;
+        }
+
+        footer {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 0.8rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        footer a { color: var(--primary-gold); text-decoration: none; }
+
+        @media (max-width: 900px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
+        .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
+            .lang-switch img.drapeau { width: 20px; height: 15px; vertical-align: -2px; border-radius: 2px; margin-right: 3px; box-shadow: 0 0 0 1px rgba(0,0,0,0.35); }
+    </style>
+</head>
+<body>
+<header>
+<h1>고딕 타로 프로젝트 소개</h1>
+<nav class="main-nav">
+<a class="" href="index_ko.html">홈 / 게임</a>
+<a class="" href="regles_ko.html">타로 규칙</a>
+<a class="" href="galerie_ko.html">사진 갤러리</a>
+<a href="ia-tarot_ko.html">게임의 AI</a>
+<a class="active" href="apropos_ko.html">소개 및 FAQ</a>
+<div class="lang-bar">
+                <a href="apropos.html" class="lang-switch" hreflang="fr" lang="fr" title="Français"><img src="flags/fr.svg" alt="" width="20" height="15" class="drapeau"> FR</a>
+                <a href="apropos_en.html" class="lang-switch" hreflang="en" lang="en" title="English"><img src="flags/gb.svg" alt="" width="20" height="15" class="drapeau"> EN</a>
+                <a href="apropos_es.html" class="lang-switch" hreflang="es" lang="es" title="Español"><img src="flags/es.svg" alt="" width="20" height="15" class="drapeau"> ES</a>
+                <a href="apropos_de.html" class="lang-switch" hreflang="de" lang="de" title="Deutsch"><img src="flags/de.svg" alt="" width="20" height="15" class="drapeau"> DE</a>
+                <a href="apropos_it.html" class="lang-switch" hreflang="it" lang="it" title="Italiano"><img src="flags/it.svg" alt="" width="20" height="15" class="drapeau"> IT</a>
+                <a href="apropos_pt.html" class="lang-switch" hreflang="pt" lang="pt" title="Português"><img src="flags/pt.svg" alt="" width="20" height="15" class="drapeau"> PT</a>
+                <a href="apropos_ru.html" class="lang-switch" hreflang="ru" lang="ru" title="Русский"><img src="flags/ru.svg" alt="" width="20" height="15" class="drapeau"> RU</a>
+                <a href="apropos_tr.html" class="lang-switch" hreflang="tr" lang="tr" title="Türkçe"><img src="flags/tr.svg" alt="" width="20" height="15" class="drapeau"> TR</a>
+                <a href="apropos_ar.html" class="lang-switch" hreflang="ar" lang="ar" title="العربية"><img src="flags/sa.svg" alt="" width="20" height="15" class="drapeau"> AR</a>
+                <a href="apropos_hi.html" class="lang-switch" hreflang="hi" lang="hi" title="हिन्दी"><img src="flags/in.svg" alt="" width="20" height="15" class="drapeau"> HI</a>
+                <a href="apropos_bn.html" class="lang-switch" hreflang="bn" lang="bn" title="বাংলা"><img src="flags/bd.svg" alt="" width="20" height="15" class="drapeau"> BN</a>
+                <a href="apropos_id.html" class="lang-switch" hreflang="id" lang="id" title="Bahasa Indonesia"><img src="flags/id.svg" alt="" width="20" height="15" class="drapeau"> ID</a>
+                <a href="apropos_ja.html" class="lang-switch" hreflang="ja" lang="ja" title="日本語"><img src="flags/jp.svg" alt="" width="20" height="15" class="drapeau"> JA</a>
+                <a href="apropos_ko.html" class="lang-switch active-lang" hreflang="ko" lang="ko" title="한국어"><img src="flags/kr.svg" alt="" width="20" height="15" class="drapeau"> KO</a>
+                <a href="apropos_zh.html" class="lang-switch" hreflang="zh" lang="zh" title="中文"><img src="flags/cn.svg" alt="" width="20" height="15" class="drapeau"> ZH</a>
+            </div>
+</nav>
+</header>
+<main>
+<div class="info-card">
+<h2>고딕 타로 2026 프로젝트</h2>
+<p><strong>Cyril Darbost</strong>가 기획, 개발, 출시한 <strong>고딕 타로 2026</strong>은 스마트폰과 태블릿에서 흠잡을 데 없는 기술 성능을 보장하면서, 강렬하고 어둡고 정성스러운 시각적 개성을 갖춘 전통 카드 게임을 선보이고 싶다는 바람에서 탄생했습니다.</p>
+<p>이 프로젝트는 인공지능을 상대로 하는 매끄러운 싱글 게임 엔진, 실시간 멀티플레이 시스템, 그리고 타로 애호가를 위해 설계된 몰입형 사용자 경험을 결합합니다.</p>
+<p><strong>Tarot 2026</strong>은 안드로이드용 소셜 타로 게임입니다: 스마트폰과 태블릿용 <strong>안드로이드 모바일 앱</strong>으로, <a href="https://play.google.com/apps/testing/com.clea.tarot" rel="noopener" target="_blank">Google Play</a>에서 무료로 제공됩니다.</p>
+</div>
+<div class="info-card">
+<h2>제작자 및 퍼블리셔</h2>
+<p>고딕 타로 2026은 Cyril Darbost가 전적으로 만들고 개발하고 출시했습니다. 질문, 제안, 버그 신고는 <a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a> 또는 <a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>으로 보내 주세요.</p>
+</div>
+<div class="info-card">
+<h2>안정성을 위해 만든 앱</h2>
+<p>고딕 타로 2026은 Flutter로 개발되었으며 계정, 점수, 실시간 멀티플레이 테이블에 Supabase를 사용합니다. 앱은 안드로이드 스마트폰과 태블릿에서 실행되고, 15개 언어를 제공하며, 온라인 게임의 안정성을 높이기 위해 Google Play에서 비공개 베타를 진행 중입니다.</p>
+</div>
+<div class="testimonials-grid">
+<div class="testimonial-card">
+                « 드디어 친구들과의 게임 밤의 진짜 규칙을 지키는 모바일 타로 게임이 나왔네요! 고딕 분위기의 비주얼이 훌륭해요. »
+                <div class="testimonial-author">— Thomas M. (베타 테스터)</div>
+</div>
+<div class="testimonial-card">
+                « 킹 지명이 있는 5인 모드가 완벽하게 작동해요. 광고는 정말 눈에 띄지 않고 게임 도중에 절대 끊기지 않아요. »
+                <div class="testimonial-author">— Sarah L. (타로 애호가)</div>
+</div>
+</div>
+<div class="info-card">
+<h2>자주 묻는 질문 (FAQ)</h2>
+<h3>앱은 무료인가요?</h3>
+<p>네, 다운로드와 플레이가 무료입니다. 온라인 테이블에서는 게임으로 얻은 칩을 사용하며, 칩과 꾸미기 아이템은 선택적인 인앱 구매로도 제공됩니다.</p>
+<h3>어떤 기기에서 플레이할 수 있나요?</h3>
+<p>고딕 타로는 모바일 전용 게임입니다: Google Play에서 안드로이드 스마트폰과 태블릿에 설치합니다.</p>
+<h3>개발자에게 어떻게 연락하나요?</h3>
+<p>Cyril Darbost에게 연락하세요: <a href="mailto:babylone.ch@gmail.com">babylone.ch@gmail.com</a> 또는 <a href="mailto:cyrildarbost@gmail.com">cyrildarbost@gmail.com</a>. 커뮤니티 Discord 서버에서 다른 플레이어들과 대화할 수도 있습니다.</p>
+</div>
+<div class="info-card">
+<h2>감사의 말과 음악 크레딧</h2>
+<p>앱의 음악은 Alex-Productions가 작곡했습니다:</p>
+<ul>
+<li><strong>“Freaky Halloween”</strong> (2024) – 환영 음악. 출처: <a href="https://onsound.eu" rel="noopener" target="_blank">onsound.eu</a>. 라이선스: <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener" target="_blank">크리에이티브 커먼즈 저작자표시 3.0 (CC BY 3.0)</a>.</li>
+<li><strong>“Slice”</strong> – 인트로 음악. 출처: <a href="https://onsound.eu" rel="noopener" target="_blank">onsound.eu</a>. 라이선스: <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener" target="_blank">크리에이티브 커먼즈 저작자표시 3.0 (CC BY 3.0)</a>.</li>
+</ul>
+</div>
+</main>
+<footer>
+<p>© 2026 <strong>고딕 타로</strong> (Cyril Darbost) | <a href="index_ko.html">게임 홈</a> | <a href="apropos_ko.html">법적 고지</a> | <a href="privacy_ko.html">개인정보 보호</a> | <a href="delete_ko.html">계정 삭제</a></p>
+</footer>
+</body>
+</html>

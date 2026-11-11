@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IA di Tarot Gotico: gioca ai tarocchi francesi contro il computer</title>
+<meta content="Come funziona l'IA di Tarot Gotico 2026: memoria delle carte, abitudini dei giocatori, un fattore umano del 7% e un livello adattato ai tornei." name="description"/>
+<link href="https://tarot-gothique-2026.com/ia-tarot_it.html" rel="canonical"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="Cyril Darbost" name="author"/>
+<meta content="#0b0b0f" name="theme-color"/>
+<!-- Versions linguistiques (hreflang) -->
+    <link rel="alternate" hreflang="fr" href="https://tarot-gothique-2026.com/ia-tarot.html">
+    <link rel="alternate" hreflang="en" href="https://tarot-gothique-2026.com/ia-tarot_en.html">
+    <link rel="alternate" hreflang="es" href="https://tarot-gothique-2026.com/ia-tarot_es.html">
+    <link rel="alternate" hreflang="de" href="https://tarot-gothique-2026.com/ia-tarot_de.html">
+    <link rel="alternate" hreflang="it" href="https://tarot-gothique-2026.com/ia-tarot_it.html">
+    <link rel="alternate" hreflang="pt" href="https://tarot-gothique-2026.com/ia-tarot_pt.html">
+    <link rel="alternate" hreflang="ru" href="https://tarot-gothique-2026.com/ia-tarot_ru.html">
+    <link rel="alternate" hreflang="tr" href="https://tarot-gothique-2026.com/ia-tarot_tr.html">
+    <link rel="alternate" hreflang="ar" href="https://tarot-gothique-2026.com/ia-tarot_ar.html">
+    <link rel="alternate" hreflang="hi" href="https://tarot-gothique-2026.com/ia-tarot_hi.html">
+    <link rel="alternate" hreflang="bn" href="https://tarot-gothique-2026.com/ia-tarot_bn.html">
+    <link rel="alternate" hreflang="id" href="https://tarot-gothique-2026.com/ia-tarot_id.html">
+    <link rel="alternate" hreflang="ja" href="https://tarot-gothique-2026.com/ia-tarot_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://tarot-gothique-2026.com/ia-tarot_ko.html">
+    <link rel="alternate" hreflang="zh" href="https://tarot-gothique-2026.com/ia-tarot_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://tarot-gothique-2026.com/ia-tarot.html">
+<!-- Icônes -->
+<link href="favicon.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="favicon.ico" rel="icon" sizes="48x48"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<!-- Aperçus réseaux sociaux (Open Graph / Twitter) -->
+<meta content="article" property="og:type"/>
+<meta content="Gothic Tarot" property="og:site_name"/>
+<meta content="it_IT" property="og:locale"/>
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="ar_AR">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:locale:alternate" content="bn_BD">
+    <meta property="og:locale:alternate" content="id_ID">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="zh_CN">
+<meta content="https://tarot-gothique-2026.com/ia-tarot_it.html" property="og:url"/>
+<meta content="IA di Tarot Gotico: gioca ai tarocchi francesi contro il computer" property="og:title"/>
+<meta content="Come funziona l'IA di Tarot Gotico 2026: memoria delle carte, abitudini dei giocatori, un fattore umano del 7% e un livello adattato ai tornei." property="og:description"/>
+<meta content="https://tarot-gothique-2026.com/banner.jpg" property="og:image"/>
+<meta content="1024" property="og:image:width"/>
+<meta content="572" property="og:image:height"/>
+<meta content="Tarot Gotico 2026: la Morte con le carte dei tarocchi in una cattedrale gotica" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="IA di Tarot Gotico: gioca ai tarocchi francesi contro il computer" name="twitter:title"/>
+<meta content="Come funziona l'IA di Tarot Gotico 2026: memoria delle carte, abitudini dei giocatori, un fattore umano del 7% e un livello adattato ai tornei." name="twitter:description"/>
+<meta content="https://tarot-gothique-2026.com/banner.jpg" name="twitter:image"/>
+<!-- Données structurées Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://tarot-gothique-2026.com/#site",
+      "url": "https://tarot-gothique-2026.com/",
+      "name": "Tarot Gothique"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tarot-gothique-2026.com/#auteur",
+      "name": "Cyril Darbost"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tarot-gothique-2026.com/ia-tarot_it.html#page",
+      "url": "https://tarot-gothique-2026.com/ia-tarot_it.html",
+      "name": "IA di Tarot Gotico: gioca ai tarocchi francesi contro il computer",
+      "description": "Come funziona l'IA di Tarot Gotico 2026: memoria delle carte, abitudini dei giocatori, un fattore umano del 7% e un livello adattato ai tornei.",
+      "inLanguage": "it",
+      "isPartOf": {
+        "@id": "https://tarot-gothique-2026.com/#site"
+      },
+      "dateModified": "2026-11-01",
+      "breadcrumb": {
+        "@id": "https://tarot-gothique-2026.com/ia-tarot_it.html#ariane"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tarot-gothique-2026.com/ia-tarot_it.html#ariane",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tarot-gothique-2026.com/index_it.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "L'IA del gioco"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://tarot-gothique-2026.com/ia-tarot_it.html#article",
+      "headline": "L'IA di Tarot Gotico: un'avversaria che ricorda come giochi",
+      "description": "Come funziona l'IA di Tarot Gotico 2026: memoria delle carte, abitudini dei giocatori, un fattore umano del 7% e un livello adattato ai tornei.",
+      "inLanguage": "it",
+      "image": "https://tarot-gothique-2026.com/banner.jpg",
+      "dateModified": "2026-11-01",
+      "author": {
+        "@id": "https://tarot-gothique-2026.com/#auteur"
+      },
+      "publisher": {
+        "@id": "https://tarot-gothique-2026.com/#auteur"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://tarot-gothique-2026.com/ia-tarot_it.html#page"
+      },
+      "about": {
+        "@id": "https://tarot-gothique-2026.com/#jeu"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tarot-gothique-2026.com/ia-tarot_it.html#faq",
+      "inLanguage": "it",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Posso giocare a tarocchi da solo contro il computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì. I posti vuoti sono occupati dall'IA: puoi giocare una partita completa di tarocchi a 3, 4 o 5 giocatori da solo, su smartphone o tablet Android."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'IA può vedere le mie carte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Conosce solo la propria mano e le carte visibili a tutti; le sue deduzioni vengono dalle prese giocate, proprio come quelle di un giocatore umano."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'IA si adatta al mio livello?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei tornei sì: il livello dei bot dipende dalla tua categoria, calcolata dalla tua percentuale di vittorie. Fuori dai tornei l'IA gioca al massimo della forza, con circa il 7% di mosse volutamente imperfette."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le mie abitudini di gioco vengono inviate su Internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Il profilo delle tue abitudini resta sul tuo dispositivo. Al server vengono inviati solo i numeri di smazzate giocate e vinte, per stabilire la tua categoria nel torneo."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+        :root {
+            --primary-gold: #f3d060;
+            --card-bg: rgba(22, 22, 34, 0.82);
+            --header-bg: rgba(18, 18, 26, 0.88);
+            --text-main: #f8fafc;
+            --text-muted: #e2e8f0;
+            --border-color: #d4af37;
+        }
+
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto; overflow-x: hidden;
+            background: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), url('background.jpg');
+            background-image: linear-gradient(rgba(11, 11, 15, 0.35), rgba(11, 11, 15, 0.45)), image-set(url('background.webp') type('image/webp'), url('background.jpg') type('image/jpeg'));
+            background-size: cover;
+            background-position: center;
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-gold);
+            flex-shrink: 0;
+        }
+        h1 {
+            color: var(--primary-gold);
+            margin: 0 0 0.3rem 0;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-gold);
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.6rem 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.6rem;
+            overflow-y: auto; overflow-x: hidden;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .info-card h2 {
+            color: var(--primary-gold);
+            font-size: 1.25rem;
+            margin: 0 0 0.4rem 0;
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 0.6rem;
+        }
+        .info-card p {
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+        .testimonial-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1.1rem;
+            font-style: italic;
+            color: var(--text-main);
+            font-size: 1.02rem;
+            line-height: 1.45;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .testimonial-author {
+            margin-top: 0.4rem;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--primary-gold);
+            font-size: 0.92rem;
+            text-align: right;
+        }
+
+        footer {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 0.8rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        footer a { color: var(--primary-gold); text-decoration: none; }
+
+        @media (max-width: 900px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .lang-bar { display: inline-flex; gap: 3px; margin-left: 10px; flex-wrap: wrap; justify-content: center; }
+        .lang-switch {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 4px;
+            padding: 2px 5px;
+            color: var(--primary-gold);
+            text-decoration: none !important;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .lang-switch:hover { background: rgba(243, 208, 96, 0.15); }
+        .lang-switch.active-lang { background: var(--primary-gold); color: #0b0b0f !important; }
+        .info-card a { color: var(--primary-gold); }
+        .info-card h3 { color: #ffffff; font-size: 0.95rem; margin: 0.6rem 0 0.15rem 0; }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card li { margin-bottom: 0.35rem; line-height: 1.45; }
+        .ariane { font-size: 0.85rem; color: var(--text-muted); }
+        .ariane a { color: var(--primary-gold); }
+        .info-card ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+        .info-card table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; }
+        .info-card th, .info-card td { border: 1px solid var(--border-color); padding: 0.45rem 0.6rem; text-align: left;
+            font-size: 0.9rem; color: var(--text-muted); vertical-align: top; }
+        .info-card th { color: var(--primary-gold); }
+        .table-defile { overflow-x: auto; }
+        .info-card a.cta-ia { display: inline-block; background: var(--primary-gold); color: #0b0b0f; padding: 0.6rem 1.6rem;
+            border-radius: 8px; font-weight: bold; text-decoration: none; }
+            .lang-switch img.drapeau { width: 20px; height: 15px; vertical-align: -2px; border-radius: 2px; margin-right: 3px; box-shadow: 0 0 0 1px rgba(0,0,0,0.35); }
+    </style>
+</head>
+<body>
+<header>
+<h1>L'IA di Tarot Gotico: un'avversaria che ricorda come giochi</h1>
+<nav class="main-nav">
+<a class="" href="index_it.html">Home / Gioco</a>
+<a class="" href="regles_it.html">Regole dei tarocchi</a>
+<a class="" href="galerie_it.html">Galleria foto</a>
+<a class="active" href="ia-tarot_it.html">L'IA del gioco</a>
+<a href="apropos_it.html">Chi siamo e FAQ</a>
+<div class="lang-bar">
+                <a href="ia-tarot.html" class="lang-switch" hreflang="fr" lang="fr" title="Français"><img src="flags/fr.svg" alt="" width="20" height="15" class="drapeau"> FR</a>
+                <a href="ia-tarot_en.html" class="lang-switch" hreflang="en" lang="en" title="English"><img src="flags/gb.svg" alt="" width="20" height="15" class="drapeau"> EN</a>
+                <a href="ia-tarot_es.html" class="lang-switch" hreflang="es" lang="es" title="Español"><img src="flags/es.svg" alt="" width="20" height="15" class="drapeau"> ES</a>
+                <a href="ia-tarot_de.html" class="lang-switch" hreflang="de" lang="de" title="Deutsch"><img src="flags/de.svg" alt="" width="20" height="15" class="drapeau"> DE</a>
+                <a href="ia-tarot_it.html" class="lang-switch active-lang" hreflang="it" lang="it" title="Italiano"><img src="flags/it.svg" alt="" width="20" height="15" class="drapeau"> IT</a>
+                <a href="ia-tarot_pt.html" class="lang-switch" hreflang="pt" lang="pt" title="Português"><img src="flags/pt.svg" alt="" width="20" height="15" class="drapeau"> PT</a>
+                <a href="ia-tarot_ru.html" class="lang-switch" hreflang="ru" lang="ru" title="Русский"><img src="flags/ru.svg" alt="" width="20" height="15" class="drapeau"> RU</a>
+                <a href="ia-tarot_tr.html" class="lang-switch" hreflang="tr" lang="tr" title="Türkçe"><img src="flags/tr.svg" alt="" width="20" height="15" class="drapeau"> TR</a>
+                <a href="ia-tarot_ar.html" class="lang-switch" hreflang="ar" lang="ar" title="العربية"><img src="flags/sa.svg" alt="" width="20" height="15" class="drapeau"> AR</a>
+                <a href="ia-tarot_hi.html" class="lang-switch" hreflang="hi" lang="hi" title="हिन्दी"><img src="flags/in.svg" alt="" width="20" height="15" class="drapeau"> HI</a>
+                <a href="ia-tarot_bn.html" class="lang-switch" hreflang="bn" lang="bn" title="বাংলা"><img src="flags/bd.svg" alt="" width="20" height="15" class="drapeau"> BN</a>
+                <a href="ia-tarot_id.html" class="lang-switch" hreflang="id" lang="id" title="Bahasa Indonesia"><img src="flags/id.svg" alt="" width="20" height="15" class="drapeau"> ID</a>
+                <a href="ia-tarot_ja.html" class="lang-switch" hreflang="ja" lang="ja" title="日本語"><img src="flags/jp.svg" alt="" width="20" height="15" class="drapeau"> JA</a>
+                <a href="ia-tarot_ko.html" class="lang-switch" hreflang="ko" lang="ko" title="한국어"><img src="flags/kr.svg" alt="" width="20" height="15" class="drapeau"> KO</a>
+                <a href="ia-tarot_zh.html" class="lang-switch" hreflang="zh" lang="zh" title="中文"><img src="flags/cn.svg" alt="" width="20" height="15" class="drapeau"> ZH</a>
+            </div>
+</nav>
+</header>
+<main>
+<nav aria-label="Percorso di navigazione" class="ariane"><a href="index_it.html">Home</a> › <span aria-current="page">L'IA del gioco</span></nav>
+<div class="info-card">
+<p>In Tarot Gotico 2026 i posti vuoti al tavolo sono occupati da un'<strong>intelligenza artificiale</strong>: fa le dichiarazioni, chiama un re nelle partite a 5, gioca le sue carte e conta i punti proprio come un giocatore umano. Puoi giocare ai <strong>tarocchi francesi contro il computer</strong> da solo, o completare un tavolo quando mancano giocatori.</p>
+<p>Questa pagina descrive esattamente cosa fa questa IA: cosa ricorda durante una smazzata, cosa impara su di te da una partita all'altra, perché a volte sbaglia di proposito e come il suo livello si adatta in competizione.</p>
+</div>
+<div class="info-card">
+<h2>Cosa rende forte l'IA</h2>
+<ul>
+<li><strong>Zero mosse irregolari:</strong> ogni carta che gioca rispetta le regole dei tarocchi.</li>
+<li><strong>Asta ragionata:</strong> valuta la sua mano come un giocatore esperto prima di prendere.</li>
+<li><strong>Chiamata e scarto da esperta:</strong> nelle partite a 5 sceglie il suo re e prepara lo scarto per aiutare la sua squadra.</li>
+<li><strong>Memoria impeccabile:</strong> conta le carte, individua i semi mancanti e indaga sul partner nascosto.</li>
+<li><strong>Probabilità a ogni presa:</strong> stima il rischio di essere tagliata e le sue possibilità di vincere la presa.</li>
+<li><strong>Padronanza del Petit:</strong> sa quando portarlo in fondo e quando salvarlo.</li>
+<li><strong>Impara il tuo gioco:</strong> dieci abitudini seguite per giocatore, rivalutate di continuo.</li>
+<li><strong>Comportamento umano:</strong> 7% di variazione, solo su carte che non contano.</li>
+</ul>
+</div>
+<div class="info-card">
+<h2>Una giocatrice che rispetta sempre le regole</h2>
+<p>Prima di ogni mossa l'IA considera solo le carte consentite dalle regole: <strong>rispondere al seme</strong>, <strong>tagliare</strong> quando non può, <strong>sovratagliare</strong> quando è obbligatorio. Non gioca mai una carta irregolare, quindi una partita contro di lei si svolge esattamente come attorno a un vero tavolo.</p>
+</div>
+<div class="info-card">
+<h2>Asta ragionata</h2>
+<p>Per decidere se prendere, l'IA esamina la sua mano come un giocatore esperto: i suoi <strong>Bouts</strong>, la <strong>lunghezza e la forza delle briscole</strong>, i suoi <strong>re e regine</strong>, i <strong>semi lunghi</strong>, i <strong>semi mancanti e le carte singole</strong>. Da qui sceglie il contratto giusto, dalla Petite alla Garde contre, oppure passa.</p>
+<p>Diffida anche di un <strong>Petit poco protetto</strong>: con troppe poche briscole per difenderlo, rischia di essere catturato, e l'IA ne tiene conto prima di impegnarsi.</p>
+</div>
+<div class="info-card">
+<h2>Chiamata del re e scarto da giocatore esperto</h2>
+<p>Nelle partite a 5 l'IA dichiarante <strong>chiama il re del suo seme più lungo</strong> che non possiede: punta sulla sua forza e costringe gli altri a tagliare quel seme. Chiama se stessa solo come ultima risorsa. Per lo scarto procede così:</p>
+<ul>
+<li><strong>Semi mancanti preparati in anticipo:</strong> scarta prima i semi più corti per crearne di mancanti.</li>
+<li><strong>Niente di prezioso nello scarto:</strong> mai un re, mai un Bout.</li>
+<li><strong>Partner protetto:</strong> non svuota mai il seme del re chiamato, così non deve mai tagliare il re del proprio partner.</li>
+<li><strong>Briscole come ultima risorsa:</strong> scarta piccole briscole solo se le regole lo consentono e non c'è altra possibilità.</li>
+</ul>
+</div>
+<div class="info-card">
+<h2>Una memoria completa della smazzata</h2>
+<p>Durante ogni smazzata l'IA tiene traccia di ciò che un ottimo giocatore tiene a mente. Tutto viene azzerato per la smazzata successiva.</p>
+<ul>
+<li><strong>Carte giocate:</strong> ogni carta giocata dalla prima presa. Sa quindi quali carte di ogni seme sono ancora nascoste e riconosce una <strong>carta maestra</strong>.</li>
+<li><strong>Semi mancanti:</strong> appena un giocatore non risponde a un seme, l'IA annota che gli manca, briscole comprese.</li>
+<li><strong>Giocatori senza briscole:</strong> chi scarta invece di tagliare non ha più briscole; l'IA ne tiene conto per giudicare chi può ancora tagliare un seme.</li>
+<li><strong>Segnali di scarto:</strong> scartare un 6, 7, 8, 9 o 10 di un altro seme viene letto come una chiamata in quel seme.</li>
+<li><strong>Lo scarto, per il dichiarante:</strong> l'IA dichiarante sa quali carte ha messo nello scarto e le esclude dai suoi calcoli.</li>
+</ul>
+<p><strong>Nelle partite a 5 indaga sul partner nascosto</strong>: chi carica di punti le prese del dichiarante diventa sospetto, chi carica quelle della difesa rassicura, e il partner è confermato appena compare il re chiamato. In difesa, alla seconda presa, apre perfino con la carta più bassa del seme chiamato per far uscire il re.</p>
+</div>
+<div class="info-card">
+<h2>Probabilità a ogni presa</h2>
+<p>Grazie alla sua memoria, l'IA calcola prima di giocare:</p>
+<ul>
+<li><strong>Il rischio di essere tagliata:</strong> un giocatore senza più carte del seme ma con briscole taglierà; altrimenti l'IA stima la probabilità che non abbia nessuna delle carte nascoste, tenendo conto della sua tendenza a tagliare.</li>
+<li><strong>Le sue possibilità di vincere la presa:</strong> per ogni carta stima se resterà la più forte contro i giocatori che devono ancora giocare.</li>
+</ul>
+<p><strong>Quando risponde</strong>, carica di punti la presa quando è sicuro o quando va a un alleato certo. <strong>Quando scarta</strong>, segnala il seme del suo re o crea un seme mancante con una carta bassa di un seme corto. <strong>Quando apre</strong>, adotta una strategia diversa in attacco e in difesa, e preferisce un seme che nessun avversario può tagliare.</p>
+</div>
+<div class="info-card">
+<h2>Padronanza del Petit</h2>
+<ul>
+<li><strong>Con una mano ricca di briscole:</strong> conserva il Petit per l'<strong>ultima presa</strong>, se il suo calcolo le dà buone possibilità: confronta le sue briscole con quelle ancora nascoste nelle mani avversarie.</li>
+<li><strong>Con poche briscole, o quando il rischio cresce:</strong> <strong>salva il Petit</strong> il prima possibile, infilandolo in una presa sicura.</li>
+</ul>
+<p>Il Petit (1 di briscola) è uno dei tre Bouts e dà un premio se viene giocato all'ultima presa. L'IA lo gestisce con metodo:</p>
+</div>
+<div class="info-card">
+<h2>Un'IA che impara le tue abitudini</h2>
+<p>Da una smazzata all'altra l'IA osserva come gioca ogni giocatore e costruisce un profilo, ordinato secondo il ruolo avuto: dichiarante, difesa o partner.</p>
+<p>Completa questo monitoraggio con un <strong>profilo generale</strong> di ogni giocatore: frequenza con cui prende, contratto preferito, aggressività, tendenza a tagliare, percentuale di successo.</p>
+<p>Un'abitudine conta solo quando è stata <strong>osservata abbastanza spesso</strong>, e <strong>le occasioni recenti pesano di più</strong>: un giocatore che cambia stile viene rivalutato in fretta, e una sola partita non basta mai per etichettarlo.</p>
+<p>L'IA lo usa nelle sue decisioni. Contro un dichiarante aggressivo che scarica spesso le briscole presto, <strong>la difesa conserva le sue briscole maestre</strong>; un difensore che di solito carica le prese del dichiarante non viene più scambiato per il suo partner solo per questo indizio.</p>
+<p><strong>Solo informazioni pubbliche</strong>: l'IA osserva solo le carte visibili a tutti, mai la mano di un altro giocatore. I profili restano <strong>sul tuo telefono</strong>; al server viene inviato solo il numero di smazzate giocate e vinte dal giocatore connesso, per la categoria del torneo.</p>
+<div class="table-defile"><table>
+<tr><th scope="col">Abitudine osservata</th><th scope="col">Cosa registra l'IA</th></tr>
+<tr><td>Scaricare le briscole presto</td><td>Il dichiarante apre con una briscola entro le sue prime tre aperture</td></tr>
+<tr><td>Aprire con una briscola</td><td>Un giocatore apre con una briscola invece che con un seme</td></tr>
+<tr><td>Aprire nel seme chiamato</td><td>Nelle partite a 5, un difensore apre nel seme del re chiamato entro le prime quattro prese</td></tr>
+<tr><td>Nutrire il dichiarante</td><td>Un giocatore dà una carta che vale punti in una presa vinta dal dichiarante</td></tr>
+<tr><td>Tenere l'Excuse per la fine</td><td>L'Excuse viene giocata nelle ultime due prese</td></tr>
+<tr><td>Portare il Petit in fondo</td><td>Il Petit viene giocato all'ultima presa</td></tr>
+<tr><td>Segnalare chiaramente</td><td>Uno scarto di chiamata è seguito dal re di quel seme</td></tr>
+<tr><td>Annunciare le poignées</td><td>Il giocatore annuncia una poignée quando ne ha una</td></tr>
+<tr><td>Prendere con una mano debole</td><td>Il dichiarante gioca poche briscole e al massimo un Bout</td></tr>
+<tr><td>Andare sotto</td><td>La squadra del dichiarante non raggiunge i punti richiesti</td></tr>
+</table></div>
+</div>
+<div class="info-card">
+<h2>Un fattore umano del 7% sulle carte neutre</h2>
+<p>Un'IA che gioca sempre la mossa perfetta è prevedibile e poco divertente da affrontare. In <strong>circa il 7% delle sue decisioni</strong> l'IA di Tarot Gotico gioca quindi una carta bassa diversa dalla migliore, come farebbe un giocatore umano.</p>
+<p>Questo fattore umano si applica solo alle <strong>carte neutre</strong>: <strong>mai</strong> una carta che vale punti, una briscola, il Petit o l'Excuse, e mai una mossa che cambierebbe chi vince la presa. L'IA varia il suo gioco senza mai regalare punti agli avversari.</p>
+</div>
+<div class="info-card">
+<h2>Un livello adattato ai tornei</h2>
+<p>Fuori dai tornei l'IA gioca al massimo della forza, con il solo fattore umano del 7%. Nel <strong>torneo del weekend</strong> il livello dei bot dipende dalla categoria del giocatore, assegnata dal server in base alla sua <strong>percentuale di vittorie</strong>.</p>
+<div class="table-defile"><table>
+<tr><th scope="col">Categoria</th><th scope="col">Assegnazione</th><th scope="col">Mosse casuali dei bot del tavolo</th></tr>
+<tr><td>Verde</td><td>Meno del 40% di smazzate vinte</td><td>30%</td></tr>
+<tr><td>Gialla</td><td>Tra il 40 e il 55%, o meno di 9 smazzate giocate</td><td>12%</td></tr>
+<tr><td>Rossa</td><td>55% di smazzate vinte o più</td><td>0%</td></tr>
+</table></div>
+<p>La categoria viene assegnata al termine delle qualificazioni del venerdì e non si può scegliere. Un bot di livello inferiore sbaglia più spesso, nel gioco come nell'asta, e presta meno attenzione alle tue abitudini.</p>
+</div>
+<div class="info-card">
+<h2>Domande frequenti sull'IA</h2>
+<h3>Posso giocare a tarocchi da solo contro il computer?</h3>
+<p>Sì. I posti vuoti sono occupati dall'IA: puoi giocare una partita completa di tarocchi a 3, 4 o 5 giocatori da solo, su smartphone o tablet Android.</p>
+<h3>L'IA può vedere le mie carte?</h3>
+<p>No. Conosce solo la propria mano e le carte visibili a tutti; le sue deduzioni vengono dalle prese giocate, proprio come quelle di un giocatore umano.</p>
+<h3>L'IA si adatta al mio livello?</h3>
+<p>Nei tornei sì: il livello dei bot dipende dalla tua categoria, calcolata dalla tua percentuale di vittorie. Fuori dai tornei l'IA gioca al massimo della forza, con circa il 7% di mosse volutamente imperfette.</p>
+<h3>Le mie abitudini di gioco vengono inviate su Internet?</h3>
+<p>No. Il profilo delle tue abitudini resta sul tuo dispositivo. Al server vengono inviati solo i numeri di smazzate giocate e vinte, per stabilire la tua categoria nel torneo.</p>
+</div>
+<div class="info-card">
+<p><a class="cta-ia" href="https://play.google.com/apps/testing/com.clea.tarot" rel="noopener" target="_blank">Gioca contro l'IA su Google Play</a></p>
+<p>Per iniziare, leggi le <a href="regles_it.html">regole dei tarocchi</a> o torna alla <a href="index_it.html">home del gioco dei tarocchi</a>.</p>
+</div>
+</main>
+<footer>
+<p>© 2026 <strong>Tarot Gotico</strong> (Cyril Darbost) | <a href="index_it.html">Home del gioco</a> | <a href="apropos_it.html">Note legali</a> | <a href="privacy_it.html">Privacy</a> | <a href="delete_it.html">Elimina account</a></p>
+</footer>
+</body>
+</html>
