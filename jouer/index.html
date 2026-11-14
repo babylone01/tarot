@@ -1,46 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
+  <!-- Remplacé par --base-href à la compilation (jeu publié dans /jouer/). -->
   <base href="/jouer/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Tarot Gothique 2026 – Jeu de tarot en ligne gratuit dans le navigateur</title>
+  <meta name="description" content="Jouez à Tarot Gothique 2026 directement dans votre navigateur : jeu de tarot gratuit, jeu de cartes en ligne à 3, 4 ou 5 joueurs ou en solo contre l’IA. Sans installation.">
+  <link rel="canonical" href="https://tarot-gothique-2026.com/jouer/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tarot Gothique 2026 – Jeu de tarot en ligne gratuit">
+  <meta property="og:description" content="Jeu de tarot gratuit dans le navigateur : en ligne à 3, 4 ou 5 joueurs ou en solo contre l’IA.">
+  <meta property="og:url" content="https://tarot-gothique-2026.com/jouer/">
+  <meta property="og:image" content="https://tarot-gothique-2026.com/jeux-de-tarot.jpg">
 
-  <!-- iOS meta tags & icons -->
+  <!-- Barres du navigateur mobile assorties au jeu (et non blanches). -->
+  <meta name="theme-color" content="#0b0b0f">
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="tarot">
+  <meta name="apple-mobile-web-app-title" content="Tarot Gothique">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon1.png"/>
-
-  <title>tarot</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* Fond sombre partout : plus de bandes blanches pendant le chargement ni autour du jeu. */
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #0b0b0f; }
+    #chargement { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: #0b0b0f; color: #d4af37; font-family: Georgia, 'Times New Roman', serif; text-align: center; z-index: 10;
+      transition: opacity .4s; }
+    #chargement h1 { margin: 0 16px 12px; font-size: clamp(1.6rem, 7vw, 2.6rem); letter-spacing: .06em; }
+    #chargement p { margin: 0; color: #e2e8f0; font-family: system-ui, sans-serif; font-size: .95rem; opacity: .8; }
+    #chargement .barre { width: min(60vw, 240px); height: 3px; margin-top: 18px; background: #2a2a35; border-radius: 2px; overflow: hidden; }
+    #chargement .barre i { display: block; width: 40%; height: 100%; background: #d4af37; animation: va 1.2s ease-in-out infinite; }
+    @keyframes va { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+  </style>
 </head>
 <body>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
-
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
+  <div id="chargement" aria-live="polite">
+    <h1>Tarot Gothique 2026</h1>
+    <p>Jeu de tarot · chargement…</p>
+    <div class="barre"><i></i></div>
+  </div>
+  <script>
+    (function () {
+      // Écran de chargement retiré à la première image du jeu.
+      window.addEventListener('flutter-first-frame', function () {
+        var c = document.getElementById('chargement');
+        if (!c) return;
+        c.style.opacity = '0';
+        setTimeout(function () { c.remove(); }, 450);
+      });
+      // Téléphone et tablette : plein écran au premier toucher (barre d'adresse masquée). Le
+      // navigateur n'accepte le verrouillage d'orientation (table de jeu en paysage, comme
+      // l'appli Android) qu'en plein écran.
+      if (!window.matchMedia || !matchMedia('(pointer: coarse)').matches) return;
+      function pleinEcran() {
+        var d = document.documentElement;
+        if (document.fullscreenElement || !d.requestFullscreen) return;
+        d.requestFullscreen({ navigationUI: 'hide' }).catch(function () {});
+      }
+      document.addEventListener('pointerup', pleinEcran, true);
+      document.addEventListener('touchend', pleinEcran, true);
+    })();
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

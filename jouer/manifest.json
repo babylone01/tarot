@@ -1,12 +1,12 @@
 {
-    "name": "tarot",
-    "short_name": "tarot",
+    "name": "Tarot Gothique 2026",
+    "short_name": "Tarot Gothique",
     "start_url": ".",
-    "display": "standalone",
-    "background_color": "#11141b",
+    "display": "fullscreen",
+    "background_color": "#0b0b0f",
     "theme_color": "#d4af37",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
+    "description": "Jeu de tarot gratuit en ligne ou en solo contre l'IA, de 3 à 5 joueurs.",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {
