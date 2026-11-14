@@ -137,7 +137,7 @@
             "Таро"
           ],
           "gamePlatform": "Android",
-          "operatingSystem": "Android",
+          "operatingSystem": "Android, Linux, Web",
           "applicationCategory": "GameApplication",
           "playMode": [
             "SinglePlayer",
@@ -462,6 +462,26 @@
         .section-photo img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid rgba(212,175,55,0.35); }
         .section-photo.portrait img { max-width: 340px; margin: 0 auto; }
         .section-photo figcaption { font-size: 0.85rem; opacity: 0.8; text-align: center; margin-top: 0.4rem; }
+    
+        /* Section « Télécharger » : une carte par plateforme. */
+        .telechargement { width: 100%; max-width: 1170px; box-sizing: border-box; margin: 2rem auto; padding: 0 16px; text-align: center; }
+        .telechargement > h2 { color: var(--primary-gold); margin-bottom: 0.4rem; }
+        .telechargement > p { opacity: 0.85; margin-top: 0; }
+        .plateformes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 1.2rem 0; }
+        @media (max-width: 900px) { .plateformes { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 520px) { .plateformes { grid-template-columns: 1fr; } }
+        .plateforme { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1.2rem 1rem; border-radius: 14px;
+                      border: 1px solid rgba(212, 175, 55, 0.35); background: rgba(20, 16, 28, 0.85); color: inherit; }
+        .plateforme svg { color: var(--primary-gold); }
+        .plateforme h3 { margin: 0.2rem 0 0; color: var(--primary-gold); }
+        .plateforme p { margin: 0; font-size: 0.92rem; opacity: 0.85; flex-grow: 1; }
+        .plateforme .bouton-plateforme { display: inline-block; margin-top: 0.4rem; padding: 0.6rem 1.2rem; border-radius: 30px; font-weight: 700;
+                      text-decoration: none; background: var(--primary-gold); color: #14101c; }
+        .plateforme .bouton-plateforme:hover { filter: brightness(1.1); }
+        .plateforme .lien-guide { font-size: 0.85rem; color: var(--primary-gold); }
+        .plateforme.a-venir { opacity: 0.6; border-style: dashed; }
+        .plateforme .badge { margin-top: 0.4rem; padding: 0.35rem 0.9rem; border-radius: 30px; border: 1px solid var(--primary-gold);
+                      color: var(--primary-gold); font-size: 0.85rem; font-weight: 700; }
     </style>
 </head>
 <body>
@@ -499,7 +519,7 @@
         <div class="top-description">
             <h2>Карточная игра таро онлайн на Android</h2>
             <p>Добро пожаловать на официальный сайт Готического Таро 2026 — социальной игры в таро для Android. Играйте онлайн с другими или тренируйтесь в одиночку против ИИ в готическом мире с золотой отделкой по правилам французского таро для 3, 4 и 5 игроков.</p>
-            <p>Онлайн-игра идёт в приложении для Android, а не в браузере: установите его один раз, а затем присоединяйтесь к столам в реальном времени или начинайте одиночную партию, даже если других игроков нет.</p>
+            <p>Играйте на Android, прямо в браузере или на Linux: присоединяйтесь к многопользовательским столам в реальном времени или начните одиночную партию, даже если других игроков нет.</p>
         </div>
         <div class="media-row">
             <div class="media-item">
@@ -525,10 +545,38 @@
                 <p>Изучите правила французского таро, контракты и подсчет очков для 3, 4 и 5 игроков.</p>
             </div>
         </div>
-        <div class="cta-container">
-            <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Скачать игру таро в Google Play</a>
+        <section class="telechargement" id="telecharger">
+            <h2>Скачать Tarot Gothique 2026: Android, Web, Linux и Windows</h2>
+            <p>Выберите платформу: та же игра в таро — в одиночку против ИИ или онлайн против других игроков.</p>
+            <div class="plateformes">
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M10 22a14 14 0 0 1 28 0z" fill="currentColor"/><line x1="15" y1="9" x2="18" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="33" y1="9" x2="30" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="18.5" cy="17" r="1.8" fill="#14101c"/><circle cx="29.5" cy="17" r="1.8" fill="#14101c"/><rect x="10" y="24" width="28" height="15" rx="3" fill="currentColor"/><rect x="4" y="24" width="4.5" height="12" rx="2.2" fill="currentColor"/><rect x="39.5" y="24" width="4.5" height="12" rx="2.2" fill="currentColor"/><rect x="16" y="38" width="4.5" height="7" rx="2.2" fill="currentColor"/><rect x="27.5" y="38" width="4.5" height="7" rx="2.2" fill="currentColor"/></svg>
+                    <h3>Android</h3>
+                    <p>Приложение для смартфонов и планшетов, закрытое тестирование в Google Play.</p>
+                    <a class="bouton-plateforme" href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>
+                </div>
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="24" r="18"/><ellipse cx="24" cy="24" rx="8" ry="18"/><line x1="6" y1="24" x2="42" y2="24"/><path d="M9 15h30M9 33h30"/></svg>
+                    <h3>Браузер</h3>
+                    <p>Играйте онлайн сразу, ничего не устанавливая.</p>
+                    <a class="bouton-plateforme" href="jouer/">Играть сейчас</a>
+                </div>
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><ellipse cx="24" cy="27" rx="12" ry="16" fill="currentColor"/><ellipse cx="24" cy="30" rx="7.5" ry="11" fill="#f4ecd8"/><circle cx="24" cy="13" r="8" fill="currentColor"/><circle cx="21" cy="12" r="1.6" fill="#f4ecd8"/><circle cx="27" cy="12" r="1.6" fill="#f4ecd8"/><path d="M20.5 16.5 24 19l3.5-2.5z" fill="#e8a317"/><ellipse cx="16" cy="43" rx="5" ry="2.5" fill="#e8a317"/><ellipse cx="32" cy="43" rx="5" ry="2.5" fill="#e8a317"/></svg>
+                    <h3>Linux</h3>
+                    <p>Архив .tar.gz для 64-битных ПК с Linux (Ubuntu, Debian, Fedora…).</p>
+                    <a class="bouton-plateforme" href="https://github.com/babylone01/tarot/releases/download/v1.0.7-linux/tarot-gothique-1.0.7-linux-x64.tar.gz" rel="noopener">Скачать для Linux</a>
+                    <a class="lien-guide" href="linux_en.html">Инструкция по установке (на английском)</a>
+                </div>
+                <div class="plateforme a-venir">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" fill="currentColor"><path d="M6 10.5 21 8.4V23H6zM23.5 8 42 5.5V23H23.5zM6 25.5h15v14.6L6 38zM23.5 25.5H42v17L23.5 40z"/></svg>
+                    <h3>Windows</h3>
+                    <p>Версия для ПК с Windows 10 и 11.</p>
+                    <span class="badge">Скоро</span>
+                </div>
+            </div>
             <p class="cta-note">Приложение находится в <strong>закрытом тестировании</strong> в Google Play: чтобы установить его, сначала вступите в группу тестировщиков. <a href="tarot_gothique_testeurs.html">Стать бета-тестировщиком Готического Таро</a> (страница на французском)</p>
-        </div>
+        </section>
         <div class="seo-content">
             <section class="content-card">
                 <h2>Как играть в карточную игру готическое таро</h2>
@@ -590,7 +638,7 @@
                 <h3>Сколько игроков нужно для таро?</h3>
                 <p>В игре есть три классических формата: на 3, 4 или 5 игроков. Впятером взявший контракт вызывает короля, чтобы выбрать тайного партнёра.</p>
                 <h3>На каких устройствах можно играть в эту мобильную игру?</h3>
-                <p>Готический Таро — это <strong>мобильное приложение для Android</strong> для смартфонов и планшетов, бесплатно в <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>. Игра и этот сайт доступны на 15 языках.</p>
+                <p>В Tarot Gothique 2026 можно играть на <strong>Android</strong> (смартфоны и планшеты, через <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>), прямо <a href="jouer/">в браузере</a> и на <a href="linux_en.html">Linux</a>; версия для Windows скоро появится. Игра и этот сайт доступны на 15 языках.</p>
             </section>
         </div>
     </main>

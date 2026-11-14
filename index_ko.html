@@ -134,7 +134,7 @@
         "Tarot"
       ],
       "gamePlatform": "Android",
-      "operatingSystem": "Android",
+      "operatingSystem": "Android, Linux, Web",
       "applicationCategory": "GameApplication",
       "playMode": [
         "SinglePlayer",
@@ -459,6 +459,26 @@
         .section-photo img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid rgba(212,175,55,0.35); }
         .section-photo.portrait img { max-width: 340px; margin: 0 auto; }
         .section-photo figcaption { font-size: 0.85rem; opacity: 0.8; text-align: center; margin-top: 0.4rem; }
+    
+        /* Section « Télécharger » : une carte par plateforme. */
+        .telechargement { width: 100%; max-width: 1170px; box-sizing: border-box; margin: 2rem auto; padding: 0 16px; text-align: center; }
+        .telechargement > h2 { color: var(--primary-gold); margin-bottom: 0.4rem; }
+        .telechargement > p { opacity: 0.85; margin-top: 0; }
+        .plateformes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 1.2rem 0; }
+        @media (max-width: 900px) { .plateformes { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 520px) { .plateformes { grid-template-columns: 1fr; } }
+        .plateforme { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1.2rem 1rem; border-radius: 14px;
+                      border: 1px solid rgba(212, 175, 55, 0.35); background: rgba(20, 16, 28, 0.85); color: inherit; }
+        .plateforme svg { color: var(--primary-gold); }
+        .plateforme h3 { margin: 0.2rem 0 0; color: var(--primary-gold); }
+        .plateforme p { margin: 0; font-size: 0.92rem; opacity: 0.85; flex-grow: 1; }
+        .plateforme .bouton-plateforme { display: inline-block; margin-top: 0.4rem; padding: 0.6rem 1.2rem; border-radius: 30px; font-weight: 700;
+                      text-decoration: none; background: var(--primary-gold); color: #14101c; }
+        .plateforme .bouton-plateforme:hover { filter: brightness(1.1); }
+        .plateforme .lien-guide { font-size: 0.85rem; color: var(--primary-gold); }
+        .plateforme.a-venir { opacity: 0.6; border-style: dashed; }
+        .plateforme .badge { margin-top: 0.4rem; padding: 0.35rem 0.9rem; border-radius: 30px; border: 1px solid var(--primary-gold);
+                      color: var(--primary-gold); font-size: 0.85rem; font-weight: 700; }
     </style>
 </head>
 <body>
@@ -493,7 +513,7 @@
 <div class="top-description">
 <h2>안드로이드 모바일의 온라인 타로 카드 게임</h2>
 <p>안드로이드용 소셜 타로 게임, 고딕 타로 2026 공식 사이트에 오신 것을 환영합니다. 금빛 장식의 고딕 세계에서 3인, 4인, 5인 프랑스 타로 규칙으로 다른 플레이어와 온라인 대결을 하거나 AI를 상대로 혼자 연습하세요.</p>
-<p>온라인 게임은 브라우저가 아닌 안드로이드 앱에서 진행됩니다: 한 번 설치한 뒤 실시간 멀티플레이 테이블에 참여하거나, 다른 플레이어가 없을 때도 싱글 게임을 시작할 수 있습니다.</p>
+<p>Android에서, 브라우저에서 바로, 또는 Linux에서 플레이하세요. 실시간 멀티플레이어 테이블에 참여하거나 다른 플레이어가 없어도 혼자 게임을 시작할 수 있습니다.</p>
 </div>
 <div class="media-row">
 <div class="media-item">
@@ -519,10 +539,38 @@
 <p>3인, 4인, 5인용 프랑스 타로 전체 규칙, 계약 전략, 점수 계산을 마스터하세요.</p>
 </div>
 </div>
-<div class="cta-container">
-<a class="cta-button" href="https://play.google.com/apps/testing/com.clea.tarot" rel="noopener" target="_blank">Google Play에서 타로 게임 다운로드</a>
-<p class="cta-note">앱은 Google Play에서 <strong>비공개 테스트</strong> 중입니다: 설치하려면 먼저 테스터 그룹에 가입하세요. <a href="tarot_gothique_testeurs.html">고딕 타로 베타 테스터 되기</a> (프랑스어 페이지)</p>
-</div>
+<section class="telechargement" id="telecharger">
+            <h2>Tarot Gothique 2026 다운로드: Android, Web, Linux, Windows</h2>
+            <p>플랫폼을 선택하세요. 같은 타로 카드 게임을 AI와 혼자, 또는 온라인에서 다른 플레이어와 즐길 수 있습니다.</p>
+            <div class="plateformes">
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M10 22a14 14 0 0 1 28 0z" fill="currentColor"/><line x1="15" y1="9" x2="18" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="33" y1="9" x2="30" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="18.5" cy="17" r="1.8" fill="#14101c"/><circle cx="29.5" cy="17" r="1.8" fill="#14101c"/><rect x="10" y="24" width="28" height="15" rx="3" fill="currentColor"/><rect x="4" y="24" width="4.5" height="12" rx="2.2" fill="currentColor"/><rect x="39.5" y="24" width="4.5" height="12" rx="2.2" fill="currentColor"/><rect x="16" y="38" width="4.5" height="7" rx="2.2" fill="currentColor"/><rect x="27.5" y="38" width="4.5" height="7" rx="2.2" fill="currentColor"/></svg>
+                    <h3>Android</h3>
+                    <p>스마트폰·태블릿용 앱, Google Play 비공개 테스트 중.</p>
+                    <a class="bouton-plateforme" href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>
+                </div>
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="24" r="18"/><ellipse cx="24" cy="24" rx="8" ry="18"/><line x1="6" y1="24" x2="42" y2="24"/><path d="M9 15h30M9 33h30"/></svg>
+                    <h3>브라우저</h3>
+                    <p>설치 없이 지금 바로 온라인으로 플레이하세요.</p>
+                    <a class="bouton-plateforme" href="jouer/">지금 플레이</a>
+                </div>
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><ellipse cx="24" cy="27" rx="12" ry="16" fill="currentColor"/><ellipse cx="24" cy="30" rx="7.5" ry="11" fill="#f4ecd8"/><circle cx="24" cy="13" r="8" fill="currentColor"/><circle cx="21" cy="12" r="1.6" fill="#f4ecd8"/><circle cx="27" cy="12" r="1.6" fill="#f4ecd8"/><path d="M20.5 16.5 24 19l3.5-2.5z" fill="#e8a317"/><ellipse cx="16" cy="43" rx="5" ry="2.5" fill="#e8a317"/><ellipse cx="32" cy="43" rx="5" ry="2.5" fill="#e8a317"/></svg>
+                    <h3>Linux</h3>
+                    <p>64비트 Linux PC용 .tar.gz 압축 파일 (Ubuntu, Debian, Fedora 등).</p>
+                    <a class="bouton-plateforme" href="https://github.com/babylone01/tarot/releases/download/v1.0.7-linux/tarot-gothique-1.0.7-linux-x64.tar.gz" rel="noopener">Linux용 다운로드</a>
+                    <a class="lien-guide" href="linux_en.html">설치 안내 (영어)</a>
+                </div>
+                <div class="plateforme a-venir">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" fill="currentColor"><path d="M6 10.5 21 8.4V23H6zM23.5 8 42 5.5V23H23.5zM6 25.5h15v14.6L6 38zM23.5 25.5H42v17L23.5 40z"/></svg>
+                    <h3>Windows</h3>
+                    <p>Windows 10 및 11용 PC 버전.</p>
+                    <span class="badge">출시 예정</span>
+                </div>
+            </div>
+            <p class="cta-note">앱은 Google Play에서 <strong>비공개 테스트</strong> 중입니다: 설치하려면 먼저 테스터 그룹에 가입하세요. <a href="tarot_gothique_testeurs.html">고딕 타로 베타 테스터 되기</a> (프랑스어 페이지)</p>
+        </section>
 <div class="seo-content">
 <section class="content-card">
 <h2>고딕 타로 카드 게임 하는 법</h2>
@@ -578,7 +626,7 @@
 <h3>타로는 몇 명이 하나요?</h3>
 <p>게임은 3인, 4인, 5인의 세 가지 클래식 형식을 제공합니다. 5인일 때 테이커는 킹을 지명해 비밀 파트너를 고릅니다.</p>
 <h3>이 모바일 게임은 어떤 기기에서 할 수 있나요?</h3>
-<p>고딕 타로는 스마트폰과 태블릿용 <strong>안드로이드 모바일 앱</strong>으로, <a href="https://play.google.com/apps/testing/com.clea.tarot" rel="noopener" target="_blank">Google Play</a>에서 무료로 다운로드할 수 있습니다. 게임과 이 사이트는 15개 언어로 제공됩니다.</p>
+<p>Tarot Gothique 2026은 <strong>Android</strong>(<a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>를 통해 스마트폰과 태블릿), <a href="jouer/">웹 브라우저</a>에서 바로, 그리고 <a href="linux_en.html">Linux</a>에서 즐길 수 있으며, Windows 버전도 곧 출시됩니다. 게임과 이 사이트는 15개 언어로 제공됩니다.</p>
 </section>
 </div>
 </main>

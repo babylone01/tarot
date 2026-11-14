@@ -137,7 +137,7 @@
             "Tarot"
           ],
           "gamePlatform": "Android",
-          "operatingSystem": "Android",
+          "operatingSystem": "Android, Linux, Web",
           "applicationCategory": "GameApplication",
           "playMode": [
             "SinglePlayer",
@@ -463,6 +463,26 @@
         .section-photo img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid rgba(212,175,55,0.35); }
         .section-photo.portrait img { max-width: 340px; margin: 0 auto; }
         .section-photo figcaption { font-size: 0.85rem; opacity: 0.8; text-align: center; margin-top: 0.4rem; }
+    
+        /* Section « Télécharger » : une carte par plateforme. */
+        .telechargement { width: 100%; max-width: 1170px; box-sizing: border-box; margin: 2rem auto; padding: 0 16px; text-align: center; }
+        .telechargement > h2 { color: var(--primary-gold); margin-bottom: 0.4rem; }
+        .telechargement > p { opacity: 0.85; margin-top: 0; }
+        .plateformes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 1.2rem 0; }
+        @media (max-width: 900px) { .plateformes { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 520px) { .plateformes { grid-template-columns: 1fr; } }
+        .plateforme { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1.2rem 1rem; border-radius: 14px;
+                      border: 1px solid rgba(212, 175, 55, 0.35); background: rgba(20, 16, 28, 0.85); color: inherit; }
+        .plateforme svg { color: var(--primary-gold); }
+        .plateforme h3 { margin: 0.2rem 0 0; color: var(--primary-gold); }
+        .plateforme p { margin: 0; font-size: 0.92rem; opacity: 0.85; flex-grow: 1; }
+        .plateforme .bouton-plateforme { display: inline-block; margin-top: 0.4rem; padding: 0.6rem 1.2rem; border-radius: 30px; font-weight: 700;
+                      text-decoration: none; background: var(--primary-gold); color: #14101c; }
+        .plateforme .bouton-plateforme:hover { filter: brightness(1.1); }
+        .plateforme .lien-guide { font-size: 0.85rem; color: var(--primary-gold); }
+        .plateforme.a-venir { opacity: 0.6; border-style: dashed; }
+        .plateforme .badge { margin-top: 0.4rem; padding: 0.35rem 0.9rem; border-radius: 30px; border: 1px solid var(--primary-gold);
+                      color: var(--primary-gold); font-size: 0.85rem; font-weight: 700; }
     </style>
 </head>
 <body>
@@ -500,7 +520,7 @@
         <div class="top-description">
             <h2>Le jeu de tarot en ligne sur mobile Android</h2>
             <p>Bienvenue sur le site officiel de Tarot Gothique 2026, un <strong>jeu de tarot</strong> social pour Android et un <strong>jeu de cartes en ligne</strong> pensé pour le divertissement sur mobile. Affrontez d&#x27;autres joueurs en ligne ou entraînez-vous en solo contre l&#x27;IA, dans un univers gothique aux finitions dorées, avec les règles du tarot français à 3, 4 et 5 joueurs.</p>
-            <p>Le jeu en ligne se joue depuis l&#x27;application Android, et non dans le navigateur : installez-la une fois, puis rejoignez des tables multijoueur en temps réel ou lancez une partie solo, même sans autres joueurs disponibles.</p>
+            <p>Jouez sur Android, directement dans votre navigateur ou sur Linux : rejoignez des tables multijoueur en temps réel ou lancez une partie solo, même sans autres joueurs disponibles.</p>
         </div>
 
         <div class="media-row">
@@ -529,10 +549,38 @@
             </div>
         </div>
 
-        <div class="cta-container">
-            <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">Télécharger le jeu de tarot sur Google Play</a>
+        <section class="telechargement" id="telecharger">
+            <h2>Télécharger Tarot Gothique 2026 : Android, Web, Linux et Windows</h2>
+            <p>Choisissez votre plateforme : le même jeu de tarot, en solo contre l’IA ou en ligne contre d’autres joueurs.</p>
+            <div class="plateformes">
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M10 22a14 14 0 0 1 28 0z" fill="currentColor"/><line x1="15" y1="9" x2="18" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="33" y1="9" x2="30" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="18.5" cy="17" r="1.8" fill="#14101c"/><circle cx="29.5" cy="17" r="1.8" fill="#14101c"/><rect x="10" y="24" width="28" height="15" rx="3" fill="currentColor"/><rect x="4" y="24" width="4.5" height="12" rx="2.2" fill="currentColor"/><rect x="39.5" y="24" width="4.5" height="12" rx="2.2" fill="currentColor"/><rect x="16" y="38" width="4.5" height="7" rx="2.2" fill="currentColor"/><rect x="27.5" y="38" width="4.5" height="7" rx="2.2" fill="currentColor"/></svg>
+                    <h3>Android</h3>
+                    <p>Application pour smartphones et tablettes, en test fermé sur Google Play.</p>
+                    <a class="bouton-plateforme" href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>
+                </div>
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="24" r="18"/><ellipse cx="24" cy="24" rx="8" ry="18"/><line x1="6" y1="24" x2="42" y2="24"/><path d="M9 15h30M9 33h30"/></svg>
+                    <h3>Navigateur</h3>
+                    <p>Jouez en ligne tout de suite, sans rien installer.</p>
+                    <a class="bouton-plateforme" href="jouer/">Jouer maintenant</a>
+                </div>
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><ellipse cx="24" cy="27" rx="12" ry="16" fill="currentColor"/><ellipse cx="24" cy="30" rx="7.5" ry="11" fill="#f4ecd8"/><circle cx="24" cy="13" r="8" fill="currentColor"/><circle cx="21" cy="12" r="1.6" fill="#f4ecd8"/><circle cx="27" cy="12" r="1.6" fill="#f4ecd8"/><path d="M20.5 16.5 24 19l3.5-2.5z" fill="#e8a317"/><ellipse cx="16" cy="43" rx="5" ry="2.5" fill="#e8a317"/><ellipse cx="32" cy="43" rx="5" ry="2.5" fill="#e8a317"/></svg>
+                    <h3>Linux</h3>
+                    <p>Archive .tar.gz pour PC Linux 64 bits (Ubuntu, Debian, Fedora…).</p>
+                    <a class="bouton-plateforme" href="https://github.com/babylone01/tarot/releases/download/v1.0.7-linux/tarot-gothique-1.0.7-linux-x64.tar.gz" rel="noopener">Télécharger pour Linux</a>
+                    <a class="lien-guide" href="linux.html">Guide d’installation</a>
+                </div>
+                <div class="plateforme a-venir">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" fill="currentColor"><path d="M6 10.5 21 8.4V23H6zM23.5 8 42 5.5V23H23.5zM6 25.5h15v14.6L6 38zM23.5 25.5H42v17L23.5 40z"/></svg>
+                    <h3>Windows</h3>
+                    <p>Version PC pour Windows 10 et 11.</p>
+                    <span class="badge">Bientôt disponible</span>
+                </div>
+            </div>
             <p class="cta-note">L&#x27;application est en <strong>test fermé</strong> sur Google Play : pour l&#x27;installer, rejoignez d&#x27;abord le groupe des testeurs. <a href="tarot_gothique_testeurs.html">Devenir testeur bêta de Tarot Gothique</a></p>
-        </div>
+        </section>
         <div class="seo-content">
             <section class="content-card">
                 <h2>Comment jouer au jeu de tarot gothique ?</h2>
@@ -593,7 +641,7 @@
                 <h3>À combien de joueurs se joue le tarot ?</h3>
                 <p>Le jeu propose les trois formules classiques, à 3, 4 ou 5 joueurs. À 5, le preneur appelle un roi pour désigner un partenaire secret.</p>
                 <h3>Sur quels appareils jouer à ce jeu mobile ?</h3>
-                <p>Tarot Gothique est une <strong>application mobile Android</strong> pour smartphones et tablettes, à télécharger gratuitement sur <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>. Le jeu et ce site sont disponibles en 15 langues.</p>
+                <p>Tarot Gothique 2026 se joue sur <strong>Android</strong> (smartphones et tablettes, via <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>), directement <a href="jouer/">dans le navigateur</a> et sur <a href="linux.html">Linux</a> ; une version Windows arrive bientôt. Le jeu et ce site sont disponibles en 15 langues.</p>
             </section>
         </div>
     </main>

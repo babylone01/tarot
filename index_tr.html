@@ -134,7 +134,7 @@
         "Tarot"
       ],
       "gamePlatform": "Android",
-      "operatingSystem": "Android",
+      "operatingSystem": "Android, Linux, Web",
       "applicationCategory": "GameApplication",
       "playMode": [
         "SinglePlayer",
@@ -459,6 +459,26 @@
         .section-photo img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid rgba(212,175,55,0.35); }
         .section-photo.portrait img { max-width: 340px; margin: 0 auto; }
         .section-photo figcaption { font-size: 0.85rem; opacity: 0.8; text-align: center; margin-top: 0.4rem; }
+    
+        /* Section « Télécharger » : une carte par plateforme. */
+        .telechargement { width: 100%; max-width: 1170px; box-sizing: border-box; margin: 2rem auto; padding: 0 16px; text-align: center; }
+        .telechargement > h2 { color: var(--primary-gold); margin-bottom: 0.4rem; }
+        .telechargement > p { opacity: 0.85; margin-top: 0; }
+        .plateformes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 1.2rem 0; }
+        @media (max-width: 900px) { .plateformes { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 520px) { .plateformes { grid-template-columns: 1fr; } }
+        .plateforme { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1.2rem 1rem; border-radius: 14px;
+                      border: 1px solid rgba(212, 175, 55, 0.35); background: rgba(20, 16, 28, 0.85); color: inherit; }
+        .plateforme svg { color: var(--primary-gold); }
+        .plateforme h3 { margin: 0.2rem 0 0; color: var(--primary-gold); }
+        .plateforme p { margin: 0; font-size: 0.92rem; opacity: 0.85; flex-grow: 1; }
+        .plateforme .bouton-plateforme { display: inline-block; margin-top: 0.4rem; padding: 0.6rem 1.2rem; border-radius: 30px; font-weight: 700;
+                      text-decoration: none; background: var(--primary-gold); color: #14101c; }
+        .plateforme .bouton-plateforme:hover { filter: brightness(1.1); }
+        .plateforme .lien-guide { font-size: 0.85rem; color: var(--primary-gold); }
+        .plateforme.a-venir { opacity: 0.6; border-style: dashed; }
+        .plateforme .badge { margin-top: 0.4rem; padding: 0.35rem 0.9rem; border-radius: 30px; border: 1px solid var(--primary-gold);
+                      color: var(--primary-gold); font-size: 0.85rem; font-weight: 700; }
     </style>
 </head>
 <body>
@@ -493,7 +513,7 @@
 <div class="top-description">
 <h2>Android mobilde çevrimiçi tarot kart oyunu</h2>
 <p>Android için sosyal bir tarot oyunu olan Gotik Tarot 2026'nın resmî sitesine hoş geldiniz. Başkalarına karşı çevrimiçi oynayın ya da altın detaylı gotik bir dünyada, 3, 4 ve 5 oyuncu için Fransız tarotu kurallarıyla yapay zekâya karşı tek başınıza pratik yapın.</p>
-<p>Çevrimiçi oyun tarayıcıda değil, Android uygulamasında oynanır: bir kez yükleyin, ardından gerçek zamanlı çok oyunculu masalara katılın ya da başka oyuncu olmasa bile tek kişilik bir oyun başlatın.</p>
+<p>Android’de, doğrudan tarayıcınızda ya da Linux’ta oynayın: gerçek zamanlı çok oyunculu masalara katılın ya da başka oyuncu olmasa bile tek kişilik bir oyun başlatın.</p>
 </div>
 <div class="media-row">
 <div class="media-item">
@@ -519,10 +539,38 @@
 <p>3, 4 ve 5 oyuncu için Fransız tarot kurallarını, kontrat stratejilerini ve puan hesabını öğrenin.</p>
 </div>
 </div>
-<div class="cta-container">
-<a class="cta-button" href="https://play.google.com/apps/testing/com.clea.tarot" rel="noopener" target="_blank">Tarot oyununu Google Play'den indirin</a>
-<p class="cta-note">Uygulama Google Play'de <strong>kapalı testte</strong>: yüklemek için önce test grubuna katılın. <a href="tarot_gothique_testeurs.html">Gotik Tarot beta test kullanıcısı olun</a> (Fransızca sayfa)</p>
-</div>
+<section class="telechargement" id="telecharger">
+            <h2>Tarot Gothique 2026’yı indirin: Android, Web, Linux ve Windows</h2>
+            <p>Platformunuzu seçin: aynı tarot oyunu, yapay zekâya karşı tek başına ya da çevrim içi diğer oyunculara karşı.</p>
+            <div class="plateformes">
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M10 22a14 14 0 0 1 28 0z" fill="currentColor"/><line x1="15" y1="9" x2="18" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="33" y1="9" x2="30" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="18.5" cy="17" r="1.8" fill="#14101c"/><circle cx="29.5" cy="17" r="1.8" fill="#14101c"/><rect x="10" y="24" width="28" height="15" rx="3" fill="currentColor"/><rect x="4" y="24" width="4.5" height="12" rx="2.2" fill="currentColor"/><rect x="39.5" y="24" width="4.5" height="12" rx="2.2" fill="currentColor"/><rect x="16" y="38" width="4.5" height="7" rx="2.2" fill="currentColor"/><rect x="27.5" y="38" width="4.5" height="7" rx="2.2" fill="currentColor"/></svg>
+                    <h3>Android</h3>
+                    <p>Akıllı telefon ve tabletler için uygulama, Google Play’de kapalı testte.</p>
+                    <a class="bouton-plateforme" href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>
+                </div>
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="24" r="18"/><ellipse cx="24" cy="24" rx="8" ry="18"/><line x1="6" y1="24" x2="42" y2="24"/><path d="M9 15h30M9 33h30"/></svg>
+                    <h3>Tarayıcı</h3>
+                    <p>Hiçbir şey kurmadan hemen çevrim içi oynayın.</p>
+                    <a class="bouton-plateforme" href="jouer/">Hemen oyna</a>
+                </div>
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><ellipse cx="24" cy="27" rx="12" ry="16" fill="currentColor"/><ellipse cx="24" cy="30" rx="7.5" ry="11" fill="#f4ecd8"/><circle cx="24" cy="13" r="8" fill="currentColor"/><circle cx="21" cy="12" r="1.6" fill="#f4ecd8"/><circle cx="27" cy="12" r="1.6" fill="#f4ecd8"/><path d="M20.5 16.5 24 19l3.5-2.5z" fill="#e8a317"/><ellipse cx="16" cy="43" rx="5" ry="2.5" fill="#e8a317"/><ellipse cx="32" cy="43" rx="5" ry="2.5" fill="#e8a317"/></svg>
+                    <h3>Linux</h3>
+                    <p>64 bit Linux bilgisayarlar için .tar.gz arşivi (Ubuntu, Debian, Fedora…).</p>
+                    <a class="bouton-plateforme" href="https://github.com/babylone01/tarot/releases/download/v1.0.7-linux/tarot-gothique-1.0.7-linux-x64.tar.gz" rel="noopener">Linux için indir</a>
+                    <a class="lien-guide" href="linux_en.html">Kurulum kılavuzu (İngilizce)</a>
+                </div>
+                <div class="plateforme a-venir">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" fill="currentColor"><path d="M6 10.5 21 8.4V23H6zM23.5 8 42 5.5V23H23.5zM6 25.5h15v14.6L6 38zM23.5 25.5H42v17L23.5 40z"/></svg>
+                    <h3>Windows</h3>
+                    <p>Windows 10 ve 11 için PC sürümü.</p>
+                    <span class="badge">Çok yakında</span>
+                </div>
+            </div>
+            <p class="cta-note">Uygulama Google Play'de <strong>kapalı testte</strong>: yüklemek için önce test grubuna katılın. <a href="tarot_gothique_testeurs.html">Gotik Tarot beta test kullanıcısı olun</a> (Fransızca sayfa)</p>
+        </section>
 <div class="seo-content">
 <section class="content-card">
 <h2>Gotik tarot kart oyunu nasıl oynanır?</h2>
@@ -578,7 +626,7 @@
 <h3>Tarot kaç kişiyle oynanır?</h3>
 <p>Oyun 3, 4 ya da 5 oyunculu üç klasik formatı sunar. 5 kişide alıcı, gizli bir ortak seçmek için bir papaz çağırır.</p>
 <h3>Bu mobil oyun hangi cihazlarda oynanır?</h3>
-<p>Gotik Tarot, akıllı telefon ve tabletler için bir <strong>Android mobil uygulamasıdır</strong>; <a href="https://play.google.com/apps/testing/com.clea.tarot" rel="noopener" target="_blank">Google Play</a>'den ücretsiz indirilebilir. Oyun ve bu site 15 dilde mevcuttur.</p>
+<p>Tarot Gothique 2026, <strong>Android</strong>’de (<a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a> üzerinden, akıllı telefon ve tabletlerde), doğrudan <a href="jouer/">tarayıcıda</a> ve <a href="linux_en.html">Linux</a>’ta oynanır; Windows sürümü yakında geliyor. Oyun ve bu site 15 dilde sunulmaktadır.</p>
 </section>
 </div>
 </main>

@@ -137,7 +137,7 @@
             "塔罗牌"
           ],
           "gamePlatform": "Android",
-          "operatingSystem": "Android",
+          "operatingSystem": "Android, Linux, Web",
           "applicationCategory": "GameApplication",
           "playMode": [
             "SinglePlayer",
@@ -462,6 +462,26 @@
         .section-photo img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid rgba(212,175,55,0.35); }
         .section-photo.portrait img { max-width: 340px; margin: 0 auto; }
         .section-photo figcaption { font-size: 0.85rem; opacity: 0.8; text-align: center; margin-top: 0.4rem; }
+    
+        /* Section « Télécharger » : une carte par plateforme. */
+        .telechargement { width: 100%; max-width: 1170px; box-sizing: border-box; margin: 2rem auto; padding: 0 16px; text-align: center; }
+        .telechargement > h2 { color: var(--primary-gold); margin-bottom: 0.4rem; }
+        .telechargement > p { opacity: 0.85; margin-top: 0; }
+        .plateformes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 1.2rem 0; }
+        @media (max-width: 900px) { .plateformes { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 520px) { .plateformes { grid-template-columns: 1fr; } }
+        .plateforme { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1.2rem 1rem; border-radius: 14px;
+                      border: 1px solid rgba(212, 175, 55, 0.35); background: rgba(20, 16, 28, 0.85); color: inherit; }
+        .plateforme svg { color: var(--primary-gold); }
+        .plateforme h3 { margin: 0.2rem 0 0; color: var(--primary-gold); }
+        .plateforme p { margin: 0; font-size: 0.92rem; opacity: 0.85; flex-grow: 1; }
+        .plateforme .bouton-plateforme { display: inline-block; margin-top: 0.4rem; padding: 0.6rem 1.2rem; border-radius: 30px; font-weight: 700;
+                      text-decoration: none; background: var(--primary-gold); color: #14101c; }
+        .plateforme .bouton-plateforme:hover { filter: brightness(1.1); }
+        .plateforme .lien-guide { font-size: 0.85rem; color: var(--primary-gold); }
+        .plateforme.a-venir { opacity: 0.6; border-style: dashed; }
+        .plateforme .badge { margin-top: 0.4rem; padding: 0.35rem 0.9rem; border-radius: 30px; border: 1px solid var(--primary-gold);
+                      color: var(--primary-gold); font-size: 0.85rem; font-weight: 700; }
     </style>
 </head>
 <body>
@@ -499,7 +519,7 @@
         <div class="top-description">
             <h2>安卓手机上的在线塔罗纸牌游戏</h2>
             <p>欢迎来到哥特塔罗2026官方网站，这是一款面向Android的社交塔罗牌游戏。您可以在线与其他玩家对战，或与AI单人练习，在镶金的哥特世界中按照3人、4人、5人局法式塔罗规则畅玩。</p>
-            <p>在线对战通过Android应用进行，而不是在浏览器中：安装一次后，即可加入实时多人牌桌，或在没有其他玩家时开始单人对局。</p>
+            <p>可在 Android 上、直接在浏览器中或在 Linux 上游玩：加入实时多人牌桌，或在没有其他玩家时开始单人对局。</p>
         </div>
         <div class="media-row">
             <div class="media-item">
@@ -525,10 +545,38 @@
                 <p>掌握3人、4人和5人局的法国塔罗完整规则、契约策略与计分方式。</p>
             </div>
         </div>
-        <div class="cta-container">
-            <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener" class="cta-button">在 Google Play 下载塔罗牌游戏</a>
+        <section class="telechargement" id="telecharger">
+            <h2>下载 Tarot Gothique 2026：Android、Web、Linux 和 Windows</h2>
+            <p>选择你的平台：同一款塔罗纸牌游戏，可单人对战AI，也可在线与其他玩家对战。</p>
+            <div class="plateformes">
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><path d="M10 22a14 14 0 0 1 28 0z" fill="currentColor"/><line x1="15" y1="9" x2="18" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="33" y1="9" x2="30" y2="13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="18.5" cy="17" r="1.8" fill="#14101c"/><circle cx="29.5" cy="17" r="1.8" fill="#14101c"/><rect x="10" y="24" width="28" height="15" rx="3" fill="currentColor"/><rect x="4" y="24" width="4.5" height="12" rx="2.2" fill="currentColor"/><rect x="39.5" y="24" width="4.5" height="12" rx="2.2" fill="currentColor"/><rect x="16" y="38" width="4.5" height="7" rx="2.2" fill="currentColor"/><rect x="27.5" y="38" width="4.5" height="7" rx="2.2" fill="currentColor"/></svg>
+                    <h3>Android</h3>
+                    <p>适用于手机和平板的应用，正在 Google Play 封闭测试中。</p>
+                    <a class="bouton-plateforme" href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>
+                </div>
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="24" r="18"/><ellipse cx="24" cy="24" rx="8" ry="18"/><line x1="6" y1="24" x2="42" y2="24"/><path d="M9 15h30M9 33h30"/></svg>
+                    <h3>浏览器</h3>
+                    <p>无需安装，立即在线开玩。</p>
+                    <a class="bouton-plateforme" href="jouer/">立即开玩</a>
+                </div>
+                <div class="plateforme">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true"><ellipse cx="24" cy="27" rx="12" ry="16" fill="currentColor"/><ellipse cx="24" cy="30" rx="7.5" ry="11" fill="#f4ecd8"/><circle cx="24" cy="13" r="8" fill="currentColor"/><circle cx="21" cy="12" r="1.6" fill="#f4ecd8"/><circle cx="27" cy="12" r="1.6" fill="#f4ecd8"/><path d="M20.5 16.5 24 19l3.5-2.5z" fill="#e8a317"/><ellipse cx="16" cy="43" rx="5" ry="2.5" fill="#e8a317"/><ellipse cx="32" cy="43" rx="5" ry="2.5" fill="#e8a317"/></svg>
+                    <h3>Linux</h3>
+                    <p>适用于64位 Linux 电脑的 .tar.gz 压缩包（Ubuntu、Debian、Fedora 等）。</p>
+                    <a class="bouton-plateforme" href="https://github.com/babylone01/tarot/releases/download/v1.0.7-linux/tarot-gothique-1.0.7-linux-x64.tar.gz" rel="noopener">下载 Linux 版</a>
+                    <a class="lien-guide" href="linux_en.html">安装指南（英文）</a>
+                </div>
+                <div class="plateforme a-venir">
+                    <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" fill="currentColor"><path d="M6 10.5 21 8.4V23H6zM23.5 8 42 5.5V23H23.5zM6 25.5h15v14.6L6 38zM23.5 25.5H42v17L23.5 40z"/></svg>
+                    <h3>Windows</h3>
+                    <p>适用于 Windows 10 和 11 的电脑版。</p>
+                    <span class="badge">即将推出</span>
+                </div>
+            </div>
             <p class="cta-note">该应用目前在Google Play上处于<strong>封闭测试</strong>阶段：如需安装，请先加入测试者群组。<a href="tarot_gothique_testeurs.html">成为哥特塔罗的测试玩家</a>（法语页面）</p>
-        </div>
+        </section>
         <div class="seo-content">
             <section class="content-card">
                 <h2>如何玩哥特塔罗纸牌游戏</h2>
@@ -590,7 +638,7 @@
                 <h3>塔罗牌需要几个人玩？</h3>
                 <p>游戏提供3人、4人和5人三种经典玩法。5人局中，庄家叫一张国王来选出秘密搭档。</p>
                 <h3>这款手机游戏可以在哪些设备上玩？</h3>
-                <p>哥特塔罗是一款面向Android手机和平板的<strong>Android移动应用</strong>，可在<a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>免费下载。游戏和本网站提供15种语言。</p>
+                <p>Tarot Gothique 2026 可在 <strong>Android</strong>（手机和平板，通过 <a href="https://play.google.com/apps/testing/com.clea.tarot" target="_blank" rel="noopener">Google Play</a>）、直接<a href="jouer/">在网页浏览器中</a>以及 <a href="linux_en.html">Linux</a> 上游玩；Windows 版即将推出。游戏和本网站支持15种语言。</p>
             </section>
         </div>
     </main>
