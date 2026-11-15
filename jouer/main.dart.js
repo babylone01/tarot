@@ -41207,7 +41207,7 @@ if(s==null)s="web"
 q=$.aGN
 if(q==null)q=""
 p=o
-return A.N(["niveau",a.b,"message",b,"stack",c,"empreinte",d,"plateforme",s,"appareil",q,"version_app","1.0.9+21","user_id",p,"contexte",e],t.N,t.z)},
+return A.N(["niveau",a.b,"message",b,"stack",c,"empreinte",d,"plateforme",s,"appareil",q,"version_app","1.0.10+22","user_id",p,"contexte",e],t.N,t.z)},
 Lu(){var s=0,r=A.m(t.H),q,p=2,o=[],n,m,l,k,j,i,h
 var $async$Lu=A.i(function(a,b){if(a===1){o.push(b)
 s=p}for(;;)switch(s){case 0:if($.aGN!=null){s=1
