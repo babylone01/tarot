@@ -54,6 +54,22 @@
         c.style.opacity = '0';
         setTimeout(function () { c.remove(); }, 450);
       });
+      // Table de jeu (appel du jeu) : paysage verrouillé si le navigateur l'accepte (plein écran
+      // exigé, Chrome Android) ; sinon le jeu affiche « Tournez votre téléphone ».
+      window.tarotTactile = function () {
+        return !!(window.matchMedia && matchMedia('(pointer: coarse)').matches);
+      };
+      window.tarotPaysage = function (paysage) {
+        try {
+          var o = screen.orientation;
+          if (!o) return;
+          if (!paysage) { if (o.unlock) o.unlock(); return; }
+          var d = document.documentElement;
+          var plein = document.fullscreenElement ? Promise.resolve()
+            : (d.requestFullscreen ? d.requestFullscreen({ navigationUI: 'hide' }) : Promise.reject());
+          plein.then(function () { return o.lock ? o.lock('landscape') : null; }).catch(function () {});
+        } catch (e) {}
+      };
       // Téléphone et tablette : plein écran au premier toucher (barre d'adresse masquée). Le
       // navigateur n'accepte le verrouillage d'orientation (table de jeu en paysage, comme
       // l'appli Android) qu'en plein écran.
