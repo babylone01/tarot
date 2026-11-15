@@ -250,6 +250,15 @@
         .info-card code { font-family: ui-monospace, "DejaVu Sans Mono", monospace; }
         .info-card h4 { margin: 1rem 0 0.4rem; color: var(--primary-gold); font-size: 1rem; }
     </style>
+    <style>
+        #achat label { display: block; margin: 0.8rem 0; line-height: 1.45; }
+        #achat input[type=email] { display: block; width: 100%; box-sizing: border-box; margin-top: 0.4rem; padding: 0.7rem; font-size: 1rem;
+            border-radius: 8px; border: 1px solid #d4af37; background: #0b0b0f; color: #f8fafc; }
+        #achat input[type=checkbox] { width: 1.15rem; height: 1.15rem; margin-right: 0.45rem; vertical-align: -0.2rem; accent-color: #d4af37; }
+        #achat .boutons { margin-top: 1rem; }
+        #achat .boutons button { width: 100%; cursor: pointer; border: 0; }
+        #achat .erreur { color: #ff8a80; min-height: 1.2em; }
+    </style>
 </head>
 <body>
 
@@ -341,7 +350,7 @@
 
         <div class="info-card" id="commander">
             <h2>Commander</h2>
-            <p>Paiement unique de <strong>9,90 €</strong> (TVA non applicable, art. 293 B du CGI), par carte bancaire via Stripe. Le lien de téléchargement est envoyé par e-mail après l’encaissement du paiement ; il reste valable 7 jours, pour 5 téléchargements.</p>
+            <p>Paiement unique de <strong>9,90 €</strong> (prix net, vendeur non assujetti à la TVA), par carte bancaire via Stripe. Le lien de téléchargement est envoyé par e-mail après l’encaissement du paiement ; il reste valable 7 jours, pour 5 téléchargements.</p>
             <p class="avertissement-email"><strong>Important :</strong> veuillez utiliser la même adresse e-mail que celle de votre compte de jeu. C’est elle qui relie votre achat à vos 100 000 jetons, à votre pack de bienvenue et à votre Pass Tournoi.</p>
             <form id="achat" novalidate>
                 <label>Votre adresse e-mail (celle de votre compte de jeu)<input type="email" id="email" autocomplete="email" required></label>
