@@ -70,17 +70,23 @@
           plein.then(function () { return o.lock ? o.lock('landscape') : null; }).catch(function () {});
         } catch (e) {}
       };
-      // Téléphone et tablette : plein écran au premier toucher (barre d'adresse masquée). Le
-      // navigateur n'accepte le verrouillage d'orientation (table de jeu en paysage, comme
-      // l'appli Android) qu'en plein écran.
-      if (!window.matchMedia || !matchMedia('(pointer: coarse)').matches) return;
-      function pleinEcran() {
+      // Plein écran (barres du navigateur masquées, comme F11) au premier geste du joueur : les
+      // navigateurs refusent tout plein écran sans clic, toucher ou touche du clavier.
+      // Téléphone et tablette : redemandé à chaque toucher (le verrouillage paysage de la table
+      // l'exige). Ordinateur : une seule fois, pour que Échap reste respecté.
+      var tactile = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches);
+      var demande = false;
+      function pleinEcran(e) {
+        if (e && e.type === 'keydown' && (e.key === 'Escape' || e.key === 'F11')) return;
+        if (!tactile && demande) return;
         var d = document.documentElement;
         if (document.fullscreenElement || !d.requestFullscreen) return;
-        d.requestFullscreen({ navigationUI: 'hide' }).catch(function () {});
+        demande = true;
+        d.requestFullscreen({ navigationUI: 'hide' }).catch(function () { demande = false; });
       }
       document.addEventListener('pointerup', pleinEcran, true);
       document.addEventListener('touchend', pleinEcran, true);
+      document.addEventListener('keydown', pleinEcran, true);
     })();
   </script>
   <script src="flutter_bootstrap.js" async></script>
