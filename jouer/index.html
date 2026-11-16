@@ -47,6 +47,27 @@
   </div>
   <script>
     (function () {
+      // Préchargement (16/11) : vidéo de départ, musique et images de l'accueil téléchargées dès
+      // l'ouverture de la page, pendant que le moteur du jeu démarre. Le jeu les retrouve ensuite
+      // dans le cache du navigateur : plus de vidéo qui hoquette ni de musique qui saccade.
+      // Même forme d'adresse que le moteur Flutter (encodeURI = Uri.encodeFull).
+      (function () {
+        if (!window.fetch) return;
+        var base = 'assets/assets/';
+        var urgent = ['reaper_3d/depart.mp4'];
+        var ensuite = ['sounds/slice.mp3', 'images/menu_bg.png',
+          'images/cards/21 de Atout.png', "images/cards/L'Excuse.png", 'images/cards/1 de Atout.png',
+          'images/cards/Roi de Coeur.png', 'images/cards/Dame de Pique.png', 'images/cards/Cavalier de Carreau.png'];
+        ['hors_ligne', 'en_ligne'].forEach(function (c) {
+          ['aucun', '3', '4', '5'].forEach(function (n) { ensuite.push('accueil3d/moitie_' + c + '_' + n + '.png'); });
+        });
+        function charger(liste, priorite) {
+          return Promise.all(liste.map(function (f) {
+            return fetch(encodeURI(base + f), { priority: priorite }).then(function (r) { return r.ok ? r.blob() : null; }).catch(function () {});
+          }));
+        }
+        charger(urgent, 'high').then(function () { return charger(ensuite, 'low'); });
+      })();
       // Écran de chargement retiré à la première image du jeu.
       window.addEventListener('flutter-first-frame', function () {
         var c = document.getElementById('chargement');
