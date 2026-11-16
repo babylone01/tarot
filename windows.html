@@ -217,7 +217,9 @@
                          overflow-x: auto; white-space: pre; font-size: 0.9rem; }
         .info-card code { font-family: ui-monospace, "DejaVu Sans Mono", monospace; }
         .info-card h4 { margin: 1rem 0 0.4rem; color: var(--primary-gold); font-size: 1rem; }
-    </style>
+        #achat .identite { display: flex; gap: 12px; flex-wrap: wrap; }
+    #achat .identite label { flex: 1 1 180px; }
+</style>
     <style>
         #achat label { display: block; margin: 0.8rem 0; line-height: 1.45; }
         #achat input[type=email] { display: block; width: 100%; box-sizing: border-box; margin-top: 0.4rem; padding: 0.7rem; font-size: 1rem;
@@ -318,9 +320,13 @@
 
         <div class="info-card" id="commander">
             <h2>Commander</h2>
-            <p>Paiement unique de <strong>9,90 €</strong> (prix net, vendeur non assujetti à la TVA), par carte bancaire via Stripe. Le lien de téléchargement est envoyé par e-mail après l’encaissement du paiement ; il reste valable 7 jours, pour 5 téléchargements.</p>
+            <p>Paiement unique de <strong>9,90 €</strong> (prix net, vendeur non assujetti à la TVA), par carte bancaire via Stripe. Le lien de téléchargement et votre justificatif d’achat (PDF) sont envoyés par e-mail après l’encaissement du paiement ; il reste valable 7 jours, pour 5 téléchargements.</p>
             <p class="avertissement-email"><strong>Important :</strong> veuillez utiliser la même adresse e-mail que celle de votre compte de jeu. C’est elle qui relie votre achat à vos 100 000 jetons, à votre pack de bienvenue et à votre Pass Tournoi.</p>
             <form id="achat" novalidate>
+                <div class="identite">
+                    <label>Prénom<input type="text" id="prenom" autocomplete="given-name" maxlength="60" required></label>
+                    <label>Nom<input type="text" id="nom" autocomplete="family-name" maxlength="60" required></label>
+                </div>
                 <label>Votre adresse e-mail (celle de votre compte de jeu)<input type="email" id="email" autocomplete="email" required></label>
                 <label><input type="checkbox" id="cgv" required> J’accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
                 <label><input type="checkbox" id="renonciation" required> Je demande l’accès immédiat au jeu et je reconnais perdre mon droit de rétractation dès le début du téléchargement.</label>
@@ -350,16 +356,17 @@
     (function () {
         var f = document.getElementById('achat'), err = document.getElementById('erreur');
         if (!f) return;
-        var msg = {"form": "Indiquez une adresse e-mail valide et cochez les deux cases.", "indispo": "La vente n'est pas ouverte pour le moment. Aucun paiement n'a été effectué.", "tech": "Une erreur est survenue. Aucun paiement n'a été effectué, réessayez."};
+        var msg = {"form": "Indiquez votre prénom, votre nom, une adresse e-mail valide, et cochez les deux cases.", "indispo": "La vente n'est pas ouverte pour le moment. Aucun paiement n'a été effectué.", "tech": "Une erreur est survenue. Aucun paiement n'a été effectué, réessayez."};
         var b = f.querySelector('button');
         f.addEventListener('submit', function (e) {
             e.preventDefault();
-            var mail = f.email.value.trim();
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail) || !f.cgv.checked || !f.renonciation.checked) { err.textContent = msg.form; return; }
+            var mail = f.email.value.trim(), prenom = f.prenom.value.trim(), nom = f.nom.value.trim();
+            var ident = /^[\p{L}][\p{L}\p{M}' .-]{0,59}$/u;
+            if (!ident.test(prenom) || !ident.test(nom) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail) || !f.cgv.checked || !f.renonciation.checked) { err.textContent = msg.form; return; }
             err.textContent = ''; b.disabled = true;
             fetch('https://ruixknekqinalyccxotp.supabase.co/functions/v1/vente-commander', {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: mail, prestataire: 'stripe', langue: 'fr', cgv: true, renonciation: true })
+                body: JSON.stringify({ prenom: prenom, nom: nom, email: mail, prestataire: 'stripe', langue: 'fr', cgv: true, renonciation: true })
             }).then(function (r) { return r.json(); }).then(function (r) {
                 if (r.url) { location.href = r.url; return; }
                 err.textContent = r.motif === 'indisponible' ? msg.indispo : msg.tech; b.disabled = false;
