@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modération d'un commentaire | Tarot Gothique 2026</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png">
+    <style>
+        body { margin: 0; min-height: 100vh; background: #0b0b0f; color: #f8fafc; font-family: system-ui, sans-serif;
+               display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box; }
+        .carte { max-width: 640px; width: 100%; background: rgba(22,22,34,0.95); border: 1px solid #d4af37; border-radius: 10px; padding: 1.2rem 1.4rem; }
+        h1 { color: #f3d060; font-size: 1.3rem; margin: 0 0 0.8rem; }
+        blockquote { border-left: 4px solid #d4af37; margin: 0.6rem 0; padding: 0.5rem 0.8rem; background: #11111a; white-space: pre-wrap; }
+        .meta { opacity: 0.8; font-size: 0.9rem; }
+        button { font: inherit; font-weight: bold; color: #fff; border: 0; border-radius: 6px; padding: 0.7rem 1.4rem; cursor: pointer; margin-top: 0.6rem; }
+        .approuver { background: #1f8a3b; } .supprimer { background: #b3261e; }
+        #etat { font-weight: bold; color: #f3d060; min-height: 1.2em; }
+        a { color: #f3d060; }
+    </style>
+</head>
+<body>
+    <div class="carte">
+        <h1>Modération d'un commentaire</h1>
+        <div id="apercu">Chargement…</div>
+        <button id="agir" hidden></button>
+        <p id="etat" role="status"></p>
+    </div>
+    <script>
+    (function () {
+        var F = 'https://ruixknekqinalyccxotp.supabase.co/functions/v1/blog-commentaire';
+        var q = new URLSearchParams(location.search), id = q.get('id'), a = q.get('a'), sig = q.get('sig');
+        var apercu = document.getElementById('apercu'), bouton = document.getElementById('agir'), etat = document.getElementById('etat');
+        var motifs = { signature: 'Lien invalide ou modifié.', introuvable: 'Ce commentaire n’existe plus (déjà supprimé).', lien: 'Lien incomplet.' };
+        if (!id || !sig || (a !== 'approuver' && a !== 'supprimer')) { apercu.textContent = motifs.lien; return; }
+        fetch(F + '?id=' + encodeURIComponent(id) + '&a=' + a + '&sig=' + encodeURIComponent(sig))
+        .then(function (r) { return r.json(); }).then(function (j) {
+            if (!j.ok) { apercu.textContent = motifs[j.motif] || 'Erreur.'; return; }
+            var c = j.commentaire;
+            apercu.textContent = '';
+            var m = document.createElement('p'); m.className = 'meta';
+            m.textContent = c.author_name + ' — article « ' + c.post_id + ' » — ' + new Date(c.created_at).toLocaleString('fr-FR')
+                + (c.is_approved ? ' — déjà approuvé' : ' — en attente');
+            var b = document.createElement('blockquote'); b.textContent = c.content;
+            apercu.append(m, b);
+            bouton.textContent = a === 'approuver' ? 'Approuver et afficher sur le site' : 'Supprimer définitivement';
+            bouton.className = a; bouton.hidden = false;
+        }).catch(function () { apercu.textContent = 'Erreur réseau.'; });
+        bouton.addEventListener('click', function () {
+            bouton.disabled = true; etat.textContent = '…';
+            fetch(F, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: 'moderer', id: id, a: a, sig: sig }) })
+            .then(function (r) { return r.json(); }).then(function (j) {
+                if (!j.ok) { etat.textContent = motifs[j.motif] || 'Échec.'; bouton.disabled = false; return; }
+                bouton.hidden = true;
+                etat.textContent = a === 'approuver' ? 'Commentaire approuvé : il est affiché sur le site.' : 'Commentaire supprimé.';
+            }).catch(function () { etat.textContent = 'Erreur réseau.'; bouton.disabled = false; });
+        });
+    })();
+    </script>
+</body>
+</html>
