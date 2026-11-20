@@ -25,3 +25,5 @@
 
 - [Privacy policy](https://tarot-gothique-2026.com/privacy.html)
 - [Sitemap](https://tarot-gothique-2026.com/sitemap.xml)
+- [Application de tarot Android](https://tarot-gothique-2026.com/application-tarot-android.html): the Android app (solo vs AI, online tables, private rooms)
+- [Jouer au tarot en ligne gratuitement](https://tarot-gothique-2026.com/jouer-tarot-en-ligne-gratuit.html): play French tarot free in the browser, no download
