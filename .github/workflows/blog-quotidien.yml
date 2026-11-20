@@ -1,0 +1,34 @@
+name: Blog quotidien
+# Régénère le blog à partir des articles publiés dans Supabase (les articles programmés
+# passent en « publie » à leur date grâce à une tâche pg_cron), puis pousse si quelque chose a changé
+# et prévient Bing/Yandex via IndexNow.
+on:
+  schedule:
+    - cron: "20 6 * * *"   # 07 h 20 heure de Paris (hiver)
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  blog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install markdown==3.10.3
+      - run: python3 blog/generer.py
+      - name: Commit et push si changement
+        run: |
+          if git diff --quiet; then echo "Rien de nouveau"; exit 0; fi
+          git config user.name "blog-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          nouveaux=$(git status --porcelain blog/ | awk '{print $2}' | grep -E '^blog/[a-z0-9-]+\.html$' || true)
+          git add -A
+          git commit -m "Blog : publication automatique du $(date -u +%F)"
+          git push
+          urls='"https://tarot-gothique-2026.com/blog/","https://tarot-gothique-2026.com/"'
+          for f in $nouveaux; do urls="$urls,\"https://tarot-gothique-2026.com/$f\""; done
+          curl -s -o /dev/null -w "IndexNow %{http_code}\n" -H "Content-Type: application/json" \
+            -d "{\"host\":\"tarot-gothique-2026.com\",\"key\":\"49c7fad15731f83e5f0c540fd4256c4c\",\"urlList\":[$urls]}" \
+            https://api.indexnow.org/indexnow || true
