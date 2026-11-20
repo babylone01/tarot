@@ -29,7 +29,7 @@ SITE = "https://tarot-gothique-2026.com"
 SUPABASE = "https://ruixknekqinalyccxotp.supabase.co"
 CLE_PUBLIQUE = "sb_publishable_srFEs1VmnrK-ThxZzR7kOQ_QPNnCQ-T"  # clé publique (déjà dans le jeu web)
 FONCTION = f"{SUPABASE}/functions/v1/blog-commentaire"
-DISCORD = "https://discord.gg/rFCtgdkGU"
+DISCORD = "https://discord.gg/PAgE8Y3MSN"
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
         "septembre", "octobre", "novembre", "décembre"]
 
