@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
 jobs:
   blog:
     runs-on: ubuntu-latest
@@ -27,6 +28,9 @@ jobs:
           git add -A
           git commit -m "Blog : publication automatique du $(date -u +%F)"
           git push
+          # Un push fait par GITHUB_TOKEN ne relance pas toujours GitHub Pages : on demande le build.
+          curl -s -o /dev/null -w "Pages build %{http_code}\n" -X POST -H "Authorization: Bearer ${{ github.token }}" \
+            -H "Accept: application/vnd.github+json" https://api.github.com/repos/${{ github.repository }}/pages/builds || true
           urls='"https://tarot-gothique-2026.com/blog/","https://tarot-gothique-2026.com/"'
           for f in $nouveaux; do urls="$urls,\"https://tarot-gothique-2026.com/$f\""; done
           curl -s -o /dev/null -w "IndexNow %{http_code}\n" -H "Content-Type: application/json" \
