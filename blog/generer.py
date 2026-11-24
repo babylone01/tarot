@@ -119,6 +119,7 @@ def page(titre: str, description: str, canonique: str, h1: str, corps: str, json
 {json.dumps(jsonld, ensure_ascii=False, indent=2)}
     </script>
     <style>{style_du_site()}{CSS_BLOG}    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2567840580892054" crossorigin="anonymous"></script>
 </head>
 <body>
 
