@@ -91,6 +91,25 @@
           plein.then(function () { return o.lock ? o.lock('landscape') : null; }).catch(function () {});
         } catch (e) {}
       };
+      // H5 Games Ads (accès à obtenir de Google) : rien n'est chargé tant que le jeu n'appelle pas
+      // tarotPubCharger (compilation avec PUBS_H5). Annonce seulement si elle est déjà prête.
+      var pubPrete = false;
+      window.tarotPubCharger = function () {
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adBreak = window.adConfig = function (o) { window.adsbygoogle.push(o); };
+        window.adConfig({ preloadAdBreaks: 'on', sound: 'off', onReady: function () { pubPrete = true; } });
+        var s = document.createElement('script');
+        s.async = true;
+        s.crossOrigin = 'anonymous';
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2567840580892054';
+        document.head.appendChild(s);
+      };
+      window.tarotPubMontrer = function (fini) {
+        if (!pubPrete) { fini(false); return; }
+        window.adBreak({ type: 'next', name: 'fin_de_partie', adBreakDone: function (i) {
+          fini(i.breakStatus === 'viewed' || i.breakStatus === 'dismissed');
+        } });
+      };
       // Plein écran (barres du navigateur masquées, comme F11) au premier geste du joueur : les
       // navigateurs refusent tout plein écran sans clic, toucher ou touche du clavier.
       // Téléphone et tablette : redemandé à chaque toucher (le verrouillage paysage de la table
