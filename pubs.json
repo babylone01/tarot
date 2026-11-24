@@ -1,16 +1,3 @@
 {
-  "bannieres": [
-    {
-      "texte": "Le blog Tarot Gothique : conseils et stratégie",
-      "image": "https://tarot-gothique-2026.com/pubs/exemple-blog-960x400.jpg",
-      "lien": "https://tarot-gothique-2026.com/blog/",
-      "plateformes": [
-        "web",
-        "linux",
-        "windows"
-      ],
-      "debut": "2026-11-24",
-      "fin": "2026-12-31"
-    }
-  ]
+  "bannieres": []
 }
