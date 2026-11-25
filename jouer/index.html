@@ -80,7 +80,9 @@
       window.tarotTactile = function () {
         return !!(window.matchMedia && matchMedia('(pointer: coarse)').matches);
       };
+      var paysageVoulu = false;
       window.tarotPaysage = function (paysage) {
+        paysageVoulu = paysage;
         try {
           var o = screen.orientation;
           if (!o) return;
@@ -88,7 +90,11 @@
           var d = document.documentElement;
           var plein = document.fullscreenElement ? Promise.resolve()
             : (d.requestFullscreen ? d.requestFullscreen({ navigationUI: 'hide' }) : Promise.reject());
-          plein.then(function () { return o.lock ? o.lock('landscape') : null; }).catch(function () {});
+          plein.then(function () {
+            // Écran quitté pendant le passage en plein écran : ne plus verrouiller.
+            if (!paysageVoulu || !o.lock) return;
+            return o.lock('landscape').then(function () { if (!paysageVoulu) o.unlock(); });
+          }).catch(function () {});
         } catch (e) {}
       };
       // H5 Games Ads (accès à obtenir de Google) : rien n'est chargé tant que le jeu n'appelle pas
