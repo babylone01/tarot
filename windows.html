@@ -271,6 +271,11 @@
         </div>
 
         <div class="info-card">
+            <h2>Cadeau de Noël : code NOEL 2026</h2>
+            <p>Jusqu’au 31 décembre 2026 : <strong>7,92 € au lieu de 9,90 €</strong>, 200 000 jetons, pack de bienvenue doublé et 1 an de Pass Tournoi. <a href="noel-2026.html">Voir l’offre de Noël</a></p>
+        </div>
+
+        <div class="info-card">
             <h2>Ce que comprend l’offre Windows</h2>
             <div class="avantages">
                 <div class="avantage">
@@ -328,6 +333,8 @@
                     <label>Nom<input type="text" id="nom" autocomplete="family-name" maxlength="60" required></label>
                 </div>
                 <label>Votre adresse e-mail (celle de votre compte de jeu)<input type="email" id="email" autocomplete="email" required></label>
+                <label>Code promotionnel (facultatif)<input type="text" id="promo" maxlength="40" autocomplete="off" autocapitalize="characters"></label>
+                <p><button type="button" class="cta-button" id="appliquer">Appliquer le code</button> <span id="promo-etat" role="status"></span></p>
                 <label><input type="checkbox" id="cgv" required> J’accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
                 <label><input type="checkbox" id="renonciation" required> Je demande l’accès immédiat au jeu et je reconnais perdre mon droit de rétractation dès le début du téléchargement.</label>
                 <div class="boutons"><button type="submit" class="cta-button" value="stripe">Payer par carte bancaire – 9,90 €</button></div>
@@ -357,19 +364,40 @@
         var f = document.getElementById('achat'), err = document.getElementById('erreur');
         if (!f) return;
         var msg = {"form": "Indiquez votre prénom, votre nom, une adresse e-mail valide, et cochez les deux cases.", "indispo": "La vente n'est pas ouverte pour le moment. Aucun paiement n'a été effectué.", "tech": "Une erreur est survenue. Aucun paiement n'a été effectué, réessayez."};
-        var b = f.querySelector('button');
+        var b = f.querySelector('button[type=submit]'), tarif = b.textContent, etat = document.getElementById('promo-etat');
+        var API = 'https://ruixknekqinalyccxotp.supabase.co/functions/v1/vente-commander';
+        var msgPromo = { promo_inconnue: 'Code inconnu.', promo_expiree: 'Cette offre est terminée.', indisponible: msg.indispo };
+        // Le prix affiché est celui renvoyé par le serveur ; la commande le recalcule toujours.
+        function verifier() {
+            var code = f.promo.value.trim();
+            b.textContent = tarif; etat.textContent = '';
+            if (!code) return;
+            etat.textContent = 'Vérification…';
+            fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ verifier: true, promo: code }) })
+                .then(function (r) { return r.json(); }).then(function (r) {
+                    if (f.promo.value.trim() !== code) return;
+                    if (!r.ok) { etat.textContent = msgPromo[r.motif] || msg.tech; return; }
+                    var prix = (r.montant_centimes / 100).toFixed(2).replace('.', ',') + ' €';
+                    etat.textContent = 'Code appliqué : ' + prix + ', ' + r.jetons.toLocaleString('fr-FR') + ' jetons, ' + r.pack_dos + ' dos et ' + r.pack_tapis + ' tapis, Pass Tournoi ' + (r.pass_mois === 12 ? '1 an' : r.pass_mois + ' mois') + '.';
+                    b.textContent = 'Payer par carte bancaire – ' + prix;
+                }).catch(function () { etat.textContent = msg.tech; });
+        }
+        document.getElementById('appliquer').addEventListener('click', verifier);
+        f.promo.addEventListener('input', function () { b.textContent = tarif; etat.textContent = ''; });
+        var recu = new URLSearchParams(location.search).get('code');
+        if (recu) { f.promo.value = recu.slice(0, 40); verifier(); }
         f.addEventListener('submit', function (e) {
             e.preventDefault();
             var mail = f.email.value.trim(), prenom = f.prenom.value.trim(), nom = f.nom.value.trim();
             var ident = /^[\p{L}][\p{L}\p{M}' .-]{0,59}$/u;
             if (!ident.test(prenom) || !ident.test(nom) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail) || !f.cgv.checked || !f.renonciation.checked) { err.textContent = msg.form; return; }
             err.textContent = ''; b.disabled = true;
-            fetch('https://ruixknekqinalyccxotp.supabase.co/functions/v1/vente-commander', {
+            fetch(API, {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ prenom: prenom, nom: nom, email: mail, prestataire: 'stripe', langue: 'fr', cgv: true, renonciation: true })
+                body: JSON.stringify({ prenom: prenom, nom: nom, email: mail, prestataire: 'stripe', langue: 'fr', cgv: true, renonciation: true, promo: f.promo.value.trim() || undefined })
             }).then(function (r) { return r.json(); }).then(function (r) {
                 if (r.url) { location.href = r.url; return; }
-                err.textContent = r.motif === 'indisponible' ? msg.indispo : msg.tech; b.disabled = false;
+                err.textContent = msgPromo[r.motif] || msg.tech; b.disabled = false;
             }).catch(function () { err.textContent = msg.tech; b.disabled = false; });
         });
     })();
